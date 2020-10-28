@@ -1,0 +1,558 @@
+/target:library
+/nowarn:0169
+/out:"Temp/Unity.Timeline.Editor.dll"
+/refout:"Temp/Unity.Timeline.Editor.dll.ref"
+/deterministic
+/debug:portable
+/optimize+
+/nostdlib+
+/preferreduilang:en-US
+/langversion:8.0
+/reference:"Library/ScriptAssemblies/Unity.Timeline.dll"
+/reference:"Library/ScriptAssemblies/UnityEditor.TestRunner.dll"
+/reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
+/reference:"Library/ScriptAssemblies/UnityEngine.TestRunner.dll"
+/reference:"Library/ScriptAssemblies/UnityEngine.UI.dll"
+/reference:"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll"
+/reference:"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.render-pipelines.core@8.1.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEditor.Graphs.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.UIServiceModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.GIModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsNativeModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll"
+/reference:"/HWK/SFW/Unity/Hub/2020.2.0b2/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll"
+/define:CSHARP_7_3_OR_NEWER
+/define:CSHARP_7_OR_LATER
+/define:DEBUG
+/define:ENABLE_AUDIO
+/define:ENABLE_BURST_AOT
+/define:ENABLE_CACHING
+/define:ENABLE_CLOTH
+/define:ENABLE_CLOUD_LICENSE
+/define:ENABLE_CLOUD_SERVICES
+/define:ENABLE_CLOUD_SERVICES_ADS
+/define:ENABLE_CLOUD_SERVICES_ANALYTICS
+/define:ENABLE_CLOUD_SERVICES_BUILD
+/define:ENABLE_CLOUD_SERVICES_COLLAB
+/define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+/define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+/define:ENABLE_CLOUD_SERVICES_PURCHASING
+/define:ENABLE_CLOUD_SERVICES_UNET
+/define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+/define:ENABLE_CLUSTERINPUT
+/define:ENABLE_CLUSTER_SYNC
+/define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+/define:ENABLE_CUSTOM_RENDER_TEXTURE
+/define:ENABLE_DIRECTOR
+/define:ENABLE_DIRECTOR_AUDIO
+/define:ENABLE_DIRECTOR_TEXTURE
+/define:ENABLE_EDITOR_HUB_LICENSE
+/define:ENABLE_LEGACY_INPUT_MANAGER
+/define:ENABLE_LOCALIZATION
+/define:ENABLE_LZMA
+/define:ENABLE_MANAGED_ANIMATION_JOBS
+/define:ENABLE_MANAGED_AUDIO_JOBS
+/define:ENABLE_MANAGED_JOBS
+/define:ENABLE_MANAGED_TRANSFORM_JOBS
+/define:ENABLE_MICROPHONE
+/define:ENABLE_MODULAR_UNITYENGINE_ASSEMBLIES
+/define:ENABLE_MONO
+/define:ENABLE_MONO_BDWGC
+/define:ENABLE_MOVIES
+/define:ENABLE_MULTIPLE_DISPLAYS
+/define:ENABLE_NETWORK
+/define:ENABLE_PHYSICS
+/define:ENABLE_PROFILER
+/define:ENABLE_RUNTIME_GI
+/define:ENABLE_SCRIPTING_GC_WBARRIERS
+/define:ENABLE_SPATIALTRACKING
+/define:ENABLE_SPRITES
+/define:ENABLE_TERRAIN
+/define:ENABLE_TEXTURE_STREAMING
+/define:ENABLE_TILEMAP
+/define:ENABLE_TIMELINE
+/define:ENABLE_UNET
+/define:ENABLE_UNITYEVENTS
+/define:ENABLE_UNITYWEBREQUEST
+/define:ENABLE_UNITY_COLLECTIONS_CHECKS
+/define:ENABLE_VIDEO
+/define:ENABLE_VIRTUALTEXTURING
+/define:ENABLE_VR
+/define:ENABLE_WEBCAM
+/define:ENABLE_WEBSOCKET_CLIENT
+/define:ENABLE_WEBSOCKET_HOST
+/define:ENABLE_WWW
+/define:INCLUDE_DYNAMIC_GI
+/define:NET_4_6
+/define:PLATFORM_ARCH_64
+/define:PLATFORM_STANDALONE
+/define:PLATFORM_STANDALONE_LINUX
+/define:PLATFORM_SUPPORTS_MONO
+/define:RENDER_SOFTWARE_CURSOR
+/define:SCENE_TEMPLATE_MODULE
+/define:TRACE
+/define:UNITY_2017_1_OR_NEWER
+/define:UNITY_2017_2_OR_NEWER
+/define:UNITY_2017_3_OR_NEWER
+/define:UNITY_2017_4_OR_NEWER
+/define:UNITY_2018_1_OR_NEWER
+/define:UNITY_2018_2_OR_NEWER
+/define:UNITY_2018_3_OR_NEWER
+/define:UNITY_2018_4_OR_NEWER
+/define:UNITY_2019_1_OR_NEWER
+/define:UNITY_2019_2_OR_NEWER
+/define:UNITY_2019_3_OR_NEWER
+/define:UNITY_2019_4_OR_NEWER
+/define:UNITY_2020
+/define:UNITY_2020_1_OR_NEWER
+/define:UNITY_2020_2
+/define:UNITY_2020_2_0
+/define:UNITY_2020_2_OR_NEWER
+/define:UNITY_5_3_OR_NEWER
+/define:UNITY_5_4_OR_NEWER
+/define:UNITY_5_5_OR_NEWER
+/define:UNITY_5_6_OR_NEWER
+/define:UNITY_64
+/define:UNITY_ASSERTIONS
+/define:UNITY_EDITOR
+/define:UNITY_EDITOR_64
+/define:UNITY_EDITOR_LINUX
+/define:UNITY_INCLUDE_TESTS
+/define:UNITY_STANDALONE
+/define:UNITY_STANDALONE_LINUX
+/define:UNITY_STANDALONE_LINUX_API
+/define:UNITY_TEAM_LICENSE
+/define:USE_SEARCH_ENGINE_API
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/ActionContext.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/ActionManager.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/ClipAction.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/ClipsActions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/IAction.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/IMenuChecked.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/IMenuName.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/Invoker.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/MarkerAction.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/MarkerActions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/Menus/MenuItemActionBase.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/Menus/TimelineContextMenu.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/TimelineAction.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/TimelineActions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/TrackAction.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Actions/TrackActions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Activation/ActivationTrackEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Activation/ActivationTrackInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Analytics/TimelineAnalytics.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/AnimationClipActions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/AnimationClipCurveCache.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/AnimationOffsetMenu.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/AnimationPlayableAssetEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/AnimationTrackActions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/BindingSelector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/BindingTreeViewDataSource.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/BindingTreeViewDataSourceGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/ClipCurveEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/CurveDataSource.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/CurvesProxy.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Animation/TimelineAnimationUtilities.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Attributes/ActiveInModeAttribute.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Attributes/MenuEntryAttribute.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Attributes/ShortcutAttribute.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Attributes/TimelineShortcutAttribute.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Audio/AudioClipPropertiesDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Audio/AudioPlayableAssetEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Audio/AudioPlayableAssetInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Audio/AudioTrackInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/ControlTrack/ControlPlayableAssetEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/CurveEditUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/CustomEditors/ClipEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/CustomEditors/CustomTimelineEditorCache.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/CustomEditors/MarkerEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/CustomEditors/MarkerTrackEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/CustomEditors/TrackEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/DirectorNamedColor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/DirectorStyles.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Extensions/AnimatedParameterExtensions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Extensions/AnimationTrackExtensions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Extensions/TrackExtensions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Items/ClipItem.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Items/ITimelineItem.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Items/ItemsGroup.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Items/ItemsPerTrack.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Items/ItemsUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Items/MarkerItem.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/AddDelete/AddDeleteItemModeMix.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/AddDelete/AddDeleteItemModeReplace.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/AddDelete/AddDeleteItemModeRipple.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/AddDelete/IAddDeleteItemMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Cursors/TimelineCursors.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/EditMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/EditModeInputHandler.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Move/IMoveItemMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Move/MoveItemHandler.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Move/MoveItemModeMix.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Move/MoveItemModeReplace.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Move/MoveItemModeRipple.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Move/MovingItems.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/EaseClip.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/Jog.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/MarkerHeaderContextMenu.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/RectangleSelect.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/RectangleTool.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/RectangleZoom.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/SelectAndMoveItem.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/TrackZoom.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Sequence/TrimClip.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/TimeAreaAutoPanner.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/TimeIndicator.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/TimelineClipGroup.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Trim/ITrimItemMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Trim/TrimItemModeMix.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Trim/TrimItemModeReplace.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Trim/TrimItemModeRipple.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Utils/EditModeGUIUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Utils/EditModeMixUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Utils/EditModeReplaceUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Utils/EditModeRippleUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Utils/EditModeUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Utils/ManipulatorsUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Manipulators/Utils/PlacementValidity.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/MenuPriority.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Playables/ControlPlayableInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Properties/AssemblyInfo.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Recording/AnimationTrackRecorder.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Recording/TimelineRecording.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Recording/TimelineRecordingContextualResponder.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Recording/TimelineRecording_Monobehaviour.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Recording/TimelineRecording_PlayableAsset.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Recording/TrackAssetRecordingExtensions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Shortcuts.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalAssetInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalEmitterEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalEmitterInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalEventDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalManager.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalReceiverHeader.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalReceiverInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/SignalUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/Styles.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/TreeView/SignalListFactory.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/TreeView/SignalReceiverItem.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Signals/TreeView/SignalReceiverTreeView.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/State/ISequenceState.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/State/SequenceHierarchy.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/State/SequencePath.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/State/SequenceState.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/State/WindowState.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/TimelineEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/TimelineHelpers.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/TimelineSelection.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/TimelineUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Tooltip.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Trackhead.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Undo/ApplyDefaultUndoAttribute.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Undo/UndoExtensions.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Undo/UndoScope.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/UnityEditorInternals.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/AnimatedParameterCache.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/AnimatedParameterUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/BindingUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/BreadcrumbDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/ClipModifier.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/Clipboard.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/ControlPlayableUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/CustomTrackDrawerAttribute.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/DisplayNameHelper.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/GUIColorOverride.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/GUIGroupScope.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/GUIMixedValueScope.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/GUIViewportScope.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/Graphics.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/KeyTraverser.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/MarkerModifier.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/ObjectExtension.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/ObjectReferenceField.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/PropertyCollector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/Range.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/SequenceSelectorNameFormater.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/SpacePartitioner.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/StyleManager.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/StyleNormalColorOverride.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/TimeReferenceUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/TimelineKeyboardNavigation.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/TrackModifier.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/TrackResourceCache.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Utilities/TypeUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/Modes/TimeReferenceMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/Modes/TimelineActiveMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/Modes/TimelineAssetEditionMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/Modes/TimelineDisabledMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/Modes/TimelineInactiveMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/Modes/TimelineMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/Modes/TimelineReadOnlyMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/PlaybackScroller.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineMarkerHeaderGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindowTimeControl.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_ActiveTimeline.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_Breadcrumbs.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_Duration.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_EditorCallbacks.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_Gui.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_HeaderGui.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_Manipulators.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_PlayRange.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_PlayableLookup.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_PreviewPlayMode.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_Selection.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_StateChange.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_TimeArea.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_TimeCursor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/TimelineWindow_TrackGui.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/ViewModel/ScriptableObjectViewPrefs.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/ViewModel/TimelineAssetViewModel.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/ViewModel/TimelineWindowViewPrefs.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/Window/WindowConstants.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/AnimationPlayableAssetInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/AnimationTrackInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/BasicAssetInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/BuiltInCurvePresets.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/ClipInspector/ClipInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/ClipInspector/ClipInspectorCurveEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/ClipInspector/ClipInspectorSelectionInfo.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/CurvesOwner/CurvesOwnerInspectorHelper.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/CurvesOwner/ICurvesOwnerInspectorWrapper.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/DirectorNamedColorInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/EditorClip.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/EditorClipFactory.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/GroupTrackInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/MarkerInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/TimeFieldDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/TimelineAssetInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/TimelineInspectorUtility.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/TimelinePreferences.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/TimelineProjectSettings.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/inspectors/TrackAssetInspector.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/AnimationTrackKeyDataSource.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Control.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/AnimationTrackDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/ClipDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/InfiniteTrackDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/Layers/ClipsLayer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/Layers/ItemsLayer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/Layers/MarkersLayer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/TrackDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Drawers/TrackItemsDrawer.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/IPropertyKeyDataSource.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/IRowGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ItemGui/ISelectable.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ItemGui/TimelineClipGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ItemGui/TimelineItemGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ItemGui/TimelineMarkerClusterGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ItemGui/TimelineMarkerGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ManipulationsClips.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ManipulationsTimeline.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/ManipulationsTracks.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Manipulator.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/PickerUtils.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Snapping/IAttractable.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Snapping/ISnappable.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/Snapping/SnapEngine.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TimelineClipHandle.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TimelineClipUnion.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TimelineDataSource.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TimelineDragging.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TimelineTreeView.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TimelineTreeViewGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TrackGui/InlineCurveEditor.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TrackGui/TimelineGroupGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TrackGui/TimelineTrackBaseGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TrackGui/TimelineTrackErrorGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TrackGui/TimelineTrackGUI.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TrackGui/TrackResizeHandle.cs"
+"/HWK/ERAU/Active Courses/SIM 480 Capstone I/Resonance_TechLab/Stencil_Buffer_Masking_HDRP/Library/PackageCache/com.unity.timeline@1.4.2/Editor/treeview/TrackPropertyCurvesDataSource.cs"
