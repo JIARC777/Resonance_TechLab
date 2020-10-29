@@ -4,11 +4,11 @@ Shader "Depth Mask" {
         Lighting Off
         ZTest LEqual
         ZWrite On
-        ColorMask R
+        ColorMask A
         Pass {
             Stencil{
-                Ref 1
-                Comp always
+                Ref 2
+                Comp lequal
                 Pass replace
                 Fail zero
                 ZFail zero

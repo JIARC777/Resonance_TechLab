@@ -4,13 +4,14 @@ Shader "Hider" {
         Lighting Off
         ZTest GEqual
         ZWrite Off
-        ColorMask A
+
+        ColorMask BA
         Pass {
             Stencil {
-                Ref 1
+                Ref 2
                 Comp equal
                 Pass keep
-                Fail keep
+                Fail zero
                 ZFail keep
             }
         }
