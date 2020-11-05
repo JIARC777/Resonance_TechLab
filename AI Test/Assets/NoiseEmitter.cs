@@ -34,30 +34,27 @@ public class NoiseEmitter : MonoBehaviour
     public Noise noise; 
     // Reference to emitter
     ParticleSystem pSystem;
-    ParticleSystem.Particle[] particleList;
     public float currentSize;
 
   //  public List<ParticleCollisionEvent> collisionsWithEnemy;
 
     void Start()
     {
+
         pSystem = this.GetComponent<ParticleSystem>();
         pSystem.Emit(numParticles);
-        pSystem.Stop();
-        
         emitterID = Random.Range(0, 100);
         var main = pSystem.main;
         main.startSpeed = travelSpeed;
+        main.startColor = Random.ColorHSV() + new Color(0.5f,0.5f,0.5f);
         // particle lifetime determined by distance/speed
         lifeTime = travelDistance / travelSpeed;
         main.startLifetime = lifeTime;
-        //pSystem.GetParticles(particleList);
-        // particle lifetime drives particle size based on graph set up in particle emitter
-        // article size is used to determine normalized volume
 
-        // Create list to store detectedCollisions
-        // collisionsWithEnemy = new List<ParticleCollisionEvent>();
-
+       // pSystem.Stop();
+        
+        
+        
     }
     void OnParticleCollision(GameObject other)
     {
@@ -67,29 +64,22 @@ public class NoiseEmitter : MonoBehaviour
             // doesnt really matter which particles reach it, if a drone is detected by a particle, populate the noise field so that the drone can access it
             if (noise == null)
                 noise = new Noise(this.transform.position, currentSize, volumeModifier, emitterID);
-            
-            //int numTimesCollided = pSystem.GetCollisionEvents(other, collisionsWithEnemy);
-            //for (int i = 0; i < numTimesCollided; i++)
-            //{
-                //collisionsWithEnemy.ForEach
-              //  NoiseParticle noise = new NoiseParticle(this.transform.position, currentSize, volumeModifier, emitterID);
-                
-             //   //Debug.Log("Collision Detected");
-            //}
         }
     }
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetMouseButtonDown(1))
-        // {
-        //pSystem.Emit(numParticles);
-        //pSystem.Stop();
-        //pSystem.time = 0;
-        //}
-        //Debug.Log(pSystem.time);
-        //Debug.Log(lifeTime);
-        if (pSystem.time >= lifeTime -.01)
+
+        /*
+        emitterID = Random.Range(0, 100);
+        var main = pSystem.main;
+        main.startSpeed = travelSpeed;
+        // particle lifetime determined by distance/speed
+        lifeTime = travelDistance / travelSpeed;
+        main.startLifetime = lifeTime;
+        */
+
+        if (pSystem.time >= lifeTime)
             Destroy(this.gameObject);
            // pSystem.time = 0;
         currentSize = 1 - (pSystem.time / lifeTime);

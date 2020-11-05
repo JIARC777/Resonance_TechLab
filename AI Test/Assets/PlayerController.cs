@@ -13,11 +13,15 @@ public class PlayerController : MonoBehaviour
     public float threshold = 1f; 
     // List of noises - Prioritiy on louder noises 
     List<Noise> noisesDetected;
-    // Use to determine if collisions are originating from the same source or not
+    // Use to determine if collisions are originating from the same source or not - Constantly refreshed so that non-current sounds are not considered
     public Queue<int> SoundIDs;
     // used in determining collisions when 
-    float noiseID;
-    bool locationReached = false;
+    float curNoiseID;
+    // Amount of time before dequeuing the SoundID queue to keep it organized 
+    float timeSinceLastIDQueueRefresh;
+    // Time between refreshing the list
+    float idQueueRefreshRate = 10f;
+    //bool locationReached = false;
     bool investigating;
     public float investigationRadius = 3f;
     Vector3 locationToInvestigate;
@@ -25,6 +29,7 @@ public class PlayerController : MonoBehaviour
     public void Start()
     {
         noisesDetected = new List<Noise>();
+        SoundIDs = new Queue<int>();
 
     }
     // Update is called once per frame
@@ -37,55 +42,73 @@ public class PlayerController : MonoBehaviour
         float distanceToTarget;
         if (investigating)
         {
-            Debug.Log("Investigating");
+           // Debug.Log("Investigating");
             distanceToTarget = (this.transform.position - locationToInvestigate).magnitude;
             if (distanceToTarget <= investigationRadius)
             {
                 Debug.Log("No Longer Investiagting");
                 investigating = false;
-                agent.SetDestination(this.transform.position);
+                // if there are any other targets, prioritize them
+                if (!Prioritize())
+                {
+                    agent.SetDestination(this.transform.position);
+                    Debug.Log("Logic for returning to path");
+                }
             }
-                
-        }   
+        }
+        // Dequeue the list of detected sounds every so often
+        if (Time.time >= timeSinceLastIDQueueRefresh + idQueueRefreshRate && SoundIDs.Count > 0)
+            SoundIDs.Dequeue();
     }
     private void OnParticleCollision(GameObject soundPulse)
     {
-        //Debug.Log("Sound");
+        
         if (soundPulse.tag == "SuspiciousSound")
         {
             
             NoiseEmitter suspectedNoise = soundPulse.GetComponent<NoiseEmitter>();
-            
             Noise detectedNoise = suspectedNoise.noise;
-            float detectedVolume = detectedNoise.volume;
-            //Debug.Log(detectedVolume);
-            int curNoiseID = detectedNoise.noiseID;
-            //foreach (Noise noise in noisesDetected)
-            //{
-               // Debug.Log("Inside Loop");
-               // if (curNoiseID == noise.noiseID)
-               // {
-               //     Debug.Log("Culling Particle");
-               //     return;
-               // }
-            //}
-            if (detectedVolume > threshold)
+            
+            bool idRecognized = false;
+            if (SoundIDs.Count > 0)
             {
-                locationToInvestigate = detectedNoise.emittedLocation;
-                Debug.Log("Heard Something: Move to investigate");
-                Investigate();
-                
-               // noisesDetected.Add(detectedNoise);
+                foreach (int soundID in SoundIDs)
+                {
+                  //  Debug.Log(soundID);
+                    if (detectedNoise.noiseID == soundID)
+                        idRecognized = true;
+                }
             }
+            if (idRecognized)
+            {
+               // Debug.Log("Noticed Same ID, Ignoring");
+                return;
+            }
+            else
+            {
                 
-           // Prioritize();
+                float detectedVolume = detectedNoise.volume;
+                if (detectedVolume > threshold)
+                {
+                    SoundIDs.Enqueue(detectedNoise.noiseID);
+                    timeSinceLastIDQueueRefresh = Time.time;
+                    noisesDetected.Add(detectedNoise);
+                    Debug.Log("Heard Something: Move to investigate");
+                    Prioritize();
+                }
+            }
         }
     }
 
-    void Prioritize()
+    // Prioritize the loudest sound heard. Returns false if it is currently investigating a sound, or has no sounds to prioritize
+    bool Prioritize()
     {
-        if (investigating)
-            return;
+        if (noisesDetected.Count < 1)
+        {
+            Debug.Log("Cannot Prioritize");
+            return false;
+        }
+            
         Noise loudestNoise = noisesDetected[0];
         foreach (Noise detectedNoise in noisesDetected)
         {
@@ -94,8 +117,8 @@ public class PlayerController : MonoBehaviour
         }
         locationToInvestigate = loudestNoise.emittedLocation;
         Investigate();
+        return true;
     }
-
     void Investigate()
     {
         investigating = true;
