@@ -4,7 +4,7 @@ Shader "Basic Info" {
         ZTest greater
         ZWrite On //On: Make BG write to depth, could cause AO issues
         ColorMask 0
-        Offset 0, 1
+        Offset 1, 2
 
         Pass {
             Stencil {
