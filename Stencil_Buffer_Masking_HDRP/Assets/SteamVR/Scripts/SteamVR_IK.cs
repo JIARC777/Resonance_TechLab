@@ -1,4 +1,4 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+﻿    //======= Copyright (c) Valve Corporation, All rights reserved. ===============
 //
 // Purpose: Simple two bone ik solver.
 //
@@ -18,6 +18,13 @@ namespace Valve.VR
 
         [HideInInspector]
         public Transform startXform, jointXform, endXform;
+
+        void Update()
+        {
+            start.localRotation = Quaternion.Euler(start.localRotation.eulerAngles.x, start.localRotation.eulerAngles.y, 0);
+            joint.localRotation = Quaternion.Euler(joint.localRotation.eulerAngles.x, joint.localRotation.eulerAngles.y, 0);
+            end.localRotation = Quaternion.Euler(end.localRotation.eulerAngles.x, end.localRotation.eulerAngles.y, 0);
+        }
 
         void LateUpdate()
         {
