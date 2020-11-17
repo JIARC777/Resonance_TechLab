@@ -10,26 +10,45 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
 
     // value for determining whether or not a drone will treat a sound with suspicion and investigate
-    public float threshold = 1f; 
+    public float threshold = 1f;
+    public float investigationTime = 3f;
     // List of noises - Prioritiy on louder noises 
     List<Noise> noisesDetected;
     // Use to determine if collisions are originating from the same source or not - Constantly refreshed so that non-current sounds are not considered
     public Queue<int> SoundIDs;
     // used in determining collisions when 
-    float curNoiseID;
+    int curNoiseID;
     // Amount of time before dequeuing the SoundID queue to keep it organized 
     float timeSinceLastIDQueueRefresh;
+    // Set it to an arbitrarily high value so that before any sound is detected it wont attempt to prioritize anything
+    float timeReachedTarget = 100000;
     // Time between refreshing the list
     float idQueueRefreshRate = 10f;
     //bool locationReached = false;
     bool investigating;
-    public float investigationRadius = 3f;
+    bool finishedInvestigating = true;
+    bool patrolling;
+    public float arrivalRadius = 3f;
     Vector3 locationToInvestigate;
+    ParticleSystem pingDetection;
+    public GameObject[] guardPathNode;
+    int curPathNodeIndex;
+
+    public delegate void Impact();
+    public static event Impact ProbeDestroyed;
 
     public void Start()
     {
         noisesDetected = new List<Noise>();
         SoundIDs = new Queue<int>();
+        pingDetection = GetComponent<ParticleSystem>();
+        patrolling = true;
+        curPathNodeIndex = 0;
+
+        // Start the guard on a patrol route
+        locationToInvestigate = guardPathNode[curPathNodeIndex].transform.position;
+        agent.SetDestination(locationToInvestigate);
+        curPathNodeIndex = (curPathNodeIndex + 1) % guardPathNode.Length;
 
     }
     // Update is called once per frame
@@ -40,25 +59,64 @@ public class PlayerController : MonoBehaviour
         //     DirectWithMouseInput();
         //   }
         float distanceToTarget;
-        if (investigating)
+        if (investigating || patrolling)
         {
-           // Debug.Log("Investigating");
+            //Debug.Log("Investigating");
             distanceToTarget = (this.transform.position - locationToInvestigate).magnitude;
-            if (distanceToTarget <= investigationRadius)
+            if (distanceToTarget <= arrivalRadius)
             {
-                Debug.Log("No Longer Investiagting");
-                investigating = false;
-                // if there are any other targets, prioritize them
+                if (investigating)
+                {
+                    Debug.Log("Reached Location: Sending Ping");
+                    investigating = false;
+                    timeReachedTarget = Time.time;
+                    if (noisesDetected.Count > 0)
+                        noisesDetected.RemoveAt(curNoiseID);
+                    // Debug.Log(noisesDetected.Count);
+                    pingDetection.Emit(500);
+                    // if there are any other targets, prioritize them
+                } else
+                {
+                    locationToInvestigate = guardPathNode[curPathNodeIndex].transform.position;
+                    agent.SetDestination(locationToInvestigate);
+                    curPathNodeIndex = (curPathNodeIndex + 1) % guardPathNode.Length;
+
+                }
+
+            }
+        } else
+        {
+            if (Time.time >= timeReachedTarget + investigationTime & !patrolling)
+            {
                 if (!Prioritize())
                 {
                     agent.SetDestination(this.transform.position);
                     Debug.Log("Logic for returning to path");
+                    findClosestPatrolNode();
+                    patrolling = true;
                 }
             }
         }
         // Dequeue the list of detected sounds every so often
         if (Time.time >= timeSinceLastIDQueueRefresh + idQueueRefreshRate && SoundIDs.Count > 0)
             SoundIDs.Dequeue();
+    }
+    void findClosestPatrolNode()
+    {
+        int closestNode = 0;
+        float smallestDistance = 1000;
+        for (int i = 0; i < guardPathNode.Length; i++)
+        {
+            float distance = (this.transform.position - guardPathNode[i].transform.position).magnitude;
+            if (distance < smallestDistance)
+            {
+                smallestDistance = distance;
+                closestNode = i;
+            }
+        }
+        // Minus one because the logic for patrolling increments 
+        locationToInvestigate = guardPathNode[closestNode].transform.position;
+        agent.SetDestination(locationToInvestigate);
     }
     private void OnParticleCollision(GameObject soundPulse)
     {
@@ -90,6 +148,7 @@ public class PlayerController : MonoBehaviour
                 float detectedVolume = detectedNoise.volume;
                 if (detectedVolume > threshold)
                 {
+                    patrolling = false;
                     SoundIDs.Enqueue(detectedNoise.noiseID);
                     timeSinceLastIDQueueRefresh = Time.time;
                     noisesDetected.Add(detectedNoise);
@@ -107,13 +166,16 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Cannot Prioritize");
             return false;
-        }
-            
+        }     
         Noise loudestNoise = noisesDetected[0];
-        foreach (Noise detectedNoise in noisesDetected)
+        for (int i = 0; i < noisesDetected.Count; i++)
         {
-            if (detectedNoise.volume > loudestNoise.volume)
-                loudestNoise = detectedNoise;
+            if (noisesDetected[i].volume > loudestNoise.volume)
+            {
+                loudestNoise = noisesDetected[i];
+                curNoiseID = i;
+            }
+                
         }
         locationToInvestigate = loudestNoise.emittedLocation;
         Investigate();

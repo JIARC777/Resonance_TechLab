@@ -15,11 +15,14 @@ public class Noise
         //This is the allgorithm to determine exactly how "loud" something is considered
         volume = particleSize * volumeFactor;
         emittedLocation = emitterLoc;
+        this.noiseID = noiseID; 
 
     }
 }
 public class NoiseEmitter : MonoBehaviour
 {
+    // Factor that lifetime is cut by if a particle impacts a door
+    float doorInhibitor; 
     //Decide Max distance to travel
     public float travelDistance = 10f;
     //Set speed so that It can re-time the system based on distance; 
@@ -34,9 +37,8 @@ public class NoiseEmitter : MonoBehaviour
     public Noise noise; 
     // Reference to emitter
     ParticleSystem pSystem;
-    public float currentSize;
-
-  //  public List<ParticleCollisionEvent> collisionsWithEnemy;
+    public float currentMagnitude;
+    
 
     void Start()
     {
@@ -63,7 +65,19 @@ public class NoiseEmitter : MonoBehaviour
            // Debug.Log("Collision Detected");
             // doesnt really matter which particles reach it, if a drone is detected by a particle, populate the noise field so that the drone can access it
             if (noise == null)
-                noise = new Noise(this.transform.position, currentSize, volumeModifier, emitterID);
+                noise = new Noise(this.transform.position, currentMagnitude, volumeModifier, emitterID);
+        } 
+    }
+
+    private void OnParticleTrigger()
+    {
+        List<ParticleSystem.Particle> exitDoor = new List<ParticleSystem.Particle>();
+        int numParticles = pSystem.GetTriggerParticles(ParticleSystemTriggerEventType.Exit, exitDoor);
+        for (int i = 0; i < numParticles; i++)
+        {
+            ParticleSystem.Particle p = exitDoor[i];
+            p.startLifetime = lifeTime / 2;
+            exitDoor[i] = p;
         }
     }
     // Update is called once per frame
@@ -82,7 +96,7 @@ public class NoiseEmitter : MonoBehaviour
         if (pSystem.time >= lifeTime)
             Destroy(this.gameObject);
            // pSystem.time = 0;
-        currentSize = 1 - (pSystem.time / lifeTime);
+        currentMagnitude = 1 - (pSystem.time / lifeTime);
     }
     
 }

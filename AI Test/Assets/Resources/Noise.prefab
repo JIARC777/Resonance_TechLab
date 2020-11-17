@@ -3856,7 +3856,8 @@ ParticleSystem:
     interiorCollisions: 0
   TriggerModule:
     enabled: 1
-    collisionShape0: {fileID: 0}
+    collisionShape0: {fileID: 3788953469067456721, guid: ffc2b2d36d740bd47ad3aa372a81765b,
+      type: 3}
     collisionShape1: {fileID: 0}
     collisionShape2: {fileID: 0}
     collisionShape3: {fileID: 0}
@@ -3865,7 +3866,7 @@ ParticleSystem:
     inside: 1
     outside: 0
     enter: 0
-    exit: 0
+    exit: 1
     radiusScale: 1
   SubModule:
     serializedVersion: 2
@@ -4886,4 +4887,4 @@ MonoBehaviour:
   travelDistance: 30.5
   travelSpeed: 50
   volumeModifier: 1
-  currentSize: 0
+  currentMagnitude: 0
