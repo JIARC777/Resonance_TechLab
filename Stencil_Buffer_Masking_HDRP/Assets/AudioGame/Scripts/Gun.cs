@@ -29,7 +29,7 @@ namespace Valve.VR.InteractionSystem
         {
             isAttachedToHand = true;
             for (int i = 0; i < gunParts.Length; i++)
-                gunParts[i].layer = 11;
+                gunParts[i].layer = 13;
         }
 
         public void DetachedFromHand()
