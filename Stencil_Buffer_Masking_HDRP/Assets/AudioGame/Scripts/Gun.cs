@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,10 +14,19 @@ namespace Valve.VR.InteractionSystem
 
         private bool isAttachedToHand = false;
 
+
+        //DOTS
+        private FlamethrowerDOTSParticlespawnerSystem flameDOTS;
+        private void Awake()
+        {
+        }
+
+        //\\DOTS
         public void Fire()
         {
             if (isAttachedToHand)
                 particleSystem.Play();
+                flameDOTS?.SpawnParticles();
         }
 
         public void StopFiring()

@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &63755040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,8 +214,8 @@ MonoBehaviour:
       data:
         m_Name: Cutter
         enabled: 1
-        targetColorBuffer: 2
-        targetDepthBuffer: 2
+        targetColorBuffer: 0
+        targetDepthBuffer: 0
         clearFlags: 0
         passFoldout: 0
         m_Version: 0
@@ -238,7 +238,7 @@ MonoBehaviour:
       data:
         m_Name: Hiders
         enabled: 1
-        targetColorBuffer: 2
+        targetColorBuffer: 0
         targetDepthBuffer: 0
         clearFlags: 0
         passFoldout: 0
@@ -361,7 +361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879778496}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.217, y: 1.745, z: 1.078}
+  m_LocalPosition: {x: 2.467, y: 3.247, z: 1.328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
