@@ -1,5 +1,6 @@
 using Unity.Entities;
 using Unity.Mathematics;
+using Unity.Transforms;
 using UnityEngine;
 
 /// <summary>
@@ -34,6 +35,7 @@ public class CutterParticleTagAuthor : MonoBehaviour, IConvertGameObjectToEntity
         //   dstManager.AddComponentData(entity, new Unity.Transforms.Scale { Value = scale });
 
         dstManager.AddComponent<CutterParticleTag>(entity);
-
+        dstManager.AddComponent<Scale>(entity);
+        // dstManager.AddComponent<LocalToParent>(entity);
     }
 }

@@ -5,6 +5,7 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Physics;
 using Unity.Transforms;
+using UnityEngine;
 
 public class ParticleTransformSystem : SystemBase
 {
@@ -25,9 +26,8 @@ public class ParticleTransformSystem : SystemBase
         
         
         Entities
-            .WithAll<CutterParticleTag>()
-            .WithNone<CutterParticleCollidedTag>()
-            .ForEach((ref Translation tx, in Rotation rot) => {
+            .WithAll<CutterParticleTag, Child, LocalToParent>()
+            .ForEach((ref Translation tx, ref Scale scale, in Rotation rot) => {
             // Implement the work to perform for each entity here.
             // You should only access data that is local or that is a
             // field on this job. Note that the 'rotation' parameter is
@@ -37,10 +37,15 @@ public class ParticleTransformSystem : SystemBase
             // For example,
             //     translation.Value += math.mul(rotation.Value, new float3(0, 0, 1)) * deltaTime;
 
-            tx.Value += math.forward(rot.Value) * deltaTime;
-            
+            //DOTS: tx.Value += math.forward(rot.Value) * deltaTime;
 
-        }).WithBurst().ScheduleParallel();
+            // Shrink over time
+
+           scale.Value *= .95f;
+
+            Debug.Log("Scaling");
+
+            }).WithBurst().ScheduleParallel();
     }
 }
 

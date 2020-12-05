@@ -9,13 +9,8 @@ using Random = Unity.Mathematics.Random;
 
 public class FlamethrowerDOTSParticlespawnerSystem : ComponentSystem
 {
-	[SerializeField] private int particleSpawnAmount = 20;
-
-
-
 
 	private Random random;
-
 	protected override void OnUpdate()
 	{
 		SpawnParticles();
@@ -30,28 +25,35 @@ public class FlamethrowerDOTSParticlespawnerSystem : ComponentSystem
 	{
 		Entities.ForEach((ref FlamethrowerSpawner ftSpawner, ref Translation tx, ref Rotation parentRot) =>
 		{
-			for (int i = 0; i < particleSpawnAmount; i++)
+			//Spawn particles, as many as the flamethrower says to
+			for (int i = 0; i < ftSpawner.spawnAmount; i++)
 			{
 				Entity spawnedParticle = EntityManager.Instantiate(ftSpawner.flamethrowerParticleEntity);
 				
 				
-				//Set the particle's position at the parent's
+				//Set the particle's position at the parent, flamethrower 'nozzle'
 				EntityManager.SetComponentData(spawnedParticle,
 					new Translation
 					{
 						Value = tx.Value
 					});
 
+				
+				// Calculate the velocity for each particle
 				var particleFanAmount = ftSpawner.particleFanAmount;
 
 				var initialParticleVel = math.forward(parentRot.Value);
 
 				var randDirection = random.NextFloat3Direction();
+				
 				var fannedParticleVel = new float3(random.NextFloat(initialParticleVel.x - particleFanAmount.x, initialParticleVel.x + particleFanAmount.x),
 													 random.NextFloat(initialParticleVel.y - particleFanAmount.y, initialParticleVel.y + particleFanAmount.y),
 													 random.NextFloat(initialParticleVel.z - particleFanAmount.z, initialParticleVel.z + particleFanAmount.z));
 
 				var finalParticleVel = fannedParticleVel * ftSpawner.launchSpeed;
+				
+				
+				
 				//Set the particles start vel
 				EntityManager.SetComponentData(spawnedParticle,
 					new PhysicsVelocity
@@ -59,6 +61,16 @@ public class FlamethrowerDOTSParticlespawnerSystem : ComponentSystem
 						Linear = finalParticleVel,
 						Angular = float3.zero
 					});
+
+				//Add a Scale component to the particles (not on the 
+				EntityManager.AddComponentData(spawnedParticle,
+					new Scale
+					{
+						Value = 0.1f
+					});
+
+				EntityManager.AddComponentData(spawnedParticle,
+					new CutterParticleTag { });
 			}
 		});
 	}

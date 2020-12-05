@@ -167,11 +167,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flamethrowerParticleEntity: {fileID: 2491801065413494345, guid: 2b75e22ae423989c195605d53d7059b8, type: 3}
-  launchSpeed: 1500
+  launchSpeed: 20
   particleFanAmount:
-    x: 0
-    y: 0
-    z: 0
+    x: 0.01
+    y: 0.1
+    z: 0.01
+  spawnAmount: 3
 --- !u!4 &1489946669
 Transform:
   m_ObjectHideFlags: 0
@@ -179,10 +180,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489946666}
-  m_LocalRotation: {x: -0.0044709477, y: -0, z: -0, w: 0.99999}
-  m_LocalPosition: {x: -0.231, y: 2.192, z: -1.596}
+  m_LocalRotation: {x: 0.014141102, y: -0, z: -0, w: 0.99990004}
+  m_LocalPosition: {x: -0.231, y: 2.69, z: -8.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.512, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.621, y: 0, z: 0}

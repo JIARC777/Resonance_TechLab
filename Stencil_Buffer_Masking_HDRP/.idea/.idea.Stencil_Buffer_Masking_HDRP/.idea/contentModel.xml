@@ -31,6 +31,7 @@
         </e>
         <e p="B_TestingGround" t="Include">
           <e p="DOTS_Particles" t="Include">
+            <e p="CutterParticleCollisionSystem.cs" t="Include" />
             <e p="CutterParticleTag.cs" t="Include" />
             <e p="CutterParticleTagAuthor.cs" t="Include" />
             <e p="FlamethrowerDOTSParticlespawnerSystem.cs" t="Include" />
@@ -549,7 +550,7 @@
               <e p="AnalyticsEditorCallbacks.cs" t="Include" />
             </e>
           </e>
-          <e p="com.unity.burst@1.4.1-pre.2" t="Include">
+          <e p="com.unity.burst@1.4.1" t="Include">
             <e p="Editor" t="Include">
               <e p="BurstAotCompiler.cs" t="Include" />
               <e p="BurstAotSettings.cs" t="Include" />
@@ -1592,7 +1593,7 @@
               <e p="Unity.Transforms.Hybrid.asmdef" t="Include" />
             </e>
           </e>
-          <e p="com.unity.ide.rider@2.0.7" t="Include">
+          <e p="com.unity.ide.rider@3.0.2" t="Include">
             <e p="Rider" t="Include">
               <e p="Editor" t="Include">
                 <e p="Discovery.cs" t="Include" />
@@ -1635,6 +1636,7 @@
                   <e p="FileSystemUtil.cs" t="Include" />
                   <e p="LibcNativeInterop.cs" t="Include" />
                   <e p="RiderMenu.cs" t="Include" />
+                  <e p="RiderPathUtil.cs" t="Include" />
                   <e p="SerializableVersion.cs" t="Include" />
                 </e>
                 <e p="com.unity.ide.rider.asmdef" t="Include" />
@@ -2627,7 +2629,7 @@
               </e>
             </e>
           </e>
-          <e p="com.unity.render-pipelines.core@10.1.0" t="Include">
+          <e p="com.unity.render-pipelines.core@10.2.0" t="Include">
             <e p="Editor" t="Include">
               <e p="CameraEditorUtils.cs" t="Include" />
               <e p="ContextualMenuDispatcher.cs" t="Include" />
@@ -2685,6 +2687,9 @@
               <e p="MaterialUpgrader.cs" t="Include" />
               <e p="PropertyFetcher.cs" t="Include" />
               <e p="QuaternionPropertyDrawer.cs" t="Include" />
+              <e p="RenderGraph" t="Include">
+                <e p="RenderGraphViewer.cs" t="Include" />
+              </e>
               <e p="ShaderGenerator" t="Include">
                 <e p="CSharpToHLSL.cs" t="Include" />
                 <e p="ShaderGeneratorMenu.cs" t="Include" />
@@ -2903,7 +2908,7 @@
               <e p="VolumeRendering.hlsl" t="Include" />
             </e>
           </e>
-          <e p="com.unity.render-pipelines.high-definition@10.1.0" t="Include">
+          <e p="com.unity.render-pipelines.high-definition@10.2.0" t="Include">
             <e p="Editor" t="Include">
               <e p="AssemblyInfo.cs" t="Include" />
               <e p="AssetProcessors" t="Include">
@@ -2946,6 +2951,7 @@
                   <e p="TextureCombiner.shader" t="Include" />
                 </e>
               </e>
+              <e p="HDAnalytics.cs" t="Include" />
               <e p="Lighting" t="Include">
                 <e p="AdditionalShadowDataEditor.cs" t="Include" />
                 <e p="AmbientOcclusionEditor.cs" t="Include" />
@@ -2975,7 +2981,6 @@
                   <e p="HDAdditionalReflectionDataEditor.cs" t="Include" />
                   <e p="HDBakedReflectionSystem.cs" t="Include" />
                   <e p="HDProbeEditor.cs" t="Include" />
-                  <e p="HDProbeUI.ContextualMenu.cs" t="Include" />
                   <e p="HDProbeUI.Drawers.cs" t="Include" />
                   <e p="HDProbeUI.Handles.cs" t="Include" />
                   <e p="HDProbeUI.Skin.cs" t="Include" />
@@ -3108,7 +3113,6 @@
                     <e p="HDLitData.cs" t="Include" />
                     <e p="HDLitSubTarget.Migration.cs" t="Include" />
                     <e p="HDLitSubTarget.cs" t="Include" />
-                    <e p="LitPropertyBlock.cs" t="Include" />
                     <e p="LitSurfaceOptionPropertyBlock.cs" t="Include" />
                     <e p="ShaderPass.template.hlsl" t="Include" />
                     <e p="ShaderPassDefine.template.hlsl" t="Include" />
@@ -3210,6 +3214,7 @@
                   <e p="LayeringOptionsUIBlock.cs" t="Include" />
                   <e p="LayersUIBlock.cs" t="Include" />
                   <e p="LightingShaderGraphGUI.cs" t="Include" />
+                  <e p="LitShaderGraphGUI.cs" t="Include" />
                   <e p="LitSurfaceInputsUIBlock.cs" t="Include" />
                   <e p="MaterialUIBlock.cs" t="Include" />
                   <e p="MaterialUIBlockList.cs" t="Include" />
@@ -4041,6 +4046,7 @@
                     <e p="PathTracingMain.raytrace" t="Include" />
                     <e p="PathTracingMaterial.hlsl" t="Include" />
                     <e p="PathTracingSampling.hlsl" t="Include" />
+                    <e p="PathTracingVolume.hlsl" t="Include" />
                   </e>
                 </e>
                 <e p="Raytracing" t="Include">
@@ -4163,6 +4169,7 @@
                   </e>
                   <e p="DrawRenderersCustomPass.cs" t="Include" />
                   <e p="FullScreenCustomPass.cs" t="Include" />
+                  <e p="GenerateMaxZ.compute" t="Include" />
                   <e p="MSAA" t="Include">
                     <e p="AmbientOcclusionResolve.shader" t="Include" />
                     <e p="ColorResolve.shader" t="Include" />
@@ -4240,8 +4247,10 @@
                 <e p="CopyStencilBuffer.shader" t="Include" />
                 <e p="DownsampleDepth.shader" t="Include" />
                 <e p="EditorShaderVariables.hlsl" t="Include" />
+                <e p="PickingSpaceTransforms.hlsl" t="Include" />
                 <e p="ResolveStencilBuffer.compute" t="Include" />
                 <e p="ShaderGraphFunctions.hlsl" t="Include" />
+                <e p="ShaderGraphHeader.hlsl" t="Include" />
                 <e p="ShaderVariables.hlsl" t="Include" />
                 <e p="ShaderVariablesFunctions.hlsl" t="Include" />
                 <e p="ShaderVariablesGlobal.cs" t="Include" />
@@ -4767,7 +4776,7 @@
               </e>
             </e>
           </e>
-          <e p="com.unity.shadergraph@10.1.0" t="Include">
+          <e p="com.unity.shadergraph@10.2.0" t="Include">
             <e p="Editor" t="Include">
               <e p="AssemblyInfo.cs" t="Include" />
               <e p="AssetCallbacks" t="Include">
@@ -5031,6 +5040,7 @@
                       <e p="CubemapAssetNode.cs" t="Include" />
                       <e p="ProceduralVirtualTextureNode.cs" t="Include" />
                       <e p="SampleCubemapNode.cs" t="Include" />
+                      <e p="SampleRawCubemapNode.cs" t="Include" />
                       <e p="SampleTexture2DArrayNode.cs" t="Include" />
                       <e p="SampleTexture2DLODNode.cs" t="Include" />
                       <e p="SampleTexture2DNode.cs" t="Include" />
@@ -6549,7 +6559,7 @@
               </e>
             </e>
           </e>
-          <e p="com.unity.visualeffectgraph@10.1.0" t="Include">
+          <e p="com.unity.visualeffectgraph@10.2.0" t="Include">
             <e p="Editor" t="Include">
               <e p="Compiler" t="Include">
                 <e p="VFXCodeGenerator.cs" t="Include" />
@@ -6628,6 +6638,7 @@
                 <e p="VFXExpressionSampleTextureCube.cs" t="Include" />
                 <e p="VFXExpressionSampleTextureCubeArray.cs" t="Include" />
                 <e p="VFXExpressionSpawnerState.cs" t="Include" />
+                <e p="VFXExpressionStrips.cs" t="Include" />
                 <e p="VFXExpressionTextureDim.cs" t="Include" />
                 <e p="VFXExpressionTextureValues.cs" t="Include" />
                 <e p="VFXExpressionTransform.cs" t="Include" />
@@ -6804,6 +6815,7 @@
                       <e p="PositionDepth.cs" t="Include" />
                       <e p="PositionLine.cs" t="Include" />
                       <e p="PositionMesh.cs" t="Include" />
+                      <e p="PositionSDF.cs" t="Include" />
                       <e p="PositionSequential.cs" t="Include" />
                       <e p="PositionSphere.cs" t="Include" />
                       <e p="PositionTorus.cs" t="Include" />
@@ -7583,7 +7595,7 @@
     </e>
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_Stencil_Buffer_Masking_HDRP.-509538455.00" t="ExcludeRecursive" />
-    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a4/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor" t="Include">
+    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a7/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.sprite/Editor" t="Include">
       <e p="AssemblyInfo.cs" t="Include" />
       <e p="Interface" t="Include">
         <e p="IAssetDatabase.cs" t="Include" />
@@ -7641,7 +7653,7 @@
       </e>
       <e p="Unity.2D.Sprite.Editor.asmdef" t="Include" />
     </e>
-    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a4/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor" t="Include">
+    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a7/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.2d.tilemap/Editor" t="Include">
       <e p="AssemblyInfo.cs" t="Include" />
       <e p="CreateTileFromPaletteAttribute.cs" t="Include" />
       <e p="EditorTools" t="Include">
@@ -7682,12 +7694,13 @@
       <e p="SceneViewGridManager.cs" t="Include" />
       <e p="SceneViewOpenTilePaletteHelper.cs" t="Include" />
       <e p="TileDragAndDrop.cs" t="Include" />
+      <e p="TileDragAndDropHoverData.cs" t="Include" />
       <e p="TileDragAndDropManager.cs" t="Include" />
       <e p="TileUtility.cs" t="Include" />
       <e p="TilemapPrefabStageHelper.cs" t="Include" />
       <e p="Unity.2D.Tilemap.Editor.asmdef" t="Include" />
     </e>
-    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a4/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor" t="Include">
+    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a7/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Editor" t="Include">
       <e p="EventSystem" t="Include">
         <e p="EventSystemEditor.cs" t="Include" />
         <e p="EventTriggerEditor.cs" t="Include" />
@@ -7735,7 +7748,7 @@
       </e>
       <e p="UnityEditor.UI.asmdef" t="Include" />
     </e>
-    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a4/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime" t="Include">
+    <e p="$USER_HOME$/Unity/Hub/Editor/2021.1.0a7/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime" t="Include">
       <e p="EventSystem" t="Include">
         <e p="EventData" t="Include">
           <e p="AxisEventData.cs" t="Include" />
@@ -7764,6 +7777,10 @@
           <e p="PhysicsRaycaster.cs" t="Include" />
         </e>
         <e p="UIBehaviour.cs" t="Include" />
+        <e p="UIElements" t="Include">
+          <e p="PanelEventHandler.cs" t="Include" />
+          <e p="PanelRaycaster.cs" t="Include" />
+        </e>
       </e>
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />

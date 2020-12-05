@@ -13,4 +13,5 @@ public struct FlamethrowerSpawner : IComponentData
 	[SerializeField] public Entity flamethrowerParticleEntity;
 	[SerializeField] public float launchSpeed;
 	[SerializeField] public float3 particleFanAmount;
+	[SerializeField] public int spawnAmount;
 }

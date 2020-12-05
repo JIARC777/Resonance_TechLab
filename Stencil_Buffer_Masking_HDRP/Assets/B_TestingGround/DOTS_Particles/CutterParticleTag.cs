@@ -3,12 +3,12 @@
 using Unity.Entities;
 
 [GenerateAuthoringComponent]
-public class CutterParticleTag : IComponentData
+public struct CutterParticleTag : IComponentData
 {
 }
 
 
 [GenerateAuthoringComponent]
-public class CutterParticleCollidedTag : IComponentData
+public struct CutterParticleCollidedTag : IComponentData
 {
 }
