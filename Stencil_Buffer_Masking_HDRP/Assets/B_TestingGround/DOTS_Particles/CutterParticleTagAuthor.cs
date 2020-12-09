@@ -18,7 +18,7 @@ public class CutterParticleTagAuthor : MonoBehaviour, IConvertGameObjectToEntity
     //   must be one of the supported types.
     //
     // For example,
-    //    public float scale;
+    public float scale;
     
     
 
@@ -32,10 +32,12 @@ public class CutterParticleTagAuthor : MonoBehaviour, IConvertGameObjectToEntity
         //   to do it, instead of adding entities through 'dstManager' directly.
         //
         // For example,
-        //   dstManager.AddComponentData(entity, new Unity.Transforms.Scale { Value = scale });
+        dstManager.AddComponentData(entity, new Unity.Transforms.Scale { Value = scale });
 
-        dstManager.AddComponent<CutterParticleTag>(entity);
-        dstManager.AddComponent<Scale>(entity);
+        dstManager.AddComponentData(entity, new CutterParticleTag{});
+        // dstManager.AddComponent<Scale>(entity);
+		dstManager.AddComponentData(entity, new Scale {	Value = 0.1f });
         // dstManager.AddComponent<LocalToParent>(entity);
+
     }
 }

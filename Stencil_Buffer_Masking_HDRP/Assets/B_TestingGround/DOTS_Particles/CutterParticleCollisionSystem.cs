@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst;
 using Unity.Entities;
 using Unity.Jobs;
 using Unity.Physics;
@@ -36,6 +37,7 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 		return collideJob.Schedule(StepPhysicsWorld.Simulation, ref BuildPhysicsWorld.PhysicsWorld, inputDeps);
 	}
 
+	[BurstCompile]
 	private struct CollideJob : ICollisionEventsJob
 	{
 		public ComponentDataFromEntity<CutterParticleTag> cutParticleTag;
@@ -50,13 +52,13 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 			Entity particle;
 			Entity otherCollider;
 
-			if (cutParticleTag.HasComponent(collisionEvent.EntityA) && !cutParticleTag.HasComponent(collisionEvent.EntityB))
+			if (cutParticleTag.HasComponent(collisionEvent.EntityA))
 			{
 				//Particle is A
 				particle = collisionEvent.EntityA;
 				otherCollider = collisionEvent.EntityB;
 			}
-			else if (cutParticleTag.HasComponent(collisionEvent.EntityB) && !cutParticleTag.HasComponent(collisionEvent.EntityA))
+			else if (cutParticleTag.HasComponent(collisionEvent.EntityB))
 			{
 				//Particle is B
 				particle = collisionEvent.EntityB;
@@ -71,17 +73,17 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 
 			//Add the needed transform
 
-			//Connect to the parent
-			dstManager.AddComponent(particle, new Parent
-			{
-				Value = otherCollider
-			});
-			dstManager.AddComponent(particle, new LocalToWorld
-			{
-			});
-			dstManager.AddComponent(particle, new LocalToParent
-			{
-			});
+			// Connect to the parent
+			 dstManager.AddComponent(particle, new Parent
+			 {
+			 	Value = otherCollider
+			 });
+			 dstManager.AddComponent(particle, new LocalToWorld
+			 {
+			 });
+			 dstManager.AddComponent(particle, new LocalToParent
+			 {
+			 });
 
 			
 			//Remove physics body

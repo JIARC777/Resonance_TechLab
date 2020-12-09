@@ -7,13 +7,26 @@ using Unity.Physics;
 using Unity.Transforms;
 using UnityEngine;
 
+[DisableAutoCreation]
 public class ParticleTransformSystem : SystemBase
 {
-    protected override void OnUpdate()
+	public float minParticleScale = 0.001f;
+
+	private EntityCommandBufferSystem ecbSys;
+
+	protected override void OnCreate()
+	{
+		ecbSys = World.GetExistingSystem<EndSimulationEntityCommandBufferSystem>();
+	}
+
+	protected override void OnUpdate()
     {
         // Assign values to local variables captured in your job here, so that it has
         // everything it needs to do its work when it runs later.
         // For example,
+        // var commandBuffer = ecbSys.CreateCommandBuffer().AsParallelWriter();
+        var minPScale = minParticleScale;
+
         
         float deltaTime = Time.DeltaTime;
 
@@ -26,8 +39,11 @@ public class ParticleTransformSystem : SystemBase
         
         
         Entities
+	        // .WithNativeDisableParallelForRestriction(commandBuffer)
             .WithAll<CutterParticleTag, Child, LocalToParent>()
-            .ForEach((ref Translation tx, ref Scale scale, in Rotation rot) => {
+            .ForEach((Entity entity, ref Translation tx, ref Scale scale, in Rotation rot) =>
+            {
+
             // Implement the work to perform for each entity here.
             // You should only access data that is local or that is a
             // field on this job. Note that the 'rotation' parameter is
@@ -43,9 +59,16 @@ public class ParticleTransformSystem : SystemBase
 
            scale.Value *= .95f;
 
-            Debug.Log("Scaling");
+            // Debug.Log("Scaling");
+            if (scale.Value <= minPScale)
+            {
+	            // commandBuffer.DestroyEntity(0, entity);
+            }
 
+            
             }).WithBurst().ScheduleParallel();
+        
+        // commandBuffer.Dispose();
     }
 }
 
