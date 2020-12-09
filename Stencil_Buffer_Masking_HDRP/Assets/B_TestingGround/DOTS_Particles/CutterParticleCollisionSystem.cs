@@ -29,19 +29,19 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 		var collideJob = new CollideJob
 			{
 				cutParticleTag = GetComponentDataFromEntity<CutterParticleTag>(),
-				dstManager = dstManager.CreateCommandBuffer(),
+				ecBuffer = dstManager.CreateCommandBuffer(),
 				jobHandle = inputDeps,
-			};
+			}.Schedule(StepPhysicsWorld.Simulation, ref BuildPhysicsWorld.PhysicsWorld, inputDeps);
 
-		// dstManager.AddJobHandleForProducer(collideJob);
-		return collideJob.Schedule(StepPhysicsWorld.Simulation, ref BuildPhysicsWorld.PhysicsWorld, inputDeps);
+		dstManager.AddJobHandleForProducer(collideJob);
+		return collideJob;
 	}
 
 	[BurstCompile]
 	private struct CollideJob : ICollisionEventsJob
 	{
 		public ComponentDataFromEntity<CutterParticleTag> cutParticleTag;
-		public EntityCommandBuffer dstManager;
+		public EntityCommandBuffer ecBuffer;
 		public JobHandle jobHandle;
 
 
@@ -75,22 +75,22 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 			//Add the needed transform
 
 			// Connect to the parent
-			 dstManager.AddComponent(particle, new Parent
+			 ecBuffer.AddComponent(particle, new Parent
 			 {
 			 	Value = otherCollider
 			 });
-			 dstManager.AddComponent(particle, new LocalToWorld
+			 ecBuffer.AddComponent(particle, new LocalToWorld
 			 {
 			 });
-			 dstManager.AddComponent(particle, new LocalToParent
+			 ecBuffer.AddComponent(particle, new LocalToParent
 			 {
 			 });
 
 			
 			//Remove physics body
-			dstManager.SetComponent<PhysicsVelocity>(particle, new PhysicsVelocity{});
+			ecBuffer.SetComponent<PhysicsVelocity>(particle, new PhysicsVelocity{});
 
-			dstManager.SetComponent<PhysicsDamping>(particle, new PhysicsDamping
+			ecBuffer.SetComponent<PhysicsDamping>(particle, new PhysicsDamping
 			{
 				Linear =  Single.PositiveInfinity,
 				Angular = Single.PositiveInfinity

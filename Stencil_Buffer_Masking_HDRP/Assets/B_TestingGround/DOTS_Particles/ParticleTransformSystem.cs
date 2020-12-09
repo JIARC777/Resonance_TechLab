@@ -7,7 +7,7 @@ using Unity.Physics;
 using Unity.Transforms;
 using UnityEngine;
 
-[DisableAutoCreation]
+
 public class ParticleTransformSystem : SystemBase
 {
 	public float minParticleScale = 0.001f;
