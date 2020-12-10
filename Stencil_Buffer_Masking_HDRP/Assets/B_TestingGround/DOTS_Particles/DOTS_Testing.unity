@@ -180,14 +180,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d30974bf68d61043b1572197db94cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SimulationType: 2
+  m_SimulationType: 1
   m_Gravity:
     x: -0
     y: -9.81
     z: -0
   m_SolverIterationCount: 1
   m_EnableSolverStabilizationHeuristic: 0
-  m_ThreadCountHint: 8
+  m_ThreadCountHint: 11
   m_SynchronizeCollisionWorld: 0
 --- !u!4 &410791136
 Transform:
@@ -260,12 +260,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flamethrowerParticleEntity: {fileID: 2491801065413494345, guid: 2b75e22ae423989c195605d53d7059b8, type: 3}
-  launchSpeed: 20
+  launchSpeed: 1
   particleFanAmount:
     x: 0.01
     y: 0.1
     z: 0.01
-  spawnAmount: 3
+  spawnAmount: 20
 --- !u!4 &1489946669
 Transform:
   m_ObjectHideFlags: 0
