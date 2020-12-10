@@ -11,7 +11,6 @@ using Unity.Rendering;
 using Unity.Transforms;
 using UnityEngine;
 
-
 [UpdateAfter(typeof(EndFramePhysicsSystem))]
 public class CutterParticleCollisionSystem : JobComponentSystem
 {

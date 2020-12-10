@@ -39,11 +39,11 @@ public class FlamethrowerDOTSParticlespawnerSystem : ComponentSystem
 			Debug.Log("caw");
 			
 			//Add a Scale component to the particles (not on the 
-		/*	ecBuffer.AddComponent(entityInQueryIndex, spawnedParticle,
+			EntityManager.AddComponentData(spawnedParticle,
 				new Scale
 				{
 					Value = 0.1f
-				});
+				});*/
 			
 			//Set the particle's position at the parent, flamethrower 'nozzle'
 			ecBuffer.SetComponent(entityInQueryIndex, spawnedParticle,
