@@ -7,7 +7,7 @@ using UnityEngine;
 using Unity.Mathematics;
 using Random = Unity.Mathematics.Random;
 
-
+[UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
 public class FlamethrowerDOTSParticlespawnerSystem : ComponentSystem
 {
 	public Entity particle;
@@ -33,11 +33,11 @@ public class FlamethrowerDOTSParticlespawnerSystem : ComponentSystem
 			
 			
 			//Add a Scale component to the particles (not on the 
-			EntityManager.AddComponentData(spawnedParticle,
+/*			EntityManager.AddComponentData(spawnedParticle,
 				new Scale
 				{
 					Value = 0.1f
-				});
+				});*/
 			
 			//Set the particle's position at the parent, flamethrower 'nozzle'
 			EntityManager.SetComponentData(spawnedParticle,
