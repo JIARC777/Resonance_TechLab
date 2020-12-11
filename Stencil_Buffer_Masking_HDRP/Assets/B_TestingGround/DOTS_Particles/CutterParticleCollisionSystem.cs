@@ -11,7 +11,7 @@ using Unity.Rendering;
 using Unity.Transforms;
 using UnityEngine;
 
-[DisableAutoCreation]
+[UpdateAfter(typeof(EndFramePhysicsSystem))]
 public class CutterParticleCollisionSystem : JobComponentSystem
 {
 	private BuildPhysicsWorld BuildPhysicsWorld;

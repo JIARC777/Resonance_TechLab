@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2491801065413494348}
   - component: {fileID: 2491801065413494353}
   - component: {fileID: 2491801065413494351}
+  - component: {fileID: 5130430003767932367}
   m_Layer: 8
   m_Name: CutterCube
   m_TagString: Untagged
@@ -292,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f24f54706161198842857cb88bdf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scale: 0
 --- !u!114 &2491801065413494351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,3 +307,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ConversionMode: 0
+--- !u!114 &5130430003767932367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2491801065413494345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb54ea4f67dc17342bcd49954c53502d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DrawColliders: 1
+  DrawColliderEdges: 1
+  DrawColliderAabbs: 1
+  DrawBroadphase: 1
+  DrawMassProperties: 1
+  DrawContacts: 1
+  DrawCollisionEvents: 1
+  DrawTriggerEvents: 1
+  DrawJoints: 1
