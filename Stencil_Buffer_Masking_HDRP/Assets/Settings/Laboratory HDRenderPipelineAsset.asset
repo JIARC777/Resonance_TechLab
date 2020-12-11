@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf1dab834d4ec34195b920ea7bbf9ec, type: 3}
-  m_Name: HDRenderPipelineAsset
+  m_Name: Laboratory HDRenderPipelineAsset
   m_EditorClassIdentifier: 
   m_RenderPipelineResources: {fileID: 11400000, guid: 3ce144cff5783da45aa5d4fdc2da14b7, type: 2}
   m_RenderPipelineRayTracingResources: {fileID: 0}
-  m_DefaultVolumeProfile: {fileID: 11400000, guid: 5268b44263d493b4488f4014df63b663, type: 2}
+  m_DefaultVolumeProfile: {fileID: 0}
   m_LensAttenuation: 0
   m_UseRenderGraph: 1
-  m_DefaultLookDevProfile: {fileID: 11400000, guid: 254c4fe87beb7be4fa72e1681edbed02, type: 2}
+  m_DefaultLookDevProfile: {fileID: 0}
   m_RenderingPathDefaultCameraFrameSettings:
     bitDatas:
-      data1: 140668768878413
+      data1: 140649441525597
       data2: 4539628425463136280
     lodBias: 1
     lodBiasMode: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
     materialQuality: 0
   m_RenderingPathDefaultBakedOrCustomReflectionFrameSettings:
     bitDatas:
-      data1: 135310787769165
+      data1: 140121151402781
       data2: 4539628424389459992
     lodBias: 1
     lodBiasMode: 0
@@ -48,8 +48,8 @@ MonoBehaviour:
     materialQuality: 0
   m_RenderingPathDefaultRealtimeReflectionFrameSettings:
     bitDatas:
-      data1: 139923425337165
-      data2: 4539628424657895448
+      data1: 139922754248477
+      data2: 4539628424389459992
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
     sssCustomSampleBudget: 20
     materialQuality: 0
   m_RenderPipelineSettings:
-    supportShadowMask: 1
+    supportShadowMask: 0
     supportSSR: 0
     supportSSRTransparent: 0
     supportSSAO: 1
@@ -71,8 +71,8 @@ MonoBehaviour:
       m_Values: 140000002800000050000000
       m_SchemaId:
         m_Id: With3Levels
-    supportVolumetrics: 1
-    supportLightLayers: 1
+    supportVolumetrics: 0
+    supportLightLayers: 0
     lightLayerName0: Light Layer default
     lightLayerName1: Light Layer 1
     lightLayerName2: Light Layer 2
@@ -88,9 +88,9 @@ MonoBehaviour:
     colorBufferFormat: 74
     supportCustomPass: 1
     customBufferFormat: 12
-    supportedLitShaderMode: 1
+    supportedLitShaderMode: 3
     planarReflectionResolution:
-      m_Values: 000100000004000000040000
+      m_Values: 000100000004000000080000
       m_SchemaId:
         m_Id: With3Levels
     supportDecals: 1
@@ -103,15 +103,15 @@ MonoBehaviour:
     decalLayerName5: Decal Layer 5
     decalLayerName6: Decal Layer 6
     decalLayerName7: Decal Layer 7
-    msaaSampleCount: 1
-    supportMotionVectors: 0
-    supportRuntimeDebugDisplay: 0
+    msaaSampleCount: 4
+    supportMotionVectors: 1
+    supportRuntimeDebugDisplay: 1
     supportRuntimeAOVAPI: 0
     supportDitheringCrossFade: 1
     supportTerrainHole: 0
     supportProbeVolume: 0
     supportRayTracing: 0
-    supportedRayTracingMode: 3
+    supportedRayTracingMode: 1
     probeVolumeSettings:
       atlasResolution: 128
       atlasOctahedralDepthResolution: 2048
@@ -119,9 +119,9 @@ MonoBehaviour:
       cookieAtlasSize: 2048
       cookieFormat: 74
       cookieAtlasLastValidMip: 0
-      cookieTexArraySize: 1
-      planarReflectionAtlasSize: 1024
-      reflectionProbeCacheSize: 64
+      cookieTexArraySize: 10
+      planarReflectionAtlasSize: 64
+      reflectionProbeCacheSize: 32
       reflectionCubemapSize: 256
       reflectionCacheCompressed: 0
       reflectionProbeFormat: 74
@@ -139,16 +139,16 @@ MonoBehaviour:
       maxLightsPerClusterCell: 8
     hdShadowInitParams:
       maxShadowRequests: 128
-      directionalShadowsDepthBits: 32
+      directionalShadowsDepthBits: 16
       shadowFilteringQuality: 1
       punctualLightShadowAtlas:
-        shadowAtlasResolution: 4096
-        shadowAtlasDepthBits: 32
-        useDynamicViewportRescale: 1
-      areaLightShadowAtlas:
         shadowAtlasResolution: 2048
         shadowAtlasDepthBits: 16
-        useDynamicViewportRescale: 1
+        useDynamicViewportRescale: 0
+      areaLightShadowAtlas:
+        shadowAtlasResolution: 512
+        shadowAtlasDepthBits: 16
+        useDynamicViewportRescale: 0
       cachedPunctualLightShadowAtlas: 2048
       cachedAreaLightShadowAtlas: 1024
       shadowResolutionDirectional:
@@ -183,7 +183,7 @@ MonoBehaviour:
       maxPercentage: 100
       minPercentage: 100
       dynResType: 1
-      upsampleFilter: 0
+      upsampleFilter: 1
       forceResolution: 0
       forcedPercentage: 100
     lowresTransparentSettings:
@@ -304,8 +304,10 @@ MonoBehaviour:
   m_DefaultMaterialQualityLevel: 4
   diffusionProfileSettings: {fileID: 0}
   diffusionProfileSettingsList:
-  - {fileID: 11400000, guid: 4dd71b09869700041b811e9555387e0a, type: 2}
-  - {fileID: 11400000, guid: 77ea8c96a48b15d478e97548ea472f24, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   beforeTransparentCustomPostProcesses: []
   beforeTAACustomPostProcesses: []
   beforePostProcessCustomPostProcesses: []
