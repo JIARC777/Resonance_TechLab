@@ -7,15 +7,25 @@ using UnityEngine;
 using Unity.Mathematics;
 using Random = Unity.Mathematics.Random;
 
-
+[UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
 public class FlamethrowerDOTSParticlespawnerSystem : ComponentSystem
 {
 	public Entity particle;
 
 	private Random random;
+
+	private int _spawnLimit = 100;
+	int _iter = 0;
+
 	protected override void OnUpdate()
 	{
-		SpawnParticles();
+		if (_iter < _spawnLimit)
+        {
+            _iter++;
+			SpawnParticles();
+
+		}
+
 	}
 
 	protected override void OnCreate()
