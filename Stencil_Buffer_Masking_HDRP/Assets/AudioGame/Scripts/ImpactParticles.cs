@@ -9,7 +9,7 @@ public class ImpactParticles : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.relativeVelocity.magnitude);
+        //Debug.Log(collision.relativeVelocity.magnitude);
         if (collision.relativeVelocity.magnitude >= minVelocity)
         {
             emitter.Play();

@@ -34,8 +34,6 @@ namespace Valve.VR.InteractionSystem
             }
 
             Vector2 coordinates = moveInput.axis;
-            //float x = coordinates.x;
-            //float z = coordinates.y;
             float x = playerViewCamera.transform.forward.x * coordinates.y;
             float z = 0;
             Vector3 direction = new Vector3(playerViewCamera.transform.forward.x * coordinates.y + playerViewCamera.transform.right.x * coordinates.x, 0, playerViewCamera.transform.forward.z * coordinates.y + playerViewCamera.transform.right.z * coordinates.x);
@@ -47,18 +45,19 @@ namespace Valve.VR.InteractionSystem
             Vector3 move = transform.right * x + transform.forward * z;
 
             controller.Move(direction * speed * Time.deltaTime);
+            Debug.Log(direction * speed * Time.deltaTime);
 
-            if (Input.GetButtonDown("Jump") && isGrounded)
-            {
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            }
+            //if (Input.GetButtonDown("Jump") && isGrounded)
+            //{
+            //    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            //}
 
             velocity.y += gravity * Time.deltaTime;
 
             //physics of free fall, multiply by time again
             controller.Move(velocity * Time.deltaTime);
             controller.center = new Vector3(bodyCollider.transform.localPosition.x, controller.center.y, bodyCollider.transform.localPosition.z);
-            //Debug.Log(bodyCollider.transform.localPosition);
+            //Debug.Log(velocity.y);
         }
     }
 }
