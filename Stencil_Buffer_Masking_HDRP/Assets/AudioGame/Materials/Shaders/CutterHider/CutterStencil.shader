@@ -15,6 +15,7 @@ Shader "Depth Mask"
         
 
     }
+    
     HLSLINCLUDE
 
     #pragma target 4.5
