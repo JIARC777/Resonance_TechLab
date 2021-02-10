@@ -58,13 +58,12 @@ public class ParticleTransformSystem : SystemBase
 
 		        // Shrink over time
 
-		        scale.Value *= .99f;
+		        scale.Value *= 0.85f;
 
 		        // Debug.Log("Scaling");
-		        if (scale.Value <= minPScale)
+		        if (math.length(scale.Value) <= minPScale)
 		        {
 			        commandBuffer.DestroyEntity(0, entity);
-			        //Debug.Log("Deleted ent");
 		        }
 
 
@@ -72,7 +71,6 @@ public class ParticleTransformSystem : SystemBase
 
         this.CompleteDependency();
 
-        // commandBuffer.Dispose();
     }
 }
 
