@@ -11,6 +11,8 @@ using Unity.Rendering;
 using Unity.Transforms;
 using UnityEngine;
 
+[UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
+[DisableAutoCreation]
 public class CutterParticleCollisionSystem : JobComponentSystem
 {
 	private BuildPhysicsWorld BuildPhysicsWorld;
@@ -33,7 +35,7 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 				jobHandle = inputDeps,
 			};
 
-		// dstManager.AddJobHandleForProducer(collideJob);
+		dstManager.AddJobHandleForProducer(inputDeps);
 		return collideJob.Schedule(StepPhysicsWorld.Simulation, ref BuildPhysicsWorld.PhysicsWorld, inputDeps);
 	}
 
@@ -66,15 +68,19 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 			}
 			else
 			{
+				jobHandle.Complete();
 				return;
 			}
+			Debug.Log("Collided");
+
+
 
 			#region Adjust Particle
 
 			//Add the needed transform
 
 			// Connect to the parent
-			 dstManager.AddComponent(particle, new Parent
+			dstManager.AddComponent(particle, new Parent
 			 {
 			 	Value = otherCollider
 			 });

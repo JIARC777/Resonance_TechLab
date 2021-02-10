@@ -32,12 +32,11 @@ public class CutterParticleTagAuthor : MonoBehaviour, IConvertGameObjectToEntity
         //   to do it, instead of adding entities through 'dstManager' directly.
         //
         // For example,
-        dstManager.AddComponentData(entity, new Unity.Transforms.Scale { Value = scale });
-
-        dstManager.AddComponentData(entity, new CutterParticleTag{});
-        // dstManager.AddComponent<Scale>(entity);
-		dstManager.AddComponentData(entity, new Scale {	Value = 0.1f });
-        // dstManager.AddComponent<LocalToParent>(entity);
+        //dstManager.AddComponentData(entity, new Unity.Transforms.Scale { Value = scale });
+         dstManager.AddComponentData(entity, new CutterParticleTag{});
+        //// dstManager.AddComponent<Scale>(entity);
+		//dstManager.AddComponentData(entity, new Scale {	Value = 0.1f });
+        //// dstManager.AddComponent<LocalToParent>(entity);
 
     }
 }

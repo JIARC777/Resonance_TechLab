@@ -7,8 +7,8 @@ using Unity.Physics;
 using Unity.Transforms;
 using UnityEngine;
 
-[DisableAutoCreation]
-public class ParticleTransformSystem : SystemBase
+//[DisableAutoCreation]
+public class ParticleTransformSystem : ComponentSystem
 {
 	public float minParticleScale = 0.001f;
 
@@ -24,7 +24,7 @@ public class ParticleTransformSystem : SystemBase
         // Assign values to local variables captured in your job here, so that it has
         // everything it needs to do its work when it runs later.
         // For example,
-        // var commandBuffer = ecbSys.CreateCommandBuffer().AsParallelWriter();
+	    var commandBuffer = ecbSys.CreateCommandBuffer().AsParallelWriter();
         var minPScale = minParticleScale;
 
         
@@ -35,39 +35,42 @@ public class ParticleTransformSystem : SystemBase
         // meaning it will process all entities in the world that have both
         // Translation and Rotation components. Change it to process the component
         // types you want.
-        
-        
-        
+
+
+
         Entities
-	        // .WithNativeDisableParallelForRestriction(commandBuffer)
-            .WithAll<CutterParticleTag, Child, LocalToParent>()
-            .ForEach((Entity entity, ref Translation tx, ref Scale scale, in Rotation rot) =>
-            {
+	        //.WithNativeDisableParallelForRestriction(commandBuffer)
+	        //.WithAll<CutterParticleTag, Child, LocalToParent>()
 
-            // Implement the work to perform for each entity here.
-            // You should only access data that is local or that is a
-            // field on this job. Note that the 'rotation' parameter is
-            // marked as 'in', which means it cannot be modified,
-            // but allows this job to run in parallel with other jobs
-            // that want to read Rotation component data.
-            // For example,
-            //     translation.Value += math.mul(rotation.Value, new float3(0, 0, 1)) * deltaTime;
+	        .ForEach((Entity entity, ref Translation tx, ref Scale scale) =>
+	        {
 
-            //DOTS: tx.Value += math.forward(rot.Value) * deltaTime;
+		        // Implement the work to perform for each entity here.
+		        // You should only access data that is local or that is a
+		        // field on this job. Note that the 'rotation' parameter is
+		        // marked as 'in', which means it cannot be modified,
+		        // but allows this job to run in parallel with other jobs
+		        // that want to read Rotation component data.
+		        // For example,
+		        //     translation.Value += math.mul(rotation.Value, new float3(0, 0, 1)) * deltaTime;
 
-            // Shrink over time
+		        //DOTS: tx.Value += math.forward(rot.Value) * deltaTime;
 
-           scale.Value *= .95f;
+		        // Shrink over time
 
-            // Debug.Log("Scaling");
-            if (scale.Value <= minPScale)
-            {
-	            // commandBuffer.DestroyEntity(0, entity);
-            }
+		        scale.Value *= .95f;
 
-            
-            }).WithBurst().ScheduleParallel();
-        
+		        // Debug.Log("Scaling");
+		        if (scale.Value <= minPScale)
+		        {
+			        PostUpdateCommands.DestroyEntity(entity);
+			        //Debug.Log("Deleted ent");
+		        }
+
+
+	        }); //.WithBurst().ScheduleParallel();
+
+
         // commandBuffer.Dispose();
     }
 }

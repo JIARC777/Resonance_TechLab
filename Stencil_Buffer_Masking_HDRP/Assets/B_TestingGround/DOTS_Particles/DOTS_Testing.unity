@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 410791136}
   - component: {fileID: 410791135}
   - component: {fileID: 410791134}
+  - component: {fileID: 410791137}
   m_Layer: 0
   m_Name: Phys Sys Controls
   m_TagString: Untagged
@@ -184,7 +185,7 @@ MonoBehaviour:
     x: -0
     y: -9.81
     z: -0
-  m_SolverIterationCount: 4
+  m_SolverIterationCount: 1
   m_EnableSolverStabilizationHeuristic: 0
   m_ThreadCountHint: 8
   m_SynchronizeCollisionWorld: 0
@@ -202,6 +203,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &410791137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410791133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConversionMode: 1
 --- !u!1 &1489946666
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,12 +260,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flamethrowerParticleEntity: {fileID: 2491801065413494345, guid: 2b75e22ae423989c195605d53d7059b8, type: 3}
-  launchSpeed: 20
+  launchSpeed: 50
   particleFanAmount:
-    x: 0.01
+    x: 0.1
     y: 0.1
-    z: 0.01
-  spawnAmount: 3
+    z: 0.1
+  spawnAmount: 1000
 --- !u!4 &1489946669
 Transform:
   m_ObjectHideFlags: 0
