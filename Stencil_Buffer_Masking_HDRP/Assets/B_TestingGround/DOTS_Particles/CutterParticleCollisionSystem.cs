@@ -33,10 +33,10 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 				cutParticleTag = GetComponentDataFromEntity<CutterParticleTag>(),
 				dstManager = dstManager.CreateCommandBuffer(),
 				jobHandle = inputDeps,
-			};
+			}.Schedule(StepPhysicsWorld.Simulation, ref BuildPhysicsWorld.PhysicsWorld, inputDeps);
 
 		dstManager.AddJobHandleForProducer(inputDeps);
-		return collideJob.Schedule(StepPhysicsWorld.Simulation, ref BuildPhysicsWorld.PhysicsWorld, inputDeps);
+		return collideJob;
 	}
 
 	[BurstCompile]

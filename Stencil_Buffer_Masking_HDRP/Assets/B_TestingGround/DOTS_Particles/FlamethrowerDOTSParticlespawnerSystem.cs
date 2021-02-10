@@ -14,6 +14,7 @@ public class FlamethrowerDOTSParticlespawnerSystem : SystemBase
 
     private int _spawnLimit = 10;
     int _iter = 0;
+    private bool _flip = false;
 
     protected override void OnUpdate()
     {
@@ -21,13 +22,16 @@ public class FlamethrowerDOTSParticlespawnerSystem : SystemBase
         {
             _iter++;
             SpawnParticles();
-        } else if (Time.ElapsedTime == 25)
+        } else if (_flip == false && Time.ElapsedTime >= 15)
         {
             _iter = 0;
+            _flip = true;
+            Debug.Log(Time.ElapsedTime);
+
         }
         else
         {
-            Debug.Log(Time.ElapsedTime);
+            //Debug.Log(Time.ElapsedTime);
         }
     }
 
@@ -45,7 +49,7 @@ public class FlamethrowerDOTSParticlespawnerSystem : SystemBase
 
         Entities
             .WithNativeDisableParallelForRestriction(randomArray)
-            .ForEach((int nativeThreadIndex, ref FlamethrowerSpawner ftSpawner, ref Translation tx, ref Rotation parentRot) =>
+            .ForEach((int nativeThreadIndex, ref FlamethrowerSpawner ftSpawner, in Translation tx, in Rotation parentRot) =>
             {
                 //Random
                 var random = randomArray[nativeThreadIndex];
