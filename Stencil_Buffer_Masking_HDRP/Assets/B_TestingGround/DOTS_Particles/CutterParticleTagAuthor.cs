@@ -55,17 +55,17 @@ public class CutterParticleTagAuthor : MonoBehaviour, IConvertGameObjectToEntity
 		// });
 
 
-		dstManager.AddComponentData(entity, new RenderBounds {});
-
-		
-		var ah = Resources.Load<GameObject>("AssetHolder").GetComponent<AssetHolder>();
-		dstManager.SetSharedComponentData(entity, new RenderMesh
-		{
-			mesh = ah.myMesh,
-			material = ah.myMaterial
-		});
-		
-		dstManager.RemoveComponent<LinkedEntityGroup>(entity);
+		// dstManager.AddComponentData(entity, new RenderBounds {});
+		//
+		//
+		// var ah = Resources.Load<GameObject>("AssetHolder").GetComponent<AssetHolder>();
+		// dstManager.SetSharedComponentData(entity, new RenderMesh
+		// {
+		// 	mesh = ah.myMesh,
+		// 	material = ah.myMaterial
+		// });
+		//
+		// dstManager.RemoveComponent<LinkedEntityGroup>(entity);
 
 		
 		//dstManager.AddComponentData(entity, new CutterParticleTag { });
