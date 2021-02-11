@@ -15,15 +15,17 @@ public class DAVE : MonoBehaviour
 	{
         patrolSystem = GetComponent<Pathfollower>();
         investigationSystem = GetComponent<Investigator>();
+        patrolSystem.active = true;
+        investigationSystem.active = false;
 	}
 	// Update is called once per frame
 	void Update()
     {
-        
     }
     // This only works if we make sure that one system is initialized as active and another isnt on start
     void ToggleSystems()
 	{
+        Debug.Log("Systems Toggled");
         patrolSystem.active = !patrolSystem.active;
         investigationSystem.active = !investigationSystem.active;
 	}

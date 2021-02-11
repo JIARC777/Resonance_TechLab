@@ -6,8 +6,8 @@ using UnityEngine;
 // Since it is an event system, it assumes only one player, 
 public class PlayerDetector : MonoBehaviour
 {
-    public delegate void PlayerDetected();
-    public event PlayerDetected OnDetection;
+    public delegate void PlayerDetected(Vector3 position);
+    public static event PlayerDetected OnDetection;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +19,7 @@ public class PlayerDetector : MonoBehaviour
 		if (other.tag == "DAVEVision")
 		{
             Debug.Log("DAVE has found you. Run!");
-           // OnDetection();
+            OnDetection(transform.position);
 		}
 	}
 	// Update is called once per frame

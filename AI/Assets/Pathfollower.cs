@@ -17,7 +17,11 @@ public class Pathfollower : DAVESys
     // Update is called once per frame
     void Update()
     {
-        base.Update();
+        if (active)
+		{
+            base.Update();
+        }
+        
         // if this system is not active it means the system is investigating. In the background, search for the target node to assign next
         if (!active)
 		{

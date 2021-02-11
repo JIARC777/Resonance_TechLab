@@ -29,14 +29,14 @@ public class DAVESys : MonoBehaviour
     }
 
     protected virtual void Update()
-	{
+	{ 
         if (initialized)
 		{
-            if ((trans.position - targetPos).magnitude <= agent.stoppingDistance)
+            // This float is kinda funky - just adjust it as necessary to make sure that the ping sphere comes after the Drone stopped
+            if ((trans.position - targetPos).magnitude + 0.75f <= agent.stoppingDistance)
             {
                 updateDestination = true;
             }
         }
-            
-	}
+    }
 }
