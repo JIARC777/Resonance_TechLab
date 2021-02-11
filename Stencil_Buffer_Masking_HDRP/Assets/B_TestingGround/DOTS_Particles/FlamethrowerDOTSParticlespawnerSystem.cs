@@ -2,7 +2,6 @@ using Unity.Burst;
 using Unity.Entities;
 using Unity.Physics;
 using Unity.Transforms;
-using Unity.Physics.Extensions;
 using UnityEngine;
 using Unity.Mathematics;
 using Random = Unity.Mathematics.Random;
@@ -10,102 +9,81 @@ using Random = Unity.Mathematics.Random;
 [UpdateInGroup(typeof(FixedStepSimulationSystemGroup))]
 public class FlamethrowerDOTSParticlespawnerSystem : SystemBase
 {
-    public Entity particle;
+	public Entity particle;
 
-    private int _spawnLimit = 10;
-    int _iter = 0;
+	protected override void OnUpdate()
+	{
+		SpawnParticles();
+	}
 
-    protected override void OnUpdate()
-    {
-        if (_iter < _spawnLimit)
-        {
-            _iter++;
-            SpawnParticles();
-        } else if (Time.ElapsedTime == 25)
-        {
-            _iter = 0;
-        }
-        else
-        {
-            Debug.Log(Time.ElapsedTime);
-        }
-    }
+	protected override void OnCreate()
+	{
+	}
 
-    protected override void OnCreate()
-    {
-    }
+	[BurstCompile]
+	public void SpawnParticles()
+	{
+		var randomArray = World.GetExistingSystem<RandomSystem>().RandomArray;
 
-    [BurstCompile]
-    public void SpawnParticles()
-    {
-        var randomArray = World.GetExistingSystem<RandomSystem>().RandomArray;
-        
-        var dstManager = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>().CreateCommandBuffer();
+		var dstManager = World.GetOrCreateSystem<EndSimulationEntityCommandBufferSystem>().CreateCommandBuffer().AsParallelWriter();
 
 
-        Entities
-            .WithNativeDisableParallelForRestriction(randomArray)
-            .ForEach((int nativeThreadIndex, ref FlamethrowerSpawner ftSpawner, ref Translation tx, ref Rotation parentRot) =>
-            {
-                //Random
-                var random = randomArray[nativeThreadIndex];
-                
-                //Spawn particles, as many as the flamethrower says to
-                for (int i = 0; i < ftSpawner.spawnAmount; i++)
-                {
-                    Entity spawnedParticle = dstManager.Instantiate(ftSpawner.flamethrowerParticleEntity);
-
-                    //Add a Scale component to the particles (not on the 
-                    dstManager.AddComponent(spawnedParticle,
-                        new Scale
-                        {
-                            Value = 0.1f
-                        });
-
-                    //Set the particle's position at the parent, flamethrower 'nozzle'
-                    dstManager.SetComponent(spawnedParticle,
-                        new Translation
-                        {
-                            Value = tx.Value
-                        });
+		Entities
+			.WithNativeDisableParallelForRestriction(randomArray)
+			.ForEach((int nativeThreadIndex, in FlamethrowerSpawner ftSpawner, in Translation tx, in Rotation parentRot) =>
+			{
+				//Random
+				var random = randomArray[nativeThreadIndex];
 
 
-                    // Calculate the velocity for each particle
-                    var particleFanAmount = ftSpawner.particleFanAmount;
+				Entity spawnedParticle = dstManager.Instantiate(0, ftSpawner.flamethrowerParticleEntity);
 
-                    var initialParticleVel = math.forward(parentRot.Value);
+				//Add a Scale component to the particles (not on the 
+				dstManager.AddComponent(0, spawnedParticle,
+					new Scale
+					{
+						Value = 0.1f
+					});
+				//Set the particle's position at the parent, flamethrower 'nozzle'
+				dstManager.SetComponent(0, spawnedParticle,
+					new Translation
+					{
+						Value = tx.Value
+					});
+				
+				// Calculate the velocity for each particle
+				var particleFanAmount = ftSpawner.particleFanAmount;
 
-                    var randDirection = random.NextFloat3Direction();
+				var initialParticleVel = math.forward(parentRot.Value);
+				
 
-                    var fannedParticleVel = new float3(
-                        random.NextFloat(initialParticleVel.x - particleFanAmount.x,
-                            initialParticleVel.x + particleFanAmount.x),
-                        random.NextFloat(initialParticleVel.y - particleFanAmount.y,
-                            initialParticleVel.y + particleFanAmount.y),
-                        random.NextFloat(initialParticleVel.z - particleFanAmount.z,
-                            initialParticleVel.z + particleFanAmount.z));
+				//Spawn particles, as many as the flamethrower says to
+				for (int i = 0; i < ftSpawner.spawnAmount; i++)
+				{
 
-                    var finalParticleVel = fannedParticleVel * ftSpawner.launchSpeed;
+					var fannedParticleVel = new float3(
+						random.NextFloat(initialParticleVel.x - particleFanAmount.x, initialParticleVel.x + particleFanAmount.x),
+						random.NextFloat(initialParticleVel.y - particleFanAmount.y, initialParticleVel.y + particleFanAmount.y),
+						random.NextFloat(initialParticleVel.z - particleFanAmount.z, initialParticleVel.z + particleFanAmount.z));
 
-                    //Set the particles start vel
-                    dstManager.SetComponent(spawnedParticle,
-                        new PhysicsVelocity
-                        {
-                            Linear = finalParticleVel,
-                            Angular = float3.zero
-                        });
+					var finalParticleVel = fannedParticleVel * ftSpawner.launchSpeed;
 
+					//Set the particles start vel
+					dstManager.SetComponent(0, spawnedParticle,
+						new PhysicsVelocity
+						{
+							Linear = finalParticleVel,
+							Angular = float3.zero
+						});
 
+					dstManager.Instantiate(0, spawnedParticle);
+				}
 
-                    //dstManager.Instantiate(spawnedParticle);
-                }
-                
-                
-                
-                //Verify Random
-                randomArray[nativeThreadIndex] = random;
-            })
-            
-            .Run();
-    }
+				//Verify Random
+				randomArray[nativeThreadIndex] = random;
+			})
+			.ScheduleParallel();
+		
+		this.CompleteDependency();
+	}
 }

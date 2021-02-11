@@ -8,7 +8,7 @@ using Unity.Transforms;
 using UnityEngine;
 
 //[DisableAutoCreation]
-public class ParticleTransformSystem : ComponentSystem
+public class ParticleTransformSystem : SystemBase
 {
 	public float minParticleScale = 0.001f;
 
@@ -42,7 +42,7 @@ public class ParticleTransformSystem : ComponentSystem
 	        //.WithNativeDisableParallelForRestriction(commandBuffer)
 	        //.WithAll<CutterParticleTag, Child, LocalToParent>()
 
-	        .ForEach((Entity entity, ref Translation tx, ref Scale scale) =>
+	        .ForEach((Entity entity, ref Scale scale) =>
 	        {
 
 		        // Implement the work to perform for each entity here.
@@ -58,20 +58,19 @@ public class ParticleTransformSystem : ComponentSystem
 
 		        // Shrink over time
 
-		        scale.Value *= .95f;
+		        scale.Value *= 0.95f;
 
 		        // Debug.Log("Scaling");
-		        if (scale.Value <= minPScale)
+		        if (math.length(scale.Value) <= minPScale)
 		        {
-			        PostUpdateCommands.DestroyEntity(entity);
-			        //Debug.Log("Deleted ent");
+			        commandBuffer.DestroyEntity(0, entity);
 		        }
 
 
-	        }); //.WithBurst().ScheduleParallel();
+	        }).WithBurst().ScheduleParallel();
 
+        this.CompleteDependency();
 
-        // commandBuffer.Dispose();
     }
 }
 
