@@ -57,6 +57,8 @@ public class FlamethrowerDOTSParticlespawnerSystem : SystemBase
 				var initialParticleVel = math.forward(parentRot.Value);
 				
 
+				
+				
 				//Spawn particles, as many as the flamethrower says to
 				for (int i = 0; i < ftSpawner.spawnAmount; i++)
 				{

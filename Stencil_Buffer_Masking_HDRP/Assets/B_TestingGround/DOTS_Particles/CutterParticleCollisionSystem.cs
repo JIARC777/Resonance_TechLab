@@ -47,7 +47,7 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 
 	// [BurstCompile]
 	[RequireComponentTag(typeof(CutterParticleTag))]
-	private struct CollideJob : ICollisionEventsJob
+	private struct CollideJob : ITriggerEventsJob
 	{
 		[ReadOnly] public ComponentDataFromEntity<CutterParticleTag> cutParticleTag;
 		public EntityCommandBuffer dstManager;
@@ -130,6 +130,10 @@ public class CutterParticleCollisionSystem : JobComponentSystem
 
 			//jobHandle.Complete();
 		}
-		
+
+		public void Execute(TriggerEvent triggerEvent)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

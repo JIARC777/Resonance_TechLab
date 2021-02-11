@@ -63,7 +63,8 @@ public class ParticleTransformSystem : SystemBase
 		        // Debug.Log("Scaling");
 		        if (math.length(scale.Value) <= minPScale)
 		        {
-			        commandBuffer.DestroyEntity(0, entity);
+			        // commandBuffer.DestroyEntity(0, entity);
+			        commandBuffer.AddComponent<Disabled>(0, entity);
 		        }
 
 
