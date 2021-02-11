@@ -83,5 +83,7 @@ public class FlamethrowerDOTSParticlespawnerSystem : SystemBase
 				randomArray[nativeThreadIndex] = random;
 			})
 			.ScheduleParallel();
+		
+		this.CompleteDependency();
 	}
 }
