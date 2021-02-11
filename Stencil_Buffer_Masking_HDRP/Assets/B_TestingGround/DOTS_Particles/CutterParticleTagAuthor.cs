@@ -38,8 +38,11 @@ public class CutterParticleTagAuthor : MonoBehaviour, IConvertGameObjectToEntity
 
 		
 		dstManager.AddComponentData(entity, new PhysicsVelocity {});
+		dstManager.AddComponentData(entity, new PhysicsDamping {});
 		
 		dstManager.AddComponentData(entity, new Scale {});
+
+		dstManager.AddComponentData(entity, new CutterParticleTag {});
 		
 
 		// dstManager.AddComponentData(entity, new CompositeScale

@@ -58,7 +58,7 @@ public class ParticleTransformSystem : SystemBase
 
 		        // Shrink over time
 
-		        scale.Value *= 0.85f;
+		        scale.Value *= 0.95f;
 
 		        // Debug.Log("Scaling");
 		        if (math.length(scale.Value) <= minPScale)
