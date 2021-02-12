@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 62274273}
   - component: {fileID: 62274274}
   - component: {fileID: 62274275}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Flamethrower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,12 +310,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flamethrowerParticleEntity: {fileID: 8422052380492184911, guid: 5c91049065629444daa444c98a1eed4a, type: 3}
-  launchSpeed: 2
+  launchSpeed: 5
   particleFanAmount:
-    x: 0.05
-    y: 0.2
-    z: 0.2
-  spawnAmount: 1
+    x: 0.4
+    y: 0.4
+    z: 0.4
+  spawnAmount: 4000
 --- !u!114 &62274275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +400,14 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_Name
       value: CoffeeMug (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: minVelocity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003024611063972692, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_RootOrder
@@ -1328,6 +1336,14 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_Name
       value: CoffeeMug (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: minVelocity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003024611063972692, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_RootOrder
@@ -3743,6 +3759,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeMug (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: minVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1003024611063972692, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -4319,6 +4343,14 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_Name
       value: CoffeeMug (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: minVelocity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003024611063972692, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_RootOrder
@@ -5391,6 +5423,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeMug (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: minVelocity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1003024611063972692, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -6013,6 +6053,14 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_Name
       value: CoffeeMug
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: minVelocity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1003024611063972692, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_RootOrder

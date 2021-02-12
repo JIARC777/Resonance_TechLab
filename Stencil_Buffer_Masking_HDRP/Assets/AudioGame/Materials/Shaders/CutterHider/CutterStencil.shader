@@ -1,17 +1,51 @@
-Shader "Depth Mask"
+Shader "Cutter"
 {
- 
+    Properties
+    {
+        // Be careful, do not change the name here to _Color. It will conflict with the "fake" parameters (see end of properties) required for GI.
+        [MainColor] _UnlitColor("Color", Color) = (1,1,1,1)
+        [MainTexture] _UnlitColorMap("ColorMap", 2D) = "white" {}
+
+        [HDR] _EmissiveColor("EmissiveColor", Color) = (0, 0, 0)
+        _EmissiveColorMap("EmissiveColorMap", 2D) = "white" {}
+        // Used only to serialize the LDR and HDR emissive color in the material UI,
+        // in the shader only the _EmissiveColor should be used
+        _EmissiveIntensity("Emissive Intensity", Float) = 1
+        _EmissiveExposureWeight("Emissive Pre Exposure", Range(0.0, 1.0)) = 1.0
+
+
+    }
+
+    HLSLINCLUDE
+    #pragma target 4.5
+    #pragma only_renderers d3d11 playstation xboxone vulkan metal switch
+
+    //-------------------------------------------------------------------------------------
+    // Include
+    //-------------------------------------------------------------------------------------
+
+    #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Common.hlsl"
+    #include "Packages/com.unity.render-pipelines.high-definition/Runtime/ShaderLibrary/ShaderVariables.hlsl"
+    #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/FragInputs.hlsl"
+    #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPass.cs.hlsl"
+
+    //-------------------------------------------------------------------------------------
+    // variable declaration
+    //-------------------------------------------------------------------------------------
+
+    #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Unlit/UnlitProperties.hlsl"
+    ENDHLSL
 
     SubShader
     {
-        
+
         ///SBM--------
         Lighting Off
         ZTest lequal
         ZWrite Off
         ColorMask 0
         ///SBM-------
-        
+
 
         Pass
         {
@@ -25,53 +59,34 @@ Shader "Depth Mask"
                 ZFail keep
             }
             ///SBM-------
-            
-            Name "ForwardOnly"
-            Tags { "LightMode" = "ForwardOnly" }
+
+
+
             HLSLPROGRAM
+            #pragma only_renderers d3d11 playstation xboxone vulkan metal switch
+            //enable GPU instancing support
             #pragma multi_compile_instancing
-            #pragma multi_compile _ DOTS_INSTANCINssgas
+            #pragma multi_compile _ DOTS_INSTANCING_ON
 
-            #pragma vertex vert
-            #pragma fragment frag
-            #pragma multi_compile_fog
-            
-            #include "UnityCG.cginc"
+            #pragma multi_compile _ DEBUG_DISPLAY
 
-            struct appdata
-            {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-            };
+            #ifdef DEBUG_DISPLAY
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Debug/DebugDisplay.hlsl"
+            #endif
 
-            struct v2f
-            {
-                float2 uv : TEXCOORD0;
-                UNITY_FOG_COORDS(1)
-                float4 vertex : SV_POSITION;
-            };
+            #define SHADERPASS SHADERPASS_FORWARD_UNLIT
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-            
-            v2f vert (appdata v)
-            {
-                v2f o;
-                o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-                UNITY_TRANSFER_FOG(o,o.vertex);
-                return o;
-            }
-            
-            fixed4 frag (v2f i) : SV_Target
-            {
-                // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-                // apply fog
-                UNITY_APPLY_FOG(i.fogCoord, col);
-                return col;
-            }
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Material.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Unlit/Unlit.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Unlit/ShaderPass/UnlitSharePass.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Unlit/UnlitData.hlsl"
+            #include "Packages/com.unity.render-pipelines.high-definition/Runtime/RenderPipeline/ShaderPass/ShaderPassForwardUnlit.hlsl"
+
+            #pragma vertex Vert
+            #pragma fragment Frag
             ENDHLSL
+
+
 
         }
 
