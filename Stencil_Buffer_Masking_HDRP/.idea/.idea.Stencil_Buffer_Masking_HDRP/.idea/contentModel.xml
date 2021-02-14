@@ -35,6 +35,28 @@
             <e p="VRMovement_v2.cs" t="Include" />
           </e>
         </e>
+        <e p="B_TestingGround" t="Include">
+          <e p="HLSL" t="Include">
+            <e p="CustomFn" t="Include">
+              <e p="CustomFn.cs" t="Include" />
+              <e p="CustomFnEditor.cs" t="Include" />
+            </e>
+            <e p="OutputBuffer" t="Include">
+              <e p="VFXBufferHeader.template" t="Include" />
+              <e p="VFXBufferOutput.cs" t="Include" />
+              <e p="VFXBufferPass.template" t="Include" />
+              <e p="VFXBufferPassDepth.template" t="Include" />
+              <e p="VFXBufferPassDepthOrMV.template" t="Include" />
+              <e p="VFXBufferPassForward.template" t="Include" />
+              <e p="VFXBufferPassSelection.template" t="Include" />
+              <e p="VFXBufferPassShadowCaster.template" t="Include" />
+              <e p="VFXParticleBufferHDRP.template" t="Include" />
+              <e p="VFXParticleBufferLegacy.template" t="Include" />
+              <e p="VFXParticleBufferUniversal.template" t="Include" />
+            </e>
+            <e p="Unity.VisualEffectGraph.EditorTests.asmdef" t="Include" />
+          </e>
+        </e>
         <e p="Editor" t="Include">
           <e p="SetupProject.cs" t="Include" />
           <e p="TestsMenu.cs" t="Include" />
@@ -5894,6 +5916,7 @@
       <e p="Unity.VSCode.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Editor.Tests.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Editor.csproj" t="IncludeRecursive" />
+      <e p="Unity.VisualEffectGraph.EditorTests.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Runtime.Tests.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Runtime.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualStudio.Editor.csproj" t="IncludeRecursive" />
