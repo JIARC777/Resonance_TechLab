@@ -8,6 +8,9 @@ public class PlayerDetector : MonoBehaviour
 {
     public delegate void PlayerDetected(Vector3 position);
     public static event PlayerDetected OnDetection;
+
+    float cooldown = 1f;
+    float timeOfImpact; 
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +18,17 @@ public class PlayerDetector : MonoBehaviour
     }
 	private void OnTriggerEnter(Collider other)
 	{
+        if (Time.time >= timeOfImpact + cooldown)
+		{   
+            if (other.tag == "DAVEVision")
+            {
+                timeOfImpact = Time.time;
+                Debug.Log("DAVE has found you. Run!");
+                OnDetection(transform.position);
+            }
+        }
         // This acts as a clean way to create an event for when the player is detected.
-		if (other.tag == "DAVEVision")
-		{
-            Debug.Log("DAVE has found you. Run!");
-            OnDetection(transform.position);
-		}
+		
 	}
 	// Update is called once per frame
 	void Update()

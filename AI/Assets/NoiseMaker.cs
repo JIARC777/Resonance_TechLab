@@ -33,7 +33,7 @@ public class NoiseMaker : MonoBehaviour
 		{
             if (PhysicsObject || collision.gameObject.tag == "Map Hazard")
             {
-                Debug.Log("Collision");
+                Debug.Log("You Ran Into Something");
                 timeOfImpact = Time.time;
                 // Calculate the volume of the noise at the source 
                 EmitSound(collision);

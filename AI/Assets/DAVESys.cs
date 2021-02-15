@@ -11,7 +11,7 @@ public class DAVESys : MonoBehaviour
     public bool updateDestination;
     protected NavMeshAgent agent;
     protected Transform trans;
-    Vector3 targetPos;
+    protected Vector3 targetPos;
     bool initialized = false;
 
     protected void InitializeSystems()
