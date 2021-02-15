@@ -16,7 +16,6 @@ namespace Valve.VR.InteractionSystem
 
 
         //DOTS
-        private FlamethrowerDOTSParticlespawnerSystem flameDOTS;
         private void Awake()
         {
         }
@@ -26,7 +25,6 @@ namespace Valve.VR.InteractionSystem
         {
             if (isAttachedToHand)
                 particleSystem.Play();
-                flameDOTS?.SpawnParticles();
         }
 
         public void StopFiring()
