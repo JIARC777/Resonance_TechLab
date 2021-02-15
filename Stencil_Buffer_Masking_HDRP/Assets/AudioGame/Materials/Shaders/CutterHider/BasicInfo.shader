@@ -1,6 +1,7 @@
 Shader "Basic Info"
 {
-    Properties
+
+        Properties
     {
         // Be careful, do not change the name here to _Color. It will conflict with the "fake" parameters (see end of properties) required for GI.
         [MainColor] _UnlitColor("Color", Color) = (1,1,1,1)
@@ -15,8 +16,7 @@ Shader "Basic Info"
         
 
     }
-
-
+    
     HLSLINCLUDE
 
     #pragma target 4.5
@@ -41,7 +41,7 @@ Shader "Basic Info"
 
     SubShader
     {
-        
+
         ///SBM--------
         Lighting Off
         ZTest greater
@@ -49,12 +49,12 @@ Shader "Basic Info"
         ColorMask 0
         Offset 1, 2
         ///SBM-------
-        
+
 
         Pass
         {
 
-            
+
             ///SBM-------
             Stencil
             {
@@ -65,17 +65,9 @@ Shader "Basic Info"
                 ZFail decrsat
             }
             ///SBM-------
-            
-              
-            
-            
-            Name "ForwardOnly"
-            Tags { "LightMode" = "ForwardOnly" }
 
 
-
-            HLSLPROGRAM
-
+           HLSLPROGRAM
             #pragma only_renderers d3d11 playstation xboxone vulkan metal switch
             //enable GPU instancing support
             #pragma multi_compile_instancing
@@ -97,12 +89,12 @@ Shader "Basic Info"
 
             #pragma vertex Vert
             #pragma fragment Frag
-
             ENDHLSL
+
+
         }
 
     }
 
 
-    CustomEditor "Rendering.HighDefinition.LitGUI"
 }

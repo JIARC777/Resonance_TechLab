@@ -1,4 +1,4 @@
-Shader "Depth Mask"
+Shader "Cutter"
 {
     Properties
     {
@@ -12,12 +12,11 @@ Shader "Depth Mask"
         // in the shader only the _EmissiveColor should be used
         _EmissiveIntensity("Emissive Intensity", Float) = 1
         _EmissiveExposureWeight("Emissive Pre Exposure", Range(0.0, 1.0)) = 1.0
-        
+
 
     }
-    
-    HLSLINCLUDE
 
+    HLSLINCLUDE
     #pragma target 4.5
     #pragma only_renderers d3d11 playstation xboxone vulkan metal switch
 
@@ -35,19 +34,18 @@ Shader "Depth Mask"
     //-------------------------------------------------------------------------------------
 
     #include "Packages/com.unity.render-pipelines.high-definition/Runtime/Material/Unlit/UnlitProperties.hlsl"
-
     ENDHLSL
 
     SubShader
     {
-        
+
         ///SBM--------
         Lighting Off
         ZTest lequal
         ZWrite Off
         ColorMask 0
         ///SBM-------
-        
+
 
         Pass
         {
@@ -61,15 +59,10 @@ Shader "Depth Mask"
                 ZFail keep
             }
             ///SBM-------
-            
-            
-            
-            Name "ForwardOnly"
-            Tags { "LightMode" = "ForwardOnly" }
+
 
 
             HLSLPROGRAM
-
             #pragma only_renderers d3d11 playstation xboxone vulkan metal switch
             //enable GPU instancing support
             #pragma multi_compile_instancing
@@ -91,12 +84,12 @@ Shader "Depth Mask"
 
             #pragma vertex Vert
             #pragma fragment Frag
-
             ENDHLSL
+
+
+
         }
 
     }
 
-
-    CustomEditor "Rendering.HighDefinition.LitGUI"
 }

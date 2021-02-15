@@ -45,7 +45,7 @@ namespace Valve.VR.InteractionSystem
             Vector3 move = transform.right * x + transform.forward * z;
 
             controller.Move(direction * speed * Time.deltaTime);
-            Debug.Log(direction * speed * Time.deltaTime);
+//            Debug.Log(direction * speed * Time.deltaTime);
 
             //if (Input.GetButtonDown("Jump") && isGrounded)
             //{
