@@ -10,9 +10,11 @@ public class DAVE : MonoBehaviour
     int[] soundIdHashes = new int[100];
     Pathfollower patrolSystem;
     Investigator investigationSystem;
+
 	// Start is called before the first frame update
 	void Start()
 	{
+        PlayerDetector.OnDetection += DetectedPlayer;
         patrolSystem = GetComponent<Pathfollower>();
         investigationSystem = GetComponent<Investigator>();
         patrolSystem.active = true;
@@ -21,13 +23,34 @@ public class DAVE : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
+        // A quick check to make sure the patrol system takes over when the investigation system has finished
+        if (investigationSystem.active == false && patrolSystem.active == false)
+		{
+            ToggleSystems(0);
+        }
+            
     }
+    void DetectedPlayer(Vector3 playerPos)
+	{
+        ToggleSystems(1);
+	}
+
     // This only works if we make sure that one system is initialized as active and another isnt on start
-    void ToggleSystems()
+    void ToggleSystems(int sysIndex)
 	{
         Debug.Log("Systems Toggled");
-        patrolSystem.active = !patrolSystem.active;
-        investigationSystem.active = !investigationSystem.active;
+        switch(sysIndex)
+		{
+            case 0:
+                patrolSystem.active = true;
+                patrolSystem.ReInitialize();
+                investigationSystem.active = false;
+                break;
+            case 1:
+                patrolSystem.active = false;
+                investigationSystem.active = true;
+                break;
+		}
 	}
 	public void OnParticleCollision(GameObject noise)
 	{  
@@ -39,8 +62,9 @@ public class DAVE : MonoBehaviour
 			{
                 soundData = noise.GetComponent<ActiveSound>();
                 soundIdHashes[noiseID % 100] = noiseID;
-                Debug.Log("Beware! D.A.V.E. is Nigh!");
-                ToggleSystems();
+                Debug.Log("Beware! D.A.V.E. heard you");
+                if (investigationSystem.active == false)
+                    ToggleSystems(1);
                 investigationSystem.AddSound(soundData);
             }
         }

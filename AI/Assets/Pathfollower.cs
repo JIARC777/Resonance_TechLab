@@ -6,27 +6,31 @@ using UnityEngine.AI;
 public class Pathfollower : DAVESys
 {
     public GameObject[] nodeList;
-    GameObject nextNode;
+    int curNodeIndex;
     // Start is called before the first frame update
     void Start()
     {
         InitializeSystems();
         active = true;
     }
-
+    public void ReInitialize()
+	{
+        updateDestination = true;
+	}
     // Update is called once per frame
     void Update()
     {
         if (active)
 		{
             base.Update();
+            // Check to see if the investigator passed a now irrelevant target position
+            
+            if (updateDestination)
+			{
+                curNodeIndex = (curNodeIndex + 1) % nodeList.Length;
+                SetTarget(nodeList[curNodeIndex].transform.position);
+			}
         }
-        
-        // if this system is not active it means the system is investigating. In the background, search for the target node to assign next
-        if (!active)
-		{
-          //  lookForClosestNode();
-		}
     }
 
     
