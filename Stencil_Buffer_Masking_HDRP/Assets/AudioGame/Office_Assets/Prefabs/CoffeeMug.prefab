@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 748104330318236693}
   - component: {fileID: 748104330318236691}
   - component: {fileID: 748104330318236688}
+  - component: {fileID: 3024047625980743027}
   m_Layer: 9
   m_Name: CoffeeMug
   m_TagString: Untagged
@@ -289,6 +290,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minVelocity: 2
   emitter: {fileID: 748104330450857818}
+--- !u!114 &3024047625980743027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477563243284470254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c718f1c9c9eca8a4ba52c886fc1c1efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolumeBaseline: 5
+  echoFactor: 1
+  volumeMultiplier: 1
+  impactCooldown: 5
+  PhysicsObject: 1
 --- !u!1 &748104330450857819
 GameObject:
   m_ObjectHideFlags: 0
