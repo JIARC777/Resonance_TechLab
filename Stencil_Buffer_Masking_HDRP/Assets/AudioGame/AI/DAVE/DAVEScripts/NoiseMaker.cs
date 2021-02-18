@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,10 +11,10 @@ public class NoiseMaker : MonoBehaviour
     public float echoFactor = 1f;
     public float volumeMultiplier = 1f;
     // Length of time before next OnCollision Call in the case of continued collision
-    public float impactCooldown = 5f;
+    public float impactCooldown = 1f;
     // by what factor we can modify the particle simulation speed to work with better magnitudes
     // Recording time object was hit
-    float timeOfImpact;
+    float timeOfImpact = 0f;
     // control whether or not the object should consider the floor an audible collision
     public bool PhysicsObject;
     // Data structure for communicating information to the AI
@@ -24,14 +25,16 @@ public class NoiseMaker : MonoBehaviour
 
     void Start()
     {
-      //  pSystem = ParticlePrefab.GetComponent<ParticleSystem>();
+        //pSystem = ParticlePrefab.GetComponent<ParticleSystem>()
     }
 
+    
 	private void OnCollisionEnter(Collision collision)
 	{
+		Debug.Log("Collision");
         if (Time.time >= timeOfImpact + impactCooldown)
 		{
-            if (PhysicsObject || collision.gameObject.tag == "Map Hazard"  && collision.gameObject.tag != "Player")
+			if (PhysicsObject || collision.gameObject.tag == "Map Hazard")
             {
                 Debug.Log("You Ran Into Something");
                 timeOfImpact = Time.time;
@@ -40,12 +43,53 @@ public class NoiseMaker : MonoBehaviour
             }
         }
 	}
-
-    void EmitSound(Collision col)
+    
+    
+	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		float initialVolume = defaultVolumeBaseline * (col.relativeVelocity.magnitude * 100000000);
+		Debug.Log("Collision");
+		if (Time.time >= timeOfImpact + impactCooldown)
+		{
+			if (PhysicsObject || hit.gameObject.tag == "Map Hazard")
+			{
+				Debug.Log("You Ran Into Something");
+				timeOfImpact = Time.time;
+				// Calculate the volume of the noise at the source 
+				EmitSound(hit);
+			}
+	    }
+	}
+
+	void EmitSound(Collision col)
+	{
+		float initialVolume = defaultVolumeBaseline;//; * (col.relativeVelocity.magnitude * 100000000);
 		float echo = echoFactor;
 		float lifeTime = echo * defaultVolumeBaseline;
+		Debug.Log(initialVolume);
+		Debug.Log(echo);
+		Debug.Log(lifeTime);
+		if (col.gameObject.GetComponent<NoiseData>() != null)
+		{
+			float materialSoundProperty = col.gameObject.GetComponent<NoiseData>().loudnessFactor;
+			initialVolume *= materialSoundProperty;
+			// calculate initial volume ** ADD FACTOR FOR VELOCITY OF OBJECT ON IMPACT **
+			echoFactor *= col.gameObject.GetComponent<NoiseData>().echoFactor;
+		}
+		ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
+		ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
+		sound.TransferVolumeData(initialVolume, lifeTime, transform.position, Time.time);
+		// if something weird breaks uncomment? 
+		//sound = null;
+
+	}
+	void EmitSound(ControllerColliderHit col)
+    {
+	    float initialVolume = defaultVolumeBaseline;//; * (col.relativeVelocity.magnitude * 100000000);
+		float echo = echoFactor;
+		float lifeTime = echo * defaultVolumeBaseline;
+		Debug.Log(initialVolume);
+		Debug.Log(echo);
+		Debug.Log(lifeTime);
         if (col.gameObject.GetComponent<NoiseData>() != null)
         {
 	        float materialSoundProperty = col.gameObject.GetComponent<NoiseData>().loudnessFactor;
