@@ -6,8 +6,8 @@ using UnityEngine;
 // Since it is an event system, it assumes only one player, 
 public class PlayerDetector : MonoBehaviour
 {
-    public delegate void PlayerDetected(Vector3 position);
-    public static event PlayerDetected OnDetection;
+    public delegate void PD(Vector3 position);
+    public static event PD OnDetection;
 
     float cooldown = 1f;
     float timeOfImpact; 

@@ -15,7 +15,7 @@ public class Pathfollower : DAVESys
     }
     public void ReInitialize()
 	{
-        updateDestination = true;
+        arrivedAtDestination = true;
 	}
     // Update is called once per frame
     void Update()
@@ -25,7 +25,7 @@ public class Pathfollower : DAVESys
             base.Update();
             // Check to see if the investigator passed a now irrelevant target position
             
-            if (updateDestination)
+            if (arrivedAtDestination)
 			{
                 curNodeIndex = (curNodeIndex + 1) % nodeList.Length;
                 SetTarget(nodeList[curNodeIndex].transform.position);

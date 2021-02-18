@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public class DAVESys : MonoBehaviour
 {
     [HideInInspector]
     public bool active;
-    [HideInInspector]
-    public bool updateDestination;
+    [FormerlySerializedAs("updateDestination")] [HideInInspector]
+    public bool arrivedAtDestination;
     protected NavMeshAgent agent;
     protected Transform trans;
     protected Vector3 targetPos;
@@ -23,7 +24,7 @@ public class DAVESys : MonoBehaviour
 
     public void SetTarget(Vector3 target)
     {
-        updateDestination = false;
+        arrivedAtDestination = false;
         targetPos = target;
         agent.SetDestination(targetPos);
     }
@@ -35,7 +36,7 @@ public class DAVESys : MonoBehaviour
             // This float is kinda funky - just adjust it as necessary to make sure that the ping sphere comes after the Drone stopped
             if ((trans.position - targetPos).magnitude + 0.75f <= agent.stoppingDistance)
             {
-                updateDestination = true;
+                arrivedAtDestination = true;
             }
         }
     }
