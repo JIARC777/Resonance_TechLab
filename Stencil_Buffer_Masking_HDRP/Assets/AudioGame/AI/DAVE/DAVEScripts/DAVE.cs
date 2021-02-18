@@ -10,6 +10,7 @@ public class DAVE : MonoBehaviour
     int[] soundIdHashes = new int[100];
     Pathfollower patrolSystem;
     Investigator investigationSystem;
+    //public BoxCollider daveBox;
 
 	// Start is called before the first frame update
 	void Start()
@@ -23,6 +24,7 @@ public class DAVE : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
+	    Debug.Log("Dave is working");
         // A quick check to make sure the patrol system takes over when the investigation system has finished
         if (investigationSystem.active == false && patrolSystem.active == false)
 		{
@@ -54,6 +56,7 @@ public class DAVE : MonoBehaviour
 	}
 	public void OnParticleCollision(GameObject noise)
 	{  
+		Debug.Log("Dave hit a particle");
 		if (noise.tag == "Noise")
 		{
             int noiseID = noise.GetComponent<ActiveSound>().Id;

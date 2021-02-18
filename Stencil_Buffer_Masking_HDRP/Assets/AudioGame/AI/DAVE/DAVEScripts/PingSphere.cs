@@ -9,11 +9,13 @@ public class PingSphere : MonoBehaviour
     public bool active;
     float curScale;
     public bool foundPlayer = false;
+    public delegate void PlayerDetected(Vector3 position);
+    public static event PlayerDetected DetectedPlayer;
     // Start is called before the first frame update
     void Awake()
     {
         transform.localScale = new Vector3(0, 0, 0);
-        PlayerDetector.OnDetection += FoundPlayer;
+       // PlayerDetector.OnDetection += FoundPlayer;
         active = true;
     }
 
@@ -30,9 +32,11 @@ public class PingSphere : MonoBehaviour
 		}
     }
 
-     void FoundPlayer(Vector3 pos)
-	 {
-        Debug.Log("Ping found Player");
-        foundPlayer = true;
-	 }
+    void OnTriggerEnter(Collider other)
+    {
+	    if (other.tag == "Player")
+	    {
+		    DetectedPlayer(other.transform.position);
+	    }
+    }
 }

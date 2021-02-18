@@ -65,9 +65,6 @@ public class NoiseMaker : MonoBehaviour
 		float initialVolume = defaultVolumeBaseline;//; * (col.relativeVelocity.magnitude * 100000000);
 		float echo = echoFactor;
 		float lifeTime = echo * defaultVolumeBaseline;
-		Debug.Log(initialVolume);
-		Debug.Log(echo);
-		Debug.Log(lifeTime);
 		if (col.gameObject.GetComponent<NoiseData>() != null)
 		{
 			float materialSoundProperty = col.gameObject.GetComponent<NoiseData>().loudnessFactor;
@@ -87,10 +84,7 @@ public class NoiseMaker : MonoBehaviour
 	    float initialVolume = defaultVolumeBaseline;//; * (col.relativeVelocity.magnitude * 100000000);
 		float echo = echoFactor;
 		float lifeTime = echo * defaultVolumeBaseline;
-		Debug.Log(initialVolume);
-		Debug.Log(echo);
-		Debug.Log(lifeTime);
-        if (col.gameObject.GetComponent<NoiseData>() != null)
+		if (col.gameObject.GetComponent<NoiseData>() != null)
         {
 	        float materialSoundProperty = col.gameObject.GetComponent<NoiseData>().loudnessFactor;
 	        initialVolume *= materialSoundProperty;
