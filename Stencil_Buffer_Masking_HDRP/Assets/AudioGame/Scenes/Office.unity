@@ -1306,6 +1306,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1445252775801086641, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1445252775801137895, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1316,7 +1320,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775806467803, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_Radius
-      value: 0.26
+      value: 0.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445252775806467803, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.49
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775918983756, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_Enabled
@@ -3476,6 +3484,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
   m_PrefabInstance: {fileID: 477480485}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1282476911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282476909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c718f1c9c9eca8a4ba52c886fc1c1efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolumeBaseline: 5
+  echoFactor: 1
+  volumeMultiplier: 1
+  impactCooldown: 1
+  PhysicsObject: 0
 --- !u!114 &1282476912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3488,6 +3513,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982c04c223b36f74c9b09904887079de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1282476913
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282476909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1295475913
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +4533,10 @@ PrefabInstance:
       propertyPath: m_LightShadowCasterMode
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8370431049599985257, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
 --- !u!4 &1679407101 stripped
@@ -4948,7 +4991,7 @@ GameObject:
   - component: {fileID: 1729944929}
   m_Layer: 10
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5302,7 +5345,7 @@ GameObject:
   - component: {fileID: 1921299912}
   m_Layer: 10
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
