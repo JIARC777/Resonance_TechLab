@@ -4,11 +4,80 @@
    "app_key" : "application.generated.unity.stencil_buffer_masking_hdrp.exe",
    "bindings" : {
       "/actions/buggy" : {
-         "chords" : [],
-         "haptics" : [],
-         "poses" : [],
-         "skeleton" : [],
-         "sources" : []
+         "sources" : [
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/buggy/in/steering"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/left/input/thumbstick"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/buggy/in/steering"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/right/input/thumbstick"
+            },
+            {
+               "inputs" : {
+                  "pull" : {
+                     "output" : "/actions/buggy/in/throttle"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "pull" : {
+                     "output" : "/actions/buggy/in/throttle"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/buggy/in/brake"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/buggy/in/brake"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/a"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/buggy/in/reset"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/b"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/buggy/in/reset"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/b"
+            }
+         ]
       },
       "/actions/default" : {
          "chords" : [],
@@ -46,7 +115,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/interactui"
+                     "output" : "/actions/default/in/fireweapon"
                   }
                },
                "mode" : "button",
@@ -82,7 +151,7 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/interactui"
+                     "output" : "/actions/default/in/fireweapon"
                   }
                },
                "mode" : "button",
@@ -126,14 +195,7 @@
                "path" : "/user/hand/right/input/thumbstick"
             },
             {
-               "inputs" : {
-                  "east" : {
-                     "output" : "/actions/default/in/snapturnright"
-                  },
-                  "west" : {
-                     "output" : "/actions/default/in/snapturnleft"
-                  }
-               },
+               "inputs" : {},
                "mode" : "dpad",
                "parameters" : {
                   "deadzone_pct" : "85",
@@ -223,26 +285,68 @@
             {
                "inputs" : {
                   "click" : {
-                     "output" : "/actions/default/in/fireweapon"
+                     "output" : "/actions/default/in/interactui"
                   }
                },
                "mode" : "trigger",
                "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/interactui"
+                  }
+               },
+               "mode" : "trigger",
+               "path" : "/user/hand/right/input/trigger"
             }
          ]
       },
       "/actions/platformer" : {
-         "chords" : [],
-         "haptics" : [],
-         "poses" : [],
-         "skeleton" : [],
-         "sources" : []
+         "sources" : [
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/platformer/in/move"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/left/input/thumbstick"
+            },
+            {
+               "inputs" : {
+                  "position" : {
+                     "output" : "/actions/platformer/in/move"
+                  }
+               },
+               "mode" : "joystick",
+               "path" : "/user/hand/right/input/thumbstick"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/platformer/in/jump"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/left/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/platformer/in/jump"
+                  }
+               },
+               "mode" : "button",
+               "path" : "/user/hand/right/input/trigger"
+            }
+         ]
       }
    },
    "category" : "steamvr_input",
    "controller_type" : "knuckles",
    "description" : "",
-   "name" : "Audiogame_Move",
+   "name" : "Saved [Testing] Stencil_Buffer_Masking_HDRP configuration for Index Controller",
    "options" : {},
    "simulated_actions" : []
 }
