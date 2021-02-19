@@ -24,9 +24,18 @@ namespace Valve.VR.InteractionSystem
         Vector3 velocity;
         bool isGrounded;
 
+        private void FixedUpdate()
+        {
+            float distanceFromFloor = Vector3.Dot(playerViewCamera.localPosition, Vector3.up);
+            controller.height = Mathf.Max(controller.radius, distanceFromFloor);
+            controller.center = playerViewCamera.localPosition - 0.5f * distanceFromFloor * Vector3.up;
+            //transform.localPosition = playerViewCamera.localPosition - 0.5f * distanceFromFloor * Vector3.up;
+        }
+
         // Update is called once per frame
         void Update()
         {
+
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
             if (isGrounded && velocity.y < 0)
             {
@@ -45,18 +54,12 @@ namespace Valve.VR.InteractionSystem
             Vector3 move = transform.right * x + transform.forward * z;
 
             controller.Move(direction * speed * Time.deltaTime);
-//            Debug.Log(direction * speed * Time.deltaTime);
-
-            //if (Input.GetButtonDown("Jump") && isGrounded)
-            //{
-            //    velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-            //}
 
             velocity.y += gravity * Time.deltaTime;
 
             //physics of free fall, multiply by time again
             controller.Move(velocity * Time.deltaTime);
-            controller.center = new Vector3(bodyCollider.transform.localPosition.x, controller.center.y, bodyCollider.transform.localPosition.z);
+            //controller.center = new Vector3(bodyCollider.transform.localPosition.x, controller.center.y, bodyCollider.transform.localPosition.z);
             //Debug.Log(velocity.y);
         }
     }
