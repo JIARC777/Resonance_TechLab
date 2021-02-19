@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Name: Fog
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
+  m_AdvancedMode: 1
   quality:
     m_OverrideState: 0
     m_Value: 1
@@ -82,7 +82,7 @@ MonoBehaviour:
     m_Value: 1
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
@@ -92,8 +92,8 @@ MonoBehaviour:
     min: 0
     max: 1
   depthExtent:
-    m_OverrideState: 0
-    m_Value: 128
+    m_OverrideState: 1
+    m_Value: 21.16
     min: 0.1
   denoisingMode:
     m_OverrideState: 0
@@ -104,8 +104,8 @@ MonoBehaviour:
     min: -1
     max: 1
   sliceDistributionUniformity:
-    m_OverrideState: 0
-    m_Value: 0.75
+    m_OverrideState: 1
+    m_Value: 0.362
     min: 0
     max: 1
   m_FogControlMode:
@@ -132,6 +132,9 @@ MonoBehaviour:
     min: 0
     max: 1
   directionalLightsOnly:
+    m_OverrideState: 0
+    m_Value: 0
+  filter:
     m_OverrideState: 0
     m_Value: 0
 --- !u!114 &7382276659697517529
