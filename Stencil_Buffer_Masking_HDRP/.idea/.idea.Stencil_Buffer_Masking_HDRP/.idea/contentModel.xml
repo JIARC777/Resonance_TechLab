@@ -299,9 +299,10 @@
               <e p="DAVEScripts" t="Include">
                 <e p="ActiveSound.cs" t="Include" />
                 <e p="DAVE.cs" t="Include" />
+                <e p="DAVEChaser.cs" t="Include" />
                 <e p="DAVEDeactivated.cs" t="Include" />
                 <e p="DAVEInvestigator.cs" t="Include" />
-                <e p="DAVEPathfollower.cs" t="Include" />
+                <e p="DAVEPatroller.cs" t="Include" />
                 <e p="DAVESys.cs" t="Include" />
                 <e p="NoiseData.cs" t="Include" />
                 <e p="NoiseMaker.cs" t="Include" />
@@ -325,10 +326,10 @@
                 <e p="CutterStencil.shader" t="Include" />
                 <e p="Hider_PullUp.shader" t="Include" />
               </e>
-              <e p="Lit.shader" t="Include" />
               <e p="Noise" t="Include">
                 <e p="NewSurfaceShader.shader" t="Include" />
               </e>
+              <e p="Resonance_Lit.shader" t="Include" />
             </e>
           </e>
           <e p="Office_Assets" t="Include">
@@ -4428,7 +4429,7 @@
               </e>
             </e>
           </e>
-          <e p="com.unity.timeline@1.5.1-pre.3" t="Include">
+          <e p="com.unity.timeline@1.5.2" t="Include">
             <e p="DocCodeExamples" t="Include">
               <e p="DocCodeExamples.asmdef" t="Include" />
             </e>
@@ -4719,16 +4720,22 @@
                 <e p="CustomTrackDrawerAttribute.cs" t="Include" />
                 <e p="DisplayNameHelper.cs" t="Include" />
                 <e p="Graphics.cs" t="Include" />
-                <e p="GUIColorOverride.cs" t="Include" />
-                <e p="GUIGroupScope.cs" t="Include" />
-                <e p="GUIMixedValueScope.cs" t="Include" />
-                <e p="GUIViewportScope.cs" t="Include" />
                 <e p="KeyTraverser.cs" t="Include" />
                 <e p="MarkerModifier.cs" t="Include" />
                 <e p="ObjectExtension.cs" t="Include" />
                 <e p="ObjectReferenceField.cs" t="Include" />
                 <e p="PropertyCollector.cs" t="Include" />
                 <e p="Range.cs" t="Include" />
+                <e p="Scopes" t="Include">
+                  <e p="GUIColorOverride.cs" t="Include" />
+                  <e p="GUIGroupScope.cs" t="Include" />
+                  <e p="GUIMixedValueScope.cs" t="Include" />
+                  <e p="GUIViewportScope.cs" t="Include" />
+                  <e p="HorizontalScope.cs" t="Include" />
+                  <e p="IndentLevelScope.cs" t="Include" />
+                  <e p="LabelWidthScope.cs" t="Include" />
+                  <e p="PropertyScope.cs" t="Include" />
+                </e>
                 <e p="SequenceSelectorNameFormater.cs" t="Include" />
                 <e p="SpacePartitioner.cs" t="Include" />
                 <e p="StyleManager.cs" t="Include" />
