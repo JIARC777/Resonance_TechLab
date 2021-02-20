@@ -8,7 +8,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 debounceMs = 250
 scopes = {
-	"last_search.B1CC2302" = ""
+	"last_search.B1CC2302" = "Wall_"
 	"m_ShownPanels.B1CC2302" = "3"
 	"m_SideBarSplitter.B1CC2302" = "180"
 	"m_DetailsPanelSplitter.B1CC2302" = "700"
@@ -51,6 +51,36 @@ providers = {
 		defaultAction = null
 	}
 	query = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	menu = {
+		active = true
+		priority = 80
+		defaultAction = null
+	}
+	settings = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	help = {
+		active = true
+		priority = -1
+		defaultAction = null
+	}
+	calculator = {
+		active = true
+		priority = 10
+		defaultAction = null
+	}
+	static_methods = {
+		active = true
+		priority = 85
+		defaultAction = null
+	}
+	res = {
 		active = true
 		priority = 100
 		defaultAction = null

@@ -6,8 +6,8 @@ Shader "Hider PullUp"
     {
 
         ///SBM--------
-        ZWrite Off //On: Make BG write to depth, could cause AO issues
-        Offset 0, 3
+        ZWrite On //On: Make BG write to depth, could cause AO issues
+        Offset 0, -3
         ///SBM-------
 
 
