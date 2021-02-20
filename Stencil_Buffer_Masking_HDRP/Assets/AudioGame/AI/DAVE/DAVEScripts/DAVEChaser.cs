@@ -2,22 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DAVEPathfollower : IDaveState
+public class DAVEChaser : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Initialize(DAVE dave)
+    void Start()
     {
         
     }
 
     // Update is called once per frame
-    public void UpdateLoop(DAVE dave)
+    void Update()
     {
         
-    }
-
-    public void UpdateCycle(DAVE d)
-    {
-
     }
 }
