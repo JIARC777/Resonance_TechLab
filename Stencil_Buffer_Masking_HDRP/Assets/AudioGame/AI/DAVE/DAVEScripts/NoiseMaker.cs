@@ -31,7 +31,7 @@ public class NoiseMaker : MonoBehaviour
     
 	private void OnCollisionEnter(Collision collision)
 	{
-		Debug.Log("Collision");
+//		Debug.Log("Collision");
         if (Time.time >= timeOfImpact + impactCooldown)
 		{
 			if (PhysicsObject || collision.gameObject.tag == "Map Hazard")
@@ -47,7 +47,7 @@ public class NoiseMaker : MonoBehaviour
     
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
-		Debug.Log("Collision");
+//		Debug.Log("Collision");
 		if (Time.time >= timeOfImpact + impactCooldown)
 		{
 			if (PhysicsObject || hit.gameObject.tag == "Map Hazard")
@@ -91,7 +91,7 @@ public class NoiseMaker : MonoBehaviour
 	        // calculate initial volume ** ADD FACTOR FOR VELOCITY OF OBJECT ON IMPACT **
 	        echoFactor *= col.gameObject.GetComponent<NoiseData>().echoFactor;
         }
-        ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
+        ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.TransformPoint(this.GetComponent<CharacterController>().center), transform.rotation) as GameObject;
         ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
         sound.TransferVolumeData(initialVolume, lifeTime, transform.position, Time.time);
         // if something weird breaks uncomment? 
