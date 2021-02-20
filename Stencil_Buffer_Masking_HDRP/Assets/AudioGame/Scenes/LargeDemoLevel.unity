@@ -419,74 +419,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &81331284 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3779465913675247790, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
-  m_PrefabInstance: {fileID: 1679407100}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &81331285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81331284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4534ec81957aad6459c50fea8f299d59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
-  arrivedAtDestination: 0
-  nodeList:
-  - {fileID: 460364242}
-  - {fileID: 626463160}
-  - {fileID: 1860239659}
-  - {fileID: 332545349}
---- !u!114 &81331286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81331284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7eed99b535823848b73a6ddcbcce192, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
-  arrivedAtDestination: 0
-  playerPosRef: {x: 0, y: 0, z: 0}
-  damageRadius: 1
-  pingSource: {fileID: 1024491623}
---- !u!114 &81331287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81331284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8a699ef615606c43924f4257df5a440, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
-  arrivedAtDestination: 0
---- !u!65 &81331290
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 81331284}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.53, y: 1.27, z: 1.79}
-  m_Center: {x: 0, y: 2.08, z: 0}
 --- !u!1 &88681110
 GameObject:
   m_ObjectHideFlags: 0
@@ -15437,7 +15369,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8370431049599985257, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
 --- !u!4 &1679407101 stripped
 Transform:

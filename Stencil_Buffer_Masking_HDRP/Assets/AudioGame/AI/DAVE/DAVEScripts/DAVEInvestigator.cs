@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class DAVEInvestigator : IDaveState
-{  
-    private ActiveSound[] soundsToInvestigate;    
+{
+    List<ActiveSound> soundsToInvestigate = new List<ActiveSound>();
+    DAVE thisDave;
     // Start is called before the first frame update
-   public void Initialize(DAVE dave)
+    public void Initialize(DAVE dave)
     {
-       Add();
+        dave.HeardNoise += Add;
+        thisDave = dave;
     }
 
     // Update is called once per frame
@@ -17,14 +20,20 @@ public class DAVEInvestigator : IDaveState
         
     }
 
-    void Add()
+    void Add(ActiveSound noise)
     {
-        
+        soundsToInvestigate.Add(noise);
+        if (soundsToInvestigate.Count > 1)
+            PrioritizeSounds();
     }
 
     void PrioritizeSounds()
     {
-        
+        if (soundsToInvestigate.Count >= 1)
+        {
+            soundsToInvestigate = soundsToInvestigate.OrderBy(s => s.curVolume).ToList<ActiveSound>();
+        }
+        thisDave.SetDestination(soundsToInvestigate[0].soundLocation);
     }
 }
 
