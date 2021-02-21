@@ -15,7 +15,7 @@ public class OldDAVE : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-        PlayerDetector.OnDetection += DetectedPlayer;
+        //PlayerDetector.OnDetection += DetectedPlayer;
         patrolSystem = GetComponent<Pathfollower>();
         investigationSystem = GetComponent<Investigator>();
         patrolSystem.active = true;

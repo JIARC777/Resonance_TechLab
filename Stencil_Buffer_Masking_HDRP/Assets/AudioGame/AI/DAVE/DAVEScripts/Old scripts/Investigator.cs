@@ -19,7 +19,7 @@ public class Investigator : DAVESys
     {
         InitializeSystems();
         //PlayerDetector.OnDetection += AttackPlayer;
-        PingSphere.DetectedPlayer += ChasePlayer;
+        //PingSphere.DetectedPlayer += ChasePlayer;
     }
 
     public void AddSound(ActiveSound sound)

@@ -2,21 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DAVEChaser : IDaveState
+public class DAVEChaser1 : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void Initialize(DAVE dave)
+    void Start()
     {
-        Debug.Log("Player Found: Initialized Chaser");
+        
     }
 
     // Update is called once per frame
-    public void UpdateCycle(DAVE dave)
-    {
-    }
-
-
-    public void Exit()
+    void Update()
     {
         
     }

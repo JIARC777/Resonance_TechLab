@@ -8,7 +8,7 @@ public class DAVEInvestigator : IDaveState
     List<ActiveSound> soundsToInvestigate = new List<ActiveSound>();
     DAVE thisDave;
 
-    private float noiseWaitTime = 3f;
+    private float noiseWaitTime = 1f;
     private float noiseStartWaitTime;
 
     private bool bIsInvestigatingAndWaiting = false;
@@ -71,11 +71,14 @@ public class DAVEInvestigator : IDaveState
             {
                 //There's a sound, we're at it, and we should investigate
                 //Debug.Log("Arrived");
+                dave.PingSurroundings();
                 bIsInvestigatingAndWaiting = true;
                 noiseStartWaitTime = Time.time;
             }
         }
     }
+    
+    
 
     public void Exit()
     {
