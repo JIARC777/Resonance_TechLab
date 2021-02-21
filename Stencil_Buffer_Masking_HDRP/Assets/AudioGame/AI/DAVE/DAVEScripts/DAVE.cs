@@ -14,9 +14,10 @@ public class DAVE : MonoBehaviour
     [HideInInspector]
     // Reference to the current state of Dave
     public IDaveState currentState;
-    ///public DAVEData crossStateData;
     // Set transform nodes in inspector
     public GameObject[] patrolPathNodes;
+    // How far do you want a ping to travel
+    public float pingRadius = 7f;
     // when Exiting Patrol, Patrol can access and set this as a marker, so it knows where to go when it starts patrolling again
     [HideInInspector]
     public int currentPatrolPathIndex;
@@ -24,11 +25,11 @@ public class DAVE : MonoBehaviour
     // Store Sound Ids so that particles from the same sound are not called twice
     int[] soundIdHashes = new int[100];
     Vector3 currentDestination;
+    GameObject currentPing;
 
     // Events
-    // Called On OnTriggerEnter if tag == Player, indicating a player was found
-    public delegate void PlayerDetected(Vector3 position);
-    public event PlayerDetected DetectedPlayer;
+    
+    
     // Called On OnParticleCollsion
     public delegate void SoundHeard(ActiveSound suspiciousNoise);
     public event SoundHeard HeardNoise;
@@ -56,6 +57,7 @@ public class DAVE : MonoBehaviour
         //Debug.Log(agent.stoppingDistance);
         if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance)
         {
+            // Call Event letting any states know destination has been reached
 //             Debug.Log("Reached Destination");
              ArrivedAtDestination(this);
         }
@@ -103,5 +105,22 @@ public class DAVE : MonoBehaviour
         }
     }
     
+    // Let any states ping for surroundings with public function
+    public void PingSurroundings()
+    {
+        currentPing = Instantiate(Resources.Load("PingSphere", typeof(GameObject)), transform.position + new Vector3(0, 2, 0), transform.rotation) as GameObject;
+        PingSphere PingInfo = currentPing.GetComponent<PingSphere>();
+       // PingInfo.maxRadius = pingRadius;
+        PingInfo.DetectedPlayer += EnterChaseState;
+        // if collision happens, this is quickly switched back on, if not it will stop the pinging process
+    }
+
+    void EnterChaseState(Vector3 lastKnownPlayerLocation)
+    {
+        currentState.Exit();
+        currentState = new DAVEChaser();
+        currentState.Initialize(this);
+        
+    }
 
 }
