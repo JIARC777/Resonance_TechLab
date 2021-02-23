@@ -11,42 +11,61 @@ public class DAVEChaser : IDaveState
 
     private float timeOfArrival;
     // Since a ping takes a noticable finite amount of time, this keeps us from killing the state until we assume the ping returned void 
-    float timeTime = 5F;
+    bool bIsWaitingAtLocation = false;
+    float pingWaitTime = 1f;
+    private float noiseStartWaitTime;
     public void Initialize(DAVE dave)
     {
         Debug.Log("Player Found: Initialized Chaser");
         thisDave = dave;
-        ChasePlayer(thisDave.lastKnownPlayerLocation);
-        thisDave.ArrivedAtDestination += Investigate;
+        TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
+        thisDave.ArrivedAtDestination += ReachedOldPlayerPosPing;
     }
 
     // Update is called once per frame
     public void UpdateCycle(DAVE dave)
     {
-        if (thisDave.pingFoundPlayer)
+        var doneWaitingOnInvestigation = bIsWaitingAtLocation && Time.time >= noiseStartWaitTime + pingWaitTime;
+        if (doneWaitingOnInvestigation)
         {
-            // As soon as its true, set false
-            thisDave.pingFoundPlayer = false;
-            ChasePlayer(thisDave.lastKnownPlayerLocation);
+            if (thisDave.pingFoundPlayer)
+            {
+                Debug.Log("Found Player Again");
+                // As soon as its true, set false
+                thisDave.pingFoundPlayer = false;
+                TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
+            }
         }
+        
     }
 
-    public void ChasePlayer(Vector3 suspectedPlayerLocation)
+    public void TravelToSuspectedPlayerPos(Vector3 suspectedPlayerLocation)
     {
-        
+        Debug.Log("Set Player Destination");
         thisDave.SetDestination(suspectedPlayerLocation);
     }
 
-    public void Investigate(DAVE dave)
+    public void ReachedOldPlayerPosPing(DAVE dave)
     {
-        timeSinceLastPing = Time.time;
+        Debug.Log("Reached old player location");
+        
         // We asssume that if this ping returns a hit, we will reassign the position
-        thisDave.PingSurroundings();
+        
+        if (!bIsWaitingAtLocation)
+        {
+            thisDave.PingSurroundings();
+            //There's a sound, we're at it, and we should investigate
+            //Debug.Log("Arrived");
+            // dave.PingSurroundings();
+            bIsWaitingAtLocation = true;
+            noiseStartWaitTime = Time.time;
+        }
+        
     }
 
 
     public void Exit()
     {
-        thisDave.ArrivedAtDestination -= Investigate;
+        thisDave.ArrivedAtDestination -= ReachedOldPlayerPosPing;
     }
 }
