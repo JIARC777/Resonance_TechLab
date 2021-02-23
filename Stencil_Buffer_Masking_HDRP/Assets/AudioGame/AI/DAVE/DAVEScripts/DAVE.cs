@@ -19,9 +19,9 @@ public class DAVE : MonoBehaviour
     public GameObject[] patrolPathNodes;
     // How far do you want a ping to travel
     // public float pingRadius = 7f;
-    public float attackRadius = 3f;
+    public float attackRadius = 0.1f;
     // How far is AI willing to travel before
-    public float chaseRadius = 5F;
+    //public float chaseRadius = 5F;
     // when Exiting Patrol, Patrol can access and set this as a marker, so it knows where to go when it starts patrolling again
     [HideInInspector]
     public int currentPatrolPathIndex;
@@ -78,7 +78,7 @@ public class DAVE : MonoBehaviour
 
     public void SetDestination(Vector3 newPointOfInterest)
 	{
-        Debug.Log("New Destination" + newPointOfInterest);
+       // Debug.Log("New Destination" + newPointOfInterest);
         currentDestination = newPointOfInterest;
         // Debug.Log(newPointOfInterest);
         agent.SetDestination(currentDestination);
@@ -96,10 +96,10 @@ public class DAVE : MonoBehaviour
                 ActiveSound soundData = noise.GetComponent<ActiveSound>();
                 soundIdHashes[noiseID % 100] = noiseID;
                 //Debug.Log("Beware! D.A.V.E. heard you");
-                
+
+                // Debug.Log(currentState.GetType().ToString());
                 // Check to see if the current State is not a DAVEInvestigator initialize state - This lets us add a transition case in DAVE itself while not creating a new state every time DAVE hears a sound
                 var bNotInInvestigatorState = currentState.GetType().ToString() != "DAVEInvestigator";
-                Debug.Log(currentState.GetType().ToString());
                 if (bNotInInvestigatorState)
                 {
                     currentState.Exit();
@@ -132,7 +132,9 @@ public class DAVE : MonoBehaviour
         // Update Drone's last known player position
         lastKnownPlayerLocation = knownPlayerLocation;
         // Before chasing, check if we are close enough to attack
-        if ((knownPlayerLocation - this.transform.position).magnitude <= attackRadius)
+        var bCanAttackPlayer = (this.transform.position - knownPlayerLocation).magnitude <= attackRadius;
+        Debug.Log((this.transform.position - knownPlayerLocation).magnitude);
+        if (bCanAttackPlayer)
         {
             // Entering Attack Condition
             Debug.Log("Attack Player");
