@@ -36,16 +36,21 @@ namespace Valve.VR.InteractionSystem
         public void AttachedToHand()
         {
             isAttachedToHand = true;
-            for (int i = 0; i < gunParts.Length; i++)
-                gunParts[i].layer = 13;
+            foreach(GameObject go in gunParts)
+            {
+                go.layer = 13;
+                go.GetComponent<Collider>().enabled = false;
+            }
         }
 
         public void DetachedFromHand()
         {
             isAttachedToHand = false;
-            for (int i = 0; i < gunParts.Length; i++)
-                gunParts[i].layer = 10;
+            foreach (GameObject go in gunParts)
+            {
+                go.layer = 10;
+                go.GetComponent<Collider>().enabled = true;
+            }
         }
     }
 }
-
