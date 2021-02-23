@@ -3004,7 +3004,10 @@ MonoBehaviour:
   - {fileID: 626463160}
   - {fileID: 1860239659}
   - {fileID: 332545349}
+  attackRadius: 0.1
   currentPatrolPathIndex: 0
+  lastKnownPlayerLocation: {x: 0, y: 0, z: 0}
+  pingFoundPlayer: 0
 --- !u!65 &389864824
 BoxCollider:
   m_ObjectHideFlags: 0

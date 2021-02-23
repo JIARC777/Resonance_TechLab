@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 6843711}
   m_Layer: 10
   m_Name: Wall_ER_Door_South
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 18243145}
   m_Layer: 10
   m_Name: Wall_CR_West
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 32332038}
   m_Layer: 9
   m_Name: Wall_SR_Door_West_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -400,7 +400,7 @@ GameObject:
   - component: {fileID: 89055526}
   m_Layer: 10
   m_Name: Wall_CR_South
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 147703244}
   m_Layer: 9
   m_Name: Wall_ER_INT_South_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 164342618}
   m_Layer: 10
   m_Name: Wall_SR_West
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -685,7 +685,7 @@ Transform:
   m_Children:
   - {fileID: 1577963105}
   m_Father: {fileID: 169528898}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &169528897
 GameObject:
@@ -697,7 +697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 169528898}
   m_Layer: 10
-  m_Name: South_Room
+  m_Name: South_Room_Broom_Closet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -715,7 +715,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 235166229}
-  - {fileID: 2122456581}
   - {fileID: 164342620}
   - {fileID: 1810048832}
   m_Father: {fileID: 1591875485}
@@ -734,7 +733,7 @@ GameObject:
   - component: {fileID: 235166227}
   m_Layer: 10
   m_Name: Wall_SR_Door_West
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -798,8 +797,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235166225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.1251402, y: -6.602831, z: -1.9428272}
-  m_LocalScale: {x: 5, y: 5, z: 0.2}
+  m_LocalPosition: {x: 4.008, y: -6.602831, z: -1.9428272}
+  m_LocalScale: {x: 3.2013, y: 5, z: 0.2}
   m_Children:
   - {fileID: 32332035}
   m_Father: {fileID: 169528898}
@@ -902,7 +901,7 @@ GameObject:
   - component: {fileID: 243785574}
   m_Layer: 9
   m_Name: Wall_CR_INT_North_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1120,7 +1119,7 @@ GameObject:
   - component: {fileID: 266296998}
   m_Layer: 10
   m_Name: Wall_East
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1184,7 +1183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266296996}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -18.881222, y: -19.407717, z: -10.053932}
+  m_LocalPosition: {x: -22.07, y: -19.407717, z: -10.053932}
   m_LocalScale: {x: 26, y: 5, z: 0.20000002}
   m_Children:
   - {fileID: 1460054839}
@@ -1298,8 +1297,8 @@ ArticulationBody:
   m_GameObject: {fileID: 298450459}
   m_Enabled: 1
   m_Mass: 1
-  m_ParentAnchorPosition: {x: 0, y: 0, z: 0}
-  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_ParentAnchorPosition: {x: 0, y: -0.027532578, z: 0}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   m_AnchorPosition: {x: 0, y: 0.50000006, z: 0}
   m_AnchorRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
   m_ComputeParentAnchor: 1
@@ -1435,7 +1434,7 @@ GameObject:
   - component: {fileID: 308208517}
   m_Layer: 9
   m_Name: Wall_West_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1751,7 +1750,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &327889412
 Transform:
   m_ObjectHideFlags: 0
@@ -1845,7 +1844,7 @@ GameObject:
   - component: {fileID: 338122006}
   m_Layer: 9
   m_Name: Wall_WR_INT_Door_West_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -1940,7 +1939,7 @@ GameObject:
   - component: {fileID: 363974250}
   m_Layer: 10
   m_Name: Wall_CR_INT_North
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2021,7 +2020,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430960442}
   m_Layer: 10
-  m_Name: East_Room
+  m_Name: East_Room_Cubicle_Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,7 +2057,7 @@ GameObject:
   - component: {fileID: 482644678}
   m_Layer: 10
   m_Name: Wall_WR_INT_Door_East
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2179,7 +2178,7 @@ GameObject:
   - component: {fileID: 571891716}
   m_Layer: 9
   m_Name: Wall_CR_West_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2275,7 +2274,7 @@ GameObject:
   - component: {fileID: 585280712}
   m_Layer: 9
   m_Name: Wall_SR_East_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2370,7 +2369,7 @@ GameObject:
   - component: {fileID: 592500946}
   m_Layer: 10
   m_Name: Wall_ER_INT_South
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2434,8 +2433,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592500944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.82122, y: -19.407717, z: -4.2439322}
-  m_LocalScale: {x: 3.5, y: 5, z: 0.2}
+  m_LocalPosition: {x: -15.65, y: -19.407717, z: -4.2439322}
+  m_LocalScale: {x: 5.0635586, y: 5, z: 0.2}
   m_Children:
   - {fileID: 147703241}
   m_Father: {fileID: 430960442}
@@ -2454,7 +2453,7 @@ GameObject:
   - component: {fileID: 595183454}
   m_Layer: 10
   m_Name: Wall_WR_INT_Door_West
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2538,7 +2537,7 @@ GameObject:
   - component: {fileID: 599734967}
   m_Layer: 10
   m_Name: Wall_North
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2602,8 +2601,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 599734965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.118779, y: -19.407717, z: -22.843933}
-  m_LocalScale: {x: 40, y: 5, z: 0.2}
+  m_LocalPosition: {x: 0.04, y: -19.407717, z: -22.843933}
+  m_LocalScale: {x: 47.431915, y: 5, z: 0.2}
   m_Children:
   - {fileID: 950642881}
   m_Father: {fileID: 1187260232}
@@ -2687,7 +2686,7 @@ Transform:
   m_GameObject: {fileID: 619344489}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.0891635, y: -11.272008, z: -9.435855}
-  m_LocalScale: {x: 40, y: 0.1, z: 26}
+  m_LocalScale: {x: 47.600002, y: 0.1, z: 26}
   m_Children:
   - {fileID: 1144820015}
   m_Father: {fileID: 1591875485}
@@ -2706,7 +2705,7 @@ GameObject:
   - component: {fileID: 622280936}
   m_Layer: 10
   m_Name: Wall_ER_Door_North
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -2791,7 +2790,7 @@ GameObject:
   - component: {fileID: 655639320}
   m_Layer: 9
   m_Name: Wall_ER_INT_North_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3318,7 +3317,7 @@ GameObject:
   - component: {fileID: 866599039}
   m_Layer: 10
   m_Name: Wall_CR_North
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3402,7 +3401,7 @@ GameObject:
   - component: {fileID: 886531761}
   m_Layer: 10
   m_Name: Wall_West
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3569,7 +3568,7 @@ GameObject:
   - component: {fileID: 950642884}
   m_Layer: 9
   m_Name: Wall_North_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3664,7 +3663,7 @@ GameObject:
   - component: {fileID: 980350155}
   m_Layer: 10
   m_Name: Wall_South
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3728,8 +3727,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980350153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.118779, y: -19.407717, z: 2.6560678}
-  m_LocalScale: {x: 40, y: 5, z: 0.2}
+  m_LocalPosition: {x: 0.03999996, y: -19.407717, z: 2.6560678}
+  m_LocalScale: {x: 47.431915, y: 5, z: 0.2}
   m_Children:
   - {fileID: 1975403394}
   m_Father: {fileID: 1187260232}
@@ -3830,7 +3829,7 @@ GameObject:
   - component: {fileID: 1079486548}
   m_Layer: 10
   m_Name: Wall_ER_INT_North
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -3894,8 +3893,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079486546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.82122, y: -19.407717, z: -15.9839325}
-  m_LocalScale: {x: 3.5, y: 5, z: 0.2}
+  m_LocalPosition: {x: -15.650001, y: -19.407717, z: -15.9839325}
+  m_LocalScale: {x: 5.0635586, y: 5, z: 0.2}
   m_Children:
   - {fileID: 655639317}
   m_Father: {fileID: 430960442}
@@ -4402,7 +4401,7 @@ GameObject:
   - component: {fileID: 1326072149}
   m_Layer: 9
   m_Name: Wall_ER_Door_North_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4498,7 +4497,7 @@ GameObject:
   - component: {fileID: 1341630084}
   m_Layer: 9
   m_Name: Wall_ER_Door_South_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4580,102 +4579,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000002, y: 1, z: 1.0000004}
   m_Center: {x: -0.000000059604645, y: -0.000000029802322, z: -0.0000076293945}
---- !u!1 &1458991752
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1458991753}
-  - component: {fileID: 1458991755}
-  - component: {fileID: 1458991754}
-  - component: {fileID: 1458991756}
-  m_Layer: 9
-  m_Name: Wall_SR_Door_East_Hider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &1458991753
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458991752}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2122456581}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1458991754
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458991752}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 5
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: ccd65395e44b8974abf38a52f7c0d636, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 2
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1458991755
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458991752}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &1458991756
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458991752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1.0000001}
-  m_Center: {x: 0, y: -0.000000029802322, z: 0}
 --- !u!1 &1460054838
 GameObject:
   m_ObjectHideFlags: 0
@@ -4690,7 +4593,7 @@ GameObject:
   - component: {fileID: 1460054842}
   m_Layer: 9
   m_Name: Wall_East_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -4786,7 +4689,7 @@ GameObject:
   - component: {fileID: 1489084421}
   m_Layer: 9
   m_Name: Wall_WR_Door_North_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5098,7 +5001,7 @@ GameObject:
   - component: {fileID: 1550385191}
   m_Layer: 9
   m_Name: Wall_CR_North_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5194,7 +5097,7 @@ GameObject:
   - component: {fileID: 1574920711}
   m_Layer: 9
   m_Name: Wall_WR_INT_Door_East_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5290,7 +5193,7 @@ GameObject:
   - component: {fileID: 1577963108}
   m_Layer: 9
   m_Name: Wall_SR_West_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5386,7 +5289,7 @@ GameObject:
   - component: {fileID: 1581687528}
   m_Layer: 9
   m_Name: Wall_CR_South_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5519,7 +5422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.606
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5527,7 +5430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.024
+      value: 9.03
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5610,7 +5513,7 @@ GameObject:
   - component: {fileID: 1653127651}
   m_Layer: 10
   m_Name: Wall_WR_Door_South
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5694,7 +5597,7 @@ GameObject:
   - component: {fileID: 1810048830}
   m_Layer: 10
   m_Name: Wall_SR_East
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5719,7 +5622,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c328e5e011f99594285ae21d56734b82, type: 2}
+  - {fileID: 2100000, guid: fbe150286818670439ccd225e220c350, type: 2}
   - {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -5758,12 +5661,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1810048828}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -5.27486, y: -6.602831, z: 1.5571728}
+  m_LocalPosition: {x: 0.56, y: -6.602831, z: 1.5571728}
   m_LocalScale: {x: 7, y: 5, z: 0.20000002}
   m_Children:
   - {fileID: 585280709}
   m_Father: {fileID: 169528898}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1817354942
 GameObject:
@@ -5779,7 +5682,7 @@ GameObject:
   - component: {fileID: 1817354946}
   m_Layer: 9
   m_Name: Wall_WR_Door_South_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -5957,7 +5860,7 @@ GameObject:
   - component: {fileID: 1941260075}
   m_Layer: 9
   m_Name: Wall_CR_Door_South_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6053,7 +5956,7 @@ GameObject:
   - component: {fileID: 1975403397}
   m_Layer: 9
   m_Name: Wall_South_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6148,7 +6051,7 @@ GameObject:
   - component: {fileID: 1993936866}
   m_Layer: 10
   m_Name: Wall_CR_INT_West
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6232,7 +6135,7 @@ GameObject:
   - component: {fileID: 2023929545}
   m_Layer: 10
   m_Name: Wall_WR_Door_North
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6399,7 +6302,7 @@ GameObject:
   - component: {fileID: 2120926476}
   m_Layer: 9
   m_Name: Wall_CR_INT_West_Hider
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -6481,90 +6384,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9999999, y: 1, z: 1.0000001}
   m_Center: {x: -0.000000014901161, y: -0.000000029802322, z: 0.0000019073486}
---- !u!1 &2122456577
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2122456581}
-  - component: {fileID: 2122456580}
-  - component: {fileID: 2122456579}
-  m_Layer: 10
-  m_Name: Wall_SR_Door_East
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!23 &2122456579
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122456577}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 4
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: fbe150286818670439ccd225e220c350, type: 2}
-  - {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 2
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2122456580
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122456577}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2122456581
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122456577}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3748598, y: -6.602831, z: -1.9428272}
-  m_LocalScale: {x: 4, y: 5, z: 0.2}
-  m_Children:
-  - {fileID: 1458991753}
-  m_Father: {fileID: 169528898}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2130340371
 GameObject:
   m_ObjectHideFlags: 0
@@ -6578,7 +6397,7 @@ GameObject:
   - component: {fileID: 2130340373}
   m_Layer: 10
   m_Name: Wall_CR_Door_South
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
