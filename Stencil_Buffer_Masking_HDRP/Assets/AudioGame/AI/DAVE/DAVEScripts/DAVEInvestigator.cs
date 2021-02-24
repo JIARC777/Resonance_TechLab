@@ -82,7 +82,7 @@ public class DAVEInvestigator : IDaveState
 
     public void Exit()
     {
-        Debug.Log("No More Sound For DAVE");
+        Debug.Log("Exting Investigator");
         thisDave.HeardNoise -= Add;
         thisDave.ArrivedAtDestination -= InvestigateSound;
         // This is where we transition into the patroller state instead of in the DAVE base  class

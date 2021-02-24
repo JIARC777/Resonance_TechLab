@@ -28,9 +28,12 @@ public class DAVEChaser : IDaveState
         var doneWaitingOnInvestigation = bIsWaitingAtLocation && Time.time >= noiseStartWaitTime + pingWaitTime;
         if (doneWaitingOnInvestigation)
         {
+          //  Debug.Log("Done Investiagting");
+            // Only after this waiting period, check to see if the ping hit anything
             if (thisDave.pingFoundPlayer)
             {
                 Debug.Log("Found Player Again");
+                bIsWaitingAtLocation = false;
                 // As soon as its true, set false
                 thisDave.pingFoundPlayer = false;
                 TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
@@ -54,16 +57,14 @@ public class DAVEChaser : IDaveState
         if (!bIsWaitingAtLocation)
         {
             thisDave.PingSurroundings();
-            //There's a sound, we're at it, and we should investigate
-            //Debug.Log("Arrived");
-            // dave.PingSurroundings();
+            Debug.Log("Arrived and Waiting");
             bIsWaitingAtLocation = true;
             noiseStartWaitTime = Time.time;
         }
         
     }
 
-
+    // Someone brave can look at fitting this into the execution loop for DAVE 
     public void Exit()
     {
         thisDave.ArrivedAtDestination -= ReachedOldPlayerPosPing;

@@ -13,7 +13,7 @@ public class PlayerDetector : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log(other.transform.position);
+            //Debug.Log(other.transform.position);
             // this just uses the basic transform we may need to reconfigure for ther character controller
             DetectedPlayer(other.transform.position);
         }
