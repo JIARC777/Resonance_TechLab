@@ -10,7 +10,7 @@ public class DAVEPatroller : IDaveState
     // Start is called before the first frame update
     public void Initialize(DAVE dave)
     {
-        // Debug.Log("We are here");
+        Debug.Log("Patroller Initialized");
         thisDave = dave;
         patrolPathNodes = dave.patrolPathNodes;
         dave.ArrivedAtDestination += GoToNextPatrolNode;
@@ -19,17 +19,18 @@ public class DAVEPatroller : IDaveState
     // Update Cycle looks for events to deactivate itself and pass dave the new current state if it needs to
     public void UpdateCycle(DAVE dave)
     {
-       
+       // Debug.Log("Patroller Is Running");
     }
     public void GoToNextPatrolNode(DAVE dave)
 	{
+        Debug.Log("Patroller: Go To Next Patrol Node");
         dave.currentPatrolPathIndex = ((dave.currentPatrolPathIndex + 1) % (patrolPathNodes.Length));
         dave.SetDestination(patrolPathNodes[dave.currentPatrolPathIndex].transform.localPosition);
 	}
     public void Exit()
     {
         
-        Debug.Log("Destroy Patroller");
+        Debug.Log("Exit Patroller");
         // Make sure to unsub from events on destruction
         thisDave.ArrivedAtDestination -= GoToNextPatrolNode;
     }

@@ -20,7 +20,7 @@ public class ActiveSound: MonoBehaviour
     float duration;
     float volume;
     float timeSoundOccured;
-    int particleRes = 1000;
+    int particleRes = 2000;
     
     ParticleSystem pSystem;
 
