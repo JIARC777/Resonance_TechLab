@@ -18,6 +18,7 @@ public class DAVEInvestigator : IDaveState
     {
         dave.HeardNoise += Add;
         thisDave = dave;
+        thisDave.waitingAtLocation = false;
         thisDave.ArrivedAtDestination += InvestigateSound;
     }
 
@@ -27,16 +28,22 @@ public class DAVEInvestigator : IDaveState
         var doneWaitingOnInvestigation = bIsInvestigatingAndWaiting && Time.time >= noiseStartWaitTime + noiseWaitTime;
         if (doneWaitingOnInvestigation)
         {
-            //Debug.Log("Removed sound");
-            soundsToInvestigate.RemoveAt(0);
             bIsInvestigatingAndWaiting = false;
-            PrioritizeSounds();
-            //Exit();
+            soundsToInvestigate.RemoveAt(0);
+            if (soundsToInvestigate.Count == 0) //No sounds to investigate
+            {
+                Exit();
+            } else
+			{
+                PrioritizeSounds();
+			}
         }
     }
 
     void Add(ActiveSound noise)
     {
+        // Assign the Active Sound's volume based on its now current volume (right at time of impact)
+        noise.volumeAtImpact = noise.curVolume;
         //Debug.Log("Noise Heard" + noise.soundLocation);
         soundsToInvestigate.Add(noise);
         if (soundsToInvestigate.Count > 0)
@@ -46,36 +53,51 @@ public class DAVEInvestigator : IDaveState
         }
     }
 
+    
     void PrioritizeSounds()
     {
         if (soundsToInvestigate.Count >= 1)
-        {
-            soundsToInvestigate = soundsToInvestigate.OrderBy(s => s.curVolume).ToList<ActiveSound>();
+        {   // Toggle between the Linq expression and our custom function 
+            // soundsToInvestigate = soundsToInvestigate.OrderBy(s => s.curVolume).ToList<ActiveSound>();
+            soundsToInvestigate = SortAndReorder(soundsToInvestigate);
+      
         }
-
         if (soundsToInvestigate.Count > 0)
         {
             thisDave.SetDestination(soundsToInvestigate[0].soundLocation);
         }
     }
-
+    // the OrderBy function is clean but doesnt seem to provide the behavior we want - as a testing precaution, we can implement this more open manual function to more easily adjust priority behavior
+    List<ActiveSound> SortAndReorder(List<ActiveSound> soundList)
+	{
+        // Reference to maximum volume of noise
+        float maxVol = 0f;
+        int loudestSoundIndex = 0;
+        for (int i = 0; i < soundList.Count; i++)
+		{
+            if (soundList[i].volumeAtImpact > maxVol)
+                loudestSoundIndex = i;
+		}
+        // I think that a simple swap function should be just fine - make sure to just set the loudest sound to the front of the array since that is what the code working with the Linq sorter assumes 
+        // since we are working with such small lists on average, and this function is called on every new sound we do not need to sort the entire array each time
+        // if we want to go all CS125, we can create a seperate function for the swap
+        ActiveSound tempSound = null;
+        tempSound = soundList[loudestSoundIndex];
+        soundList[loudestSoundIndex] = soundList[0];
+        soundList[0] = tempSound;
+        Debug.Log("Sound with Max Volume: " + soundList[0].Id + ": " + soundList[0].volumeAtImpact);
+        // Not sure if we really need to null the tempSound or not but its quick to do
+        tempSound = null;
+        // Return the reordered list
+        return soundList;
+	}
     void InvestigateSound(DAVE dave)
     {
-        if (soundsToInvestigate.Count == 0) //No sounds to investigate
-        {
-            Exit();
-        }
-        else
-        {
-            if (!bIsInvestigatingAndWaiting)
-            {
-                //There's a sound, we're at it, and we should investigate
-                //Debug.Log("Arrived");
-                dave.PingSurroundings();
-                bIsInvestigatingAndWaiting = true;
-                noiseStartWaitTime = Time.time;
-            }
-        }
+        //There's a sound, we're at it, and we should investigate
+        //Debug.Log("Arrived At Sound");
+        dave.PingSurroundings();
+        bIsInvestigatingAndWaiting = true;
+        noiseStartWaitTime = Time.time;
     }
     
     
@@ -85,7 +107,7 @@ public class DAVEInvestigator : IDaveState
         Debug.Log("Exting Investigator");
         thisDave.HeardNoise -= Add;
         thisDave.ArrivedAtDestination -= InvestigateSound;
-        // This is where we transition into the patroller state instead of in the DAVE base  class
+        // This is where we transition into the patroller state instead of in the DAVE base class
         thisDave.currentState = new DAVEPatroller();
         thisDave.currentState.Initialize(thisDave);
     }

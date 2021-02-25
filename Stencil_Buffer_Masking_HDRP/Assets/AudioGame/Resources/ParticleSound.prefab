@@ -48,6 +48,7 @@ MonoBehaviour:
   curVolume: 0
   soundLocation: {x: 0, y: -0.014, z: 0.076}
   Id: 917563
+  volumeAtImpact: 0
   speedFactorMultiplier: 1
 --- !u!199 &1606137619900986218
 ParticleSystemRenderer:
@@ -3926,7 +3927,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 9783
+      m_Bits: 1591
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

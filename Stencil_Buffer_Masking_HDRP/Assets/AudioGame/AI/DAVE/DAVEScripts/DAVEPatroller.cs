@@ -12,8 +12,10 @@ public class DAVEPatroller : IDaveState
     {
         Debug.Log("Patroller Initialized");
         thisDave = dave;
+        thisDave.waitingAtLocation = false;
         patrolPathNodes = dave.patrolPathNodes;
         dave.ArrivedAtDestination += GoToNextPatrolNode;
+        GoToNextPatrolNode(thisDave);
     }
 
     // Update Cycle looks for events to deactivate itself and pass dave the new current state if it needs to
