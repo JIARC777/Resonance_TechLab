@@ -10,7 +10,7 @@ public class DAVEPatroller : IDaveState
     // Start is called before the first frame update
     public void Initialize(DAVE dave)
     {
-        Debug.Log("Patroller Initialized");
+        Debug.Log("<color=blue>Entering Patroller</color>");
         thisDave = dave;
         thisDave.waitingAtLocation = false;
         patrolPathNodes = dave.patrolPathNodes;
@@ -32,7 +32,7 @@ public class DAVEPatroller : IDaveState
     public void Exit()
     {
         
-        Debug.Log("Exit Patroller");
+        Debug.Log("<color=blue>Exit Patroller</color>");
         // Make sure to unsub from events on destruction
         thisDave.ArrivedAtDestination -= GoToNextPatrolNode;
     }
