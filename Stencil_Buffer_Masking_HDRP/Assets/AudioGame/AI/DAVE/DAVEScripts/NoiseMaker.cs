@@ -44,8 +44,8 @@ public class NoiseMaker : MonoBehaviour
 			// we dont want to collide with the player - Player should interact with a physics object - any other time make noise
 			if (collision.gameObject.tag != "Player" && collision.gameObject.name != "HandColliderLeft(Clone)" && collision.gameObject.name != "HandColliderRight(Clone)")
             {
-                Debug.Log("The Object Hit Something");
-				Debug.Log(collision.gameObject.name);
+                // Debug.Log("The Object Hit Something");
+				// Debug.Log(collision.gameObject.name);
                 timeOfImpact = Time.time;
                 // Calculate the volume of the noise at the source 
                 EmitSound(collision);
@@ -62,7 +62,7 @@ public class NoiseMaker : MonoBehaviour
 			// We only want to collide if something is tagged as a map hazard
 			if (hit.gameObject.tag == "Map Hazard")
 			{
-				Debug.Log("You Ran Into Something");
+				// Debug.Log("You Ran Into Something");
 				timeOfImpact = Time.time;
 				// Calculate the volume of the noise at the source 
 				EmitSound(hit);

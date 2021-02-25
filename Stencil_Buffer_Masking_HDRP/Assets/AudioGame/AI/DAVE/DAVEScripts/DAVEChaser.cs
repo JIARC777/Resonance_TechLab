@@ -17,14 +17,18 @@ public class DAVEChaser : IDaveState
     private float noiseStartWaitTime;
     public void Initialize(DAVE dave)
     {
-        Debug.Log("Player Found: Initialized Chaser");
+        Debug.Log("<color=red>Entering: Chaser</color>");
         thisDave = dave;
         thisDave.waitingAtLocation = false;
         TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
         thisDave.ArrivedAtDestination += ReachedOldPlayerPosPing;
+
+
+        thisDave.PingExited += PingExited;
     }
 
     // Update is called once per frame
+
     public void UpdateCycle(DAVE dave)
     {
         var doneWaitingOnInvestigation = bIsWaitingAtLocation && Time.time >= noiseStartWaitTime + pingWaitTime;
@@ -52,6 +56,7 @@ public class DAVEChaser : IDaveState
 
     public void ReachedOldPlayerPosPing(DAVE dave)
     {
+        ///TODO: If the player ping didn't find anything, exit out to Patroller
         Debug.Log("Reached old player location");
         
         // We asssume that if this ping returns a hit, we will reassign the position
@@ -66,9 +71,17 @@ public class DAVEChaser : IDaveState
         
     }
 
+    private void PingExited(DAVE dave)
+    {//The ping Didn't find anything, exiting out to Patroller
+        Debug.Log("<color=purple> Exiting Chaser through PingExit</color>");
+        Debug.Assert(1 == 2);
+    }
+
     // Someone brave can look at fitting this into the execution loop for DAVE 
     public void Exit()
     {
+        Debug.Log("<color=red> Exiting Chaser</color>");
+
         thisDave.ArrivedAtDestination -= ReachedOldPlayerPosPing;
     }
 }
