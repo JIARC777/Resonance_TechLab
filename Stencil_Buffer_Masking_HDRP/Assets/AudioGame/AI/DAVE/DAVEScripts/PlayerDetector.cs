@@ -6,8 +6,10 @@ public class PlayerDetector : MonoBehaviour
 {
     // This is the central event for detecting a player
     public delegate void PlayerDetected(Vector3 position);
+
     // Called On OnTriggerEnter if tag == Player, indicating a player was found
     public event PlayerDetected DetectedPlayer;
+    public event DAVE.PingExit PingExit;
 
     public void OnTriggerEnter(Collider other)
     {

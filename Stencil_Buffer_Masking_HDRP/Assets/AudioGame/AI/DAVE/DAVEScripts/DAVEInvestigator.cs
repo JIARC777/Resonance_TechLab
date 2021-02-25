@@ -11,24 +11,25 @@ public class DAVEInvestigator : IDaveState
     private float noiseWaitTime = 1f;
     private float noiseStartWaitTime;
 
-    private bool bIsInvestigatingAndWaiting = false;
+    private bool bIsWaitingOnInvestigation = false;
 
     // Start is called before the first frame update
     public void Initialize(DAVE dave)
     {
+        Debug.Log("<color=green>Enterering: Investigator</color>");
         dave.HeardNoise += Add;
         thisDave = dave;
         thisDave.waitingAtLocation = false;
-        thisDave.ArrivedAtDestination += InvestigateSound;
+        thisDave.ArrivedAtDestination += PingAtInvestigateSound;
     }
 
     // Update is called once per frame
     public void UpdateCycle(DAVE dave)
     {
-        var doneWaitingOnInvestigation = bIsInvestigatingAndWaiting && Time.time >= noiseStartWaitTime + noiseWaitTime;
+        var doneWaitingOnInvestigation = bIsWaitingOnInvestigation && Time.time >= noiseStartWaitTime + noiseWaitTime;
         if (doneWaitingOnInvestigation)
         {
-            bIsInvestigatingAndWaiting = false;
+            bIsWaitingOnInvestigation = false;
             soundsToInvestigate.RemoveAt(0);
             if (soundsToInvestigate.Count == 0) //No sounds to investigate
             {
@@ -91,12 +92,12 @@ public class DAVEInvestigator : IDaveState
         // Return the reordered list
         return soundList;
 	}
-    void InvestigateSound(DAVE dave)
+    void PingAtInvestigateSound(DAVE dave)
     {
         //There's a sound, we're at it, and we should investigate
         //Debug.Log("Arrived At Sound");
         dave.PingSurroundings();
-        bIsInvestigatingAndWaiting = true;
+        bIsWaitingOnInvestigation = true;
         noiseStartWaitTime = Time.time;
     }
     
@@ -104,9 +105,9 @@ public class DAVEInvestigator : IDaveState
 
     public void Exit()
     {
-        Debug.Log("Exting Investigator");
+        Debug.Log("<color=green>Exting Investigator</color>");
         thisDave.HeardNoise -= Add;
-        thisDave.ArrivedAtDestination -= InvestigateSound;
+        thisDave.ArrivedAtDestination -= PingAtInvestigateSound;
         // This is where we transition into the patroller state instead of in the DAVE base class
         thisDave.currentState = new DAVEPatroller();
         thisDave.currentState.Initialize(thisDave);

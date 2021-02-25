@@ -8,6 +8,7 @@ public class PingSphere : PlayerDetector
     //public float lifeTime = 5f;
     float curScale;
     // Start is called before the first frame update
+    
     void Awake()
     {
         transform.localScale = new Vector3(0, 0, 0);
@@ -19,7 +20,7 @@ public class PingSphere : PlayerDetector
         transform.localScale = new Vector3(curScale,curScale,curScale);
         curScale += .1f;
         if (curScale >= maxRadius)
-		{
+        {
             Destroy(this.gameObject);
 		}
     }
