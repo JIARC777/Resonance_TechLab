@@ -8,6 +8,7 @@ public class DAVEChaser : IDaveState
     // Start is called before the first frame update
     DAVE thisDave;
     float timeSinceLastPing;
+    //Vector3 last
 
     private float timeOfArrival;
     // Since a ping takes a noticable finite amount of time, this keeps us from killing the state until we assume the ping returned void 
@@ -18,6 +19,7 @@ public class DAVEChaser : IDaveState
     {
         Debug.Log("Player Found: Initialized Chaser");
         thisDave = dave;
+        thisDave.waitingAtLocation = false;
         TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
         thisDave.ArrivedAtDestination += ReachedOldPlayerPosPing;
     }

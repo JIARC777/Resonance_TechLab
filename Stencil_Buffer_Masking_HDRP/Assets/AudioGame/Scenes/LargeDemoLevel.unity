@@ -2594,13 +2594,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4661e958e9068d44dba5a774a479b134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waitingAtLocation: 0
   patrolPathNodes:
   - {fileID: 460364242}
   - {fileID: 626463160}
   - {fileID: 1860239659}
   - {fileID: 332545349}
   currentPatrolPathIndex: 0
-  attackRadius: 0.1
+  attackRadius: 2
   postAttackWaitTime: 10
   AgroMode: 0
   playerHealth: 3
@@ -3867,11 +3868,27 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1445252775801086641, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445252775801109547, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445252775801125913, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 1445252775801137895, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775801137895, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445252775801139521, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -13834,6 +13851,10 @@ PrefabInstance:
     - target: {fileID: 3779465913675247790, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Name
       value: AI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3779465913675247791, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
