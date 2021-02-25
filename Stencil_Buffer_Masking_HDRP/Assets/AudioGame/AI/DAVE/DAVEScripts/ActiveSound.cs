@@ -13,6 +13,9 @@ public class ActiveSound: MonoBehaviour
     public Vector3 soundLocation;
     [HideInInspector]
     public int Id;
+    // This is a bit of a weird one, but its going to need to be assigned by DAVEInvestigator based on a sounds constantly changing current value
+    // This is for dave to not sort basd on curVolume but the actual volume on impact;
+    public float volumeAtImpact;
 
     public float speedFactorMultiplier = 5f;
 
@@ -58,9 +61,10 @@ public class ActiveSound: MonoBehaviour
             Destroy(this.gameObject);
         else
 		{
-
+            // This ideally calculates priority based on distance
             // We need a nicer equation for falloff - try to take into account echo versus volume
             curVolume *= 1 - (duration / lifeTime);
+           // Debug.Log("Active Sound " + Id + ": Volume: " + curVolume);
         }   
     }
 }

@@ -23,6 +23,9 @@ public class DAVE : MonoBehaviour
     NavMeshAgent agent;
     // Store Sound Ids so that particles from the same sound are not called twice
     int[] soundIdHashes = new int[100];
+    // Check whether or not DAVE has stopped at a given location - make sure to set correctly in states
+    [HideInInspector]
+    public bool waitingAtLocation = false;
 
     [Header("Patrol State")]
     // Set transform nodes in inspector
@@ -95,9 +98,12 @@ public class DAVE : MonoBehaviour
     {
         // Debug.Log((currentDestination - transform.position).magnitude);
 
-        // Check the distance between target to notify any listeners that DAVE has arrived
-        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance)
+        // Check the distance between target to notify any listeners that DAVE has arrived - also check to make sure you are not waiting
+        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation)
         {
+            Debug.Log("Arrived");
+            // DAVE is waiting, no need to tell anything DAVE arrived
+            waitingAtLocation = true;
             // Call Event letting any states know destination has been reached
 //             Debug.Log("Reached Destination");
              ArrivedAtDestination(this);
@@ -110,6 +116,8 @@ public class DAVE : MonoBehaviour
 
     public void SetDestination(Vector3 newPointOfInterest)
 	{
+        // New destination incoming, no longer waiting - make sure to call set destination after any wait periods (I think we already do this)
+        waitingAtLocation = false;
         Debug.Log("New Destination" + newPointOfInterest);
         currentDestination = newPointOfInterest;
         // Debug.Log(newPointOfInterest);

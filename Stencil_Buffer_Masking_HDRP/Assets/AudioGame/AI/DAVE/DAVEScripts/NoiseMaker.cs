@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class NoiseMaker : MonoBehaviour
 {
+	// Noise maker is the script for anything that emits sound particles relating to the AI's Detection system which includes the player and all physics objects 
+	
     // Baseline volume  - does not take material properties as defined in an Objects NoiseData into account so final volume will be higher
     [Tooltip("Default volume, can become louder after material property processing")]
     public float defaultVolumeBaseline = 5f;
@@ -33,15 +35,17 @@ public class NoiseMaker : MonoBehaviour
         //pSystem = ParticlePrefab.GetComponent<ParticleSystem>()
     }
 
-    
+    // This is the collision for any physics objects 
 	private void OnCollisionEnter(Collision collision)
 	{
 //		Debug.Log("Collision");
         if (Time.time >= timeOfImpact + impactCooldown)
 		{
-			if (PhysicsObject || collision.gameObject.tag == "Map Hazard")
+			// we dont want to collide with the player - Player should interact with a physics object - any other time make noise
+			if (collision.gameObject.tag != "Player" && collision.gameObject.name != "HandColliderLeft(Clone)" && collision.gameObject.name != "HandColliderRight(Clone)")
             {
-                Debug.Log("You Ran Into Something");
+                Debug.Log("The Object Hit Something");
+				Debug.Log(collision.gameObject.name);
                 timeOfImpact = Time.time;
                 // Calculate the volume of the noise at the source 
                 EmitSound(collision);
@@ -49,13 +53,14 @@ public class NoiseMaker : MonoBehaviour
         }
 	}
     
-    
+    // This is the collision for the player
 	private void OnControllerColliderHit(ControllerColliderHit hit)
 	{
 //		Debug.Log("Collision");
 		if (Time.time >= timeOfImpact + impactCooldown)
 		{
-			if (PhysicsObject || hit.gameObject.tag == "Map Hazard")
+			// We only want to collide if something is tagged as a map hazard
+			if (hit.gameObject.tag == "Map Hazard")
 			{
 				Debug.Log("You Ran Into Something");
 				timeOfImpact = Time.time;
@@ -65,6 +70,7 @@ public class NoiseMaker : MonoBehaviour
 	    }
 	}
 
+	// This is the sound emission for any physics objects
 	void EmitSound(Collision col)
 	{
 		float initialVolume = defaultVolumeBaseline;//; * (col.relativeVelocity.magnitude * 100000000);
@@ -84,6 +90,8 @@ public class NoiseMaker : MonoBehaviour
 		//sound = null;
 
 	}
+
+	// This is the sound emission for the player
 	void EmitSound(ControllerColliderHit col)
     {
 	    float initialVolume = defaultVolumeBaseline;//; * (col.relativeVelocity.magnitude * 100000000);
@@ -103,10 +111,4 @@ public class NoiseMaker : MonoBehaviour
 		//sound = null;
 
 	}
-
-	// Update is called once per frame
-	void Update()
-    {
-
-    }
 }
