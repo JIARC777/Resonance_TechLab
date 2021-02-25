@@ -6,16 +6,21 @@ using UnityEngine;
 public class NoiseMaker : MonoBehaviour
 {
     // Baseline volume  - does not take material properties as defined in an Objects NoiseData into account so final volume will be higher
+    [Tooltip("Default volume, can become louder after material property processing")]
     public float defaultVolumeBaseline = 5f;
     // echo factor and volume multiplier act as controls for the distance and speed sound travels - keep at one to inherit these properties from the object collided with
+    [Tooltip("'Distance' multiplier of the sound travel. \nSet to '1' to inherit from collided object")]
     public float echoFactor = 1f;
+    [Tooltip("General volume multiplier. \nSet to '1' to inherit from collided object")]
     public float volumeMultiplier = 1f;
     // Length of time before next OnCollision Call in the case of continued collision
+    [Tooltip("Time to wait before registering another collision \n Helps stop spam if continually colliding")]
     public float impactCooldown = 1f;
     // by what factor we can modify the particle simulation speed to work with better magnitudes
     // Recording time object was hit
     float timeOfImpact = 0f;
     // control whether or not the object should consider the floor an audible collision
+    [Tooltip("Whether this object is a PhysObj, or something like a wall/desk")]
     public bool PhysicsObject;
     // Data structure for communicating information to the AI
     //Reference to particle gameobject to spawn on collision
