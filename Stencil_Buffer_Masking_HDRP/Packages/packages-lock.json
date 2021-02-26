@@ -63,10 +63,12 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.5",
+      "version": "2.0.7",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.vscode": {
@@ -242,13 +244,6 @@
         "com.unity.xr.legacyinputhelpers": "2.1.4"
       },
       "url": "https://registry.npmjs.org"
-    },
-    "net.peeweek.vfxgraph-extras": {
-      "version": "https://github.com/peeweek/net.peeweek.vfxgraph-extras.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "4dea2c601115d6d8712773ea4fc76b3c3383a895"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
