@@ -25,8 +25,11 @@ public class DAVE : MonoBehaviour
     int[] soundIdHashes = new int[100];
     // Check whether or not DAVE has stopped at a given location - make sure to set correctly in states
     [HideInInspector]
-    public bool waitingAtLocation = false;
-
+    public bool waitingAtLocation = false; 
+    // Have dave stop
+    public bool lockDownMode = true;
+    // reference to the starting height we can use to LERP DAVE back to position after being deactivated 
+    private float startingYHeight;
     
     [Header("Patrol State")]
     // Set transform nodes in inspector
@@ -80,9 +83,12 @@ public class DAVE : MonoBehaviour
 
     
     [Header("Detectors")]
-    // If we choose to go with a trigger based approach for detecting the player that extends past pings, assign the appropriate collider with a PlayerDetector script here so that we can subscribe to its event
-    public PlayerDetector surroundingAreaDetector;
-    
+    // Assign trigger sphere that is meant to detect the player at close range - ideally should be set slightly higher than attack radius 
+    public PlayerDetector closeProximityDetector;
+    // Assign the trigger box marked AMTTriggerZone, so we can sub to it's trigger event and know if the player has shot dave
+    public OnAMTTrigger daveWeakSpot;
+    // Assign Dave's model to this slot, making sure it has an OnDavePhysicsImpact assocaited
+    public OnDavePhysicsImpact daveModelCollider;
 
     
     // Events
@@ -107,8 +113,17 @@ public class DAVE : MonoBehaviour
     
     // Start is called before the first frame update
     void Awake()
-    {   
+    {
+        // Subscribe to the triggering Events living on different DAVE children
+        // Sub to weak spot monitor
+        daveWeakSpot.amtHitWeakSpot += quietDeactivate;
+        // Sub to General Physics collisions on the DAVE collider
+        daveModelCollider.SomethingHitDAVE += loudDeactivate;
+        // Sub The event that triggers the chase/attack sequence to the proximity detector 
+        closeProximityDetector.DetectedPlayer += EngagePlayer;
+        
         currentDestination = Vector3.zero;
+        
         agent = this.GetComponent<NavMeshAgent>();
         //crossStateData = new DAVEData();
         // Start DAVE off in a patrol mode
@@ -122,7 +137,7 @@ public class DAVE : MonoBehaviour
         // Debug.Log((currentDestination - transform.position).magnitude);
 
         // Check the distance between target to notify any listeners that DAVE has arrived - also check to make sure you are not waiting
-        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation)
+        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation && !lockDownMode)
         {
             Debug.Log("Arrived");
             // DAVE is waiting, no need to tell anything DAVE arrived
@@ -134,8 +149,8 @@ public class DAVE : MonoBehaviour
         
         //
         var bIsWaitingOnAttackAnimation = Time.time > attackTimestamp + postAttackWaitTime;
-        if(bIsWaitingOnAttackAnimation)
-            currentState.UpdateCycle(this);
+//        if(bIsWaitingOnAttackAnimation)
+//            currentState.UpdateCycle(this);
 //      Debug.Log(currentState.GetType().ToString());
         
     }
@@ -281,4 +296,19 @@ public class DAVE : MonoBehaviour
 	{
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
+
+    // Call this function when dave needs to be quietly deactivated for the given amount of time;
+    void quietDeactivate()
+    {
+        // We deactivated dave for a tiny bit - keep him in the air, just freeze his location - maybe change lighting or material state
+    }
+
+    void loudDeactivate()
+    {
+        // Dave was just hit with a projectile (or physics object?)
+        // Turn off kinematics on his rigidbody, wait, then lerp to initial height/position
+        // If we want an agro mode toggle it would likely be here 
+    }
+    
+    
 }
