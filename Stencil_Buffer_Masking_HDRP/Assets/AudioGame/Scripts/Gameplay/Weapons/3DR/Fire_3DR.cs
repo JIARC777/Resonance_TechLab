@@ -14,6 +14,10 @@ public class Fire_3DR : MonoBehaviour
     public bool isHeld;
     //How long it takes for a projectile to be printed
     public float printTime;
+    //Is the player firing the 3DR
+    public bool isFiring = false;
+    //Is the player reloading
+    public bool isReloading = false;
 
     [Header("Spool Properties")]
     //How many "charges" of the spool remain
@@ -80,13 +84,37 @@ public class Fire_3DR : MonoBehaviour
         aimingLine.enabled = false;
     }
 
+    public void startFiring()
+    {
+        isFiring = true;
+    }
+    public void stopFiring()
+    {
+        isFiring = false;
+    }
+    public void startReloading()
+    {
+        isReloading = true;
+    }
+
+    public void stopReloading()
+    {
+        isReloading = false;
+    }
+
+    public void OnPickUp()
+    {
+        isHeld = true;
+    }
+
+    public void OnDrop()
+    {
+        isHeld = false;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
-        //Is the left mouse button(LMB) being pressed(replace with VR trigger)
-        bool fire3DR = Input.GetKey(KeyCode.Mouse0);
-        //Is the "R" key being pressed(replace with VR button)
-        bool generate = Input.GetKey(KeyCode.R);
 
         //If the 3DR isn't being held, turn off the aim lines
         if (!isHeld)
@@ -109,13 +137,13 @@ public class Fire_3DR : MonoBehaviour
             CreateLinePositions();
 
             //If the 3DR has a projectile loaded and the LMB is pressed
-            if (currentAmmo && fire3DR)
+            if (currentAmmo && isFiring)
             {
                 //Call the Fire() function
                 Fire();
             }
             //If the amount of spool charges is greater than 0, the "R" key is pressed, and the 3DR isn't creating a projectile already
-            if (spoolRemaining > 0 && generate && canGenerateAmmo)
+            if (spoolRemaining > 0 && isReloading && canGenerateAmmo)
             {
                 //Call the GenerateAmmo() function
                 GenerateAmmo();
