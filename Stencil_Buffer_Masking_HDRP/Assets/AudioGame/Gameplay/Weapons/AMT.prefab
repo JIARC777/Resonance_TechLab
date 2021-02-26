@@ -106,7 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2071798855526842318}
-  - component: {fileID: 2071798855526842305}
+  - component: {fileID: 6614064454968073919}
   m_Layer: 0
   m_Name: AMT
   m_TagString: Beam
@@ -132,7 +132,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &2071798855526842305
+--- !u!114 &6614064454968073919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,18 +141,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071798855526842304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7a1d7985879e374ba44b5a59c3abb4f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f5d6a3b2be276d48998fdb6a43c896c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clapAction:
-    actionPath: /actions/default/in/Clap
-    needsReinit: 0
-  fireAction:
-    actionPath: /actions/default/in/FireWeapon
-    needsReinit: 0
-  particles: {fileID: 0}
-  isHeld: 0
-  canFire: 0
+  isHeld: 1
+  canFire: 1
+  isFiring: 0
+  isClapping: 0
   energy: 0
   energyReserve: 100
   clapEnergyUsed: 25
@@ -166,9 +161,7 @@ MonoBehaviour:
   beamEnergyRegen: 2.5
   beamUpTime: 0.25
   beamDetectUpTime: 0.5
-  beamLength: 10
-  isFiring: 0
-  isClapping: 0
+  beamLength: 5
 --- !u!1 &2071798855810505284
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +839,6 @@ GameObject:
   - component: {fileID: 2231387889639831683}
   - component: {fileID: 5457130666253601442}
   - component: {fileID: 2586822941754448413}
-  - component: {fileID: 2856558325076297299}
   - component: {fileID: 773556682}
   m_Layer: 0
   m_Name: Beam _Hit_Detect
@@ -932,18 +924,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2856558325076297299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9067964930563252371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b64bae249b1b9e24eb40252fb784caf5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &773556682
 Rigidbody:
   m_ObjectHideFlags: 0
