@@ -14,7 +14,10 @@ public class OnDavePhysicsImpact : MonoBehaviour
     {
         // Check if its projectile or physics object, call event
         //if (other.gameObject.tag == "Projectile" || other.gameObject.tag == "PhysicsObject") {
+        
+        // for some reason this collides with the floor - no big deal once we nail down the tags to filter
         Debug.Log("Something Hit Dave");
+        Debug.Log(other.gameObject.name);
         SomethingHitDAVE();
             
        // }

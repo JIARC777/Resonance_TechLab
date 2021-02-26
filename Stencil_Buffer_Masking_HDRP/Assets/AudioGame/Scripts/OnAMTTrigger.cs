@@ -25,7 +25,9 @@ public class OnAMTTrigger : MonoBehaviour
     {
        // if (other.tag == "AMT_Beam")
       //  {
+            
             Debug.Log("Weak Spot Hit");
+            Debug.Log(other.name);
             amtHitWeakSpot();
       //  }
     }

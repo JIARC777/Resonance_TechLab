@@ -5,6 +5,8 @@ using UnityEngine.AI;
 using UnityEngine.Events;
 // We definetly want to remove this but I want to experiment with gameOver states with DAVE so for now DAVE has the power to restart the level
 using UnityEngine.SceneManagement;
+using Valve.VR.InteractionSystem;
+
 public interface IDaveState
 {
     void Initialize(DAVE dave);
@@ -49,6 +51,8 @@ public class DAVE : MonoBehaviour
     public float playerHealth = 3f;
     // Switchs to update parameters easily inside update - should be related to when your toggle Agro mode
     
+    // Place where we want the ray to detect the player to fire from. 
+    public Transform gunTip;
 
     //TODO: To be implemented post V/S
     // bool engageAgro;
@@ -244,6 +248,7 @@ public class DAVE : MonoBehaviour
 			{
                 RestartLevel();
 			}
+            AttackPLayer();
             StartCoroutine(PauseActionAfterAttack());
             
         }
@@ -281,7 +286,7 @@ public class DAVE : MonoBehaviour
     IEnumerator PauseActionAfterAttack()
     {
         attackTimestamp = Time.time;
-        Debug.Log("<color=yellow> Attack time happens now</color>");
+        Debug.Log("<color=cyan>Post Attack Cooldown</color>");
         yield return new WaitForSeconds(postAttackWaitTime);
         currentState.Exit();
         currentState = new DAVEPatroller();
@@ -309,6 +314,14 @@ public class DAVE : MonoBehaviour
         // Turn off kinematics on his rigidbody, wait, then lerp to initial height/position
         // If we want an agro mode toggle it would likely be here 
     }
-    
-    
+
+    void AttackPLayer()
+    {
+        // We need a reference to the player's position
+        Debug.Log("<color=Red> Attacking player</color>");
+        // Find the player, get the position, add a bit of extra height assuming its floor position 
+        // If we find that this static height leads to issues, we can look for a way to implement dynamic height
+        Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, 1.3f, 0);
+        Debug.Log(playerTargetPos);
+    }
 }
