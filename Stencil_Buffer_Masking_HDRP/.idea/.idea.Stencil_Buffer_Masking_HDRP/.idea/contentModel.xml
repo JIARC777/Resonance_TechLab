@@ -352,6 +352,22 @@
               <e p="Fire_AMT.cs" t="Include" />
             </e>
           </e>
+          <e p="Prefabs" t="Include">
+            <e p="Tools" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="3DR" t="Include">
+                  <e p="Despawn_Item.cs" t="Include" />
+                  <e p="Fire_3DR.cs" t="Include" />
+                  <e p="Generate_Spools.cs" t="Include" />
+                  <e p="Reload_3DR_Ammo.cs" t="Include" />
+                  <e p="Reload_3DR_Spool.cs" t="Include" />
+                </e>
+                <e p="AMT" t="Include">
+                  <e p="Fire_AMT.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Scripts" t="Include">
             <e p="AlignWithPlayerBody.cs" t="Include" />
             <e p="FirstPersonMovement.cs" t="Include" />
@@ -1184,7 +1200,7 @@
               </e>
             </e>
           </e>
-          <e p="com.unity.ide.visualstudio@2.0.5" t="Include">
+          <e p="com.unity.ide.visualstudio@2.0.7" t="Include">
             <e p="Editor" t="Include">
               <e p="AssemblyInfo.cs" t="Include" />
               <e p="com.unity.ide.visualstudio.asmdef" t="Include" />
@@ -1199,6 +1215,8 @@
                 <e p="MessageType.cs" t="Include" />
                 <e p="Messenger.cs" t="Include" />
                 <e p="Serializer.cs" t="Include" />
+                <e p="TcpClient.cs" t="Include" />
+                <e p="TcpListener.cs" t="Include" />
                 <e p="UdpSocket.cs" t="Include" />
               </e>
               <e p="ProjectGeneration" t="Include">
@@ -1213,6 +1231,16 @@
               <e p="SolutionProjectEntry.cs" t="Include" />
               <e p="SolutionProperties.cs" t="Include" />
               <e p="Symbols.cs" t="Include" />
+              <e p="Testing" t="Include">
+                <e p="TestAdaptor.cs" t="Include" />
+                <e p="TestResultAdaptor.cs" t="Include" />
+                <e p="TestRunnerApiListener.cs" t="Include" />
+                <e p="TestRunnerCallbacks.cs" t="Include" />
+                <e p="TestStatusAdaptor.cs" t="Include" />
+              </e>
+              <e p="UnityInstallation.cs" t="Include" />
+              <e p="UsageUtility.cs" t="Include" />
+              <e p="VersionPair.cs" t="Include" />
               <e p="VisualStudioEditor.cs" t="Include" />
               <e p="VisualStudioInstallation.cs" t="Include" />
               <e p="VisualStudioIntegration.cs" t="Include" />
@@ -5872,36 +5900,6 @@
               <e p="Unity.XR.OpenVR.asmdef" t="Include" />
             </e>
           </e>
-          <e p="net.peeweek.vfxgraph-extras@4dea2c6011" t="Include">
-            <e p="Editor" t="Include">
-              <e p="Blocks" t="Include">
-                <e p="CustomCode" t="Include">
-                  <e p="CustomBlock.cs" t="Include" />
-                  <e p="CustomBlockEditor.cs" t="Include" />
-                </e>
-              </e>
-              <e p="Unity.VisualEffectGraph.EditorTests.asmdef" t="Include" />
-              <e p="VolumeMixer" t="Include">
-                <e p="VolumeMixerEditor.cs" t="Include" />
-                <e p="VolumeMixerPropertyDrawer.cs" t="Include" />
-                <e p="VolumeMixerSettings.cs" t="Include" />
-              </e>
-            </e>
-            <e p="Runtime" t="Include">
-              <e p="CustomSpawners" t="Include">
-                <e p="CountOverTime.cs" t="Include" />
-              </e>
-              <e p="Unity.VisualEffectGraph.RuntimeTests.asmdef" t="Include" />
-              <e p="VolumeMixer" t="Include">
-                <e p="VolumeMixer.cs" t="Include" />
-                <e p="VolumeMixerColorPropertyBinder.cs" t="Include" />
-                <e p="VolumeMixerFloatPropertyBinder.cs" t="Include" />
-                <e p="VolumeMixerPropertyAttribute.cs" t="Include" />
-                <e p="VolumeMixerPropertyBinderBase.cs" t="Include" />
-                <e p="VolumeMixerVectorPropertyBinder.cs" t="Include" />
-              </e>
-            </e>
-          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
@@ -5981,12 +5979,9 @@
       <e p="Unity.Toolchain.Linux-x86_64.EditorTests.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Editor.Tests.csproj" t="IncludeRecursive" />
-      <e p="Unity.VisualEffectGraph.EditorTests.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Runtime.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Runtime.Player.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualEffectGraph.Runtime.Tests.csproj" t="IncludeRecursive" />
-      <e p="Unity.VisualEffectGraph.RuntimeTests.csproj" t="IncludeRecursive" />
-      <e p="Unity.VisualEffectGraph.RuntimeTests.Player.csproj" t="IncludeRecursive" />
       <e p="Unity.VisualStudio.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.VSCode.Editor.csproj" t="IncludeRecursive" />
       <e p="Unity.XR.Management.csproj" t="IncludeRecursive" />
