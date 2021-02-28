@@ -28,10 +28,15 @@ public class DAVE : MonoBehaviour
     // Check whether or not DAVE has stopped at a given location - make sure to set correctly in states
     [HideInInspector]
     public bool waitingAtLocation = false; 
-    // Have dave stop
-    public bool lockDownMode = true;
     // reference to the starting height we can use to LERP DAVE back to position after being deactivated 
-    private float startingYHeight;
+    float startingYHeight;
+
+    [Header("Model Specific Dependancies")]
+    // Reference the transform of the model itself
+    public Transform modelTransform;
+    public Transform beamGunTip;
+    // reference the rigidbody of the model
+    public Rigidbody modelRB;
     
     [Header("Patrol State")]
     // Set transform nodes in inspector
@@ -49,10 +54,12 @@ public class DAVE : MonoBehaviour
     private float attackTimestamp = 0f;
     // We need to move this but for simplicity I decrement this to create a game over state - how many times the player can get shot;
     public float playerHealth = 3f;
+    // Since we rely on Triggers, which can sometimes get called more than once, we need to make sure that we know if the player has been engaged or not to ignore any extra event calls
+    bool engagedPlayer = false;
     // Switchs to update parameters easily inside update - should be related to when your toggle Agro mode
     
     // Place where we want the ray to detect the player to fire from. 
-    public Transform gunTip;
+    
 
     //TODO: To be implemented post V/S
     // bool engageAgro;
@@ -86,13 +93,24 @@ public class DAVE : MonoBehaviour
     Vector3 lastNoisePosition = Vector3.zero;
 
     
-    [Header("Detectors")]
+    [Header("Detectors & Taking Damage")]
     // Assign trigger sphere that is meant to detect the player at close range - ideally should be set slightly higher than attack radius 
     public PlayerDetector closeProximityDetector;
     // Assign the trigger box marked AMTTriggerZone, so we can sub to it's trigger event and know if the player has shot dave
     public OnAMTTrigger daveWeakSpot;
     // Assign Dave's model to this slot, making sure it has an OnDavePhysicsImpact assocaited
     public OnDavePhysicsImpact daveModelCollider;
+    // How long do we wait after being "quietly" deactivated
+    public float weakSpotDeactivatedWaitTime = 30f;
+    // How long do we wait after being hit by a physics object
+    public float physicsImpactDeactivationWaitTime = 5f;
+    // How long do we wait after being hit by a projectile
+    public float projectileImpactDeactivationWaitTime = 100f;
+    // DAVE has taken some form of damage
+    bool damaged;
+    bool needToLERPModel;
+    // How fast Lerping goes;
+    float lerpSpeed = 4f;
 
     
     // Events
@@ -127,7 +145,7 @@ public class DAVE : MonoBehaviour
         closeProximityDetector.DetectedPlayer += EngagePlayer;
         
         currentDestination = Vector3.zero;
-        
+        startingYHeight = modelTransform.position.y;
         agent = this.GetComponent<NavMeshAgent>();
         //crossStateData = new DAVEData();
         // Start DAVE off in a patrol mode
@@ -141,20 +159,32 @@ public class DAVE : MonoBehaviour
         // Debug.Log((currentDestination - transform.position).magnitude);
 
         // Check the distance between target to notify any listeners that DAVE has arrived - also check to make sure you are not waiting
-        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation && !lockDownMode)
+        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation)
         {
             Debug.Log("Arrived");
             // DAVE is waiting, no need to tell anything DAVE arrived
             waitingAtLocation = true;
             // Call Event letting any states know destination has been reached
 //             Debug.Log("Reached Destination");
-             ArrivedAtDestination(this);
+             ArrivedAtDestination?.Invoke(this);
+            // if damaged on arrival it means the NavMesh has just moved seperate of the model 
+            if (damaged)
+			{
+                damaged = false;
+                needToLERPModel = true;
+                modelTransform.parent = transform;
+			}
         }
-        
+        if (needToLERPModel)
+		{
+            LERPModelBackToCenter();
+		}
+        if (currentState != null)
+            currentState.UpdateCycle(this);
         //
         var bIsWaitingOnAttackAnimation = Time.time > attackTimestamp + postAttackWaitTime;
 //        if(bIsWaitingOnAttackAnimation)
-//            currentState.UpdateCycle(this);
+//            
 //      Debug.Log(currentState.GetType().ToString());
         
     }
@@ -234,63 +264,66 @@ public class DAVE : MonoBehaviour
     // Fires on event, player detected by ping
     void EngagePlayer(Vector3 knownPlayerLocation)
     {
-        // Update Drone's last known player position
-        lastKnownPlayerLocation = knownPlayerLocation;
-        // Before chasing, check if we are close enough to attack
-        var bCanAttackPlayer = (this.transform.position - knownPlayerLocation).magnitude <= attackRadius;
-        // Debug.Log("Player Distance Away: " + (this.transform.position - knownPlayerLocation).magnitude);
-        if (bCanAttackPlayer)
-        {//Can attack player right now, do so
-            // Entering Attack Condition
-            // Debug.Log("Attack Player");
-            playerHealth--;
-            if (playerHealth <= 0)
-			{
-                RestartLevel();
-			}
-            AttackPLayer();
-            StartCoroutine(PauseActionAfterAttack());
-            
-        }
-        else
-        { //Can't attack player right now, must move to them
-            var bNotInChaseState = currentState.GetType().ToString() != "DAVEChaser";
-            if (bNotInChaseState)
-            {//Must transition to chaser state to go to player location
-                // Bit of a fun little bug I found here that explains alot of behavior we've seen - So we call exit on DAVEInvestigator in most cases which in turn by default activates a DAVEPatroller in the background referenced to the current state, so that is why we have a tendency to return to the patrol state all the time;
-                // Since its initialized and no one ever calls exit on it before the reference to the current state is changed, whenever it becomes Initialized I assume it will stay initialized for the durration of the run
+        if (!engagedPlayer)
+		{
+            engagedPlayer = true;
+            // Update Drone's last known player position
+            lastKnownPlayerLocation = knownPlayerLocation;
+            // Even though attack is handled by the DAVE script itself, we dont want any other states trying to tell DAVE what to do. This is a bit of a weird "No State" situation. We assume the temporarilyDeactivateProcessing couroutine will re-intialized a patroller after the proper waiting time;
+            currentState.Exit();
+            ///FIX: Edge case, if exiting investigator, it automatically starts a patroller, exit that too
+            if (currentState.GetType().ToString() == "DAVEPatroller")
                 currentState.Exit();
-                ///FIX: Edge case, if exiting investigator, it automatically starts a patroller, exit that too
-                if (currentState.GetType().ToString() == "DAVEPatroller")
-                    currentState.Exit();
+            
+            // Before chasing, check if we are close enough to attack
+            var bCanAttackPlayer = (this.transform.position - knownPlayerLocation).magnitude <= attackRadius;
+            // Debug.Log("Player Distance Away: " + (this.transform.position - knownPlayerLocation).magnitude);
+            if (bCanAttackPlayer)
+            {//Can attack player right now, do so
+             // Entering Attack Condition
+             // Debug.Log("Attack Player");
 
-                currentState = new DAVEChaser();
-                currentState.Initialize(this);
-
-                pingFoundPlayer = false;
+                // Set the current state to null when attacking. patrol will be re-initialized after the cooldown
+                currentState = null;
+                AttackPlayer();
+                StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
             }
             else
-            {//Currently in chase state
-                //This re-ping found player, inform chaser to pathfind
-                pingFoundPlayer = true;
+            { //Can't attack player right now, must move to them
+                var bNotInChaseState = currentState.GetType().ToString() != "DAVEChaser";
+                if (bNotInChaseState)
+                {//Must transition to chaser state to go to player location
+                 // Bit of a fun little bug I found here that explains alot of behavior we've seen - So we call exit on DAVEInvestigator in most cases which in turn by default activates a DAVEPatroller in the background referenced to the current state, so that is why we have a tendency to return to the patrol state all the time;
+                 // Since its initialized and no one ever calls exit on it before the reference to the current state is changed, whenever it becomes Initialized I assume it will stay initialized for the durration of the run
+                    currentState = new DAVEChaser();
+                    currentState.Initialize(this);
+
+                    pingFoundPlayer = false;
+                }
+                else
+                {//Currently in chase state
+                 //This re-ping found player, inform chaser to pathfind
+                    pingFoundPlayer = true;
+                }
             }
         }
         
+        
     }
 
-    // We might have to implement a DAVEInvestigator style waiting system if we move this logic, but for now we can leverage a coroutine to pause DAVE after he attacks a player, giving them a chance to escape
-    /// <summary>
-    /// DAVE is attacking the player, wait for him to finish then exit to patroller
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator PauseActionAfterAttack()
+   // Whenever we want to pause DAVE's processing, we can call this script and pass various related different wait times such as post attack waiting and deactivating times
+    IEnumerator temporarilyDeactivateProcessing(float waitTime)
     {
+        
         attackTimestamp = Time.time;
-        Debug.Log("<color=cyan>Post Attack Cooldown</color>");
-        yield return new WaitForSeconds(postAttackWaitTime);
-        currentState.Exit();
+        Debug.Log("<color=cyan>Deactivation Cooldown Start</color>");
+        yield return new WaitForSeconds(waitTime);
+        Debug.Log("<color=cyan>Deactivation Cooldown Complete</color>");
+        if (currentState != null)
+            currentState.Exit();
         currentState = new DAVEPatroller();
         currentState.Initialize(this);
+        engagedPlayer = false;
     }
 
     
@@ -306,22 +339,68 @@ public class DAVE : MonoBehaviour
     void quietDeactivate()
     {
         // We deactivated dave for a tiny bit - keep him in the air, just freeze his location - maybe change lighting or material state
+        temporarilyDeactivateProcessing(weakSpotDeactivatedWaitTime);
+        
     }
 
-    void loudDeactivate()
+    void loudDeactivate(bool hardImpact)
     {
-        // Dave was just hit with a projectile (or physics object?)
-        // Turn off kinematics on his rigidbody, wait, then lerp to initial height/position
+        // Go ahead and unparent the transform, this will allow the NavMesh agent to move itself to the model's position
+        modelTransform.parent = null;
+        // deactivate kinematic so we can use physics
+        modelRB.isKinematic = false;
+        // Let the update checking for arrival at destination know to call the function to lerp the model.
+        damaged = true;
+        // deactivate for the proper amount of time;
+        // This is a bit weird, but I dont want any events interfering with being damaged, especially the player running into the detector box, which should be "deactivated"
+        closeProximityDetector.DetectedPlayer -= EngagePlayer;
+        if (hardImpact)
+		{
+            modelRB.useGravity = true;
+            temporarilyDeactivateProcessing(projectileImpactDeactivationWaitTime);
+            // Make the NavMesh move to the model
+            
+		} else
+		{
+            temporarilyDeactivateProcessing(physicsImpactDeactivationWaitTime);
+		}
+        SetDestination(modelTransform.position);
         // If we want an agro mode toggle it would likely be here 
     }
 
-    void AttackPLayer()
+    void AttackPlayer()
     {
         // We need a reference to the player's position
         Debug.Log("<color=Red> Attacking player</color>");
         // Find the player, get the position, add a bit of extra height assuming its floor position 
         // If we find that this static height leads to issues, we can look for a way to implement dynamic height
+        
         Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, 1.3f, 0);
-        Debug.Log(playerTargetPos);
+        Debug.Log("Player's Location: " + playerTargetPos);
+        SetDestination(playerTargetPos);
+        Debug.DrawLine(beamGunTip.position, playerTargetPos, Color.red);
+        // Add an actual object and/or line renderer ^
+        playerHealth--;
+        if (playerHealth <= 0)
+        {
+            RestartLevel();
+        }
+    }
+
+    void LERPModelBackToCenter()
+	{
+        // Assuming that we've parented correctly, we just need to fly to local position 0
+        modelTransform.localPosition = Vector3.Lerp(modelTransform.position, new Vector3(0, startingYHeight, 0), Time.deltaTime) * lerpSpeed ;
+        modelTransform.localRotation = Quaternion.Slerp(modelTransform.localRotation, transform.localRotation, Time.deltaTime * lerpSpeed);
+
+        // This essentially stops this function from being called;
+        if ((modelTransform.localPosition - new Vector3(0, startingYHeight, 0)).magnitude <= 0.1f)
+		{
+            needToLERPModel = false;
+            Debug.Log("Model Moved To Correct Position");
+            // Now that we are safely reactivated, this listener can be reinitialized
+            closeProximityDetector.DetectedPlayer += EngagePlayer;
+        }
+            
     }
 }
