@@ -250,6 +250,7 @@ public class Fire_3DR : MonoBehaviour
     //This function fires a projectile from the 3DR
     public void Fire()
     {
+        Debug.Log("firing");
         //Unparents the projectile from the 3DR's firingLocation
         currentAmmo.SetParent(null);
 
