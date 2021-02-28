@@ -6,10 +6,6 @@ namespace Valve.VR.InteractionSystem
 {
     public class Fire_AMT : MonoBehaviour
     {
-        [Header("SteamVR Config")]
-        public SteamVR_Action_Boolean clapAction;
-        public SteamVR_Action_Boolean fireAction;
-
         [Header("AMT Particle System")]
         public ParticleSystem particles;
 
