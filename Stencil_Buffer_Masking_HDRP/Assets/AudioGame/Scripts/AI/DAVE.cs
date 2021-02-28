@@ -270,11 +270,7 @@ public class DAVE : MonoBehaviour
             // Update Drone's last known player position
             lastKnownPlayerLocation = knownPlayerLocation;
             // Even though attack is handled by the DAVE script itself, we dont want any other states trying to tell DAVE what to do. This is a bit of a weird "No State" situation. We assume the temporarilyDeactivateProcessing couroutine will re-intialized a patroller after the proper waiting time;
-            currentState.Exit();
-            ///FIX: Edge case, if exiting investigator, it automatically starts a patroller, exit that too
-            if (currentState.GetType().ToString() == "DAVEPatroller")
-                currentState.Exit();
-            
+            ExitCurrentState();
             // Before chasing, check if we are close enough to attack
             var bCanAttackPlayer = (this.transform.position - knownPlayerLocation).magnitude <= attackRadius;
             // Debug.Log("Player Distance Away: " + (this.transform.position - knownPlayerLocation).magnitude);
@@ -345,6 +341,10 @@ public class DAVE : MonoBehaviour
 
     void loudDeactivate(bool hardImpact)
     {
+        // If we are in any state, we want to exit them properly
+        ExitCurrentState();
+        // Stop DAVE here
+        SetDestination(transform.position);
         // Go ahead and unparent the transform, this will allow the NavMesh agent to move itself to the model's position
         modelTransform.parent = null;
         // deactivate kinematic so we can use physics
@@ -402,5 +402,31 @@ public class DAVE : MonoBehaviour
             closeProximityDetector.DetectedPlayer += EngagePlayer;
         }
             
+    }
+    // If we could move this to an event system that would be nice, but I am having issues with collision layers
+	private void OnCollisionEnter(Collision collision)
+	{
+        if (collision.gameObject.tag == "Ammo")
+        {
+            Debug.Log("Projectile hit DAVE");
+            // Call the event, set hardImpact bool to true so that DAVE knows to deactivate himself
+            // SomethingHitDAVE(true);
+            loudDeactivate(true);
+        }
+        if (collision.gameObject.tag == "PhysicsObj")
+        {
+            Debug.Log("You threw something at DAVE");
+            // Call the event, set hardImpact bool to false so that DAVE might just stops for a quick second 
+            loudDeactivate(false);
+        }
+    }
+    void ExitCurrentState()
+	{
+        if (currentState != null)
+        {
+            currentState.Exit();
+            if (currentState.GetType().ToString() == "DAVEPatroller")
+                currentState.Exit();
+        }
     }
 }
