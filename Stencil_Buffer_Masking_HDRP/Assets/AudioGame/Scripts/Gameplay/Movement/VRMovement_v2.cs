@@ -8,7 +8,6 @@ namespace Valve.VR.InteractionSystem
     {
         public CharacterController controller;
         public SteamVR_Action_Vector2 moveInput;
-        public Transform bodyCollider;
         public Transform playerViewCamera;
 
         public float speed = 12f;
@@ -20,7 +19,6 @@ namespace Valve.VR.InteractionSystem
 
         public LayerMask groundMask;
 
-
         Vector3 velocity;
         bool isGrounded;
 
@@ -29,14 +27,13 @@ namespace Valve.VR.InteractionSystem
             float distanceFromFloor = Vector3.Dot(playerViewCamera.localPosition, Vector3.up);
             controller.height = Mathf.Max(controller.radius, distanceFromFloor);
             controller.center = playerViewCamera.localPosition - 0.5f * distanceFromFloor * Vector3.up;
-            //transform.localPosition = playerViewCamera.localPosition - 0.5f * distanceFromFloor * Vector3.up;
         }
 
         // Update is called once per frame
         void Update()
         {
-
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
             if (isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f;
@@ -45,10 +42,10 @@ namespace Valve.VR.InteractionSystem
             Vector2 coordinates = moveInput.axis;
             float x = playerViewCamera.transform.forward.x * coordinates.y;
             float z = 0;
-            Vector3 direction = new Vector3(playerViewCamera.transform.forward.x * coordinates.y + playerViewCamera.transform.right.x * coordinates.x, 0, playerViewCamera.transform.forward.z * coordinates.y + playerViewCamera.transform.right.z * coordinates.x);
+            Vector3 direction = new Vector3(playerViewCamera.transform.forward.x * coordinates.y + playerViewCamera.transform.right.x * coordinates.x,
+                0, playerViewCamera.transform.forward.z * coordinates.y + playerViewCamera.transform.right.z * coordinates.x);
             //parentRigidBody.AddForce(new Vector3(playerViewCamera.transform.forward.x * coordinates.y, 0, playerViewCamera.transform.forward.z * coordinates.y) * moveSpeed, ForceMode.VelocityChange);
             //parentRigidBody.AddForce(new Vector3(playerViewCamera.transform.right.x * coordinates.x, 0, playerViewCamera.transform.right.z * coordinates.x) * moveSpeed, ForceMode.VelocityChange);
-
 
             //genius
             Vector3 move = transform.right * x + transform.forward * z;
@@ -59,8 +56,8 @@ namespace Valve.VR.InteractionSystem
 
             //physics of free fall, multiply by time again
             controller.Move(velocity * Time.deltaTime);
-            //controller.center = new Vector3(bodyCollider.transform.localPosition.x, controller.center.y, bodyCollider.transform.localPosition.z);
-            //Debug.Log(velocity.y);
+
+            
         }
     }
 }
