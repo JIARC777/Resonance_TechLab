@@ -12,6 +12,7 @@ public class OnDavePhysicsImpact : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
+        /*
         // Check if its projectile thats hit the player
         if (other.gameObject.tag == "Ammo") {
              Debug.Log("Projectile hit DAVE");
@@ -24,5 +25,6 @@ public class OnDavePhysicsImpact : MonoBehaviour
             // Call the event, set hardImpact bool to false so that DAVE might just stops for a quick second 
             SomethingHitDAVE(false);
         }
+        */
     }
 }
