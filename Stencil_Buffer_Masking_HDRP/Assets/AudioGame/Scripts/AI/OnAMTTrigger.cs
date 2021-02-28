@@ -10,25 +10,13 @@ public class OnAMTTrigger : MonoBehaviour
 
     public event OnAMTHit amtHitWeakSpot;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-       // if (other.tag == "AMT_Beam")
-      //  {
-            
+      if (other.tag == "Beam")
+      {
             Debug.Log("Weak Spot Hit");
-            Debug.Log(other.name);
             amtHitWeakSpot();
-      //  }
+      }
     }
 }

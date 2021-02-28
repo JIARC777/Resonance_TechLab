@@ -745,6 +745,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -1307,6 +1311,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -1511,6 +1519,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -1690,6 +1702,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -1880,6 +1896,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -2677,6 +2697,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -2754,6 +2778,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -2836,7 +2864,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitingAtLocation: 0
-  lockDownMode: 1
+  modelTransform: {fileID: 678471980}
+  beamGunTip: {fileID: 1303798786}
+  modelRB: {fileID: 1679407101}
   patrolPathNodes:
   - {fileID: 460364242}
   - {fileID: 626463160}
@@ -2846,7 +2876,6 @@ MonoBehaviour:
   attackRadius: 2
   postAttackWaitTime: 10
   playerHealth: 3
-  gunTip: {fileID: 0}
   pingRadius: 7
   lastKnownPlayerLocation: {x: 0, y: 0, z: 0}
   pingFoundPlayer: 0
@@ -2854,6 +2883,9 @@ MonoBehaviour:
   closeProximityDetector: {fileID: 1916060359}
   daveWeakSpot: {fileID: 290611610}
   daveModelCollider: {fileID: 678471983}
+  weakSpotDeactivatedWaitTime: 30
+  physicsImpactDeactivationWaitTime: 5
+  projectileImpactDeactivationWaitTime: 100
 --- !u!65 &389864824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2881,6 +2913,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -3258,6 +3294,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -3327,6 +3367,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -4180,6 +4224,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -4354,6 +4402,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -4530,6 +4582,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -4664,6 +4720,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -5503,6 +5563,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -5580,6 +5644,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -5879,6 +5947,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -6033,6 +6105,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -6200,6 +6276,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -6375,6 +6455,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -6667,6 +6751,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -6736,6 +6824,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -7920,6 +8012,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -8234,6 +8330,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -8311,6 +8411,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -8985,6 +9089,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -9062,6 +9170,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -9253,6 +9365,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -9364,6 +9480,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -9651,6 +9771,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -10241,6 +10365,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -10304,6 +10432,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1003024611063972692, guid: 422b8511739892747ba907bb940c491c, type: 3}
   m_PrefabInstance: {fileID: 1302710591}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1303798785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1303798786}
+  m_Layer: 0
+  m_Name: BeamGunTip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1303798786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1303798785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.01027, z: 0.0519}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 678471980}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1308970051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10318,6 +10476,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -10645,6 +10807,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -10835,6 +11001,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -10912,6 +11082,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -11218,6 +11392,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -12094,6 +12272,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -12569,6 +12751,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -12646,6 +12832,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -13313,6 +13503,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -13921,6 +14115,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -13998,6 +14196,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -14079,127 +14281,127 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1331261463, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 152623066526444975, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 215369224236539881, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 217009971318044370, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 709947647692898745, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 725557646149107485, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149067340219, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1206633640158802753, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1306080075385300332, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1426784732862345917, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1507767884218105450, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1614226369849101978, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1724552066917986670, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1855812947274074154, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1869004960465134792, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1988356933082913520, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2017874390716912399, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2051804977924624776, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2147003104192444300, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2192746235690088792, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2482085870474186765, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2833988764568386813, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2866621853177480167, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2903893173551196455, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2940987129138155007, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3025308561993332147, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3309868096721404067, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3389304254348173683, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3402582101840014856, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3440944806338265245, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3492142894111202696, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3779465913675247788, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_RootOrder
@@ -14251,7 +14453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3779465913675247790, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3779465913675247791, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_StoppingDistance
@@ -14259,126 +14461,131 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3779745572640032905, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3956586359039909110, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4072203006869754419, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4340423644773692390, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4491407786999874917, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4570198775640471218, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5090062053996869336, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5100743046940931544, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5165454011447712928, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5265589512031037832, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5510095817078395992, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5754853476118611771, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5820216907849656622, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6256800615216979476, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6310194976370052087, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6429644746823679970, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6655816212634878184, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6695304550933943730, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6808460513616783201, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7034943285576118909, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7209991398809027340, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7555431049938306100, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7915217112188019598, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7922072074039526900, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165565475605035885, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8335586787014735404, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8728723278086490279, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8879367955937850117, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9022215873611782410, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9215231536302371930, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
+--- !u!54 &1679407101 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1024491624, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
+  m_PrefabInstance: {fileID: 1679407100}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1681694399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14393,6 +14600,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -14472,6 +14683,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -14549,6 +14764,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -15041,6 +15260,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -15844,6 +16067,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -15921,6 +16148,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -16035,6 +16266,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -16112,6 +16347,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -16239,6 +16478,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -16994,6 +17237,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
+      objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
       value: 5
@@ -17185,6 +17432,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
@@ -17603,6 +17854,10 @@ PrefabInstance:
     - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477563243284470254, guid: 422b8511739892747ba907bb940c491c, type: 3}
+      propertyPath: m_TagString
+      value: PhysicsObj
       objectReference: {fileID: 0}
     - target: {fileID: 748104330318236688, guid: 422b8511739892747ba907bb940c491c, type: 3}
       propertyPath: minVelocity
