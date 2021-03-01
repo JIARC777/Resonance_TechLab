@@ -111,7 +111,7 @@ public class DAVE : MonoBehaviour
     bool needToLERPModel;
     // How fast Lerping goes;
     float lerpSpeed = 4f;
-
+    bool isStopped = true;
     
     // Events
     #region Events
@@ -159,7 +159,7 @@ public class DAVE : MonoBehaviour
         // Debug.Log((currentDestination - transform.position).magnitude);
 
         // Check the distance between target to notify any listeners that DAVE has arrived - also check to make sure you are not waiting
-        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation)
+        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation && !isStopped)
         {
             Debug.Log("Arrived");
             // DAVE is waiting, no need to tell anything DAVE arrived
