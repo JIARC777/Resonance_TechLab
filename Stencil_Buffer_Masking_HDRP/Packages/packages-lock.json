@@ -95,7 +95,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "12.0.0",
+      "version": "11.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -104,23 +104,25 @@
       }
     },
     "com.unity.render-pipelines.high-definition": {
-      "version": "10.2.2",
+      "version": "11.0.0",
       "depth": 0,
-      "source": "registry",
+      "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "10.2.2",
-        "com.unity.shadergraph": "10.2.2",
-        "com.unity.visualeffectgraph": "10.2.2",
-        "com.unity.render-pipelines.high-definition-config": "10.2.2"
-      },
-      "url": "https://packages.unity.com"
+        "com.unity.modules.video": "1.0.0",
+        "com.unity.modules.animation": "1.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.render-pipelines.core": "11.0.0",
+        "com.unity.shadergraph": "11.0.0",
+        "com.unity.visualeffectgraph": "11.0.0",
+        "com.unity.render-pipelines.high-definition-config": "11.0.0"
+      }
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "12.0.0",
+      "version": "11.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "12.0.0"
+        "com.unity.render-pipelines.core": "11.0.0"
       }
     },
     "com.unity.searcher": {
@@ -138,11 +140,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "12.0.0",
+      "version": "11.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "12.0.0",
+        "com.unity.render-pipelines.core": "11.0.0",
         "com.unity.searcher": "4.3.1"
       }
     },
@@ -223,11 +225,11 @@
       }
     },
     "com.unity.visualeffectgraph": {
-      "version": "12.0.0",
+      "version": "11.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.shadergraph": "12.0.0"
+        "com.unity.shadergraph": "11.0.0"
       }
     },
     "com.unity.xr.legacyinputhelpers": {
