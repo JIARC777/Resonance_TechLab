@@ -2885,7 +2885,7 @@ MonoBehaviour:
   daveModelCollider: {fileID: 678471983}
   weakSpotDeactivatedWaitTime: 30
   physicsImpactDeactivationWaitTime: 5
-  projectileImpactDeactivationWaitTime: 100
+  projectileImpactDeactivationWaitTime: 10
 --- !u!65 &389864824
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5452,7 +5452,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: fab7662250ee4d84d9b198f67db4da92, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -14500,7 +14500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1024491625, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1331261463, guid: 2db307d116b87b044a4f73d4dfa7e87f, type: 3}
       propertyPath: m_Layer
