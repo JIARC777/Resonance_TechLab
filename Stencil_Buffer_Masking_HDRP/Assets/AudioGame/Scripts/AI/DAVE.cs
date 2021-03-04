@@ -111,7 +111,7 @@ public class DAVE : MonoBehaviour
     public OnAMTTrigger daveWeakSpot;
 
     // Assign Dave's model to this slot, making sure it has an OnDavePhysicsImpact assocaited
-    public OnDavePhysicsImpact daveModelCollider;
+    //public OnDavePhysicsImpact daveModelCollider;
 
     // How long do we wait after being "quietly" deactivated
     public float weakSpotDeactivatedWaitTime = 30f;
@@ -128,7 +128,7 @@ public class DAVE : MonoBehaviour
     bool needToLERPModel;
 
     // How fast Lerping goes;
-    float lerpSpeed = 0.1f;
+    float lerpSpeed = 1f;
     bool isStopped = false;
 
     // Events
@@ -164,7 +164,7 @@ public class DAVE : MonoBehaviour
         // Sub to weak spot monitor
         daveWeakSpot.amtHitWeakSpot += quietDeactivate;
         // Sub to General Physics collisions on the DAVE collider
-        daveModelCollider.SomethingHitDAVE += loudDeactivate;
+        //daveModelCollider.SomethingHitDAVE += loudDeactivate;
         // Sub The event that triggers the chase/attack sequence to the proximity detector 
         closeProximityDetector.DetectedPlayer += EngagePlayer;
 
@@ -183,7 +183,7 @@ public class DAVE : MonoBehaviour
         // Debug.Log((currentDestination - transform.position).magnitude);
 
         // Check the distance between target to notify any listeners that DAVE has arrived - also check to make sure you are not waiting
-        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation && !isStopped)
+        if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation)
         {
             Debug.Log("Arrived");
             
@@ -381,18 +381,21 @@ public class DAVE : MonoBehaviour
         //Debug.Log("LERPing");
         // Assuming that we've parented correctly, we just need to fly to local position 0
         Debug.Log(startingYHeight);
-        modelTransform.localPosition = Vector3.Lerp(modelTransform.position, new Vector3(0, startingYHeight, 0), Time.deltaTime * lerpSpeed);
+        Debug.Log((transform.position - modelTransform.position).magnitude);
+        modelTransform.position = Vector3.Lerp(modelTransform.position, new Vector3(transform.position.x, startingYHeight, transform.position.z), Time.deltaTime * lerpSpeed);
         modelTransform.localRotation = Quaternion.Slerp(modelTransform.localRotation, Quaternion.identity, Time.deltaTime * lerpSpeed);
 
 
         // This essentially stops this function from being called;
-        if ((modelTransform.localPosition - new Vector3(0, startingYHeight, 0)).magnitude <= 0.1f)
+        if ((modelTransform.localPosition - new Vector3(0, startingYHeight, 0)).magnitude <= 0.25f)
         {
             needToLERPModel = false;
             Debug.Log("Model Moved To Correct Position");
             // Now that we are safely reactivated, this listener can be reinitialized
             closeProximityDetector.DetectedPlayer += EngagePlayer;
             agent.enabled = true;
+            currentState = new DAVEPatroller();
+            currentState.Initialize(this);
         }
     }
 
