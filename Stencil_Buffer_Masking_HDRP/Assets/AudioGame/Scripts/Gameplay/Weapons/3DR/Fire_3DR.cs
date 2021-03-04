@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class Fire_3DR : MonoBehaviour
 {
@@ -63,6 +65,7 @@ public class Fire_3DR : MonoBehaviour
 
     //Instance of this script, used within the spool and projectile reloading scripts
     public static Fire_3DR threeDRInstance;
+    private SteamVR_Input_Sources holdingHand;
 
     // Start is called before the first frame update
     void Start()
@@ -87,11 +90,20 @@ public class Fire_3DR : MonoBehaviour
         aimingLine.enabled = false;
     }
 
-    public void StartFiring() => isFiring = true;
+    public void StartFiring(SteamVR_Behaviour_Boolean behavBool, SteamVR_Input_Sources source, bool boolStat)
+    {
+        var bTriggerPulledIsSameHand = behavBool.booleanAction.activeDevice == holdingHand;
+        if(bTriggerPulledIsSameHand)
+        isFiring = true;
+    }
 
     public void StopFiring() => isFiring = false;
 
-    public void OnPickUp() => isHeld = true;
+    public void OnPickUp()
+    {
+        holdingHand = GetComponentInParent<Hand>().handType;
+        isHeld = true;
+    }
 
     public void OnDrop() => isHeld = false;
 

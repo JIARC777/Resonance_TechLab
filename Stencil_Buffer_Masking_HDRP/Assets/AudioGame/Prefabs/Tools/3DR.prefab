@@ -445,11 +445,14 @@ MonoBehaviour:
       m_Calls: []
   onPress:
     m_PersistentCalls:
+      m_Calls: []
+  onPressDown:
+    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4672195814563783357}
         m_TargetAssemblyTypeName: Fire_3DR, Assembly-CSharp
         m_MethodName: StartFiring
-        m_Mode: 1
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -458,9 +461,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onPressDown:
-    m_PersistentCalls:
-      m_Calls: []
   onPressUp:
     m_PersistentCalls:
       m_Calls:
