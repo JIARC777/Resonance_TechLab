@@ -285,10 +285,13 @@ public class DAVE : MonoBehaviour
 
     IEnumerator temporarilyDeactivateProcessing(float waitTime)
     {
+        damaged = true;
         attackTimestamp = Time.time;
+        agent.enabled = false;
         Debug.Log("<color=cyan>Deactivation Cooldown Start</color>");
         yield return new WaitForSeconds(waitTime);
         Debug.Log("<color=cyan>Deactivation Cooldown Complete</color>");
+        agent.enabled = true;
         if (currentState != null)
             currentState.Exit();
         currentState = new DAVEPatroller();
@@ -298,6 +301,7 @@ public class DAVE : MonoBehaviour
     
     IEnumerator deactivateAndReattachDave(float waitTime)
     {
+        damaged = true;
         attackTimestamp = Time.time;
         Debug.Log("<color=cyan>Deactivation Cooldown Start</color>");
         yield return new WaitForSeconds(waitTime);
@@ -317,8 +321,9 @@ public class DAVE : MonoBehaviour
 
     void quietDeactivate()
     {
+        Debug.Log("Quiet Deactivate");
         // We deactivated dave for a tiny bit - keep him in the air, just freeze his location - maybe change lighting or material state
-        temporarilyDeactivateProcessing(weakSpotDeactivatedWaitTime);
+        StartCoroutine(temporarilyDeactivateProcessing(weakSpotDeactivatedWaitTime));
     }
 
     void loudDeactivate(bool hardImpact)
@@ -341,18 +346,22 @@ public class DAVE : MonoBehaviour
         // deactivate for the proper amount of time;
         // This is a bit weird, but I dont want any events interfering with being damaged, especially the player running into the detector box, which should be "deactivated"
         closeProximityDetector.DetectedPlayer -= EngagePlayer;
-        if (hardImpact)
+        if (!damaged)
         {
-            modelRB.useGravity = true;
-            StartCoroutine(deactivateAndReattachDave(physicsImpactDeactivationWaitTime));
-            // Make the NavMesh move to the model
+            if (hardImpact)
+            {
+                modelRB.useGravity = true;
+                StartCoroutine(deactivateAndReattachDave(physicsImpactDeactivationWaitTime));
+                // Make the NavMesh move to the model
+            }
+            else
+            {
+                StartCoroutine(deactivateAndReattachDave(physicsImpactDeactivationWaitTime));
+            }
         }
-        else
-        {
-            StartCoroutine(temporarilyDeactivateProcessing(physicsImpactDeactivationWaitTime));
-        }
+        
 
-        SetDestination(modelTransform.position);
+        //SetDestination(modelTransform.position);
         // If we want an agro mode toggle it would likely be here 
     }
 
@@ -394,6 +403,7 @@ public class DAVE : MonoBehaviour
             // Now that we are safely reactivated, this listener can be reinitialized
             closeProximityDetector.DetectedPlayer += EngagePlayer;
             agent.enabled = true;
+            damaged = false;
             currentState = new DAVEPatroller();
             currentState.Initialize(this);
         }
