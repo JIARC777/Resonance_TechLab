@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 318af78ebbc131240895c42ebbf63536
+guid: 4749b68c2bc7fde4b8999a3d866713e3
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -11,15 +11,14 @@ ScriptedImporter:
   version: 29
   projectContext: 1
   mGraphInstanceData:
-  - graphLabel: Beech Wood Parquet Cube
-    prototypeName: Beech Wood Parquet Cube
+  - graphLabel: Carpet Curly Chevron
+    prototypeName: Carpet Curly Chevron
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://beech_wood_parquet_cube\" label=\"\" >\n 
-      <presetinput identifier=\"$outputsize\" uid=\"3505132696\" type=\"8\" value=\"9,9\"
-      />\n  <presetinput identifier=\"$randomseed\" uid=\"2275279562\" type=\"4\"
-      value=\"1519\" />\n </sbspreset>\n"
+    preset: " <sbspreset pkgurl=\"pkg://carpet_curly_chevron\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"683406423\" type=\"8\" value=\"9,9\" />\n
+      </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -35,7 +34,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
-        texture: {fileID: 65413322956079994, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+        texture: {fileID: 2085901988435327518, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
@@ -63,7 +62,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _HeightMap
-        texture: {fileID: 2444690147453073292, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+        texture: {fileID: -2583076423639159525, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _IridescenceMaskMap
@@ -79,11 +78,11 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {fileID: -9209465439656239716, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+        texture: {fileID: -7872093512290095802, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
-        texture: {fileID: 2508262092852913631, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+        texture: {fileID: 1586733659792025827, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMapOS
@@ -91,7 +90,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _SpecularColorMap
-        texture: {fileID: 405636587273179997, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+        texture: {fileID: -3264962819367979852, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _SubsurfaceMaskMap
@@ -486,6 +485,15 @@ ScriptedImporter:
       bImage: 1
       bNumerical: 0
       bLinear: 1
+    - outputName: specularLevel
+      identifier: specular_level
+      usageName: specularLevel
+      channelStr: specularLevel
+      label: Specular Level
+      usage: 12
+      bImage: 1
+      bNumerical: 0
+      bLinear: 1
     - outputName: height
       identifier: height
       usageName: height
@@ -549,6 +557,11 @@ ScriptedImporter:
       - sourceName: smoothness
         from: 0
         to: 3
+    - targetName: specularLevel
+      components:
+      - sourceName: specularLevel
+        from: 0
+        to: 3
     - targetName: height
       components:
       - sourceName: height
@@ -574,43 +587,47 @@ ScriptedImporter:
         from: 0
         to: 3
     textureParameters:
-    - textureName: Beech Wood Parquet Cube - diffuse
+    - textureName: Carpet Curly Chevron - diffuse
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - baseColor
+    - textureName: Carpet Curly Chevron - baseColor
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - normal
+    - textureName: Carpet Curly Chevron - normal
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - specular
+    - textureName: Carpet Curly Chevron - specular
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - glossiness
+    - textureName: Carpet Curly Chevron - glossiness
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - roughness
+    - textureName: Carpet Curly Chevron - roughness
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - metallic
+    - textureName: Carpet Curly Chevron - metallic
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - height
+    - textureName: Carpet Curly Chevron - specularLevel
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - ambientOcclusion
+    - textureName: Carpet Curly Chevron - height
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Beech Wood Parquet Cube - mask
+    - textureName: Carpet Curly Chevron - ambientOcclusion
+      wrapMode: 0
+      filterMode: 1
+      aniso: 1
+    - textureName: Carpet Curly Chevron - mask
       wrapMode: 0
       filterMode: 1
       aniso: 1
@@ -625,10 +642,10 @@ ScriptedImporter:
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
-    material: {fileID: 8209230588633548044, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+    material: {fileID: 8643874357979584349, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
     generatedTextures:
-    - {fileID: 65413322956079994, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
-    - {fileID: 2508262092852913631, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
-    - {fileID: 405636587273179997, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
-    - {fileID: 2444690147453073292, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
-    - {fileID: -9209465439656239716, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+    - {fileID: 2085901988435327518, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
+    - {fileID: 1586733659792025827, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
+    - {fileID: -3264962819367979852, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
+    - {fileID: -2583076423639159525, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
+    - {fileID: -7872093512290095802, guid: 4749b68c2bc7fde4b8999a3d866713e3, type: 3}
