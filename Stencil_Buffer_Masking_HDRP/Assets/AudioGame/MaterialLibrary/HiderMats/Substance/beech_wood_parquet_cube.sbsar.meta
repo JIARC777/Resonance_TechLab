@@ -18,7 +18,8 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://beech_wood_parquet_cube\" label=\"\" >\n 
       <presetinput identifier=\"$outputsize\" uid=\"3505132696\" type=\"8\" value=\"9,9\"
-      />\n </sbspreset>\n"
+      />\n  <presetinput identifier=\"$randomseed\" uid=\"2275279562\" type=\"4\"
+      value=\"1519\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
