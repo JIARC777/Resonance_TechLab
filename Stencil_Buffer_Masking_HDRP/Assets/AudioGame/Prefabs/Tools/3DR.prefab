@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 4120687820225754254}
   - component: {fileID: 4120687820225754353}
   - component: {fileID: 4120687820225754355}
+  - component: {fileID: 789087055}
   m_Layer: 0
   m_Name: 3DR
   m_TagString: Untagged
@@ -535,12 +536,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 789087055}
+        m_TargetAssemblyTypeName: Holsterable, Assembly-CSharp
+        m_MethodName: OnHolsterablePickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4672195814563783357}
         m_TargetAssemblyTypeName: Fire_3DR, Assembly-CSharp
         m_MethodName: OnDrop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 789087055}
+        m_TargetAssemblyTypeName: Holsterable, Assembly-CSharp
+        m_MethodName: OnHolsterDrop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -606,6 +631,18 @@ MonoBehaviour:
   highlightOnHover: 1
   hideHighlight: []
   hoverPriority: 0
+--- !u!114 &789087055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672195814563783347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44b16a829455f14b97c8302d0db39b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4672195814776311925
 GameObject:
   m_ObjectHideFlags: 0
