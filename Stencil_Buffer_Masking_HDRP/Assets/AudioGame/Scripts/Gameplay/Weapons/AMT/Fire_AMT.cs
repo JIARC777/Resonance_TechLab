@@ -111,8 +111,8 @@ public class Fire_AMT : MonoBehaviour
         //Variable that is always counting up, used for building up the charge over time
         float buildingCharge = Time.deltaTime;
 
-        //IF the player isn's holding down either main mouse button, the player can attempt to fire another beam or clap
-        if (isClapping == false && isFiring == false)
+        //IF the player isn't holding down the right index trigger, the player can attempt to fire another beam or clap
+        if (isFiring == false)
         {
             //canFire = true;
 
@@ -148,16 +148,13 @@ public class Fire_AMT : MonoBehaviour
         }
         else
         {
-            //Set the beamCharge gameobject's active state to false
+            //Set the beamCharge gameobject's active state to false, then set the AMT's charge back to 0
             beamCharge.gameObject.SetActive(false);
-
-            //Set the AMT's charge back to 0
             charge = 0;
 
-            //If the AMT's energy is less-than 100
+            //If the AMT's energy is less-than 100, increase energy at a rate of beamRegen per second
             if (energy < 100)
             {
-                //Increase energy at a rate of beamRegen per second
                 energy += Time.deltaTime * beamEnergyRegen;
             }
             //Otherwise, set the AMT's energy to the max energyReserve value
@@ -268,7 +265,7 @@ public class Fire_AMT : MonoBehaviour
 
         //Set the beam gameObject's size and position using the beamPosAdjust variable
         beam.localScale = new Vector3(0.1f, 0.1f, newSize);
-        beam.localPosition = new Vector3(0, 0, -beamPosAdj);
+        beam.localPosition = new Vector3(0, 0, beamPosAdj);
 
         //Set the beamDetect gameObject's size and position using the beamPosAdjust variable
         //beamDetect.localScale = new Vector3(0.5f, 0.5f, newSize);

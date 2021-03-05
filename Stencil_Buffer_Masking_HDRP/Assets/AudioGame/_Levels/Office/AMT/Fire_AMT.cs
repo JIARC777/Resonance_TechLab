@@ -14,6 +14,7 @@ namespace Valve.VR.InteractionSystem
         public bool isHeld = false;
         //Can the AMT be fired/Is the AMT recharging from a recent shot
         public bool canFire = true;
+        private SteamVR_Input_Sources holdingHand;
 
         [Header("AMT Energy Settings")]
         //How much energy the AMT starts with in reserve
@@ -25,6 +26,7 @@ namespace Valve.VR.InteractionSystem
         //Time it takes to recharge for another clap
         public float clapRechargeTime = 0.1f;
 
+        #region Beam Props
         [Header("Beam Properties")]
         //How much has the AMT been charged; always starts at 0 (compared with beamChargeUpTime)
         public float charge = 0f;
@@ -46,6 +48,8 @@ namespace Valve.VR.InteractionSystem
         public float beamDetectUpTime = 0.5f;
         //How long the beam is
         public float beamLength = 5f;
+        
+        #endregion Beam Props
 
         [Header("AMT Objects")]
         //The Transform object representing the Beam
@@ -53,7 +57,7 @@ namespace Valve.VR.InteractionSystem
         //The Transform object representing the Beam's charging animation
         private Transform beamCharge;
         //The Transform object representing the Beam's additional hitbox (Added for reliability with onTriggerEnter)
-        private Transform beamDetect;
+        //private Transform beamDetect;
 
         public bool isFiring = false;
         public bool isClapping = false;
@@ -64,7 +68,7 @@ namespace Valve.VR.InteractionSystem
             //Find the Beam, Beam Charge, and Beam Detect Transforms within the AMT parent and assign them to the beam, beamCharge, and beamDetect Transforms respectively
             beam = transform.GetChild(1);
             beamCharge = transform.GetChild(2);
-            beamDetect = transform.GetChild(3);
+            //beamDetect = transform.GetChild(3);
 
             //Adjust the size and position of the beam and beamDetect Transforms based on the beamLength variable
             AdjustBeamLength(beamLength);
@@ -72,26 +76,29 @@ namespace Valve.VR.InteractionSystem
             //Set the beam, beamCharge, and beamDetect gameObjects active state to false
             beam.gameObject.SetActive(false);
             beamCharge.gameObject.SetActive(false);
-            beamDetect.gameObject.SetActive(false);
+            //beamDetect.gameObject.SetActive(false);
 
             //Set the beginning energy reserve to the maximum energyReserve variable
             energy = energyReserve;
         }
 
-        public void startFiring()
+        #region Status Functions
+        public void StartFiring(SteamVR_Behaviour_Boolean behavBool, SteamVR_Input_Sources source, bool boolStat)
         {
-            isFiring = true;
+            var bTriggerPulledIsSameHand = behavBool.booleanAction.activeDevice == holdingHand;
+            if(bTriggerPulledIsSameHand)
+                isFiring = true;
         }
-        public void stopFiring()
+        public void StopFiring()
         {
             isFiring = false;
         }
-        public void startClapping()
+        public void StartClapping()
         {
             isClapping = true;
         }
 
-        public void stopClapping()
+        public void StopClapping()
         {
             isClapping = false;
         }
@@ -99,12 +106,18 @@ namespace Valve.VR.InteractionSystem
         public void OnPickUp()
         {
             isHeld = true;
+            holdingHand = GetComponentInParent<Hand>().handType;
+            
+            
         }
         public void OnDrop()
         {
             isHeld = false;
         }
 
+
+
+        #endregion StatusCode Functions
         // Update is called once per frame
         void Update()
         {
@@ -118,9 +131,10 @@ namespace Valve.VR.InteractionSystem
             float buildingCharge = Time.deltaTime;
 
             //IF the player isn's holding down either main mouse button, the player can attempt to fire another beam or clap
-            if (isClapping == false && isFiring == false)
+            if (isFiring == false)
             {
-                canFire = true;
+                beamCharge.localScale = new Vector3(beamChargeOriginalScale, beamChargeOriginalScale,
+                    beamChargeOriginalScale);
             }
 
             //If the RMB is down, the AMT is being held, it isn't charging from a previous shot/clap, and the energy is greater or equal to the clapEnergyUsed variable
@@ -177,7 +191,7 @@ namespace Valve.VR.InteractionSystem
 
             //Set the active state of the beam gameobject and the beamDetect gameobject to true
             beam.gameObject.SetActive(true);
-            beamDetect.gameObject.SetActive(true);
+            //beamDetect.gameObject.SetActive(true);
 
             //Start the FireBeam coroutine
             StartCoroutine(FireBeam());
@@ -204,7 +218,7 @@ namespace Valve.VR.InteractionSystem
                 //Set the active state of the beam gameobject to false
                 beam.gameObject.SetActive(false);
 
-                StartCoroutine(BeamDetectUptime());
+                //StartCoroutine(BeamDetectUptime());
 
                 //Wait 3 seconds
                 yield return new WaitForSeconds(beamRechargeTime);
@@ -213,17 +227,17 @@ namespace Valve.VR.InteractionSystem
                 charge = 0;
 
                 //Set the canFire boolean back to true
-                //canFire = true;
+                canFire = true;
             }
 
-            IEnumerator BeamDetectUptime()
-            {
-                //Wait a certain amount of time within the beamDetectUpTime variable
-                yield return new WaitForSeconds(beamDetectUpTime);
-
-                //Set the active state of the beam gameobject to false
-                beamDetect.gameObject.SetActive(false);
-            }
+            // IEnumerator BeamDetectUptime()
+            // {
+            //     //Wait a certain amount of time within the beamDetectUpTime variable
+            //     yield return new WaitForSeconds(beamDetectUpTime);
+            //
+            //     //Set the active state of the beam gameobject to false
+            //     //beamDetect.gameObject.SetActive(false);
+            // }
         }
 
         IEnumerator Clap()
@@ -246,15 +260,15 @@ namespace Valve.VR.InteractionSystem
         private void AdjustBeamLength(float newSize)
         {
             //Float that represents the equation to properly position each object using the newSize variable
-            float beamPosAdjust = 1f + (0.5f * newSize);
+            float beamPosAdjust = 0.375f + (0.5f * newSize);
 
             //Set the beam gameObject's size and position using the beamPosAdjust variable
             beam.localScale = new Vector3(0.1f, 0.1f, newSize);
-            beam.localPosition = new Vector3(0, 0, -beamPosAdjust);
+            beam.localPosition = new Vector3(0, 0, beamPosAdjust);
 
             //Set the beamDetect gameObject's size and position using the beamPosAdjust variable
-            beamDetect.localScale = new Vector3(0.5f, 0.5f, newSize);
-            beamDetect.localPosition = new Vector3(0, 0, -beamPosAdjust);
+            //beamDetect.localScale = new Vector3(0.5f, 0.5f, newSize);
+            //beamDetect.localPosition = new Vector3(0, 0, beamPosAdjust);
         }
     }
 

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class Fire_3DR : MonoBehaviour
 {
@@ -49,6 +51,7 @@ public class Fire_3DR : MonoBehaviour
     public Transform internalSpool;
     //Place where the printed projectiles are placed
     public Transform ammoSpawn;
+    public Transform lineObject;
 
     [Header("Line Properties")]
     //The LineRenderer used to create the aiming line
@@ -62,6 +65,7 @@ public class Fire_3DR : MonoBehaviour
 
     //Instance of this script, used within the spool and projectile reloading scripts
     public static Fire_3DR threeDRInstance;
+    private SteamVR_Input_Sources holdingHand;
 
     // Start is called before the first frame update
     void Start()
@@ -76,42 +80,34 @@ public class Fire_3DR : MonoBehaviour
         firingLocation = transform.GetChild(3);
         internalSpool = transform.GetChild(4);//Debug
         ammoSpawn = transform.GetChild(5);
+        lineObject = transform.GetChild(6);
 
         //Creates a gameObject with the 3DR's LineRenderer attached to it, then assigns the LineRenderer component to the aimingLine LineRenderer variable
-        aimingLine = Instantiate(aimingObject, null).GetComponent<LineRenderer>();
+        //aimingLine = Instantiate(aimingObject, null).GetComponent<LineRenderer>();
+        aimingLine = lineObject.GetComponent<LineRenderer>();
 
         //Disables the aimingLine LineRenderer
         aimingLine.enabled = false;
     }
 
-    public void startFiring()
+    public void StartFiring(SteamVR_Behaviour_Boolean behavBool, SteamVR_Input_Sources source, bool boolStat)
     {
+        var bTriggerPulledIsSameHand = behavBool.booleanAction.activeDevice == holdingHand;
+        if(bTriggerPulledIsSameHand)
         isFiring = true;
     }
-    public void stopFiring()
-    {
-        isFiring = false;
-    }
-    public void startReloading()
-    {
-        isReloading = true;
-    }
 
-    public void stopReloading()
-    {
-        isReloading = false;
-    }
+    public void StopFiring() => isFiring = false;
 
     public void OnPickUp()
     {
+        holdingHand = GetComponentInParent<Hand>().handType;
         isHeld = true;
     }
 
-    public void OnDrop()
-    {
-        isHeld = false;
-    }
+    public void OnDrop() => isHeld = false;
 
+    
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -126,12 +122,19 @@ public class Fire_3DR : MonoBehaviour
         if (isHeld)
         {
             
-            //If the 3DR is being held, turn on the aim lines
+            //Turn on the aim lines
             aimingLine.enabled = true;
 
             //Sets the aimingLine gameObject's position and yRotation to this object's respective position and rotation
-            aimingLine.gameObject.transform.localPosition = firingLocation.position;
-            aimingLine.gameObject.transform.localRotation = Quaternion.Euler(0, transform.localEulerAngles.y, 0);
+            //aimingLine.transform.localPosition = firingLocation.position;
+            aimingLine.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
+            // aimingLine.transform.localRotation =
+                // Quaternion.Euler(transform.parent.InverseTransformVector(new Vector3(transform.parent.eulerAngles.x, transform.parent.eulerAngles.y,
+                    // transform.parent.eulerAngles.z))); //Quaternion.Euler(transform.parent.eulerAngles.x, 0, transform.parent.eulerAngles.z);
+            
+            
+            
+            //Quaternion.Euler(transform.parent.localEulerAngles.x, transform.parent.localEulerAngles.y, 0)
 
             //Generate the aiming line path
             CreateLinePositions();
@@ -142,9 +145,10 @@ public class Fire_3DR : MonoBehaviour
                 //Call the Fire() function
                 Fire();
             }
-            //If the amount of spool charges is greater than 0, the "R" key is pressed, and the 3DR isn't creating a projectile already
-            if (spoolRemaining > 0 && isReloading && canGenerateAmmo)
+            //If the amount of spool charges is greater than 0 and the 3DR isn't creating a projectile already
+            if (spoolRemaining > 0 && canGenerateAmmo && !currentAmmo)
             {
+                
                 //Call the GenerateAmmo() function
                 GenerateAmmo();
             }
@@ -155,10 +159,10 @@ public class Fire_3DR : MonoBehaviour
     public void Reload(Transform ammo)
     {
         //Assigns ammo to the currentAmmo transform
-        currentAmmo = ammo;
+        currentAmmo = Instantiate(ammo, firingLocation);
 
         //Sets the parent, position, and rotation of currentAmmo to the firing location
-        currentAmmo.SetParent(firingLocation);
+        //currentAmmo.SetParent(firingLocation);
         currentAmmo.position = firingLocation.position;
         currentAmmo.rotation = firingLocation.rotation;
 
@@ -179,6 +183,8 @@ public class Fire_3DR : MonoBehaviour
             //Prevents any more projectiles from being created during this process then reduces the remaining spool charges by the spoolLost variable
             canGenerateAmmo = false;
             spoolRemaining -= spoolLost;
+
+            isReloading = false;
 
             //If the spool has no remaining charges left, reset its size back to its original size, the disable it
             if (spoolRemaining == 0)
@@ -224,7 +230,7 @@ public class Fire_3DR : MonoBehaviour
             }            
 
             //Creates the projectile based on the newAmmo transform, and assigns the ammoSpawn transform as its parent
-            Instantiate(newAmmo, ammoSpawn);
+            Reload(newAmmo);
 
             //Allows the player to generate another projectile, if they're able to
             canGenerateAmmo = true;
@@ -248,7 +254,7 @@ public class Fire_3DR : MonoBehaviour
     }
 
     //This function fires a projectile from the 3DR
-    public void Fire()
+    private void Fire()
     {
         Debug.Log("firing");
         //Unparents the projectile from the 3DR's firingLocation
@@ -265,6 +271,8 @@ public class Fire_3DR : MonoBehaviour
 
         //Sets the currentAmmo in the 3DR to null
         currentAmmo = null;
+
+        canGenerateAmmo = true;
     }
 
     //This function uses the parameters under the Line header and uses them to create a LineRenderer
@@ -297,8 +305,8 @@ public class Fire_3DR : MonoBehaviour
             float timeTravelled = (float)i / lineLength;
 
             //Calculates the vertical and horizontal velocities using PHYSICS EQUATIONS
-            float horizVel = firingForce * Mathf.Cos(transform.localEulerAngles.x * Mathf.Deg2Rad);
-            float vertVel = firingForce * Mathf.Sin(transform.localEulerAngles.x * Mathf.Deg2Rad);
+            float horizVel = firingForce * Mathf.Cos(transform.rotation.eulerAngles.x * Mathf.Deg2Rad);
+            float vertVel = firingForce * Mathf.Sin(transform.rotation.eulerAngles.x * Mathf.Deg2Rad);
 
             //Calculates the vertical and horizontal distances at the current time using PHYSICS EQUATIONS
             float vertDist = -(timeTravelled * ((49 * timeTravelled) + (10 * vertVel)) / 10);

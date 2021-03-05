@@ -14,21 +14,23 @@ ScriptedImporter:
   - graphLabel: Pixel Patterned
     prototypeName: Pixel Patterned
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://wood_pixel_patterned\" label=\"\" >\n  <presetinput
       identifier=\"$outputsize\" uid=\"1023435586\" type=\"8\" value=\"9,9\" />\n 
-      <presetinput identifier=\"glaze_selection\" uid=\"1271923674\" type=\"4\" value=\"4\"
-      />\n  <presetinput identifier=\"wood_vein_intensity\" uid=\"1272969914\" type=\"0\"
-      value=\"0.601\" />\n  <presetinput identifier=\"pixel_depth_intensity\" uid=\"1272868260\"
-      type=\"0\" value=\"0.482\" />\n  <presetinput identifier=\"contrast\" uid=\"1205408731\"
-      type=\"0\" value=\"0.011\" />\n  <presetinput identifier=\"saturation\" uid=\"945609452\"
-      type=\"0\" value=\"0.463\" />\n </sbspreset>\n"
+      <presetinput identifier=\"$randomseed\" uid=\"1785885968\" type=\"4\" value=\"3878\"
+      />\n  <presetinput identifier=\"glaze_selection\" uid=\"1271923674\" type=\"4\"
+      value=\"4\" />\n  <presetinput identifier=\"wood_vein_intensity\" uid=\"1272969914\"
+      type=\"0\" value=\"0.601\" />\n  <presetinput identifier=\"pixel_depth_intensity\"
+      uid=\"1272868260\" type=\"0\" value=\"0.482\" />\n  <presetinput identifier=\"contrast\"
+      uid=\"1205408731\" type=\"0\" value=\"0.011\" />\n  <presetinput identifier=\"saturation\"
+      uid=\"945609452\" type=\"0\" value=\"0.463\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP _NORMALMAP
-        _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      shaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _GLOSSINESSMAP _HEIGHTMAP _MASKMAP
+        _METALLICGLOSSMAP _NA_DIFFUSE _NORMALMAP _NORMALMAP_TANGENT_SPACE _OCCLUSIONMAP
+        _ROUGHNESSMAP _SPECULARCOLORMAP _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
@@ -631,8 +633,13 @@ ScriptedImporter:
       bGenerateOnLoad: 1
     material: {fileID: 4101335923645286840, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
     generatedTextures:
+    - {fileID: -9029634614586572691, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
     - {fileID: 6369951670691872457, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
     - {fileID: 3665018746517430930, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
     - {fileID: -2944865851199968741, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
+    - {fileID: -6332854417920661895, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
+    - {fileID: 5075783203201074141, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
+    - {fileID: 3739603742719908275, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
     - {fileID: -3786977034249315080, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
+    - {fileID: -7564743738773559084, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
     - {fileID: 2293569570845107583, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
