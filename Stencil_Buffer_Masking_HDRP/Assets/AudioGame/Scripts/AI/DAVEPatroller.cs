@@ -15,7 +15,9 @@ public class DAVEPatroller : IDaveState
         thisDave.waitingAtLocation = false;
         patrolPathNodes = dave.patrolPathNodes;
         dave.ArrivedAtDestination += GoToNextPatrolNode;
+        thisDave.statusLight.color = thisDave.patrolModeColor;
         GoToNextPatrolNode(thisDave);
+        
     }
 
     // Update Cycle looks for events to deactivate itself and pass dave the new current state if it needs to

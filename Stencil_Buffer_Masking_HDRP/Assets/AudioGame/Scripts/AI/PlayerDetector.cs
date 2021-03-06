@@ -9,15 +9,16 @@ public class PlayerDetector : MonoBehaviour
 
     // Called On OnTriggerEnter if tag == Player, indicating a player was found
     public event PlayerDetected DetectedPlayer;
-    public event DAVE.PingExit PingExit;
+   /// public event DAVE.PingExit PingExit;
 
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player Detected with Trigger");
+            Debug.Log("Player Detected with Trigger at location: " + other.transform.position);
             // this just uses the basic transform we may need to reconfigure for ther character controller
-            DetectedPlayer?.Invoke(other.transform.position);
+            // DetectedPlayer?.Invoke(other.transform.position);
+            DetectedPlayer(other.transform.position);
         }
     }
 }
