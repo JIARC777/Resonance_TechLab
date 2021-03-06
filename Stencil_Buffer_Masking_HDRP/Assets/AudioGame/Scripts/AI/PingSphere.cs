@@ -27,6 +27,8 @@ public class PingSphere : PlayerDetector
 
      void OnTriggerEnter(Collider other)
     {
+        if (other.tag == "Player")
+            Debug.Log("Ping Detected Player");
         base.OnTriggerEnter(other);
     }
 }

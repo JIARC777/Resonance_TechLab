@@ -21,6 +21,7 @@ public class DAVEInvestigator : IDaveState
         thisDave = dave;
         thisDave.waitingAtLocation = false;
         thisDave.ArrivedAtDestination += PingAtInvestigateSound;
+        thisDave.statusLight.color = thisDave.investigationModeColor;
     }
 
     // Update is called once per frame
@@ -61,7 +62,8 @@ public class DAVEInvestigator : IDaveState
         {   // Toggle between the Linq expression and our custom function 
             // soundsToInvestigate = soundsToInvestigate.OrderBy(s => s.curVolume).ToList<ActiveSound>();
             soundsToInvestigate = SortAndReorder(soundsToInvestigate);
-      
+            Debug.Log("Sound with Max Volume: " + soundsToInvestigate[0].Id + ": " + soundsToInvestigate[0].volumeAtImpact + "at location: " + soundsToInvestigate[0].soundLocation);
+
         }
         if (soundsToInvestigate.Count > 0)
         {
@@ -86,7 +88,7 @@ public class DAVEInvestigator : IDaveState
         tempSound = soundList[loudestSoundIndex];
         soundList[loudestSoundIndex] = soundList[0];
         soundList[0] = tempSound;
-        Debug.Log("Sound with Max Volume: " + soundList[0].Id + ": " + soundList[0].volumeAtImpact);
+        
         // Not sure if we really need to null the tempSound or not but its quick to do
         tempSound = null;
         // Return the reordered list
@@ -101,8 +103,6 @@ public class DAVEInvestigator : IDaveState
         noiseStartWaitTime = Time.time;
     }
     
-    
-
     public void Exit()
     {
         Debug.Log("<color=green>Exting Investigator</color>");
