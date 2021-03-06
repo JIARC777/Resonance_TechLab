@@ -5050,6 +5050,7 @@ GameObject:
   - component: {fileID: 3380325361438763494}
   - component: {fileID: 3380325361438763488}
   - component: {fileID: 3380325361438763490}
+  - component: {fileID: 239020722}
   m_Layer: 0
   m_Name: AMT
   m_TagString: Untagged
@@ -5235,12 +5236,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 239020722}
+        m_TargetAssemblyTypeName: Holsterable, Assembly-CSharp
+        m_MethodName: OnHolsterablePickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDetachFromHand:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 3614655560201232673}
         m_TargetAssemblyTypeName: Valve.VR.InteractionSystem.Fire_AMT, Assembly-CSharp
         m_MethodName: OnDrop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 239020722}
+        m_TargetAssemblyTypeName: Holsterable, Assembly-CSharp
+        m_MethodName: OnHolsterDrop
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5361,6 +5386,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &239020722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614655560201232672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44b16a829455f14b97c8302d0db39b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3614655560419820708
 GameObject:
   m_ObjectHideFlags: 0
