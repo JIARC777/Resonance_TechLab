@@ -9,7 +9,7 @@ public class Reload_3DR_Ammo : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         //If the tag of the collider's gameobject is of the "Ammo" variety, call the Reload() function within the Fire_3DR script
-        if(other.tag == "Ammo" && !Fire_3DR.threeDRInstance.currentAmmo)
+        if(other.tag == "Projectile" && !Fire_3DR.threeDRInstance.currentProjectile)
         {
             Fire_3DR.threeDRInstance.Reload(other.transform);
         }
