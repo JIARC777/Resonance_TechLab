@@ -18,7 +18,15 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://alcantara_topstitch_diamond\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"2005629128\" type=\"8\"
-      value=\"9,9\" />\n </sbspreset>\n"
+      value=\"11,11\" />\n  <presetinput identifier=\"topstitch_color\" uid=\"53169234\"
+      type=\"2\" value=\"0.129458,0.129458,0.133364\" />\n  <presetinput identifier=\"topstitch_amount\"
+      uid=\"53102765\" type=\"4\" value=\"10\" />\n  <presetinput identifier=\"topstitch_position\"
+      uid=\"53115368\" type=\"0\" value=\"0.335\" />\n  <presetinput identifier=\"topstitch_width\"
+      uid=\"53094686\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_length\"
+      uid=\"52660473\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_puncture\"
+      uid=\"64338391\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"hole_size\"
+      uid=\"53195977\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"quilting_type\"
+      uid=\"52746883\" type=\"4\" value=\"3\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -27,7 +35,7 @@ ScriptedImporter:
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
-      customRenderQueue: -1
+      customRenderQueue: 2225
       texEnvs:
       - name: _AnisotropyMap
         texture: {instanceID: 0}
@@ -35,7 +43,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
         texture: {fileID: 3870169668648347709, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
-        scale: {x: 1, y: 1}
+        scale: {x: 12, y: 12}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -189,7 +197,7 @@ ScriptedImporter:
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 0
+        float: 1
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -197,17 +205,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 0
+        float: 1
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 0
+        float: 1
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -253,7 +261,7 @@ ScriptedImporter:
       - name: _HeightTessCenter
         float: 0.5
       - name: _InvTilingScale
-        float: 1
+        float: 0.083333336
       - name: _Ior
         float: 1
       - name: _IridescenceMask
@@ -307,23 +315,23 @@ ScriptedImporter:
       - name: _StencilRef
         float: 0
       - name: _StencilRefDepth
-        float: 0
+        float: 8
       - name: _StencilRefDistortionVec
-        float: 2
+        float: 4
       - name: _StencilRefGBuffer
-        float: 2
+        float: 10
       - name: _StencilRefMV
-        float: 32
+        float: 40
       - name: _StencilWriteMask
-        float: 3
+        float: 6
       - name: _StencilWriteMaskDepth
         float: 8
       - name: _StencilWriteMaskDistortionVec
-        float: 2
+        float: 4
       - name: _StencilWriteMaskGBuffer
-        float: 3
+        float: 14
       - name: _StencilWriteMaskMV
-        float: 32
+        float: 40
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -379,11 +387,11 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 4
+        float: 3
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 8
+        float: 4
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
@@ -637,8 +645,8 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 2048
+      textureHeight: 2048
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
