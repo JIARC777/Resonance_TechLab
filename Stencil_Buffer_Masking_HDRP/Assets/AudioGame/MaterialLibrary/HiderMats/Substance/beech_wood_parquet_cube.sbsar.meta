@@ -17,9 +17,11 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://beech_wood_parquet_cube\" label=\"\" >\n 
-      <presetinput identifier=\"$outputsize\" uid=\"3505132696\" type=\"8\" value=\"9,9\"
+      <presetinput identifier=\"$outputsize\" uid=\"3505132696\" type=\"8\" value=\"11,11\"
       />\n  <presetinput identifier=\"$randomseed\" uid=\"2275279562\" type=\"4\"
-      value=\"1519\" />\n </sbspreset>\n"
+      value=\"1519\" />\n  <presetinput identifier=\"wood_color\" uid=\"3101650278\"
+      type=\"2\" value=\"0.698113,0.466978,0.207458\" />\n  <presetinput identifier=\"cut\"
+      uid=\"3101650206\" type=\"4\" value=\"1\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -620,8 +622,8 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 512
-      textureHeight: 512
+      textureWidth: 2048
+      textureHeight: 2048
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
