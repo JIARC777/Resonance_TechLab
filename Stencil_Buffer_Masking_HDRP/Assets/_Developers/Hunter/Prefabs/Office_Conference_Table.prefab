@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5192259180909783913}
   - component: {fileID: 7498447663063122434}
   - component: {fileID: 1360851847366315752}
+  - component: {fileID: 2661318902002155287}
   m_Layer: 0
   m_Name: topPlate
   m_TagString: Untagged
@@ -82,6 +83,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2661318902002155287
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309762005631040765}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6903390522573948767, guid: b5ff3bcbe0ffeffea8f237eca697fcab, type: 3}
 --- !u!1 &4174632901262047273
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +108,7 @@ GameObject:
   - component: {fileID: 4756902969363907994}
   - component: {fileID: 7124058884639515408}
   - component: {fileID: 8380459586255089090}
+  - component: {fileID: 1567914606272401905}
   m_Layer: 0
   m_Name: groove_highlight
   m_TagString: Untagged
@@ -164,6 +180,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1567914606272401905
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4174632901262047273}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6043432902988042939, guid: b5ff3bcbe0ffeffea8f237eca697fcab, type: 3}
 --- !u!1 &4249032152863699058
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,6 +205,7 @@ GameObject:
   - component: {fileID: 4918413776849036105}
   - component: {fileID: 7824608636555713027}
   - component: {fileID: 6751777890925837975}
+  - component: {fileID: 9152580662819625192}
   m_Layer: 0
   m_Name: default
   m_TagString: Untagged
@@ -246,6 +277,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &9152580662819625192
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4249032152863699058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: b5ff3bcbe0ffeffea8f237eca697fcab, type: 3}
 --- !u!1 &5150521325110167723
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5490313971589468689}
   m_Layer: 0
-  m_Name: desk
+  m_Name: Office_Conference_Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
