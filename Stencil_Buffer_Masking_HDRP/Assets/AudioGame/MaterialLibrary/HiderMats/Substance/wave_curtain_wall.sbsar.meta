@@ -17,8 +17,13 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://wave_curtain_wall\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"50853450\" type=\"8\" value=\"12,12\" />\n
-      </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"50853450\" type=\"8\" value=\"12,12\" />\n 
+      <presetinput identifier=\"base_color\" uid=\"1761847981\" type=\"2\" value=\"0.272204,0.268156,0.433962\"
+      />\n  <presetinput identifier=\"metallic\" uid=\"1761846358\" type=\"0\" value=\"0.621\"
+      />\n  <presetinput identifier=\"x_amount\" uid=\"1763471245\" type=\"4\" value=\"50\"
+      />\n  <presetinput identifier=\"scale\" uid=\"1763617694\" type=\"0\" value=\"0.281\"
+      />\n  <presetinput identifier=\"warp\" uid=\"1761639653\" type=\"0\" value=\"0.226\"
+      />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
