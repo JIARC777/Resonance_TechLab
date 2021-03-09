@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
-// We definetly want to remove this but I want to experiment with gameOver states with DAVE so for now DAVE has the power to restart the level
-using UnityEngine.SceneManagement;
 using Valve.VR.InteractionSystem;
 
 public interface IDaveState
@@ -401,11 +399,15 @@ public class DAVE : MonoBehaviour
         SetDestination(playerTargetPos);
         Debug.DrawLine(beamGunTip.position, playerTargetPos, Color.red);
         // Add an actual object and/or line renderer ^
-        playerHealth--;
-        if (playerHealth <= 0)
-        {
-            RestartLevel();
-        }
+
+        //This commented stuff is old, now uses ResonanceHealth stuff
+        //playerHealth--;
+        //if (playerHealth <= 0)
+        //{
+        //    RestartLevel();
+        //}
+        ResonanceHealth.DamagePlayer();
+
         StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
     }
 
@@ -525,12 +527,4 @@ public class DAVE : MonoBehaviour
             soundToPlay.Play();
 		}
 	}
-    
-    /// <summary>
-    /// Player has died and the level should restart
-    /// </summary>
-    void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
 }
