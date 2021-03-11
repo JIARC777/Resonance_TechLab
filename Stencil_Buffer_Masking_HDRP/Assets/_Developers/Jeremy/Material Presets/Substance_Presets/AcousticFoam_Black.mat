@@ -31,7 +31,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
         m_Texture: {fileID: 7869413865426731910, guid: 904c34da51b75e04ca0fd9554aac45fe, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 3, y: 3}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
         m_Texture: {fileID: 0}
@@ -177,16 +177,16 @@ Material:
     - _EnableFogOnTransparent: 1
     - _EnableGeometricSpecularAA: 0
     - _EnergyConservingSpecularColor: 1
-    - _HeightAmplitude: 0.049999997
+    - _HeightAmplitude: 0.14999999
     - _HeightCenter: 0.5
     - _HeightMapParametrization: 1
     - _HeightMax: 1
     - _HeightMin: -1
     - _HeightOffset: 0
     - _HeightPoMAmplitude: 2
-    - _HeightTessAmplitude: 5
+    - _HeightTessAmplitude: 15
     - _HeightTessCenter: 0.5
-    - _InvTilingScale: 1
+    - _InvTilingScale: 0.33333334
     - _Ior: 1
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
@@ -229,7 +229,7 @@ Material:
     - _TessellationFactor: 64
     - _TessellationFactorMaxDistance: 50
     - _TessellationFactorMinDistance: 1
-    - _TessellationFactorTriangleSize: 100
+    - _TessellationFactorTriangleSize: 5
     - _TessellationMode: 0
     - _TessellationShapeFactor: 0.75
     - _TexWorldScale: 1
