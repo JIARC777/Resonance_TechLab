@@ -8,22 +8,14 @@ public class Panel_Detect : MonoBehaviour
 
     public Material activePanelMat;
     public Material inactivePanelMat;
-    public Material currentPanelMat;
 
     public GameObject[] linkedObjects;
 
     private void Start()
     {
-        currentPanelMat = inactivePanelMat;
+        SetMaterial(inactivePanelMat);
 
         activated = false;
-
-        Debug.Log(currentPanelMat);
-    }
-
-    private void Update()
-    {
-        transform.parent.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().material = currentPanelMat;
     }
 
     public void OnTriggerEnter(Collider other)
@@ -34,7 +26,7 @@ public class Panel_Detect : MonoBehaviour
             {
                 Destroy(other.gameObject);
 
-                currentPanelMat = activePanelMat;
+                SetMaterial(activePanelMat);
 
                 Debug.Log("Activated");
 
@@ -51,9 +43,9 @@ public class Panel_Detect : MonoBehaviour
         if(other.tag == "Beam" && !activated)
         {
             for (int i = 0; i < linkedObjects.Length; i++)
-            {                
+            {
 
-                currentPanelMat = activePanelMat;
+                SetMaterial(activePanelMat);
 
                 Debug.Log("Activated");
 
@@ -62,5 +54,10 @@ public class Panel_Detect : MonoBehaviour
                 linkedObjects[i].gameObject.GetComponent<Activate>().Activation();
             }
         }
+    }
+
+    public void SetMaterial(Material mat)
+    {
+        transform.parent.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().material = mat;
     }
 }

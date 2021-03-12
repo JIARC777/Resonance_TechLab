@@ -8,11 +8,16 @@ public class Activate : MonoBehaviour
     public float doorOpenTime;
 
     public bool vertical;
+    public bool horizontal;
+
+    public bool lockedPanel;
 
     public Transform upDoor;
 
     public Transform doorLeft;
     public Transform doorRight;
+
+    public Unlock_Requirements requirements;
 
     private void Start()
     {
@@ -20,7 +25,8 @@ public class Activate : MonoBehaviour
         {
             upDoor = transform.GetChild(0);
         }
-        else
+        
+        if(horizontal)
         {
             doorLeft = transform.GetChild(0);
             doorRight = transform.GetChild(1);
@@ -33,10 +39,15 @@ public class Activate : MonoBehaviour
         {
             StartCoroutine(VerticalDoor());
         }
-        if(gameObject.tag == "Door" && !vertical)
+        if(gameObject.tag == "Door" && horizontal)
         {
             StartCoroutine(HorizonalDoor());
         }
+        if (lockedPanel)
+        {
+            requirements.PanelActivated();
+        }
+
     }
 
     IEnumerator VerticalDoor()
@@ -46,7 +57,7 @@ public class Activate : MonoBehaviour
 
         while(timeTillUp < doorOpenTime)
         {
-            upDoor.position = new Vector3(upDoor.localPosition.x, Mathf.Lerp(upDoor.localPosition.y, doorEndPos, timeTillUp), upDoor.localPosition.z);
+            upDoor.localPosition = new Vector3(upDoor.localPosition.x, Mathf.Lerp(upDoor.localPosition.y, doorEndPos, timeTillUp), upDoor.localPosition.z);
 
             timeTillUp += Time.deltaTime;
             yield return null;

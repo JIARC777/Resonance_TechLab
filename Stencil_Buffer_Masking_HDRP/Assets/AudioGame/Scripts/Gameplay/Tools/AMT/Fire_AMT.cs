@@ -109,6 +109,7 @@ public class Fire_AMT : MonoBehaviour
                 //If the corresponding button is down and the energy is greater or equal to the clapEnergyUsed variable, clap
                 if (isClapping && (energy >= clapEnergyUsed))
                 {
+                    chargeLight.ClapLighting();
                     StartCoroutine(Clap());
                 }
 
@@ -210,8 +211,11 @@ public class Fire_AMT : MonoBehaviour
         energy -= clapEnergyUsed;
 
         //Emit sound particles, then wait clapRechargeTime seconds
-        particles.Play();
+        particles.Play();        
+
         yield return new WaitForSeconds(clapRechargeTime);
+
+        canFire = true;
 
     }
 
