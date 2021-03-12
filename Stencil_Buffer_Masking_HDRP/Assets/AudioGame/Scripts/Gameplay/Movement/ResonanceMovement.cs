@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * Purpose: Control the player's movement and health system
+ * Purpose: Control the player's movement
  * 
  */
 
@@ -19,6 +19,11 @@ namespace Valve.VR.InteractionSystem
         public float speed = 12f;
         public float gravity = -9.81f;
         public float jumpHeight = 3f;
+
+        //running into objects
+        public float kickForce = 2f;
+        //How long before the player can make another mistake?
+        public float kickResetTime = 2f;
 
         //a sphere positioned at the player's feet to determine distance from ground
         public Transform groundCheck;
@@ -62,6 +67,37 @@ namespace Valve.VR.InteractionSystem
             //physics of free fall, multiply by time again
             verticalVelocity.y += gravity * Time.deltaTime;
             controller.Move(verticalVelocity * Time.deltaTime);
+        }
+
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+
+            //Not preferrable, do better with how our model heirarchies work!
+            Rigidbody hitObjectBody = GetAppropriateRigidBody(hit);
+
+            if (hitObjectBody)
+            {
+                Debug.Log("Kicking " + hitObjectBody.name);
+                Vector3 kickDirection = playerViewCamera.rotation * Vector3.forward;
+                kickDirection = kickDirection.normalized;
+                hitObjectBody.AddForce(kickDirection * kickForce);
+            }
+        }
+
+        //this is terrible
+        private Rigidbody GetAppropriateRigidBody(ControllerColliderHit hit)
+        {
+            
+            Rigidbody body = null;
+            if (hit.transform.parent)
+            {
+                //First try to get the body from the object's parent
+                body = hit.transform.parent.GetComponent<Rigidbody>();
+            }
+            if (!body)
+                //if the parent doesn't have one or if no parent, get it from the object itself
+                body = hit.transform.GetComponent<Rigidbody>();
+            return body;
         }
     }
 }
