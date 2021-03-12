@@ -19,7 +19,10 @@ ScriptedImporter:
     preset: " <sbspreset pkgurl=\"pkg://eggcrate_acoustic_foam_panel\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"4177333647\" type=\"8\"
       value=\"12,12\" />\n  <presetinput identifier=\"Color\" uid=\"2399496610\"
-      type=\"2\" value=\"0,0.0182985,0.245283\" />\n </sbspreset>\n"
+      type=\"2\" value=\"0.443396,0.443396,0.443396\" />\n  <presetinput identifier=\"tile\"
+      uid=\"2454019354\" type=\"4\" value=\"8\" />\n  <presetinput identifier=\"eggcrate_offset\"
+      uid=\"2454019135\" type=\"0\" value=\"0.529\" />\n  <presetinput identifier=\"foam_thinness\"
+      uid=\"2399530387\" type=\"0\" value=\"0\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -28,7 +31,7 @@ ScriptedImporter:
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
-      customRenderQueue: 2225
+      customRenderQueue: -1
       texEnvs:
       - name: _AnisotropyMap
         texture: {instanceID: 0}
@@ -190,7 +193,7 @@ ScriptedImporter:
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 1
+        float: 0
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -198,17 +201,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 1
+        float: 0
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 1
+        float: 0
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 1
+        float: 0
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -308,23 +311,23 @@ ScriptedImporter:
       - name: _StencilRef
         float: 0
       - name: _StencilRefDepth
-        float: 8
+        float: 0
       - name: _StencilRefDistortionVec
-        float: 4
+        float: 2
       - name: _StencilRefGBuffer
-        float: 10
+        float: 2
       - name: _StencilRefMV
-        float: 40
+        float: 32
       - name: _StencilWriteMask
-        float: 6
+        float: 3
       - name: _StencilWriteMaskDepth
         float: 8
       - name: _StencilWriteMaskDistortionVec
-        float: 4
+        float: 2
       - name: _StencilWriteMaskGBuffer
-        float: 14
+        float: 3
       - name: _StencilWriteMaskMV
-        float: 40
+        float: 32
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -334,7 +337,7 @@ ScriptedImporter:
       - name: _TessellationBackFaceCullEpsilon
         float: -0.25
       - name: _TessellationFactor
-        float: 11.6
+        float: 4
       - name: _TessellationFactorMaxDistance
         float: 50
       - name: _TessellationFactorMinDistance
@@ -380,11 +383,11 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 3
+        float: 4
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 4
+        float: 8
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
