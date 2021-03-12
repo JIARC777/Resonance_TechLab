@@ -48,6 +48,7 @@ public class ActiveSound: MonoBehaviour
         var main = pSystem.main;
         main.startLifetime = lifeTime;
         main.startSpeed = (volume * speedFactorMultiplier);
+       // main.startSize = volume/5;
         curVolume = volume;
         pSystem.Emit(particleRes);
 
