@@ -17,8 +17,12 @@ ScriptedImporter:
     generateAllOutputs: 0
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://acoustic_foam\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"361967971\" type=\"8\" value=\"9,9\" />\n
-      </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"361967971\" type=\"8\" value=\"9,9\" />\n 
+      <presetinput identifier=\"Color\" uid=\"1651201358\" type=\"2\" value=\"0,0,0\"
+      />\n  <presetinput identifier=\"foam_damage\" uid=\"1651182775\" type=\"0\"
+      value=\"0.106\" />\n  <presetinput identifier=\"wedge_tile\" uid=\"1651182235\"
+      type=\"4\" value=\"20\" />\n  <presetinput identifier=\"wedge_deformation\"
+      uid=\"1651233918\" type=\"0\" value=\"1\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}

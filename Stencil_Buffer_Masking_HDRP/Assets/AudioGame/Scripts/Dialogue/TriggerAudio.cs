@@ -49,9 +49,9 @@ public class TriggerAudio : MonoBehaviour
         if (startPlayTime != -1f && Time.time > startPlayTime + lengthOfClip)
         {
             //disable the base canvas, destroy the template and the triggerbox
-            //uiCanvas.SetActive(false);
-           // Destroy(createdTemplate);
-            //Destroy(gameObject);
+            uiCanvas.SetActive(false);
+            Destroy(createdTemplate);
+            Destroy(gameObject);
         }
     }
 }
