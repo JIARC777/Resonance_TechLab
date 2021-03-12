@@ -43,17 +43,14 @@ public class Fire_AMT : MonoBehaviour
 
     #region AMT Objects
     [Header("AMT Objects")]
+    public Spin_Emitter spinning;
+    public Charge_Lighting chargeLight;
+    public AMT_Hud hud;
     private Transform beam; //The Transform object representing the Beam
     private Transform beamCharge; //The Transform object representing the Beam's charging animation
-    #endregion AMT Objects
-
-    #region Line Properties
-    [Header("Line Properties")]
-    public LineRenderer aimingLine; //The LineRenderer used to create the aiming line    
-    public Transform aimingObject; //The object the aimingLine LineRenderer is on
-    public int lineLength; //How many points the line follows
-    public float lineWidthMultiplier; //How wide the line looks
-    #endregion Line Properties  
+    private Transform lineObj;
+    private LineRenderer aimingLine;
+    #endregion AMT Objects  
 
     #region SteamVR Input Functions
     public void StartFiring(SteamVR_Behaviour_Boolean behavBool, SteamVR_Input_Sources source, bool boolStat)
@@ -84,9 +81,9 @@ public class Fire_AMT : MonoBehaviour
         //Find the beam, beamCharge, and aimingLine within the AMT parent and assign them to the beam, beamCharge, and beamDetect Transforms respectively
         beam = transform.GetChild(1);
         beamCharge = transform.GetChild(2);
-        aimingObject = transform.GetChild(3);
+        lineObj = transform.GetChild(3);
 
-        aimingLine = aimingObject.GetComponent<LineRenderer>();        
+        aimingLine = lineObj.GetComponent<LineRenderer>();
 
         //Set the beam, beamCharge, and beamDetect gameObjects active state to false
         beam.gameObject.SetActive(false);
@@ -102,6 +99,9 @@ public class Fire_AMT : MonoBehaviour
 
         float buildingCharge = Time.deltaTime; //Variable that is always counting up, used for building up the charge over time
 
+        hud.SetCharge(charge);
+        hud.SetEnergy(energy);
+
         if (isHeld) //If the AMT is being held
         {
             if (canFire) //If the AMT isn't recharging from a previous shot/clap
@@ -116,19 +116,21 @@ public class Fire_AMT : MonoBehaviour
                 if (isFiring && (energy >= beamEnergyUsed))
                 {
 
-                    CreateLinePositions(); //Create the positions for the aimingLine
+                    aimingLine.enabled = true;
+
+                    lineObj.transform.position = beamCharge.position;
 
                     AdjustBeamLength(beamLength); //Adjust the size and position of the beam and beamDetect Transforms based on the beamLength variable
-
-                    aimingLine.enabled = true;
-                    aimingLine.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
 
                     beamCharge.gameObject.SetActive(true); //Set the beamCharge gameobject's active state to true
 
                     charge += buildingCharge; //Increase the charge of the AMT using the incrementing buildingCharge variable stated previously
 
-                    //Increment the beamCharge gameobject's scale by the beamChargeScale float multiplied by Time.deltaTime
-                    beamCharge.localScale += new Vector3(beamChargeScale, beamChargeScale, beamChargeScale) * Time.deltaTime;
+                    //Increment the beamCharge gameobject's scale by the beamChargeScale float multiplied by buildingCharge
+                    beamCharge.localScale += new Vector3(beamChargeScale, beamChargeScale, beamChargeScale) * buildingCharge;
+
+                    chargeLight.ChargeUp(buildingCharge);
+                    spinning.SpinUp(buildingCharge);
 
                     //If the charge time of the AMT is greater or equal to beamChargeTime, fire the AMT
                     if (charge >= beamChargeUpTime)
@@ -139,15 +141,24 @@ public class Fire_AMT : MonoBehaviour
             }
         }
 
+        if (!canFire)
+        {
+            spinning.SpinDown(buildingCharge);
+            chargeLight.ChargeDown(buildingCharge);
+        }
+
         if (!isFiring) //If the firing trigger isn't being pressed
         {
             //Reset the beamCharge size and disable the aimingLine
             beamCharge.localScale = new Vector3(beamChargeOriginalScale, beamChargeOriginalScale, beamChargeOriginalScale);
+
+            spinning.SpinDown(buildingCharge);
+
             aimingLine.enabled = false;
 
             //Set the beamCharge gameobject's active state to false and set the AMT's charge back to 0
             beamCharge.gameObject.SetActive(false);
-            charge = 0;
+            charge = 0;                        
 
             //If the AMT's energy is less-than 100, increase energy at a rate of beamRegen per second, otherwise, set the AMT's energy to the max energyReserve value
             if (energy < 100)
@@ -213,35 +224,5 @@ public class Fire_AMT : MonoBehaviour
         //Set the beam gameObject's size and position using the beamPosAdjust variable
         beam.localScale = new Vector3(0.1f, 0.1f, newSize);
         beam.localPosition = new Vector3(0, 0, beamPosAdjust);
-    }
-
-    //This function uses the parameters under the Line header and uses them to create a LineRenderer
-    public LineRenderer LineCreator()
-    {
-
-        LineRenderer line = aimingLine; //Finds the LineRenderer component on the firingLocation gameObject
-
-        //Sets the LineRenderer's width multiplier, how many points it has, and whether it uses the world space
-        line.useWorldSpace = false;
-        line.widthMultiplier = lineWidthMultiplier;
-        line.positionCount = lineLength;
-
-        return line; //Returns the created LineRenderer
-    }
-
-    //This function creates a path based on the forced applied to the projectile, and the total points within the line created
-    public void CreateLinePositions()
-    {
-
-        LineRenderer aimingLine = LineCreator(); //Use the LineCreator function to create a line
-
-        for (int i = 0; i < lineLength; i++) //Loops through lineLength amount of times
-        {
-            float newLinePos = i  * lineLength;
-            Debug.Log(newLinePos);
-
-            aimingLine.SetPosition(i, new Vector3(0, 0, newLinePos));
-
-        }
     }
 }
