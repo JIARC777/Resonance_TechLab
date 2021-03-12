@@ -20,7 +20,6 @@ public class GroundCheckPositioner : MonoBehaviour
         if (Physics.Raycast(headPos.position, Vector3.down, out hit, maxHeight, groundMask))
         {
             transform.position = hit.point;
-            Debug.Log(hit.transform.gameObject.name);
         }
     }
 }
