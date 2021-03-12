@@ -289,6 +289,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &355080305 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: e04ef8d443a6be786b0e63412767ae26, type: 3}
+  m_PrefabInstance: {fileID: 2045095113}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &355080306
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355080305}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: e04ef8d443a6be786b0e63412767ae26, type: 3}
 --- !u!1 &387539829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,6 +1304,14 @@ PrefabInstance:
     - target: {fileID: 1151388028547126963, guid: e04ef8d443a6be786b0e63412767ae26, type: 3}
       propertyPath: m_LocalPosition.z
       value: -2.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: e04ef8d443a6be786b0e63412767ae26, type: 3}
+      propertyPath: m_Name
+      value: FrontDeskMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: e04ef8d443a6be786b0e63412767ae26, type: 3}
+      propertyPath: m_TagString
+      value: Map Hazard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e04ef8d443a6be786b0e63412767ae26, type: 3}

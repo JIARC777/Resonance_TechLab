@@ -182,6 +182,7 @@ public class DAVE : MonoBehaviour
         agent = this.GetComponent<NavMeshAgent>();
         //crossStateData = new DAVEData();
         // Start DAVE off in a patrol mode
+        ExitCurrentState();
         currentState = new DAVEPatroller();
         currentState.Initialize(this);
     }
@@ -254,8 +255,7 @@ public class DAVE : MonoBehaviour
             Debug.Log("Engage Player = true");
             engagedPlayer = true;
             // Update Drone's last known player position
-            // Even though attack is handled by the DAVE script itself, we dont want any other states trying to tell DAVE what to do. This is a bit of a weird "No State" situation. We assume the temporarilyDeactivateProcessing couroutine will re-intialized a patroller after the proper waiting time;
-            ExitCurrentState();
+            // Even though attack is handled by the DAVE script itself, we dont want any other states trying to tell DAVE what to do. This is a bit of a weird "No State" situation. We assume the temporarilyDeactivateProcessing couroutine will re-intialized a patroller after the proper waiting time
         }
         lastKnownPlayerLocation = knownPlayerLocation;
         // Before chasing, check if we are close enough to attack
@@ -265,6 +265,7 @@ public class DAVE : MonoBehaviour
         if (bCanAttackPlayer)
         {
             //Can attack player right now, do so
+            ExitCurrentState();
             currentState = null;
             AttackPlayer();
 
@@ -281,6 +282,7 @@ public class DAVE : MonoBehaviour
                 //Must transition to chaser state to go to player location
                 // Bit of a fun little bug I found here that explains alot of behavior we've seen - So we call exit on DAVEInvestigator in most cases which in turn by default activates a DAVEPatroller in the background referenced to the current state, so that is why we have a tendency to return to the patrol state all the time;
                 // Since its initialized and no one ever calls exit on it before the reference to the current state is changed, whenever it becomes Initialized I assume it will stay initialized for the durration of the run
+                ExitCurrentState();
                 currentState = new DAVEChaser();
                 currentState.Initialize(this);
                 PlayAudio(daveHeardPlayer);
@@ -310,11 +312,12 @@ public class DAVE : MonoBehaviour
         Debug.Log("<color=cyan>Deactivation Cooldown Complete</color>");
         hoverFX.Play();
         agent.enabled = true;
-        if (currentState != null)
-            currentState.Exit();
+        
+        ExitCurrentState();
         currentState = new DAVEPatroller();
         currentState.Initialize(this);
         engagedPlayer = false;
+        damaged = false;
     }
     
     IEnumerator deactivateAndReattachDave(float waitTime)
@@ -327,9 +330,11 @@ public class DAVE : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         Debug.Log("<color=cyan>Deactivation Cooldown Complete</color>");
         hoverFX.Play();
-        if (currentState != null)
-            currentState.Exit();
+        
+        ExitCurrentState();
+
         engagedPlayer = false;
+        damaged = false;
         needToLERPModel = true;
         modelRB.isKinematic = true;
         modelRB.useGravity = false;
@@ -392,11 +397,11 @@ public class DAVE : MonoBehaviour
         // Find the player, get the position, add a bit of extra height assuming its floor position 
         // If we find that this static height leads to issues, we can look for a way to implement dynamic height
 
-        Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position +
-                                  new Vector3(0, 1.3f, 0);
-        PlayAudio(fireAtPlayer);
-        Debug.Log("Player's Location: " + playerTargetPos);
+        Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, 1.3f, 0);
         SetDestination(playerTargetPos);
+        
+        Debug.Log("Player's Location: " + playerTargetPos);
+        
         Debug.DrawLine(beamGunTip.position, playerTargetPos, Color.red);
         // Add an actual object and/or line renderer ^
 
@@ -407,10 +412,20 @@ public class DAVE : MonoBehaviour
         //    RestartLevel();
         //}
         ResonanceHealth.DamagePlayer();
-
-        StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
+        StartCoroutine(HoldAttackState());
+        
     }
 
+    public IEnumerator HoldAttackState()
+    {
+        //Debug.Log("Holding Attack");
+        statusLight.color = AttackModeColor;
+        yield return new WaitForSeconds(.25f);
+        PlayAudio(fireAtPlayer);
+        yield return new WaitForSeconds(1.75f);
+        
+        StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
+    }
     void LERPModelBackToCenter()
     {
         //Debug.Log("LERPing");
@@ -429,6 +444,8 @@ public class DAVE : MonoBehaviour
             closeProximityDetector.DetectedPlayer += EngagePlayer;
             agent.enabled = true;
             damaged = false;
+            
+            ExitCurrentState();
             currentState = new DAVEPatroller();
             currentState.Initialize(this);
         }
@@ -472,6 +489,7 @@ public class DAVE : MonoBehaviour
     {
         if (noise.tag == "Noise" && !damaged)
         {
+            //Debug.Log("Sound Particles Detected");
             int noiseID = noise.GetComponent<ActiveSound>().Id;
             // Do a mini hash to store the id into a small array with 0(1) search while allowing a check of larger numbers
             if (soundIdHashes[noiseID % 100] != noiseID)
@@ -504,10 +522,10 @@ public class DAVE : MonoBehaviour
                 var bNotInInvestigatorState = currentState != null && currentState.GetType().ToString() != "DAVEInvestigator";
                 if (bNotInInvestigatorState)
                 {
-                    currentState.Exit();
                     //Debug.Log("Changing State to Investigator");
                     // Its worth noting now that a new investigator is created each time it transitions, so any old sounds are ignorned. 
                     //This shouldnt change much because the exit condition for the investigator is to essentially clear the list or get distracted by finding the player
+                    ExitCurrentState();
                     currentState = new DAVEInvestigator();
                     currentState.Initialize(this);
                 }
