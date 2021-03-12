@@ -13,7 +13,7 @@ public class DAVEChaser : IDaveState
     private float timeOfArrival;
     // Since a ping takes a noticable finite amount of time, this keeps us from killing the state until we assume the ping returned void 
     bool bIsWaitingAtLocation = false;
-    float pingWaitTime = 1f;
+    float pingWaitTime = 2f;
     private float noiseStartWaitTime;
     public void Initialize(DAVE dave)
     {
@@ -21,10 +21,11 @@ public class DAVEChaser : IDaveState
         thisDave = dave;
         thisDave.waitingAtLocation = false;
         TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
+        thisDave.statusLight.color = thisDave.chaserModeColor;
         thisDave.ArrivedAtDestination += ReachedOldPlayerPosPing;
 
 
-        thisDave.PingExited += PingExited;
+       // thisDave.PingExited += PingExited;
     }
 
     // Update is called once per frame
@@ -43,14 +44,17 @@ public class DAVEChaser : IDaveState
                 // As soon as its true, set false
                 thisDave.pingFoundPlayer = false;
                 TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
-            }
+            } else
+			{
+                Exit();
+			}
         }
         
     }
 
     public void TravelToSuspectedPlayerPos(Vector3 suspectedPlayerLocation)
     {
-        Debug.Log("Set Player Destination");
+        Debug.Log("Set Player Destination: " + suspectedPlayerLocation);
         thisDave.SetDestination(suspectedPlayerLocation);
     }
 
@@ -74,14 +78,16 @@ public class DAVEChaser : IDaveState
     private void PingExited(DAVE dave)
     {//The ping Didn't find anything, exiting out to Patroller
         Debug.Log("<color=purple> Exiting Chaser through PingExit</color>");
-        Debug.Assert(1 == 2);
+        //Debug.Assert(1 == 2);
     }
 
     // Someone brave can look at fitting this into the execution loop for DAVE 
     public void Exit()
     {
         Debug.Log("<color=red> Exiting Chaser</color>");
-
+        thisDave.engagedPlayer = false;
         thisDave.ArrivedAtDestination -= ReachedOldPlayerPosPing;
+        thisDave.currentState = new DAVEPatroller();
+        thisDave.currentState.Initialize(thisDave);
     }
 }

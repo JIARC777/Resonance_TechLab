@@ -65,17 +65,13 @@ public class DAVE : MonoBehaviour
     public float playerHealth = 3f;
 
     // Since we rely on Triggers, which can sometimes get called more than once, we need to make sure that we know if the player has been engaged or not to ignore any extra event calls
-    bool engagedPlayer = false;
+    public bool engagedPlayer = false;
     // Switchs to update parameters easily inside update - should be related to when your toggle Agro mode
 
     // Place where we want the ray to detect the player to fire from. 
 
-
-    //TODO: To be implemented post V/S
-    // bool engageAgro;
-    // bool disengageAgro;
-    // How fast does DAVE travel when he's angry
-    // public float AgroSpeedIncrease = 1f;
+      // How fast does DAVE travel when he's angry
+       public float AgroSpeedIncrease = 2f;
     // Whenever we get to determining how damage affects DAVE we can implement this flag to increase the speed and other factors - set to public in inspector for debugging/balancing 
     // public bool AgroMode;
 
@@ -122,14 +118,28 @@ public class DAVE : MonoBehaviour
     // How long do we wait after being hit by a projectile
     public float projectileImpactDeactivationWaitTime = 100f;
 
+    [Header("Light Indicators")]
+    public Light statusLight;
+    public Color patrolModeColor;
+    public Color investigationModeColor;
+    public Color chaserModeColor;
+    public Color AttackModeColor;
+    public Color deactivateModeColor;
+
     // DAVE has taken some form of damage
     bool damaged;
 
     bool needToLERPModel;
-
     // How fast Lerping goes;
     float lerpSpeed = 1f;
     bool isStopped = false;
+
+    [Header("Audio")]
+    public AudioSource ping;
+    public AudioSource daveHeardPlayer;
+    public AudioSource daveHeardNoise;
+    public AudioSource fireAtPlayer;
+    public AudioSource hoverFX;
 
     // Events
 
@@ -162,12 +172,13 @@ public class DAVE : MonoBehaviour
     {
         // Subscribe to the triggering Events living on different DAVE children
         // Sub to weak spot monitor
-        daveWeakSpot.amtHitWeakSpot += quietDeactivate;
+        daveWeakSpot.amtHitWeakSpot += BeamDeactivate;
         // Sub to General Physics collisions on the DAVE collider
-        //daveModelCollider.SomethingHitDAVE += loudDeactivate;
+        // daveModelCollider.SomethingHitDAVE += loudDeactivate;
         // Sub The event that triggers the chase/attack sequence to the proximity detector 
         closeProximityDetector.DetectedPlayer += EngagePlayer;
-
+        hoverFX.loop = true;
+        hoverFX.Play();
         currentDestination = Vector3.zero;
         startingYHeight = modelTransform.position.y;
         agent = this.GetComponent<NavMeshAgent>();
@@ -200,7 +211,7 @@ public class DAVE : MonoBehaviour
             LERPModelBackToCenter();
         }
 
-        if (currentState != null)
+        if (currentState != null && !damaged)
             currentState.UpdateCycle(this);
         //
         var bIsWaitingOnAttackAnimation = Time.time > attackTimestamp + postAttackWaitTime;
@@ -224,8 +235,10 @@ public class DAVE : MonoBehaviour
 
     public void PingSurroundings()
     {
+        Debug.Log("Ping");
+        PlayAudio(ping);
         currentPing = Instantiate(Resources.Load("PingSphere", typeof(GameObject)),
-            transform.position + new Vector3(0, 2, 0), transform.rotation) as GameObject;
+            modelTransform.position + new Vector3(0,0,0.25f), transform.rotation) as GameObject;
         PingSphere PingInfo = currentPing.GetComponent<PingSphere>();
         PingInfo.maxRadius = pingRadius;
         // Immediately sub to the Ping's event in case of collision - assume unsub on destroyed gameobject
@@ -240,43 +253,47 @@ public class DAVE : MonoBehaviour
     {
         if (!engagedPlayer)
         {
+            Debug.Log("Engage Player = true");
             engagedPlayer = true;
             // Update Drone's last known player position
-            lastKnownPlayerLocation = knownPlayerLocation;
             // Even though attack is handled by the DAVE script itself, we dont want any other states trying to tell DAVE what to do. This is a bit of a weird "No State" situation. We assume the temporarilyDeactivateProcessing couroutine will re-intialized a patroller after the proper waiting time;
             ExitCurrentState();
-            // Before chasing, check if we are close enough to attack
-            var bCanAttackPlayer = (this.transform.position - knownPlayerLocation).magnitude <= attackRadius;
-            // Debug.Log("Player Distance Away: " + (this.transform.position - knownPlayerLocation).magnitude);
-            if (bCanAttackPlayer)
-            {
-                //Can attack player right now, do so
+        }
+        lastKnownPlayerLocation = knownPlayerLocation;
+        // Before chasing, check if we are close enough to attack
+        var bCanAttackPlayer = (this.transform.position - knownPlayerLocation).magnitude <= attackRadius;
+        Debug.Log(bCanAttackPlayer);
+        // Debug.Log("Player Distance Away: " + (this.transform.position - knownPlayerLocation).magnitude);
+        if (bCanAttackPlayer)
+        {
+            //Can attack player right now, do so
+            currentState = null;
+            AttackPlayer();
 
-                currentState = null;
-                AttackPlayer();
-                StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
+        }
+        else
+        {
+            Debug.Log("Entering Chase Phase");
+            //Can't attack player right now, must move to them
+
+            var bNotInChaseState = currentState.GetType().ToString() != "DAVEChaser";
+            Debug.Log(bNotInChaseState);
+            if (bNotInChaseState)
+            {
+                //Must transition to chaser state to go to player location
+                // Bit of a fun little bug I found here that explains alot of behavior we've seen - So we call exit on DAVEInvestigator in most cases which in turn by default activates a DAVEPatroller in the background referenced to the current state, so that is why we have a tendency to return to the patrol state all the time;
+                // Since its initialized and no one ever calls exit on it before the reference to the current state is changed, whenever it becomes Initialized I assume it will stay initialized for the durration of the run
+                currentState = new DAVEChaser();
+                currentState.Initialize(this);
+                PlayAudio(daveHeardPlayer);
+                pingFoundPlayer = false;
             }
             else
             {
-                //Can't attack player right now, must move to them
-
-                var bNotInChaseState = currentState.GetType().ToString() != "DAVEChaser";
-                if (bNotInChaseState)
-                {
-                    //Must transition to chaser state to go to player location
-                    // Bit of a fun little bug I found here that explains alot of behavior we've seen - So we call exit on DAVEInvestigator in most cases which in turn by default activates a DAVEPatroller in the background referenced to the current state, so that is why we have a tendency to return to the patrol state all the time;
-                    // Since its initialized and no one ever calls exit on it before the reference to the current state is changed, whenever it becomes Initialized I assume it will stay initialized for the durration of the run
-                    currentState = new DAVEChaser();
-                    currentState.Initialize(this);
-
-                    pingFoundPlayer = false;
-                }
-                else
-                {
-                    //Currently in chase state
-                    //This re-ping found player, inform chaser to pathfind
-                    pingFoundPlayer = true;
-                }
+                Debug.Log("Notify Chaser: Ping found player");
+                //Currently in chase state
+                //This re-ping found player, inform chaser to pathfind
+                pingFoundPlayer = true;
             }
         }
     }
@@ -285,12 +302,15 @@ public class DAVE : MonoBehaviour
 
     IEnumerator temporarilyDeactivateProcessing(float waitTime)
     {
+        hoverFX.Pause();
+        statusLight.color = deactivateModeColor;
         damaged = true;
         attackTimestamp = Time.time;
         agent.enabled = false;
         Debug.Log("<color=cyan>Deactivation Cooldown Start</color>");
         yield return new WaitForSeconds(waitTime);
         Debug.Log("<color=cyan>Deactivation Cooldown Complete</color>");
+        hoverFX.Play();
         agent.enabled = true;
         if (currentState != null)
             currentState.Exit();
@@ -301,16 +321,17 @@ public class DAVE : MonoBehaviour
     
     IEnumerator deactivateAndReattachDave(float waitTime)
     {
+        statusLight.color = deactivateModeColor;
+        hoverFX.Pause();
         damaged = true;
         attackTimestamp = Time.time;
         Debug.Log("<color=cyan>Deactivation Cooldown Start</color>");
         yield return new WaitForSeconds(waitTime);
         Debug.Log("<color=cyan>Deactivation Cooldown Complete</color>");
+        hoverFX.Play();
         if (currentState != null)
             currentState.Exit();
-        // currentState = new DAVEPatroller();
-        // currentState.Initialize(this);
-        // engagedPlayer = false;
+        engagedPlayer = false;
         needToLERPModel = true;
         modelRB.isKinematic = true;
         modelRB.useGravity = false;
@@ -319,14 +340,15 @@ public class DAVE : MonoBehaviour
 
     // Call this function when dave needs to be quietly deactivated for the given amount of time;
 
-    void quietDeactivate()
+    void BeamDeactivate()
     {
-        Debug.Log("Quiet Deactivate");
+        Debug.Log("Deactivated with Beam");
         // We deactivated dave for a tiny bit - keep him in the air, just freeze his location - maybe change lighting or material state
         StartCoroutine(temporarilyDeactivateProcessing(weakSpotDeactivatedWaitTime));
     }
 
-    void loudDeactivate(bool hardImpact)
+
+    void ImpactDeactivate(bool projectileImpact)
     {
         ExitCurrentState();
 
@@ -348,7 +370,7 @@ public class DAVE : MonoBehaviour
         closeProximityDetector.DetectedPlayer -= EngagePlayer;
         if (!damaged)
         {
-            if (hardImpact)
+            if (projectileImpact)
             {
                 modelRB.useGravity = true;
                 StartCoroutine(deactivateAndReattachDave(physicsImpactDeactivationWaitTime));
@@ -374,6 +396,7 @@ public class DAVE : MonoBehaviour
 
         Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position +
                                   new Vector3(0, 1.3f, 0);
+        PlayAudio(fireAtPlayer);
         Debug.Log("Player's Location: " + playerTargetPos);
         SetDestination(playerTargetPos);
         Debug.DrawLine(beamGunTip.position, playerTargetPos, Color.red);
@@ -383,6 +406,7 @@ public class DAVE : MonoBehaviour
         {
             RestartLevel();
         }
+        StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
     }
 
     void LERPModelBackToCenter()
@@ -394,8 +418,7 @@ public class DAVE : MonoBehaviour
         modelTransform.position = Vector3.Lerp(modelTransform.position, new Vector3(transform.position.x, startingYHeight, transform.position.z), Time.deltaTime * lerpSpeed);
         modelTransform.localRotation = Quaternion.Slerp(modelTransform.localRotation, Quaternion.identity, Time.deltaTime * lerpSpeed);
 
-
-        // This essentially stops this function from being called;
+        // We've Reached the correct position - stop lerping;
         if ((modelTransform.localPosition - new Vector3(0, startingYHeight, 0)).magnitude <= 0.25f)
         {
             needToLERPModel = false;
@@ -427,26 +450,25 @@ public class DAVE : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Hit Dave");
         if (collision.gameObject.tag == "Projectile")
         {
             Debug.Log("Projectile hit DAVE");
             // Call the event, set hardImpact bool to true so that DAVE knows to deactivate himself
             // SomethingHitDAVE(true);
-            loudDeactivate(true);
+            ImpactDeactivate(true);
         }
 
         if (collision.gameObject.tag == "PhysicsObj")
         {
             Debug.Log("You threw something at DAVE");
             // Call the event, set hardImpact bool to false so that DAVE might just stops for a quick second 
-            loudDeactivate(false);
+            ImpactDeactivate(false);
         }
     }
 
     public void OnParticleCollision(GameObject noise)
     {
-        if (noise.tag == "Noise")
+        if (noise.tag == "Noise" && !damaged)
         {
             int noiseID = noise.GetComponent<ActiveSound>().Id;
             // Do a mini hash to store the id into a small array with 0(1) search while allowing a check of larger numbers
@@ -477,7 +499,7 @@ public class DAVE : MonoBehaviour
 
                 // Debug.Log(currentState.GetType().ToString());
                 // Check to see if the current State is not a DAVEInvestigator initialize state - This lets us add a transition case in DAVE itself while not creating a new state every time DAVE hears a sound
-                var bNotInInvestigatorState = currentState.GetType().ToString() != "DAVEInvestigator";
+                var bNotInInvestigatorState = currentState != null && currentState.GetType().ToString() != "DAVEInvestigator";
                 if (bNotInInvestigatorState)
                 {
                     currentState.Exit();
@@ -487,7 +509,7 @@ public class DAVE : MonoBehaviour
                     currentState = new DAVEInvestigator();
                     currentState.Initialize(this);
                 }
-
+                PlayAudio(daveHeardNoise);
                 // Call the event (after transitioning, so the investigator can pick up the event call)
                 HeardNoise?.Invoke(soundData);
             }
@@ -496,7 +518,13 @@ public class DAVE : MonoBehaviour
     
     #endregion Collisions
 
-    
+    void PlayAudio(AudioSource soundToPlay)
+	{
+        if (!soundToPlay.isPlaying)
+		{
+            soundToPlay.Play();
+		}
+	}
     
     /// <summary>
     /// Player has died and the level should restart
