@@ -24,6 +24,9 @@ namespace Valve.VR.InteractionSystem
         public float kickForce = 2f;
         //How long before the player can make another mistake?
         public float kickResetTime = 2f;
+        private float lastKickTime = -1f;
+        //How much should the object move upward?
+        public float upForceAmount = 50f;
 
         //a sphere positioned at the player's feet to determine distance from ground
         public Transform groundCheck;
@@ -67,21 +70,29 @@ namespace Valve.VR.InteractionSystem
             //physics of free fall, multiply by time again
             verticalVelocity.y += gravity * Time.deltaTime;
             controller.Move(verticalVelocity * Time.deltaTime);
+
         }
 
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-
-            //Not preferrable, do better with how our model heirarchies work!
-            Rigidbody hitObjectBody = GetAppropriateRigidBody(hit);
-
-            if (hitObjectBody)
+            //Do not allow kick to happen unless enough time has passed
+            if (Time.time > lastKickTime + kickResetTime)
             {
-                Debug.Log("Kicking " + hitObjectBody.name);
-                Vector3 kickDirection = playerViewCamera.rotation * Vector3.forward;
-                kickDirection = kickDirection.normalized;
-                hitObjectBody.AddForce(kickDirection * kickForce);
+                //Not preferrable, do better with how our model heirarchies work!
+                Rigidbody hitObjectBody = GetAppropriateRigidBody(hit);
+
+                if (hitObjectBody)
+                {
+                    Debug.Log("Kicking " + hitObjectBody.name);
+                    Vector3 kickDirection = playerViewCamera.rotation * Vector3.forward;
+                    //Add an amount of upward because its interesting that way
+                    kickDirection += Vector3.up * upForceAmount;
+                    kickDirection = kickDirection.normalized;
+                    hitObjectBody.AddForce(kickDirection * kickForce);
+                    lastKickTime = Time.time;
+                }
             }
+            
         }
 
         //this is terrible
