@@ -28,8 +28,6 @@ public class Panel_Detect : MonoBehaviour
 
                 SetMaterial(activePanelMat);
 
-                Debug.Log("Activated");
-
                 activated = true;
 
                 if (linkedObjects[i])
@@ -46,8 +44,6 @@ public class Panel_Detect : MonoBehaviour
             {
 
                 SetMaterial(activePanelMat);
-
-                Debug.Log("Activated");
 
                 activated = true;
 

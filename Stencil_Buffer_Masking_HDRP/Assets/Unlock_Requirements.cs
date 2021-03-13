@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Unlock_Requirements : MonoBehaviour
 {
@@ -14,10 +16,14 @@ public class Unlock_Requirements : MonoBehaviour
 
     public Transform[] linkedObjects;
 
+    public TMP_Text remainingText;
+
     // Start is called before the first frame update
     void Start()
     {
         panelsActivated = 0;
+
+        remainingText.text = "Panels Required\n\n" + panelsRequired;
 
         SetMaterial(noneActivePanelMat);
     }
@@ -28,11 +34,15 @@ public class Unlock_Requirements : MonoBehaviour
 
         SetMaterial(someActivePanelMat);
 
-        if(panelsActivated == panelsRequired)
+        remainingText.text = "Panels Required\n\n" + (panelsRequired - panelsActivated);
+
+        if (panelsActivated == panelsRequired)
         {
             SetMaterial(allActivePanelMat);
 
-            for(int i = 0; i < linkedObjects.Length; i++)
+            remainingText.text = "Panels Required\n\n" + (panelsRequired - panelsActivated);
+
+            for (int i = 0; i < linkedObjects.Length; i++)
             {
                 linkedObjects[i].gameObject.GetComponent<Activate>().Activation();
             }
@@ -41,7 +51,6 @@ public class Unlock_Requirements : MonoBehaviour
 
     public void SetMaterial(Material mat)
     {
-        Debug.Log("Here");
         transform.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().material = mat;
     }
 }
