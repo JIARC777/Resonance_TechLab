@@ -8,5 +8,10 @@ public class SpeakerTemplate : MonoBehaviour
 {
     public TextMeshProUGUI name;
     public Image profilePicture;
-    public Image isActive;
+    public Image speakingIndicator;
+
+    public void toggleIndicator()
+    {
+        speakingIndicator.enabled = !speakingIndicator.enabled;
+    }
 }
