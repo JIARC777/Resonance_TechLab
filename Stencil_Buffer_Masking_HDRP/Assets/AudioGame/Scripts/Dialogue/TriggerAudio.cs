@@ -2,20 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Speakers
+{
+    bios,
+    hyperlynx,
+    linerider
+}
+
 public class TriggerAudio : MonoBehaviour
 {
-    //The canvas on which the dialoge elements will go
-    public GameObject uiCanvas;
-    public string speakerName;
+    [Header("SET IN THIS ORDER: bios, hyperlynx, linerider")]
+    public GameObject[] templates;
+    public Speakers speakerName;
     //The template UI prefab that has picture, name, isActive light
-    public GameObject characterTemplate;
 
     //Must live on this gameObject already
     AudioSource audioClipToPlay;
     float lengthOfClip;
     float startPlayTime = -1f;
     //The acutal instance of characterTemplate to be instantiated
-    GameObject createdTemplate;
+    SpeakerTemplate createdTemplate;
 
     private void Start()
     {
@@ -31,14 +37,11 @@ public class TriggerAudio : MonoBehaviour
             //don't play again if the player re-hits the triggerbox
             if (!audioClipToPlay.isPlaying)
             {
-                //play the audio and enable the base canvas
+                //play the audio and enable the speaker's isActive icon
                 audioClipToPlay.Play();
                 startPlayTime = Time.time;
-                uiCanvas.SetActive(true);
-
-                //create and configure the specific speaker template here
-                createdTemplate = Instantiate(characterTemplate, uiCanvas.transform);
-                createdTemplate.GetComponent<SpeakerTemplate>().name.text = speakerName;
+                createdTemplate = templates[(int)speakerName].GetComponent<SpeakerTemplate>();
+                createdTemplate.toggleIndicator();
             }
         }
     }
@@ -49,8 +52,7 @@ public class TriggerAudio : MonoBehaviour
         if (startPlayTime != -1f && Time.time > startPlayTime + lengthOfClip)
         {
             //disable the base canvas, destroy the template and the triggerbox
-            uiCanvas.SetActive(false);
-            Destroy(createdTemplate);
+            createdTemplate.toggleIndicator();
             Destroy(gameObject);
         }
     }
