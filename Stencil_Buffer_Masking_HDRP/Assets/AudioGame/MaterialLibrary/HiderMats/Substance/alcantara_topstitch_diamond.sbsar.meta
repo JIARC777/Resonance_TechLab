@@ -18,20 +18,26 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://alcantara_topstitch_diamond\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"2005629128\" type=\"8\"
-      value=\"11,11\" />\n  <presetinput identifier=\"topstitch_color\" uid=\"53169234\"
-      type=\"2\" value=\"0.129458,0.129458,0.133364\" />\n  <presetinput identifier=\"topstitch_amount\"
-      uid=\"53102765\" type=\"4\" value=\"10\" />\n  <presetinput identifier=\"topstitch_position\"
-      uid=\"53115368\" type=\"0\" value=\"0.335\" />\n  <presetinput identifier=\"topstitch_width\"
-      uid=\"53094686\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_length\"
-      uid=\"52660473\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_puncture\"
+      value=\"11,11\" />\n  <presetinput identifier=\"color\" uid=\"23325954\" type=\"2\"
+      value=\"1,1,1\" />\n  <presetinput identifier=\"variation_hue\" uid=\"18594193\"
+      type=\"0\" value=\"31\" />\n  <presetinput identifier=\"metallic\" uid=\"23326001\"
+      type=\"0\" value=\"0.174\" />\n  <presetinput identifier=\"topstitch_color\"
+      uid=\"53169234\" type=\"2\" value=\"0.129458,0.129458,0.133364\" />\n  <presetinput
+      identifier=\"topstitch_amount\" uid=\"53102765\" type=\"4\" value=\"100\" />\n 
+      <presetinput identifier=\"topstitch_position\" uid=\"53115368\" type=\"0\"
+      value=\"0.335\" />\n  <presetinput identifier=\"topstitch_width\" uid=\"53094686\"
+      type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_length\" uid=\"52660473\"
+      type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_puncture\"
       uid=\"64338391\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"hole_size\"
       uid=\"53195977\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"quilting_type\"
       uid=\"52746883\" type=\"4\" value=\"3\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP _NORMALMAP
-        _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
+      shaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _GLOSSINESSMAP _HEIGHTMAP _MASKMAP
+        _METALLICGLOSSMAP _NA_DIFFUSE _NORMALMAP _NORMALMAP_TANGENT_SPACE _OCCLUSIONMAP
+        _ROUGHNESSMAP _SPECULARCOLORMAP _TESSELLATION_DISPLACEMENT _UNKNOWN_SPECULARLEVEL
+        _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
