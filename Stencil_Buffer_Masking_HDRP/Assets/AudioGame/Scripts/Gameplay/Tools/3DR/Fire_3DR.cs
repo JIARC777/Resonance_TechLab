@@ -37,8 +37,9 @@ public class Fire_3DR : MonoBehaviour
     [Header("3DR Transforms")]
     public Transform firingLocation; //Transform where the projectiles are placed to be fired    
     public Transform currentProjectile; //Current projectile loaded in the 3DR    
-    public Transform internalSpool; //The object representing the spool on the 3DR 
-    public Transform projectileSpawn; //Place where the printed projectiles are placed
+    public Transform internalSpool; //The object representing the spool on the 3DR
+    public Transform spoolOBJ;
+    //public Transform projectileSpawn; //Place where the printed projectiles are placed
     #endregion 3DR Transforms
 
     #region Line Properties
@@ -76,10 +77,11 @@ public class Fire_3DR : MonoBehaviour
         
         spoolRemaining = maxSpool; //Sets the initial amount of spool charges to the max spool charge count
 
-        //Assigns the firingLocation, internalSpool, and ammoSpawn transforms to their corresponding transforms within the 3DR prefab
-        firingLocation = transform.GetChild(3);
-        internalSpool = transform.GetChild(4);
-        aimingObject = transform.GetChild(5);
+        //Assigns the firingLocation, internalSpool, spoolOBJ, and ammoSpawn transforms to their corresponding transforms within the 3DR prefab
+        firingLocation = transform.GetChild(2);
+        spoolOBJ = transform.GetChild(3);
+        internalSpool = spoolOBJ.GetChild(1);
+        aimingObject = transform.GetChild(4);
                 
         aimingLine = aimingObject.GetComponent<LineRenderer>(); //Creates a gameObject with the 3DR's LineRenderer attached to it, then assigns the LineRenderer component to the aimingLine LineRenderer variable
                 
@@ -102,6 +104,7 @@ public class Fire_3DR : MonoBehaviour
             CreateLinePositions();
 
             aimingLine.enabled = true;
+            aimingLine.transform.localPosition = firingLocation.localPosition;
             aimingLine.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0);
         }
         
@@ -150,7 +153,7 @@ public class Fire_3DR : MonoBehaviour
         }
         else //Otherwise, multiply the internalSpool's scale by the spoolScaleReduce variable
         {
-            internalSpool.localScale *= spoolScaleReduce;
+            internalSpool.localScale = new Vector3(internalSpool.localScale.x * spoolScaleReduce, internalSpool.localScale.y * spoolScaleReduce, internalSpool.localScale.z);
         }
 
                 
