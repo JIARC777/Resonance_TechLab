@@ -13,7 +13,7 @@
       "dependencies": {}
     },
     "com.unity.ads": {
-      "version": "3.5.2",
+      "version": "3.6.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -77,7 +77,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.purchasing": {
-      "version": "3.0.0-pre.4",
+      "version": "3.0.0-pre.6",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -86,7 +86,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
-      "version": "11.0.0",
+      "version": "12.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -95,17 +95,17 @@
       }
     },
     "com.unity.render-pipelines.high-definition": {
-      "version": "11.0.0",
+      "version": "12.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.modules.video": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
-        "com.unity.render-pipelines.core": "11.0.0",
-        "com.unity.shadergraph": "11.0.0",
-        "com.unity.visualeffectgraph": "11.0.0",
-        "com.unity.render-pipelines.high-definition-config": "11.0.0"
+        "com.unity.render-pipelines.core": "12.0.0",
+        "com.unity.shadergraph": "12.0.0",
+        "com.unity.visualeffectgraph": "12.0.0",
+        "com.unity.render-pipelines.high-definition-config": "12.0.0"
       }
     },
     "com.unity.render-pipelines.high-definition-config": {
@@ -131,11 +131,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
-      "version": "11.0.0",
+      "version": "12.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.render-pipelines.core": "11.0.0",
+        "com.unity.render-pipelines.core": "12.0.0",
         "com.unity.searcher": "4.3.1"
       }
     },
@@ -216,11 +216,11 @@
       }
     },
     "com.unity.visualeffectgraph": {
-      "version": "11.0.0",
+      "version": "12.0.0",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
-        "com.unity.shadergraph": "11.0.0"
+        "com.unity.shadergraph": "12.0.0"
       }
     },
     "com.unity.xr.legacyinputhelpers": {
@@ -234,11 +234,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "3.2.17",
+      "version": "4.0.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.xr.legacyinputhelpers": "2.1.2",
+        "com.unity.modules.subsystems": "1.0.0",
+        "com.unity.modules.vr": "1.0.0",
+        "com.unity.modules.xr": "1.0.0",
+        "com.unity.xr.legacyinputhelpers": "2.1.7",
         "com.unity.subsystemregistration": "1.0.6"
       },
       "url": "https://packages.unity.com"
