@@ -4388,7 +4388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178557192}
   m_LocalRotation: {x: 0.5420678, y: 0.5420678, z: -0.45405117, w: 0.45405117}
-  m_LocalPosition: {x: -9.375999, y: 2.4940002, z: -0.03}
+  m_LocalPosition: {x: -9.375999, y: 2.458, z: -0.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 279493185}
@@ -6420,9 +6420,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2552774245457453746, guid: b39565ebef3984747b3bde74b071bfa2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: -2366096473097574580, guid: b39565ebef3984747b3bde74b071bfa2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b39565ebef3984747b3bde74b071bfa2, type: 3}
       propertyPath: m_Name
       value: SofaGeo
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b39565ebef3984747b3bde74b071bfa2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b39565ebef3984747b3bde74b071bfa2, type: 3}
