@@ -63,6 +63,7 @@ public class Fire_3DR : MonoBehaviour
     public void OnPickUp()
     {
         holdingHand = GetComponentInParent<Hand>().handType;
+        Debug.Log("Picked Up");
         isHeld = true;
     }
 
@@ -79,13 +80,17 @@ public class Fire_3DR : MonoBehaviour
 
         //Assigns the firingLocation, internalSpool, spoolOBJ, and ammoSpawn transforms to their corresponding transforms within the 3DR prefab
         firingLocation = transform.GetChild(2);
-        spoolOBJ = transform.GetChild(3);
+        
+        spoolOBJ = transform.GetChild(0);
         internalSpool = spoolOBJ.GetChild(1);
+        
         aimingObject = transform.GetChild(4);
                 
         aimingLine = aimingObject.GetComponent<LineRenderer>(); //Creates a gameObject with the 3DR's LineRenderer attached to it, then assigns the LineRenderer component to the aimingLine LineRenderer variable
                 
         aimingLine.enabled = false; //Disables the aimingLine LineRenderer
+
+        canGenerateProjectile = true;
     }
     
 
