@@ -941,10 +941,34 @@ namespace HoudiniEngineUnity
 	/// </summary>
 	/// <param name="go">GameObject to set static state on</param>
 	/// <param name="bStatic">Static state to set</param>
-	public static void SetStatic(GameObject go, bool bStatic)
+	public static void SetStatic(GameObject go, bool bStatic, bool bIncludeChildren)
 	{
 #if UNITY_EDITOR
 	    go.isStatic = bStatic;
+	    if (bIncludeChildren)
+	    {
+		foreach (Transform trans in go.transform.GetComponentsInChildren<Transform>(true))
+		{
+		    trans.gameObject.isStatic = bStatic;
+		}
+	    }
+	    
+#endif
+	}
+
+	public static void SetIsHidden(GameObject go, bool isHidden, bool bIncludeChildren)
+	{
+#if UNITY_EDITOR && UNITY_2019_2_OR_NEWER
+	    SceneVisibilityManager visibilityManager = SceneVisibilityManager.instance;
+	    
+	    if (isHidden)
+	    {
+		visibilityManager.Hide(go, bIncludeChildren);
+	    }
+	    else
+	    {
+		visibilityManager.Show(go, bIncludeChildren);
+	    }
 #endif
 	}
 

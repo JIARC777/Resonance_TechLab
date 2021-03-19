@@ -137,7 +137,18 @@ namespace HoudiniEngineUnity
 
 	public void Log(string msg)
 	{
-	    _log.Append(msg);
+	    lock (_log)
+	    {
+	        _log.AppendLine(msg);
+	    }
+	}
+
+	public void ClearLog()
+	{
+	    lock (_log)
+	    {
+	        _log = new StringBuilder();
+	    }
 	}
 
 	public void Error(string error)
@@ -251,7 +262,7 @@ namespace HoudiniEngineUnity
 
 	public virtual void OnLoadComplete(HEU_ThreadedTaskLoadGeo.HEU_LoadData loadData)
 	{
-	    Log(loadData._logStr);
+	    Log(loadData._logStr.ToString());
 	    _cookNodeID = loadData._cookNodeID;
 
 	    if (loadData._loadStatus == HEU_ThreadedTaskLoadGeo.HEU_LoadData.LoadStatus.SUCCESS)
@@ -301,7 +312,7 @@ namespace HoudiniEngineUnity
 	{
 	    _syncing = false;
 
-	    Log(loadData._logStr);
+	    Log(loadData._logStr.ToString());
 	    _cookNodeID = loadData._cookNodeID;
 	}
 
@@ -326,7 +337,6 @@ namespace HoudiniEngineUnity
 		    GameObject newGameObject = new GameObject("heightfield_" + terrainBuffers[t]._tileIndex);
 
 		    HAPI_PartId partId = terrainBuffers[t]._id;
-		    ApplyAttributeModifiersOnGameObjectOutput(session, cookNodeId, partId, ref newGameObject);
 
 		    Transform newTransform = newGameObject.transform;
 		    newTransform.parent = parent;
@@ -412,7 +422,7 @@ namespace HoudiniEngineUnity
 		    terrainData.heightmapResolution = heightMapSize;
 		    if (terrainData.heightmapResolution != heightMapSize)
 		    {
-			Debug.LogErrorFormat("Unsupported terrain size: {0}", heightMapSize);
+			Debug.LogErrorFormat("Unsupported terrain size: {0}. Terrain resolution should be a power of 2 + 1.", heightMapSize);
 			continue;
 		    }
 
@@ -655,6 +665,8 @@ namespace HoudiniEngineUnity
 		    terrainBuffers[t]._generatedOutput = generatedOutput;
 		    _generatedOutputs.Add(generatedOutput);
 
+
+		    ApplyAttributeModifiersOnGameObjectOutput(session, cookNodeId, partId, ref newGameObject);
 		    SetOutputVisiblity(terrainBuffers[t]);
 		}
 	    }
@@ -674,7 +686,6 @@ namespace HoudiniEngineUnity
 		    GameObject newGameObject = new GameObject("mesh_" + meshBuffers[m]._geoCache._partName);
 
 		    HAPI_PartId partId = meshBuffers[m]._geoCache.PartID;
-		    ApplyAttributeModifiersOnGameObjectOutput(session, cookNodeId, partId, ref newGameObject);
 
 		    Transform newTransform = newGameObject.transform;
 		    newTransform.parent = parent;
@@ -718,6 +729,8 @@ namespace HoudiniEngineUnity
 		    {
 			HEU_GeneratedOutput.DestroyGeneratedOutput(generatedOutput);
 		    }
+
+		    ApplyAttributeModifiersOnGameObjectOutput(session, cookNodeId, partId, ref newGameObject);
 		}
 	    }
 	}
@@ -746,7 +759,6 @@ namespace HoudiniEngineUnity
 	    GameObject instanceRootGO = new GameObject("instance_" + instancerBuffer._name);
 
 	    HAPI_PartId partId = instancerBuffer._id;
-	    ApplyAttributeModifiersOnGameObjectOutput(session, cookNodeId, partId, ref instanceRootGO);
 
 	    Transform instanceRootTransform = instanceRootGO.transform;
 	    instanceRootTransform.parent = parent;
@@ -766,6 +778,8 @@ namespace HoudiniEngineUnity
 	    {
 		GenerateInstancesFromAssetPaths(instancerBuffer, instanceRootTransform);
 	    }
+
+	    ApplyAttributeModifiersOnGameObjectOutput(session, cookNodeId, partId, ref instanceRootGO);
 
 	    SetOutputVisiblity(instancerBuffer);
 	}
@@ -1004,7 +1018,8 @@ namespace HoudiniEngineUnity
 
 	    // To get the instance output name, we pass in the instance index. The actual name will be +1 from this.
 	    newInstanceGO.name = HEU_GeometryUtility.GetInstanceOutputName(instanceName, instancePrefixes, instanceIndex);
-	    newInstanceGO.isStatic = assetSourceGO.isStatic;
+
+	    HEU_GeneralUtility.CopyFlags(assetSourceGO, newInstanceGO, true);
 
 	    Transform instanceTransform = newInstanceGO.transform;
 	    HEU_HAPIUtility.ApplyLocalTransfromFromHoudiniToUnityForInstance(ref hapiTransform, instanceTransform);

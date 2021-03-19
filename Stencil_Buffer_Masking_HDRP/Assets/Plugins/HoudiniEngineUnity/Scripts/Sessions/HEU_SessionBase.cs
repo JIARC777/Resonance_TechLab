@@ -34,6 +34,9 @@ namespace HoudiniEngineUnity
 {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Typedefs (copy these from HEU_Common.cs)
+    using HAPI_UInt8 = System.Byte;
+    using HAPI_Int8 = System.SByte;
+    using HAPI_Int16 = System.Int16;
     using HAPI_Int64 = System.Int64;
     using HAPI_StringHandle = System.Int32;
     using HAPI_ErrorCodeBits = System.Int32;
@@ -98,6 +101,39 @@ namespace HoudiniEngineUnity
 
 	// Holds the last HAPI call result code
 	public HAPI_Result LastCallResultCode { get; set; }
+
+	private StringBuilder _cookLogs = new StringBuilder();
+	private int _currentCookLogCount = 0;
+	private const int MAX_COOK_LOG_COUNT = 9001;
+
+	public string GetCookLogString() { return _cookLogs.ToString(); }
+	public void AppendCookLog(string logStr) {
+	    if (!HEU_PluginSettings.WriteCookLogs)
+	    {
+		return;
+	    }
+
+	    if (_currentCookLogCount == MAX_COOK_LOG_COUNT)
+	    {
+		string cur = _cookLogs.ToString();
+		int newLine = cur.IndexOf('\n');
+		cur = cur.Substring(newLine);
+		_cookLogs.Remove(0, newLine+1);
+		_cookLogs.AppendLine(logStr);
+	    }
+	    else
+	    {
+		_cookLogs.AppendLine(logStr);
+	        _currentCookLogCount++;
+	    }
+	}
+
+	public void ClearCookLog()
+	{
+	    _cookLogs = new StringBuilder();
+	    _currentCookLogCount = 0;
+	}
+
 
 	// ASSET REGISTRATION -----------------------------------------------------------------------------------------------
 
@@ -450,6 +486,17 @@ namespace HoudiniEngineUnity
 	public virtual string GetStatusString(HAPI_StatusType statusType, HAPI_StatusVerbosity verbosity)
 	{
 	    return "Unsupported plugin configuration.";
+	}
+
+	/// <summary>
+	/// Compose the node cook result string
+	/// </summary>
+	/// <param name="nodeId"> The node to parse </param>
+	/// <param name="verbosity"> The status verbosity. </param>
+	/// <returns>True if successfully queried status string</returns>
+	public virtual string ComposeNodeCookResult(HAPI_NodeId nodeId, HAPI_StatusVerbosity verbosity)
+	{
+	    return "";
 	}
 
 	/// <summary>
@@ -966,6 +1013,21 @@ namespace HoudiniEngineUnity
 	    return false;
 	}
 
+	public virtual bool GetAttributeUInt8Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_UInt8[] data, int start, int length)
+	{
+	    return false;
+	}
+
+	public virtual bool GetAttributeInt8Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_Int8[] data, int start, int length)
+	{
+	    return false;
+	}
+
+	public virtual bool GetAttributeInt16Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_Int16[] data, int start, int length)
+	{
+	    return false;
+	}
+
 	public virtual bool GetAttributeInt64Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_Int64[] data, int start, int length)
 	{
 	    return false;
@@ -1109,6 +1171,24 @@ namespace HoudiniEngineUnity
 
 	public virtual bool SetAttributeIntData(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attrInfo,
 		int[] data, int start, int length)
+	{
+	    return false;
+	}
+
+	public virtual bool SetAttributeInt8Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attrInfo,
+		HAPI_Int8[] data, int start, int length)
+	{
+	    return false;
+	}
+
+	public virtual bool SetAttributeInt16Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attrInfo,
+		HAPI_Int16[] data, int start, int length)
+	{
+	    return false;
+	}
+
+	public virtual bool SetAttributeInt64Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attrInfo,
+		HAPI_Int64[] data, int start, int length)
 	{
 	    return false;
 	}

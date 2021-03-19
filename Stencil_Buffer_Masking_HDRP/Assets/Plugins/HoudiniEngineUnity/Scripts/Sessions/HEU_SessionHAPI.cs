@@ -28,8 +28,10 @@
 #define HOUDINIENGINEUNITY_ENABLED
 #endif
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using UnityEngine;
@@ -38,6 +40,9 @@ namespace HoudiniEngineUnity
 {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Typedefs (copy these from HEU_Common.cs)
+    using HAPI_UInt8 = System.Byte;
+    using HAPI_Int8 = System.SByte;
+    using HAPI_Int16 = System.Int16;
     using HAPI_Int64 = System.Int64;
     using HAPI_StringHandle = System.Int32;
     using HAPI_ErrorCodeBits = System.Int32;
@@ -262,6 +267,20 @@ namespace HoudiniEngineUnity
 		}
 	    }
 
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            Assembly[] assemblies = currentDomain.GetAssemblies();
+            string assemblyList = "";
+            foreach (Assembly assembly in assemblies)
+            {
+                if (!String.IsNullOrEmpty(assemblyList))
+                {
+                    assemblyList = String.Concat(assemblyList, ";");
+                }
+                assemblyList = String.Concat(assemblyList, assembly.GetName().Name);
+            }
+
+            HEU_HAPIImports.harcSetManagedHostLibrariesList(assemblyList);
+
 	    _sessionData.ProcessID = processID;
 	    _sessionData.Port = serverPort;
 
@@ -390,6 +409,20 @@ namespace HoudiniEngineUnity
 		    return false;
 		}
 	    }
+
+            AppDomain currentDomain = AppDomain.CurrentDomain;
+            Assembly[] assemblies = currentDomain.GetAssemblies();
+            string assemblyList = "";
+            foreach (Assembly assembly in assemblies)
+            {
+                if (!String.IsNullOrEmpty(assemblyList))
+                {
+                    assemblyList = String.Concat(assemblyList, ";");
+                }
+                assemblyList = String.Concat(assemblyList, assembly.GetName().Name);
+            }
+
+            HEU_HAPIImports.harcSetManagedHostLibrariesList(assemblyList);
 
 	    _sessionData.ProcessID = processID;
 
@@ -717,8 +750,6 @@ namespace HoudiniEngineUnity
 		return false;
 	    }
 
-	    SetServerEnvString(HEU_Defines.HAPI_ENV_CLIENT_NAME, "unity");
-
 	    sessionData.IsInitialized = true;
 	    ConnectionState = SessionConnectionState.CONNECTED;
 
@@ -902,6 +933,37 @@ namespace HoudiniEngineUnity
 	    if (result != HAPI_Result.HAPI_RESULT_SUCCESS)
 	    {
 		return "Failed to get status string. Likely the session is invalid.";
+	    }
+
+	    return strBuilder.ToString();
+	}
+
+	/// <summary>
+	/// Compose the node cook result string
+	/// </summary>
+	/// <param name="nodeId"> The node to parse </param>
+	/// <param name="verbosity"> The status verbosity. </param>
+	/// <returns>True if successfully queried status string</returns>
+	public override string ComposeNodeCookResult(HAPI_NodeId nodeId, HAPI_StatusVerbosity verbosity)
+	{
+	    int bufferLength = 0;
+	    HAPI_Result result = HEU_HAPIImports.HAPI_ComposeNodeCookResult(ref _sessionData._HAPISession, nodeId, verbosity, out bufferLength);
+	    if (result != HAPI_Result.HAPI_RESULT_SUCCESS)
+	    {
+		return "";
+	    }
+
+	    if (bufferLength <= 0)
+	    {
+		return "";
+	    }
+
+	    StringBuilder strBuilder = new StringBuilder(bufferLength);
+	    result = HEU_HAPIImports.HAPI_GetComposedNodeCookResult(ref _sessionData._HAPISession, strBuilder, bufferLength);
+
+	    if (result != HAPI_Result.HAPI_RESULT_SUCCESS)
+	    {
+		return "";
 	    }
 
 	    return strBuilder.ToString();
@@ -1604,6 +1666,27 @@ namespace HoudiniEngineUnity
 	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
 	}
 
+	public override bool GetAttributeUInt8Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_UInt8[] data, int start, int length)
+	{
+	    HAPI_Result result = HEU_HAPIImports.HAPI_GetAttributeUInt8Data(ref _sessionData._HAPISession, nodeID, partID, name, ref attributeInfo, -1, data, start, length);
+	    HandleStatusResult(result, "Getting Attribute Int8 Data", false, true);
+	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
+	}
+
+	public override bool GetAttributeInt8Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_Int8[] data, int start, int length)
+	{
+	    HAPI_Result result = HEU_HAPIImports.HAPI_GetAttributeInt8Data(ref _sessionData._HAPISession, nodeID, partID, name, ref attributeInfo, -1, data, start, length);
+	    HandleStatusResult(result, "Getting Attribute Int8 Data", false, true);
+	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
+	}
+
+	public override bool GetAttributeInt16Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_Int16[] data, int start, int length)
+	{
+	    HAPI_Result result = HEU_HAPIImports.HAPI_GetAttributeInt16Data(ref _sessionData._HAPISession, nodeID, partID, name, ref attributeInfo, -1, data, start, length);
+	    HandleStatusResult(result, "Getting Attribute Int16 Data", false, true);
+	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
+	}
+
 	public override bool GetAttributeInt64Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attributeInfo, [Out] HAPI_Int64[] data, int start, int length)
 	{
 	    HAPI_Result result = HEU_HAPIImports.HAPI_GetAttributeInt64Data(ref _sessionData._HAPISession, nodeID, partID, name, ref attributeInfo, -1, data, start, length);
@@ -1798,6 +1881,30 @@ namespace HoudiniEngineUnity
 	{
 	    HAPI_Result result = HEU_HAPIImports.HAPI_SetAttributeIntData(ref _sessionData._HAPISession, nodeID, partID, name, ref attrInfo, data, start, length);
 	    HandleStatusResult(result, "Setting Attribute Int Data", false, true);
+	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
+	}
+
+	public override bool SetAttributeInt8Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attrInfo,
+		HAPI_Int8[] data, int start, int length)
+	{
+	    HAPI_Result result = HEU_HAPIImports.HAPI_SetAttributeInt8Data(ref _sessionData._HAPISession, nodeID, partID, name, ref attrInfo, data, start, length);
+	    HandleStatusResult(result, "Setting Attribute Int8 Data", false, true);
+	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
+	}
+
+	public override bool SetAttributeInt16Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attrInfo,
+		HAPI_Int16[] data, int start, int length)
+	{
+	    HAPI_Result result = HEU_HAPIImports.HAPI_SetAttributeInt16Data(ref _sessionData._HAPISession, nodeID, partID, name, ref attrInfo, data, start, length);
+	    HandleStatusResult(result, "Setting Attribute Int16 Data", false, true);
+	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
+	}
+
+	public override bool SetAttributeInt64Data(HAPI_NodeId nodeID, HAPI_PartId partID, string name, ref HAPI_AttributeInfo attrInfo,
+		HAPI_Int64[] data, int start, int length)
+	{
+	    HAPI_Result result = HEU_HAPIImports.HAPI_SetAttributeInt64Data(ref _sessionData._HAPISession, nodeID, partID, name, ref attrInfo, data, start, length);
+	    HandleStatusResult(result, "Setting Attribute Int64 Data", false, true);
 	    return (result == HAPI_Result.HAPI_RESULT_SUCCESS);
 	}
 

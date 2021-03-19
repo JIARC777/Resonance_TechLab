@@ -351,6 +351,11 @@ namespace HoudiniEngineUnity
 
 	public bool SessionSyncAutoCook { get { return _sessionSyncAutoCook; } set { _sessionSyncAutoCook = value; } }
 
+	[SerializeField]
+	private bool _bakeUpdateKeepPreviousTransformValues = false;
+
+	public bool BakeUpdateKeepPreviousTransformValues { get { return _bakeUpdateKeepPreviousTransformValues; } set { _bakeUpdateKeepPreviousTransformValues = value; } }
+
 	// CURVES -----------------------------------------------------------------------------------------------------
 
 	// Toggle curve editing tool in Scene view
@@ -497,7 +502,7 @@ namespace HoudiniEngineUnity
 	    if (this.HasBeenInstantiated())
 	    {
 		HEU_HoudiniAsset instantiatedAsset = this.GetInstantiatedObject();
-	    	this.CopyInstantiatedProperties(instantiatedAsset);
+	    	this.ResetAndCopyInstantiatedProperties(instantiatedAsset);
 	    }
 
 	    // All assets are checked if valid in Houdini Engine session in Awake.
@@ -1168,7 +1173,7 @@ namespace HoudiniEngineUnity
 	    else
 	    {
 #if UNITY_EDITOR && UNITY_2018_3_OR_NEWER
-		var stage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
+		var stage = UnityEditor.Experimental.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
 		if (stage != null)
 		{
 		    // Disable UI when HDA is in prefab stage
@@ -1456,6 +1461,22 @@ namespace HoudiniEngineUnity
 	    session.GetNodeInfo(_assetID, ref _nodeInfo);
 	    session.GetAssetInfo(_assetID, ref _assetInfo);
 
+	    string nodeStatusAll = session.ComposeNodeCookResult(_assetID, HAPI_StatusVerbosity.HAPI_STATUSVERBOSITY_ALL);
+	    if (nodeStatusAll != "")
+	    {
+		session.AppendCookLog(nodeStatusAll);
+	    }
+
+	    string nodeStatusError = session.ComposeNodeCookResult(_assetID, HAPI_StatusVerbosity.HAPI_STATUSVERBOSITY_ERRORS);
+	    if (nodeStatusError != "")
+	    {
+		SetCookStatus(AssetCookStatus.NONE, _lastCookResult = AssetCookResult.ERRORED);
+
+		string resultString = string.Format(HEU_Defines.HEU_NAME + ": Failed to cook asset {0}! \n{1}", AssetName, nodeStatusError);
+		Debug.LogErrorFormat(resultString);
+		return;
+	    }
+
 	    // We will always regenerate parameters after cooking to make sure we're in sync.
 	    GenerateParameters(session);
 
@@ -1514,7 +1535,7 @@ namespace HoudiniEngineUnity
 	    // Notify listeners that we've cooked!
 	    List<GameObject> outputObjects = new List<GameObject>();
 	    GetOutputGameObjects(outputObjects);
-	    if (_downstreamConnectionCookedEvent != null)
+	    if (_downstreamConnectionCookedEvent != null && HEU_PluginSettings.CookingTriggersDownstreamCooks && _cookingTriggersDownCooks)
 	    {
 		_downstreamConnectionCookedEvent.Invoke(this, true, outputObjects);
 	    }
@@ -1558,6 +1579,11 @@ namespace HoudiniEngineUnity
 		do
 		{
 		    bResult = session.GetCookState(out statusCode);
+
+		    // Add to cook log
+		    string cookStatus = session.GetStatusString(HAPI_StatusType.HAPI_STATUS_COOK_STATE, HAPI_StatusVerbosity.HAPI_STATUSVERBOSITY_ERRORS);
+		    session.AppendCookLog(cookStatus);
+
 		    if (bResult && (statusCode > HAPI_State.HAPI_STATE_MAX_READY_STATE))
 		    {
 			// Still cooking. If async, we'll return, otherwise busy wait.
@@ -2115,6 +2141,15 @@ namespace HoudiniEngineUnity
 
 	private void UploadAttributeValues(HEU_SessionBase session)
 	{
+	    for (int i = _attributeStores.Count - 1; i >= 0; i--)
+	    {
+		HEU_AttributesStore attributeStore = _attributeStores[i];
+		if (!attributeStore.IsValidStore(session))
+		{
+		    RemoveAttributeStore(attributeStore);
+		}
+	    }
+
 	    // Normally only the attribute stores that are dirty will be uploaded to Houdini.
 	    // But if _toolsInfo._alwaysCookUpstream is true, we will upload all attributes
 	    // if there is at least one of them that is dirty. This is to handle case where
@@ -2739,9 +2774,24 @@ namespace HoudiniEngineUnity
 	    string bakedAssetPath = existingPrefabFolder;
 	    bool bWriteMeshesToAssetDatabase = true;
 	    bool bReconnectPrefabInstances = false;
+
+	    List<TransformData> previousTransformValues = null;
+
+	    if (_bakeUpdateKeepPreviousTransformValues)
+	    {
+		previousTransformValues = new List<TransformData>();
+		List<Transform> previousTransforms = HEU_GeneralUtility.GetLODTransforms(bakeTargetGO);
+		previousTransforms.ForEach((Transform trans) => {  previousTransformValues.Add(new TransformData(trans)); });
+	    }
+	    
 	    GameObject newClonedRoot = CloneAssetWithoutHDA(ref bakedAssetPath, bWriteMeshesToAssetDatabase, bReconnectPrefabInstances);
 	    if (newClonedRoot != null)
 	    {
+		if (previousTransformValues != null)
+		{
+		    HEU_GeneralUtility.SetLODTransformValues(newClonedRoot, previousTransformValues);
+		}
+
 		try
 		{
 		    if (string.IsNullOrEmpty(bakedAssetPath))
@@ -2787,6 +2837,7 @@ namespace HoudiniEngineUnity
 	    bool bWriteMeshesToAssetDatabase = true;
 	    bool bDeleteExistingComponents = true;
 	    bool bReconnectPrefabInstances = true;
+	    bool bKeepPreviousTransformValues = _bakeUpdateKeepPreviousTransformValues;
 
 	    UnityEngine.Object targetAssetDBObject = null;
 
@@ -2816,7 +2867,7 @@ namespace HoudiniEngineUnity
 	    {
 		// Single object
 
-		clonableParts[0].BakePartToGameObject(bakeTargetGO, bDeleteExistingComponents, bDontDeletePersistantResources, bWriteMeshesToAssetDatabase, ref targetAssetPath, sourceToTargetMeshMap, sourceToCopiedMaterials, ref targetAssetDBObject, assetDBObjectFileName, bReconnectPrefabInstances);
+		clonableParts[0].BakePartToGameObject(bakeTargetGO, bDeleteExistingComponents, bDontDeletePersistantResources, bWriteMeshesToAssetDatabase, ref targetAssetPath, sourceToTargetMeshMap, sourceToCopiedMaterials, ref targetAssetDBObject, assetDBObjectFileName, bReconnectPrefabInstances, bKeepPreviousTransformValues);
 
 		outputObjects.Add(bakeTargetGO);
 		bBakedSuccessful = true;
@@ -2848,7 +2899,7 @@ namespace HoudiniEngineUnity
 			// Remove from target child list to avoid destroying it later when we process excess child gameobjects
 			unprocessedTargetChildren.Remove(targetObject);
 
-			partData.BakePartToGameObject(targetObject, bDeleteExistingComponents, bDontDeletePersistantResources, bWriteMeshesToAssetDatabase, ref targetAssetPath, sourceToTargetMeshMap, sourceToCopiedMaterials, ref targetAssetDBObject, assetDBObjectFileName, bReconnectPrefabInstances);
+			partData.BakePartToGameObject(targetObject, bDeleteExistingComponents, bDontDeletePersistantResources, bWriteMeshesToAssetDatabase, ref targetAssetPath, sourceToTargetMeshMap, sourceToCopiedMaterials, ref targetAssetDBObject, assetDBObjectFileName, bReconnectPrefabInstances, bKeepPreviousTransformValues);
 		    }
 
 		    outputObjects.Add(targetObject);
@@ -4140,6 +4191,9 @@ namespace HoudiniEngineUnity
 	    UpdateTotalCookCount();
 	    bool bRequiresCook = oldCount != _totalCookCount;
 
+	    int numInputNodes = this._inputNodes.Count;
+
+
 	    if (bRequiresCook)
 	    {
 		//Debug.LogFormat("Recooking asset because of cook count mismatch: current={0} != new={1}", oldCount, _totalCookCount);
@@ -4178,8 +4232,27 @@ namespace HoudiniEngineUnity
 		    true, out _totalCookCount);
 	}
 
-	private void CopyInstantiatedProperties(HEU_HoudiniAsset newAsset)
+	private void ResetAndCopyInstantiatedProperties(HEU_HoudiniAsset newAsset)
 	{
+	    InvalidateAsset();
+
+	    // Setup again to avoid null references
+	    SetupAsset(_assetType, _assetPath, _rootGameObject, GetAssetSession(true));
+
+	    // Destroy everything except the root object and this
+	    // This ensures that there are no dangling gameobjects from the instantiation
+	    // Note that this creates a limitation, where a duplicated object destroys all children of it
+	    // but I think it's fine, since we stated in the docs that we don't fully support duplication in the first
+	    // place ;)
+	    Transform[] gos = _rootGameObject.GetComponentsInChildren<Transform>();
+	    foreach (Transform trans in gos)
+	    {
+		if (trans != null && trans.gameObject != null && trans.gameObject != this.gameObject && trans.gameObject != _rootGameObject)
+		{
+		    DestroyImmediate(trans.gameObject);
+		}
+	    }
+
 	    HEU_SessionBase session = GetAssetSession(true);
 	    bool bBuildAsync = false;
 		
