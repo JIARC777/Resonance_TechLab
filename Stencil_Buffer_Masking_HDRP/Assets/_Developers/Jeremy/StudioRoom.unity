@@ -167,6 +167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 364.8
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -217,7 +225,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.54
   m_BlockerSampleCount: 24
@@ -265,18 +273,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &17466378
 Light:
   m_ObjectHideFlags: 0
@@ -327,8 +327,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5}
   m_BounceIntensity: 1
@@ -1089,7 +1089,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5113528817929350216, guid: 9f3f1db19bbdaa840b84844fada4a487, type: 3}
+  - {fileID: 2100000, guid: 4cf6e2a1b4d258043933190879f489c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1163,6 +1163,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 219.88
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -1213,7 +1221,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -1261,18 +1269,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &311784030
 Light:
   m_ObjectHideFlags: 0
@@ -1323,8 +1323,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 7.45963}
   m_BounceIntensity: 1
@@ -1579,6 +1579,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 219.88
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -1629,7 +1637,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -1677,18 +1685,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &341305841
 Light:
   m_ObjectHideFlags: 0
@@ -1739,8 +1739,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.811966}
   m_BounceIntensity: 1
@@ -2538,6 +2538,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -2588,7 +2596,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -2636,18 +2644,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &532210433
 Light:
   m_ObjectHideFlags: 0
@@ -2698,8 +2698,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 7.6190934}
   m_BounceIntensity: 1
@@ -3045,6 +3045,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3095,7 +3103,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -3143,18 +3151,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &637507478
 Light:
   m_ObjectHideFlags: 0
@@ -3205,8 +3205,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.726512}
   m_BounceIntensity: 1
@@ -3768,6 +3768,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 571.00525
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3818,7 +3826,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.54
   m_BlockerSampleCount: 24
@@ -3866,18 +3874,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &795055158
 Light:
   m_ObjectHideFlags: 0
@@ -3928,8 +3928,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5}
   m_BounceIntensity: 1
@@ -4081,6 +4081,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 364.8
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -4131,7 +4139,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.54
   m_BlockerSampleCount: 24
@@ -4179,18 +4187,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &894126326
 Light:
   m_ObjectHideFlags: 0
@@ -4241,8 +4241,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5}
   m_BounceIntensity: 1
@@ -4996,6 +4996,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -5046,7 +5054,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -5094,18 +5102,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1061784518
 Light:
   m_ObjectHideFlags: 0
@@ -5156,8 +5156,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5.6530743}
   m_BounceIntensity: 1
@@ -5427,6 +5427,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 219.88
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -5477,7 +5485,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -5525,18 +5533,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1136766168
 Light:
   m_ObjectHideFlags: 0
@@ -5587,8 +5587,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.392136}
   m_BounceIntensity: 1
@@ -6063,6 +6063,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 579.23663
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -6113,7 +6121,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.54
   m_BlockerSampleCount: 24
@@ -6161,18 +6169,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1262124267
 Light:
   m_ObjectHideFlags: 0
@@ -6223,8 +6223,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5}
   m_BounceIntensity: 1
@@ -8324,6 +8324,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -8374,7 +8382,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -8422,18 +8430,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1749302934
 Light:
   m_ObjectHideFlags: 0
@@ -8484,8 +8484,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5.699899}
   m_BounceIntensity: 1
@@ -8542,7 +8542,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4182295053640314924, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
+  - {fileID: 2100000, guid: 1e2aad2c5ccd8d744ba45f668461f205, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9421,6 +9421,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -9471,7 +9479,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0.194
   m_EvsmVarianceBias: 0
   m_EvsmBlurPasses: 4
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.0001
   m_BlockerSampleCount: 24
@@ -9519,18 +9527,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 13
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1962703677
 Light:
   m_ObjectHideFlags: 0
@@ -9581,8 +9581,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.718016}
   m_BounceIntensity: 1
@@ -9840,7 +9840,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4182295053640314924, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
+  - {fileID: 2100000, guid: 1e2aad2c5ccd8d744ba45f668461f205, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

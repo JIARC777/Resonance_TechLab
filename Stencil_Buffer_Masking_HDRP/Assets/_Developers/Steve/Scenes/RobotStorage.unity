@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: ff178357213f1c34c8c9b3ac64b9f871, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -178,7 +179,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.1}
   m_Size: {x: 1.34, y: 0.75, z: 0.2}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &79898945
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,6 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: 87bc2db9ac01488428eba9761c44adf9, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -330,7 +331,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &271703244
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: 604c51e2df461de40bacd760813dd94b, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -523,7 +524,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &312878356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,6 +1237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: 8f577171e9ef17c4d8b22580f15e393f, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -1249,7 +1250,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &724494933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,6 +1540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: 5a1bdacd39f2d88479c40dcd017f342f, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -1552,7 +1553,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1001 &740472074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1653,6 +1653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: bd24f06cbba8ff44e992be2c079d74ae, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -1665,7 +1666,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &838400579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,6 +1710,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 600
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -1760,7 +1768,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0
   m_EvsmVarianceBias: 0.00001
   m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.1
   m_BlockerSampleCount: 24
@@ -1808,18 +1816,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &838400582
 Light:
   m_ObjectHideFlags: 0
@@ -1870,8 +1870,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
@@ -1939,6 +1939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: 964d15c7e3146cf4bbbea6de72270ada, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -1951,7 +1952,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &889518361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,6 +1995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: ac2ff8dba148ecb469b4fbdf498a8260, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -2007,7 +2008,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &1160302414
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,6 +2134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 49.220455
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -2184,7 +2192,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0
   m_EvsmVarianceBias: 0.00001
   m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.1
   m_BlockerSampleCount: 24
@@ -2232,18 +2240,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1235551100
 Light:
   m_ObjectHideFlags: 0
@@ -2294,8 +2294,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.78, y: 1.35}
   m_BounceIntensity: 1
@@ -2363,6 +2363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: 24c50d722042a404a9d1093f324472ec, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -2375,7 +2376,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &1425639366
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,8 +2550,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469685409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.7043, y: 2.52, z: 10.9}
-  m_LocalScale: {x: 0.15903227, y: 4.9955683, z: 4.3528028}
+  m_LocalPosition: {x: 10.657, y: 2.52, z: 10.9}
+  m_LocalScale: {x: 0.064449504, y: 4.9955683, z: 4.3528028}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2807,6 +2807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: 8b7e7f09ac728514eb726a4824b5bccc, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -2819,7 +2820,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &1902200665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2864,6 +2864,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 600
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -2914,7 +2922,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0
   m_EvsmVarianceBias: 0.00001
   m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.1
   m_BlockerSampleCount: 24
@@ -2962,18 +2970,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1902200668
 Light:
   m_ObjectHideFlags: 0
@@ -3024,8 +3024,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
@@ -3094,6 +3094,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 600
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3144,7 +3152,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0
   m_EvsmVarianceBias: 0.00001
   m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.1
   m_BlockerSampleCount: 24
@@ -3192,18 +3200,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &1976046683
 Light:
   m_ObjectHideFlags: 0
@@ -3254,8 +3254,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
@@ -3407,6 +3407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19d9143a39eb3b46bc4563e9889cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 2
   m_Material: {fileID: 2100000, guid: f9f1a0775c05b7f4fae3ffb23e322b2e, type: 2}
   m_DrawDistance: 1000
   m_FadeScale: 0.9
@@ -3419,7 +3420,6 @@ MonoBehaviour:
   m_Offset: {x: 0, y: 0, z: 0.005}
   m_Size: {x: 0.7, y: 0.58, z: 0.01}
   m_FadeFactor: 1
-  m_Version: 2
 --- !u!1 &2066230482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,6 +3464,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
   m_Intensity: 600
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3514,7 +3522,7 @@ MonoBehaviour:
   m_EvsmLightLeakBias: 0
   m_EvsmVarianceBias: 0.00001
   m_EvsmBlurPasses: 0
-  m_LightlayersMask: 1
+  m_LightlayersMask: 5
   m_LinkShadowLayers: 1
   m_ShadowNearPlane: 0.1
   m_BlockerSampleCount: 24
@@ -3562,18 +3570,10 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 0
+  showAdditionalSettings: 1
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 0
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
 --- !u!108 &2066230485
 Light:
   m_ObjectHideFlags: 0
@@ -3624,8 +3624,8 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_RenderingLayerMask: 5
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1

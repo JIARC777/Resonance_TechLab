@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 39c069ae4537d064aae3dfa717ea7da7
+guid: 37596957d78338560bfdc07857958e79
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -11,30 +11,31 @@ ScriptedImporter:
   version: 29
   projectContext: 1
   mGraphInstanceData:
-  - graphLabel: Concrete Float
-    prototypeName: Concrete Float
+  - graphLabel: Thick Strokes Paint
+    prototypeName: Thick Strokes Paint
     graphDescIndex: 0
     generateAllOutputs: 0
     generateMipMaps: 1
-    preset: " <sbspreset pkgurl=\"pkg://concrete_float\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"1173470128\" type=\"8\" value=\"11,11\" />\n
+    preset: " <sbspreset pkgurl=\"pkg://thick_strokes_paint\" label=\"\" >\n  <presetinput
+      identifier=\"$outputsize\" uid=\"1998124266\" type=\"8\" value=\"10,10\" />\n
       </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _HEIGHTMAP _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP
+      shaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MASKMAP _NORMALMAP
+        _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP _TESSELLATION_DISPLACEMENT _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
       enableInstancingVariants: 0
       doubleSidedGI: 0
-      customRenderQueue: 2225
+      customRenderQueue: -1
       texEnvs:
       - name: _AnisotropyMap
         texture: {instanceID: 0}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
-        texture: {fileID: -1080760001111057773, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
-        scale: {x: 2, y: 2}
+        texture: {fileID: 1592445181761844385, guid: 37596957d78338560bfdc07857958e79, type: 3}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -61,7 +62,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _HeightMap
-        texture: {fileID: 7082641804344016309, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+        texture: {fileID: -7028389193900609030, guid: 37596957d78338560bfdc07857958e79, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _IridescenceMaskMap
@@ -77,11 +78,11 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _MaskMap
-        texture: {fileID: 1915962208917492255, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+        texture: {fileID: 4044062568745945977, guid: 37596957d78338560bfdc07857958e79, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMap
-        texture: {fileID: -6087123721371061178, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+        texture: {fileID: 425152898691948736, guid: 37596957d78338560bfdc07857958e79, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _NormalMapOS
@@ -89,7 +90,7 @@ ScriptedImporter:
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _SpecularColorMap
-        texture: {fileID: 209827954756805961, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+        texture: {fileID: 2410692824532293175, guid: 37596957d78338560bfdc07857958e79, type: 3}
         scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _SubsurfaceMaskMap
@@ -182,13 +183,13 @@ ScriptedImporter:
       - name: _DisplacementLockTilingScale
         float: 1
       - name: _DisplacementMode
-        float: 0
+        float: 3
       - name: _DistortionBlendMode
         float: 0
       - name: _DistortionBlurBlendMode
         float: 0
       - name: _DistortionBlurDstBlend
-        float: 1
+        float: 0
       - name: _DistortionBlurRemapMax
         float: 1
       - name: _DistortionBlurRemapMin
@@ -196,17 +197,17 @@ ScriptedImporter:
       - name: _DistortionBlurScale
         float: 1
       - name: _DistortionBlurSrcBlend
-        float: 1
+        float: 0
       - name: _DistortionDepthTest
         float: 1
       - name: _DistortionDstBlend
-        float: 1
+        float: 0
       - name: _DistortionEnable
         float: 0
       - name: _DistortionScale
         float: 1
       - name: _DistortionSrcBlend
-        float: 1
+        float: 0
       - name: _DistortionVectorBias
         float: -1
       - name: _DistortionVectorScale
@@ -306,23 +307,23 @@ ScriptedImporter:
       - name: _StencilRef
         float: 0
       - name: _StencilRefDepth
-        float: 8
+        float: 0
       - name: _StencilRefDistortionVec
-        float: 4
+        float: 2
       - name: _StencilRefGBuffer
-        float: 10
+        float: 2
       - name: _StencilRefMV
-        float: 40
+        float: 32
       - name: _StencilWriteMask
-        float: 6
+        float: 3
       - name: _StencilWriteMaskDepth
         float: 8
       - name: _StencilWriteMaskDistortionVec
-        float: 4
+        float: 2
       - name: _StencilWriteMaskGBuffer
-        float: 14
+        float: 3
       - name: _StencilWriteMaskMV
-        float: 40
+        float: 32
       - name: _SubsurfaceMask
         float: 1
       - name: _SupportDecals
@@ -332,7 +333,7 @@ ScriptedImporter:
       - name: _TessellationBackFaceCullEpsilon
         float: -0.25
       - name: _TessellationFactor
-        float: 0
+        float: 4
       - name: _TessellationFactorMaxDistance
         float: 50
       - name: _TessellationFactorMinDistance
@@ -378,11 +379,11 @@ ScriptedImporter:
       - name: _UseShadowThreshold
         float: 0
       - name: _ZTestDepthEqualForOpaque
-        float: 3
+        float: 4
       - name: _ZTestGBuffer
         float: 4
       - name: _ZTestModeDistortion
-        float: 4
+        float: 8
       - name: _ZTestTransparent
         float: 4
       - name: _ZWrite
@@ -558,39 +559,39 @@ ScriptedImporter:
         from: 0
         to: 3
     textureParameters:
-    - textureName: Concrete Float - diffuse
+    - textureName: Thick Strokes Paint - diffuse
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - baseColor
+    - textureName: Thick Strokes Paint - baseColor
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - normal
+    - textureName: Thick Strokes Paint - normal
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - specular
+    - textureName: Thick Strokes Paint - specular
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - glossiness
+    - textureName: Thick Strokes Paint - glossiness
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - roughness
+    - textureName: Thick Strokes Paint - roughness
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - metallic
+    - textureName: Thick Strokes Paint - metallic
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - height
+    - textureName: Thick Strokes Paint - height
       wrapMode: 0
       filterMode: 1
       aniso: 1
-    - textureName: Concrete Float - mask
+    - textureName: Thick Strokes Paint - mask
       wrapMode: 0
       filterMode: 1
       aniso: 1
@@ -600,15 +601,15 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 1024
+      textureHeight: 1024
       textureFormatMode: 0
       normalCompressed: 0
-      bGenerateOnLoad: 0
-    material: {fileID: -1258362251675300733, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+      bGenerateOnLoad: 1
+    material: {fileID: -4240888956797991128, guid: 37596957d78338560bfdc07857958e79, type: 3}
     generatedTextures:
-    - {fileID: -1080760001111057773, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
-    - {fileID: -6087123721371061178, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
-    - {fileID: 209827954756805961, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
-    - {fileID: 7082641804344016309, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
-    - {fileID: 1915962208917492255, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+    - {fileID: 1592445181761844385, guid: 37596957d78338560bfdc07857958e79, type: 3}
+    - {fileID: 425152898691948736, guid: 37596957d78338560bfdc07857958e79, type: 3}
+    - {fileID: 2410692824532293175, guid: 37596957d78338560bfdc07857958e79, type: 3}
+    - {fileID: -7028389193900609030, guid: 37596957d78338560bfdc07857958e79, type: 3}
+    - {fileID: 4044062568745945977, guid: 37596957d78338560bfdc07857958e79, type: 3}
