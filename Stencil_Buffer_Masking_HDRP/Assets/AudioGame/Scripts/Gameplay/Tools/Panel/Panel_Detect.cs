@@ -31,7 +31,7 @@ public class Panel_Detect : MonoBehaviour
                 activated = true;
 
                 if (linkedObjects[i])
-                    linkedObjects[i].gameObject.GetComponent<Activate>().Activation();
+                    linkedObjects[i].gameObject.GetComponent<Activate>().Activation(true);
 
             }
 
@@ -47,7 +47,7 @@ public class Panel_Detect : MonoBehaviour
 
                 activated = true;
 
-                linkedObjects[i].gameObject.GetComponent<Activate>().Activation();
+                linkedObjects[i].gameObject.GetComponent<Activate>().Activation(true);
             }
         }
     }
