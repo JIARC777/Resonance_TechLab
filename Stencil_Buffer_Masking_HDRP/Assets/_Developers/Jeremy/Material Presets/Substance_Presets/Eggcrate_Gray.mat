@@ -10,7 +10,8 @@ Material:
   m_Name: Eggcrate_Gray
   m_Shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
   m_ShaderKeywords: _DISPLACEMENT_LOCK_TILING_SCALE _HEIGHTMAP _MAPPING_TRIPLANAR
-    _NORMALMAP _NORMALMAP_TANGENT_SPACE _TESSELLATION_DISPLACEMENT _TESSELLATION_PHONG
+    _MASKMAP _NORMALMAP _NORMALMAP_TANGENT_SPACE _SPECULARCOLORMAP _TESSELLATION_DISPLACEMENT
+    _TESSELLATION_PHONG
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -226,9 +227,9 @@ Material:
     - _SupportDecals: 1
     - _SurfaceType: 0
     - _TessellationBackFaceCullEpsilon: -0.25
-    - _TessellationFactor: 64
-    - _TessellationFactorMaxDistance: 50
-    - _TessellationFactorMinDistance: 20
+    - _TessellationFactor: 19.5
+    - _TessellationFactorMaxDistance: 20
+    - _TessellationFactorMinDistance: 1
     - _TessellationFactorTriangleSize: 100
     - _TessellationMode: 1
     - _TessellationShapeFactor: 0.75
