@@ -83,7 +83,7 @@ public class Fire_3DR : MonoBehaviour
         
         spoolOBJ = transform.GetChild(0);
         internalSpool = spoolOBJ.GetChild(1);
-        
+        -
         aimingObject = transform.GetChild(4);
                 
         aimingLine = aimingObject.GetComponent<LineRenderer>(); //Creates a gameObject with the 3DR's LineRenderer attached to it, then assigns the LineRenderer component to the aimingLine LineRenderer variable
