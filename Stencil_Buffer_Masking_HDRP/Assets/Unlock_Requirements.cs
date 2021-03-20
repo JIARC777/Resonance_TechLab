@@ -44,7 +44,7 @@ public class Unlock_Requirements : MonoBehaviour
 
             for (int i = 0; i < linkedObjects.Length; i++)
             {
-                linkedObjects[i].gameObject.GetComponent<Activate>().Activation();
+                linkedObjects[i].gameObject.GetComponent<Activate>().Activation(true);
             }
         }
     }
