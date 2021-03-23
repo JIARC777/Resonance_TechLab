@@ -18,12 +18,13 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://metal_speaker_mesh_facets\" label=\"\" >\n 
       <presetinput identifier=\"$outputsize\" uid=\"645485574\" type=\"8\" value=\"11,11\"
-      />\n  <presetinput identifier=\"color\" uid=\"1363797624\" type=\"2\" value=\"0.518868,0.518868,0.518868\"
-      />\n  <presetinput identifier=\"tile\" uid=\"1363217147\" type=\"4\" value=\"6\"
-      />\n  <presetinput identifier=\"material_relief\" uid=\"1363802089\" type=\"0\"
-      value=\"1\" />\n  <presetinput identifier=\"color_fabric\" uid=\"1363777863\"
-      type=\"2\" value=\"0.518868,0.518868,0.518868\" />\n  <presetinput identifier=\"roughness\"
-      uid=\"1363796001\" type=\"0\" value=\"0.633\" />\n </sbspreset>\n"
+      />\n  <presetinput identifier=\"$randomseed\" uid=\"1896563284\" type=\"4\"
+      value=\"7552\" />\n  <presetinput identifier=\"color\" uid=\"1363797624\" type=\"2\"
+      value=\"1,0.723029,0.466981\" />\n  <presetinput identifier=\"tile\" uid=\"1363217147\"
+      type=\"4\" value=\"2\" />\n  <presetinput identifier=\"material_relief\" uid=\"1363802089\"
+      type=\"0\" value=\"1\" />\n  <presetinput identifier=\"color_fabric\" uid=\"1363777863\"
+      type=\"2\" value=\"0,0,0\" />\n  <presetinput identifier=\"roughness\" uid=\"1363796001\"
+      type=\"0\" value=\"0.823\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}

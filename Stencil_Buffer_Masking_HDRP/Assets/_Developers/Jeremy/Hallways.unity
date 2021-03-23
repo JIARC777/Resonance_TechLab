@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000016, guid: 1c5cd2ff463bc9f4283da155649e4903, type: 2}
+  m_LightingDataAsset: {fileID: 112000016, guid: 0f1f323ab351977419cd44afd55853c9, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -153,14 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -263,6 +255,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &153039146
 Light:
   m_ObjectHideFlags: 0
@@ -333,11 +333,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153039144}
   m_LocalRotation: {x: 0.60962576, y: 0.60962576, z: -0.35826874, w: 0.35826874}
-  m_LocalPosition: {x: -1.7, y: 3.81, z: -9.49}
+  m_LocalPosition: {x: 0, y: 3.69, z: 3.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 60.884, y: 180, z: 90}
 --- !u!1 &173654533
 GameObject:
@@ -430,11 +430,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173654533}
   m_LocalRotation: {x: -0.7071068, y: 0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: 10.6, y: 1.68, z: -7.27}
+  m_LocalPosition: {x: 12.313701, y: -0.28970003, z: 2.1799998}
   m_LocalScale: {x: 0.61344475, y: 0.52163666, z: 1.080609}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1518882347}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
 --- !u!1 &275403648
 GameObject:
@@ -526,11 +526,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275403648}
-  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: 0, w: 0}
-  m_LocalPosition: {x: -10.87, y: 1.75, z: -2.3248}
-  m_LocalScale: {x: 0.6103642, y: 0.51901716, z: 0.95299447}
+  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: -0, w: 0}
+  m_LocalPosition: {x: -9.1563, y: -0.21969998, z: 7.1252}
+  m_LocalScale: {x: 0.6103642, y: 0.51901716, z: 0.9529945}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1518882347}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: -90}
 --- !u!1 &387198872
@@ -563,14 +563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -673,6 +665,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &387198874
 Light:
   m_ObjectHideFlags: 0
@@ -743,11 +743,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387198872}
   m_LocalRotation: {x: 0.6864227, y: 0.6864227, z: 0.16977611, w: -0.16977611}
-  m_LocalPosition: {x: -1.7, y: 0.12, z: -9.48}
+  m_LocalPosition: {x: 0, y: 0, z: 3.1400003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -27.785, y: 180, z: 90}
 --- !u!1 &545294260
 GameObject:
@@ -779,14 +779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -889,6 +881,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &545294262
 Light:
   m_ObjectHideFlags: 0
@@ -959,11 +959,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 545294260}
   m_LocalRotation: {x: 0.62280303, y: -0.33483797, z: -0.33483797, w: 0.62280303}
-  m_LocalPosition: {x: 10.56, y: 3.788, z: 4.049}
+  m_LocalPosition: {x: 12.26, y: 3.6680002, z: 16.668999}
   m_LocalScale: {x: 1, y: 1.0393325, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 146.528, y: 90, z: 90}
 --- !u!1 &577040364
 GameObject:
@@ -995,14 +995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -1105,6 +1097,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &577040366
 Light:
   m_ObjectHideFlags: 0
@@ -1175,11 +1175,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577040364}
   m_LocalRotation: {x: 0.43053803, y: -0.5609251, z: -0.5609251, w: 0.43053803}
-  m_LocalPosition: {x: 10.567, y: 0.14, z: -7.53}
+  m_LocalPosition: {x: 12.267, y: 0.020000003, z: 5.0899997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 194.984, y: 90, z: 90}
 --- !u!1 &735552249
 GameObject:
@@ -1211,14 +1211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -1321,6 +1313,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &735552251
 Light:
   m_ObjectHideFlags: 0
@@ -1391,11 +1391,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735552249}
   m_LocalRotation: {x: 0.29655233, y: -0.64191645, z: -0.64191645, w: 0.29655233}
-  m_LocalPosition: {x: 10.56, y: 0.12, z: 4.051}
+  m_LocalPosition: {x: 12.26, y: 0, z: 16.671}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 220.408, y: 90, z: 90}
 --- !u!1 &745356921
 GameObject:
@@ -1488,11 +1488,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745356921}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 4.28, y: 0.95, z: -12.64}
+  m_LocalPosition: {x: 5.9937, y: -1.0197, z: -3.1900005}
   m_LocalScale: {x: 0.75754493, y: 0.6441708, z: 1.3344476}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1518882347}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!1 &919372090
 GameObject:
@@ -1584,12 +1584,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919372090}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.41, y: 1.9739, z: -3.50503}
-  m_LocalScale: {x: 0.38661695, y: 0.5528076, z: 1.1889623}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 9.1237, y: 0.0041999817, z: 5.94497}
+  m_LocalScale: {x: 0.38661698, y: 0.5528076, z: 1.1889623}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1518882347}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &996335568
 GameObject:
@@ -1621,14 +1621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -1731,6 +1723,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &996335570
 Light:
   m_ObjectHideFlags: 0
@@ -1801,11 +1801,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996335568}
   m_LocalRotation: {x: -0.1940491, y: -0.67995954, z: -0.67995954, w: -0.1940491}
-  m_LocalPosition: {x: -14.06, y: 0.12, z: -6.95}
+  m_LocalPosition: {x: -12.360001, y: 0, z: 5.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 301.856, y: 90, z: 90}
 --- !u!1 &1122414770
 GameObject:
@@ -1898,11 +1898,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122414770}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -8.26, y: 0.95, z: -12.64}
+  m_LocalPosition: {x: -6.5463, y: -1.0197, z: -3.1900005}
   m_LocalScale: {x: 0.75754493, y: 0.6441708, z: 1.1756117}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1518882347}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
 --- !u!1 &1136407363
 GameObject:
@@ -1934,14 +1934,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -2044,6 +2036,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1136407365
 Light:
   m_ObjectHideFlags: 0
@@ -2114,11 +2114,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136407363}
   m_LocalRotation: {x: -0.26925176, y: 0.65383756, z: 0.65383756, w: -0.26925176}
-  m_LocalPosition: {x: -10.91, y: 0.13, z: -2.32}
+  m_LocalPosition: {x: -9.21, y: 0.009999998, z: 10.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 585.23596, y: 90, z: 90}
 --- !u!1 &1141494526
 GameObject:
@@ -2211,11 +2211,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141494526}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -1.7137, y: 1.9697, z: -9.45}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.39025438, y: 0.85740465, z: 1.825242}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1518882347}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -90}
 --- !u!1 &1207205348
 GameObject:
@@ -2247,14 +2247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -2357,6 +2349,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1207205350
 Light:
   m_ObjectHideFlags: 0
@@ -2427,11 +2427,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207205348}
   m_LocalRotation: {x: -0.6209066, y: -0.33834156, z: -0.33834156, w: -0.6209066}
-  m_LocalPosition: {x: -14.1, y: 3.82, z: 5.12}
+  m_LocalPosition: {x: -12.400001, y: 3.7, z: 17.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 392.827, y: 90, z: 90}
 --- !u!1 &1262680581
 GameObject:
@@ -2463,14 +2463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -2573,6 +2565,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1262680583
 Light:
   m_ObjectHideFlags: 0
@@ -2643,11 +2643,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1262680581}
   m_LocalRotation: {x: -0.31905055, y: -0.31905055, z: -0.6310363, w: 0.6310363}
-  m_LocalPosition: {x: -1.7, y: 0.12, z: -12.62}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 233.642, y: 180, z: 90}
 --- !u!1 &1286136475
 GameObject:
@@ -2679,14 +2679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -2789,6 +2781,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1286136477
 Light:
   m_ObjectHideFlags: 0
@@ -2859,11 +2859,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286136475}
   m_LocalRotation: {x: 0.25890613, y: 0.6580028, z: 0.6580028, w: 0.25890613}
-  m_LocalPosition: {x: 7.44, y: 0.126, z: -3.5}
+  m_LocalPosition: {x: 9.14, y: 0.0060000047, z: 9.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -47.043, y: 90, z: 90}
 --- !u!1 &1343099133
 GameObject:
@@ -2895,14 +2895,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3005,6 +2997,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1343099135
 Light:
   m_ObjectHideFlags: 0
@@ -3075,11 +3075,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343099133}
   m_LocalRotation: {x: 0.6844042, y: 0.17773835, z: 0.17773835, w: 0.6844042}
-  m_LocalPosition: {x: 7.43, y: 3.81, z: -3.5}
+  m_LocalPosition: {x: 9.13, y: 3.69, z: 9.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 60.884, y: 90, z: 90}
 --- !u!1 &1355744729
 GameObject:
@@ -3111,14 +3111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3221,6 +3213,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1355744731
 Light:
   m_ObjectHideFlags: 0
@@ -3291,11 +3291,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355744729}
   m_LocalRotation: {x: -0.6209066, y: -0.33834156, z: -0.33834156, w: -0.6209066}
-  m_LocalPosition: {x: -14.06, y: 3.82, z: -6.95}
+  m_LocalPosition: {x: -12.360001, y: 3.7, z: 5.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 392.827, y: 90, z: 90}
 --- !u!1 &1440930817
 GameObject:
@@ -3327,14 +3327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3437,6 +3429,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1440930819
 Light:
   m_ObjectHideFlags: 0
@@ -3507,11 +3507,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440930817}
   m_LocalRotation: {x: -0.6747218, y: 0.21154328, z: 0.21154328, w: -0.6747218}
-  m_LocalPosition: {x: -10.91, y: 3.82, z: -2.32}
+  m_LocalPosition: {x: -9.21, y: 3.7, z: 10.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 484.815, y: 90, z: 90}
 --- !u!1 &1463970156
 GameObject:
@@ -3543,14 +3543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3653,6 +3645,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1463970158
 Light:
   m_ObjectHideFlags: 0
@@ -3723,12 +3723,49 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463970156}
   m_LocalRotation: {x: -0.3015862, y: -0.6395669, z: -0.6395669, w: -0.3015862}
-  m_LocalPosition: {x: -14.1, y: 0.12, z: 6.6}
+  m_LocalPosition: {x: -12.400001, y: 0, z: 19.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 320.492, y: 90, z: 90}
+--- !u!1 &1518882346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1518882347}
+  m_Layer: 0
+  m_Name: WallGeo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1518882347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518882346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7137, y: 1.9697, z: -9.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 275403652}
+  - {fileID: 1807053306}
+  - {fileID: 1122414774}
+  - {fileID: 745356925}
+  - {fileID: 173654537}
+  - {fileID: 919372094}
+  - {fileID: 1141494530}
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751674593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3759,14 +3796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -3869,6 +3898,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1751674595
 Light:
   m_ObjectHideFlags: 0
@@ -3939,11 +3976,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751674593}
   m_LocalRotation: {x: 0.19150965, y: 0.19150965, z: -0.68067914, w: 0.68067914}
-  m_LocalPosition: {x: -1.7, y: 3.79, z: -12.62}
+  m_LocalPosition: {x: 0, y: 3.67, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 148.572, y: 180, z: 90}
 --- !u!1 &1807053302
 GameObject:
@@ -4035,12 +4072,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807053302}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -14.158, y: 2.3789, z: -7.1318}
-  m_LocalScale: {x: 0.471799, y: 0.6441708, z: 1.1772575}
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -12.4443, y: 0.40920007, z: 2.3181996}
+  m_LocalScale: {x: 0.471799, y: 0.64417076, z: 1.1772575}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1518882347}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1866286283
 GameObject:
@@ -4072,14 +4109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 11
-  m_ObsoleteShadowResolutionTier: 1
-  m_ObsoleteUseShadowQualitySettings: 0
-  m_ObsoleteCustomShadowResolution: 512
-  m_ObsoleteContactShadows: 0
-  m_PointlightHDType: 1
-  m_SpotLightShape: 0
-  m_AreaLightShape: 0
   m_Intensity: 209.09404
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
@@ -4182,6 +4211,14 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 1
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
 --- !u!108 &1866286285
 Light:
   m_ObjectHideFlags: 0
@@ -4252,9 +4289,55 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866286283}
   m_LocalRotation: {x: 0.62280303, y: -0.33483797, z: -0.33483797, w: 0.62280303}
-  m_LocalPosition: {x: 10.565, y: 3.778, z: -7.53}
+  m_LocalPosition: {x: 12.264999, y: 3.6580002, z: 5.0899997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 1949324900}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 146.528, y: 90, z: 90}
+--- !u!1 &1949324899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949324900}
+  m_Layer: 0
+  m_Name: Lights
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1949324900
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949324899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7, y: 0.12, z: -12.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1262680584}
+  - {fileID: 1751674596}
+  - {fileID: 153039147}
+  - {fileID: 387198875}
+  - {fileID: 996335571}
+  - {fileID: 1355744732}
+  - {fileID: 1207205351}
+  - {fileID: 1463970159}
+  - {fileID: 1343099136}
+  - {fileID: 1286136478}
+  - {fileID: 1866286286}
+  - {fileID: 577040367}
+  - {fileID: 545294263}
+  - {fileID: 735552252}
+  - {fileID: 1440930820}
+  - {fileID: 1136407366}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

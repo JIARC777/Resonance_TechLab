@@ -18,12 +18,17 @@ ScriptedImporter:
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://metal_selective_speaker_mesh\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"2076145166\" type=\"8\"
-      value=\"11,11\" />\n </sbspreset>\n"
+      value=\"11,11\" />\n  <presetinput identifier=\"color\" uid=\"210748528\" type=\"2\"
+      value=\"0,0,0\" />\n  <presetinput identifier=\"tile_dot\" uid=\"211393136\"
+      type=\"4\" value=\"80\" />\n  <presetinput identifier=\"scale_dot\" uid=\"211396979\"
+      type=\"0\" value=\"1\" />\n  <presetinput identifier=\"material_intensity\"
+      uid=\"210752993\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"roughness\"
+      uid=\"210747945\" type=\"0\" value=\"0.258\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
-      shaderKeywords: _ALPHABLEND_ON _DISPLACEMENT_LOCK_TILING_SCALE _EMISSIVE_COLOR_MAP
-        _GLOSSINESSMAP _HEIGHTMAP _MASKMAP _METALLICGLOSSMAP _NA_DIFFUSE _NORMALMAP
+      shaderKeywords: _ALPHABLEND_ON _DISPLACEMENT_LOCK_TILING_SCALE _GLOSSINESSMAP
+        _HEIGHTMAP _MAPPING_TRIPLANAR _MASKMAP _METALLICGLOSSMAP _NA_DIFFUSE _NORMALMAP
         _NORMALMAP_TANGENT_SPACE _ROUGHNESSMAP _SPECULARCOLORMAP _TESSELLATION_DISPLACEMENT
         _VERTEX_DISPLACEMENT_LOCK_OBJECT_SCALE
       lightmapFlags: 4
@@ -371,7 +376,7 @@ ScriptedImporter:
       - name: _TransparentZWrite
         float: 0
       - name: _UVBase
-        float: 0
+        float: 5
       - name: _UVDetail
         float: 0
       - name: _UVEmissive
@@ -404,7 +409,7 @@ ScriptedImporter:
       - name: _EmissionColor
         color: {r: 1, g: 1, b: 1, a: 1}
       - name: _EmissiveColor
-        color: {r: 0.5434474, g: 0, b: 0.7884232, a: 1}
+        color: {r: 0, g: 0, b: 0, a: 1}
       - name: _EmissiveColorLDR
         color: {r: 0, g: 0, b: 0, a: 1}
       - name: _InvPrimScale
@@ -420,7 +425,7 @@ ScriptedImporter:
       - name: _UVDetailsMappingMask
         color: {r: 1, g: 0, b: 0, a: 0}
       - name: _UVMappingMask
-        color: {r: 1, g: 0, b: 0, a: 0}
+        color: {r: 0, g: 0, b: 0, a: 0}
       - name: _UVMappingMaskEmissive
         color: {r: 1, g: 0, b: 0, a: 0}
     outputDescList:
