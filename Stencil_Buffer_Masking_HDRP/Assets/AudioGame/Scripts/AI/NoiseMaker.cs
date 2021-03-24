@@ -78,10 +78,13 @@ public class NoiseMaker : MonoBehaviour
 		float lifeTime = echo * defaultVolumeBaseline;
 		if (col.gameObject.GetComponent<NoiseData>() != null)
 		{
-			float materialSoundProperty = col.gameObject.GetComponent<NoiseData>().loudnessFactor;
+			NoiseData nd = col.gameObject.GetComponent<NoiseData>();
+			float materialSoundProperty = nd.loudnessFactor;
 			initialVolume *= materialSoundProperty;
 			// calculate initial volume ** ADD FACTOR FOR VELOCITY OF OBJECT ON IMPACT **
-			echoFactor *= col.gameObject.GetComponent<NoiseData>().echoFactor;
+			echoFactor *= nd.echoFactor;
+			// Supposedly this creates an audio source at runtime when the clip needs to be played and then deletes it. If we run into issue NoiseData can be reconfigured to rely on an audio source
+			AudioSource.PlayClipAtPoint(nd.soundFX, this.transform.position);
 		}
 		ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
 		ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
