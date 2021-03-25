@@ -221,7 +221,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.41
@@ -259,7 +259,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 9
+  showAdditionalSettings: 8
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.41
@@ -475,7 +475,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 9
+  showAdditionalSettings: 8
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.41
@@ -979,7 +979,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 9
+  showAdditionalSettings: 8
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.41
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 9
+  showAdditionalSettings: 8
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -1558,6 +1558,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3665563287240856705, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_Name
       value: Std_Floor_Lamp
@@ -1605,6 +1629,18 @@ PrefabInstance:
     - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8566894821334693543, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
@@ -1706,7 +1742,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.41
@@ -1744,7 +1780,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 9
+  showAdditionalSettings: 8
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -2150,7 +2186,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.41
@@ -2188,7 +2224,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 9
+  showAdditionalSettings: 8
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
