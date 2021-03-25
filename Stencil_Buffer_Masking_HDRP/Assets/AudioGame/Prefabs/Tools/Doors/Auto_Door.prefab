@@ -52,7 +52,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -172,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ab0ca3394b5fe42bb538aca88d222c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorEndPos: 2
+  doorEndPos: 4
   doorOpenTime: 0.5
   vertical: 1
   horizontal: 0
@@ -211,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 7730573004423027730}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 5, y: 2, z: 3}
+  m_LocalScale: {x: 2.5, y: 2, z: 5}
   m_Children: []
   m_Father: {fileID: 7730573003036100753}
   m_RootOrder: 1
@@ -235,7 +234,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
