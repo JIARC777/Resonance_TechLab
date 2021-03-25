@@ -1675,7 +1675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loudnessFactor: 1
   echoFactor: 1
-  soundFx: {fileID: 0}
+  soundFX: {fileID: 0}
 --- !u!1001 &357814616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13049,6 +13049,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2386650432074293849, guid: 94b625852ad44a3418966094f0031f94, type: 3}
+      propertyPath: soundFx
+      value: 
+      objectReference: {fileID: 8300000, guid: ab6a8d6f70c45fb4c84bbbb90fad16d1, type: 3}
     - target: {fileID: 6048588402700507441, guid: 94b625852ad44a3418966094f0031f94, type: 3}
       propertyPath: m_RootOrder
       value: 29
