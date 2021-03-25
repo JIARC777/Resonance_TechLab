@@ -35,14 +35,17 @@ public class DAVE : MonoBehaviour
     // reference to the starting height we can use to LERP DAVE back to position after being deactivated 
     float startingYHeight;
 
-    [Header("Model Specific Dependancies")]
+    [Header("Model Connections")]
     // Reference the transform of the model itself
     public Transform modelTransform;
 
     public Transform beamGunTip;
-
+    public Transform gunPivot; 
     // reference the rigidbody of the model
     public Rigidbody modelRB;
+
+    public ParticleSystem gunFX;
+
 
     [Header("Patrol State")]
     // Set transform nodes in inspector
@@ -357,6 +360,7 @@ public class DAVE : MonoBehaviour
 
         // Stop navmesh here
         // SetDestination(transform.position);
+
         //Disable the navmesh agent
         agent.enabled = false;
         
@@ -369,6 +373,8 @@ public class DAVE : MonoBehaviour
         // Let the update checking for arrival at destination know to call the function to lerp the model.
         // damaged = true;
         // deactivate for the proper amount of time;
+
+        // Unsub sphere trigger from event
         // This is a bit weird, but I dont want any events interfering with being damaged, especially the player running into the detector box, which should be "deactivated"
         closeProximityDetector.DetectedPlayer -= EngagePlayer;
         if (!damaged)
@@ -390,7 +396,8 @@ public class DAVE : MonoBehaviour
         // If we want an agro mode toggle it would likely be here 
     }
 
-    void AttackPlayer()
+	#region attack
+	void AttackPlayer()
     {
         // We need a reference to the player's position
         Debug.Log("<color=Red> Attacking player</color>");
@@ -398,7 +405,8 @@ public class DAVE : MonoBehaviour
         // If we find that this static height leads to issues, we can look for a way to implement dynamic height
 
         Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, 1.3f, 0);
-        SetDestination(playerTargetPos);
+        // Stay where you found the player
+        SetDestination(this.transform.position); // CHANGED AND UNTESTED  - revert to SetDestination(playerTargetPos) if error
         
         Debug.Log("Player's Location: " + playerTargetPos);
         
@@ -426,7 +434,16 @@ public class DAVE : MonoBehaviour
         
         StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
     }
-    void LERPModelBackToCenter()
+
+    void FireGun(Vector3 targetPos)
+    {
+        gunPivot.transform.LookAt(targetPos);
+        gunFX.Emit(1000);
+
+    }
+	#endregion
+
+	void LERPModelBackToCenter()
     {
         //Debug.Log("LERPing");
         // Assuming that we've parented correctly, we just need to fly to local position 0
@@ -450,10 +467,9 @@ public class DAVE : MonoBehaviour
             currentState.Initialize(this);
         }
     }
+    
 
-
-    // If we could move this to an event system that would be nice, but I am having issues with collision layers
-
+    // Because of our strange transition patterns this makes it easy to ensure we dont enter a situation where more than one state is running
     void ExitCurrentState()
     {
         if (currentState != null)
@@ -538,6 +554,8 @@ public class DAVE : MonoBehaviour
     
     #endregion Collisions
 
+
+    // Simple Audio Handler to make sure we do not accidently play a sound multiple times
     void PlayAudio(AudioSource soundToPlay)
 	{
         if (!soundToPlay.isPlaying)
