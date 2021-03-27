@@ -733,7 +733,9 @@ MonoBehaviour:
   waitingAtLocation: 0
   modelTransform: {fileID: 7290257654647726976}
   beamGunTip: {fileID: 2516581086958907604}
-  modelRB: {fileID: 7086164785029562423}
+  gunPivot: {fileID: 0}
+  modelRB: {fileID: 0}
+  gunFX: {fileID: 0}
   patrolPathNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -1015,7 +1017,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.698, z: -3.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 128403952}
+  - {fileID: 2516581086958907604}
   m_Father: {fileID: 1745376286036494920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1157,12 +1159,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2516581086958907607}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.4249233, z: 4.790768}
-  m_LocalScale: {x: 92.30769, y: 92.30769, z: 92.30769}
+  m_LocalRotation: {x: -0, y: -0, z: -6.7666406e-10, w: 1}
+  m_LocalPosition: {x: -0.0050012516, y: -1.039, z: 5.1410007}
+  m_LocalScale: {x: 80.73853, y: 80.73854, z: 80.73851}
   m_Children: []
-  m_Father: {fileID: 7290257654647726976}
-  m_RootOrder: 4
+  m_Father: {fileID: 7035965038943424456}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2516581087738877458
 GameObject:
@@ -1368,7 +1370,6 @@ Transform:
   - {fileID: 1745376286036494920}
   - {fileID: 2516581086079939905}
   - {fileID: 2516581087738877459}
-  - {fileID: 2516581086958907604}
   m_Father: {fileID: 1630282256935703430}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

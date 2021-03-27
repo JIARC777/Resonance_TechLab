@@ -59,7 +59,7 @@ public class Activate : MonoBehaviour
         {
             while (timeTillUp < doorOpenTime)
             {
-                door.position = new Vector3(door.localPosition.x, Mathf.Lerp(door.localPosition.y, doorEndPos, timeTillUp), door.localPosition.z);
+                door.localPosition = new Vector3(door.localPosition.x, Mathf.Lerp(door.localPosition.y, doorEndPos, timeTillUp), door.localPosition.z);
 
                 timeTillUp += Time.deltaTime;
                 yield return null;
@@ -69,7 +69,7 @@ public class Activate : MonoBehaviour
         {
             while (timeTillUp < doorOpenTime)
             {
-                door.position = new Vector3(door.localPosition.x, Mathf.Lerp(door.localPosition.y, doorOrigPos.y, timeTillUp), door.localPosition.z);
+                door.localPosition = new Vector3(door.localPosition.x, Mathf.Lerp(door.localPosition.y, doorOrigPos.y, timeTillUp), door.localPosition.z);
 
                 timeTillUp += Time.deltaTime;
                 yield return null;
@@ -92,8 +92,8 @@ public class Activate : MonoBehaviour
         {
             while (timeTillUp < doorOpenTime)
             {
-                doorLeft.position = new Vector3(Mathf.Lerp(doorLeft.localPosition.x, newLeftEnd, timeTillUp), doorLeft.localPosition.y, doorLeft.localPosition.z);
-                doorRight.position = new Vector3(Mathf.Lerp(doorRight.localPosition.x, newRightEnd, timeTillUp), doorRight.localPosition.y, doorRight.localPosition.z);
+                doorLeft.localPosition = new Vector3(Mathf.Lerp(doorLeft.localPosition.x, newLeftEnd, timeTillUp), doorLeft.localPosition.y, doorLeft.localPosition.z);
+                doorRight.localPosition = new Vector3(Mathf.Lerp(doorRight.localPosition.x, newRightEnd, timeTillUp), doorRight.localPosition.y, doorRight.localPosition.z);
 
                 timeTillUp += Time.deltaTime;
                 yield return null;
@@ -103,8 +103,8 @@ public class Activate : MonoBehaviour
         {
             while (timeTillUp < doorOpenTime)
             {
-                doorLeft.position = new Vector3(Mathf.Lerp(doorLeft.localPosition.x, origLeft, timeTillUp), doorLeft.localPosition.y, doorLeft.localPosition.z);
-                doorRight.position = new Vector3(Mathf.Lerp(doorRight.localPosition.x, origRight, timeTillUp), doorRight.localPosition.y, doorRight.localPosition.z);
+                doorLeft.localPosition = new Vector3(Mathf.Lerp(doorLeft.localPosition.x, origLeft, timeTillUp), doorLeft.localPosition.y, doorLeft.localPosition.z);
+                doorRight.localPosition = new Vector3(Mathf.Lerp(doorRight.localPosition.x, origRight, timeTillUp), doorRight.localPosition.y, doorRight.localPosition.z);
 
                 timeTillUp += Time.deltaTime;
                 yield return null;
@@ -123,7 +123,7 @@ public class Activate : MonoBehaviour
             {
                 while (timeTillUp < doorOpenTime)
                 {
-                    door.position = new Vector3(-Mathf.Lerp(door.localPosition.x, doorEndPos, timeTillUp), door.localPosition.y, door.localPosition.z);
+                    door.localPosition = new Vector3(-Mathf.Lerp(door.localPosition.x, doorEndPos, timeTillUp), door.localPosition.y, door.localPosition.z);
 
                     timeTillUp += Time.deltaTime;
                     yield return null;
@@ -133,7 +133,7 @@ public class Activate : MonoBehaviour
             {
                 while (timeTillUp < doorOpenTime)
                 {
-                    door.position = new Vector3(Mathf.Lerp(door.localPosition.x, doorEndPos, timeTillUp), door.localPosition.y, door.localPosition.z);
+                    door.localPosition = new Vector3(Mathf.Lerp(door.localPosition.x, doorEndPos, timeTillUp), door.localPosition.y, door.localPosition.z);
 
                     timeTillUp += Time.deltaTime;
                     yield return null;
@@ -146,7 +146,7 @@ public class Activate : MonoBehaviour
             {
                 while (timeTillUp < doorOpenTime)
                 {
-                    door.position = new Vector3(-Mathf.Lerp(door.localPosition.x, doorOrigPos.x, timeTillUp), door.localPosition.y, door.localPosition.z);
+                    door.localPosition = new Vector3(-Mathf.Lerp(door.localPosition.x, doorOrigPos.x, timeTillUp), door.localPosition.y, door.localPosition.z);
 
                     timeTillUp += Time.deltaTime;
                     yield return null;
@@ -156,13 +156,12 @@ public class Activate : MonoBehaviour
             {
                 while (timeTillUp < doorOpenTime)
                 {
-                    door.position = new Vector3(Mathf.Lerp(door.localPosition.x, doorOrigPos.x, timeTillUp), door.localPosition.y, door.localPosition.z);
+                    door.localPosition = new Vector3(Mathf.Lerp(door.localPosition.x, doorOrigPos.x, timeTillUp), door.localPosition.y, door.localPosition.z);
 
                     timeTillUp += Time.deltaTime;
                     yield return null;
                 }
             }
-        }
-        
+        }        
     }
 }

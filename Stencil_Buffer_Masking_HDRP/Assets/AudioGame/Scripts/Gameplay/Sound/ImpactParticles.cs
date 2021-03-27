@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class ImpactParticles : MonoBehaviour
 {
-    public float minVelocity = 2f;
+    public float minVelocity = 3f;
     public ParticleSystem emitter;
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log(collision.relativeVelocity.magnitude);
+    
+        Debug.Log(collision.relativeVelocity.magnitude);
         if (collision.relativeVelocity.magnitude >= minVelocity)
         {
             emitter.Play();
