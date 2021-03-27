@@ -161,7 +161,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 219.88
+  m_Intensity: 1000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -274,8 +274,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.3507352, b: 1, a: 1}
-  m_Intensity: 80.73122
+  m_Color: {r: 1, g: 0.07058824, b: 0, a: 1}
+  m_Intensity: 367.16034
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 219.88
+  m_Intensity: 1000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -490,8 +490,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.3507352, b: 1, a: 1}
-  m_Intensity: 80.73122
+  m_Color: {r: 1, g: 0.071190156, b: 0, a: 1}
+  m_Intensity: 367.16034
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -881,7 +881,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 219.88
+  m_Intensity: 1000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -994,8 +994,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.3507352, b: 1, a: 1}
-  m_Intensity: 102.60874
+  m_Color: {r: 1, g: 0.07058824, b: 0, a: 1}
+  m_Intensity: 466.6579
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1102,7 +1102,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768600478
 GameObject:
@@ -1141,7 +1141,7 @@ Transform:
   - {fileID: 269182952}
   - {fileID: 1445246712}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1182748332
 GameObject:
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 219.88
+  m_Intensity: 1000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1390,8 +1390,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.3507352, b: 1, a: 1}
-  m_Intensity: 101.18638
+  m_Color: {r: 1, g: 0.07058824, b: 0, a: 1}
+  m_Intensity: 460.1891
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1551,103 +1551,6 @@ Transform:
   m_Father: {fileID: 768600479}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
---- !u!1001 &1248793283
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LinkShadowLayers
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_ShadowUpdateMode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: showAdditionalSettings
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_ShadowResolution.m_Level
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_ShadowResolution.m_Override
-      value: 340
-      objectReference: {fileID: 0}
-    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_UpdateShadowOnLightMovement
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_ShadowResolution.m_UseOverride
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3665563287240856705, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_Name
-      value: Std_Floor_Lamp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -10.302
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.089999914
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.406
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4149331273409891899, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_Intensity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8566894821334693543, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
 --- !u!1 &1423925744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,7 +1589,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 219.88
+  m_Intensity: 1000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1799,8 +1702,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.3507352, b: 1, a: 1}
-  m_Intensity: 217.45763
+  m_Color: {r: 1, g: 0.07058824, b: 0, a: 1}
+  m_Intensity: 988.9832
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2130,7 +2033,7 @@ MonoBehaviour:
   m_PointlightHDType: 1
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 219.88
+  m_Intensity: 1000
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -2243,8 +2146,8 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0, g: 0.3507352, b: 1, a: 1}
-  m_Intensity: 215.95506
+  m_Color: {r: 1, g: 0.07058824, b: 0, a: 1}
+  m_Intensity: 982.14966
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
