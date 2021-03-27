@@ -221,7 +221,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -533,7 +533,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -1046,7 +1046,7 @@ Transform:
   m_LocalScale: {x: 9.364921, y: 0.099999994, z: 6.952162}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &104469380
 PrefabInstance:
@@ -1156,12 +1156,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -1263,7 +1295,7 @@ Transform:
   m_LocalScale: {x: 26.00001, y: 5, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &168267493
 GameObject:
@@ -1394,6 +1426,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -1733,7 +1769,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -1949,7 +1985,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -2260,7 +2296,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -2486,12 +2522,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -2689,7 +2757,7 @@ Transform:
   m_LocalScale: {x: 47.43192, y: 5, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &475483480
 PrefabInstance:
@@ -2811,12 +2879,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -2985,7 +3085,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &545012513
 GameObject:
@@ -3085,7 +3185,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -3237,6 +3337,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -3489,13 +3593,13 @@ Transform:
   - {fileID: 104469381}
   - {fileID: 912977319}
   - {fileID: 1524524404}
-  - {fileID: 1205350105}
+  - {fileID: 1280111165}
   - {fileID: 1468539979}
   - {fileID: 1706080264}
   - {fileID: 1422903210}
   - {fileID: 1737850628}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &650909909
 GameObject:
@@ -3595,7 +3699,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -3806,7 +3910,7 @@ Transform:
   m_LocalScale: {x: 18.25, y: 5, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765254254
 GameObject:
@@ -3880,7 +3984,7 @@ Transform:
   - {fileID: 73122195}
   - {fileID: 813014287}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775353039
 GameObject:
@@ -3989,7 +4093,7 @@ Transform:
   m_LocalScale: {x: 9.026429, y: 0.099999994, z: 11.805412}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &783785970
 PrefabInstance:
@@ -4441,7 +4545,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -4702,12 +4806,56 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 409.68265
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4815,7 +4963,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -5063,7 +5211,7 @@ Transform:
   - {fileID: 194352884}
   - {fileID: 1790028687}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1077041812
 PrefabInstance:
@@ -5173,12 +5321,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -5380,7 +5560,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -5596,7 +5776,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -5907,7 +6087,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -6199,20 +6379,64 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 409.68265
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
---- !u!4 &1205350105 stripped
+--- !u!4 &1280111165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6436079829787969242, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
-  m_PrefabInstance: {fileID: 1205350104}
+  m_PrefabInstance: {fileID: 1280111164}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1318788404
 PrefabInstance:
@@ -6322,12 +6546,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -6465,6 +6721,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -6739,12 +6999,56 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 409.68265
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7029,12 +7333,56 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 409.68265
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7171,12 +7519,56 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 409.68265
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7216,6 +7608,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -7342,6 +7738,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -7561,7 +7961,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -7777,7 +8177,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -7993,7 +8393,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -8226,12 +8626,56 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 409.68265
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8339,7 +8783,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -8526,6 +8970,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f82cd382c389c347b4cb05c15784206, type: 3}
+--- !u!4 &1737850628 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1408429207314017409, guid: 0f82cd382c389c347b4cb05c15784206, type: 3}
+  m_PrefabInstance: {fileID: 1737850627}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1779542449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8612,6 +9061,10 @@ PrefabInstance:
     - target: {fileID: 5921433409723940147, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921433409723940147, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 5921433409723940147, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -8764,7 +9217,7 @@ Transform:
   m_LocalScale: {x: 8.95, y: 5, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1790028686
 PrefabInstance:
@@ -8800,6 +9253,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -9010,7 +9467,7 @@ Transform:
   m_LocalScale: {x: 0.41745165, y: 0.7037163, z: 0.92705077}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &1804286198
 PrefabInstance:
@@ -9046,6 +9503,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
@@ -9269,7 +9730,7 @@ Transform:
   m_LocalScale: {x: 9.364921, y: 0.099999994, z: 6.952162}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1826463997
 GameObject:
@@ -9364,7 +9825,7 @@ Transform:
   m_LocalScale: {x: 3.8692129, y: 5, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1832365222
 GameObject:
@@ -9445,7 +9906,7 @@ Transform:
   m_LocalScale: {x: 4.507624, y: 4.0276494, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &1906304581
 GameObject:
@@ -9545,7 +10006,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -9851,7 +10312,7 @@ Transform:
   m_LocalScale: {x: 9.13045, y: 5, z: 0.19999999}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &2044234995
 GameObject:
@@ -10047,7 +10508,7 @@ MonoBehaviour:
   m_LightAngle: 1
   m_MaxDepthBias: 0.001
   m_ShadowResolution:
-    m_Override: 512
+    m_Override: 340
     m_UseOverride: 0
     m_Level: 1
   m_ShadowDimmer: 0.845
@@ -10330,12 +10791,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UpdateShadowOnLightMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
