@@ -10,6 +10,7 @@ public class Activate : MonoBehaviour
     public bool vertical;
     public bool horizontal;
     public bool dualDoors;
+    public bool terminal;
 
     public bool moveLeft;
 
@@ -47,6 +48,10 @@ public class Activate : MonoBehaviour
         if (dualDoors)
         {
             StartCoroutine(DualDoors(openOrClose));
+        }
+        if (terminal)
+        {
+            EndLevel();
         }
     }
 
@@ -163,5 +168,10 @@ public class Activate : MonoBehaviour
                 }
             }
         }        
+    }
+
+    public void EndLevel()
+    {
+        Debug.Log("The Player has reached the end of the level!");
     }
 }
