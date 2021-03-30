@@ -16,7 +16,7 @@ public class LevelLoader : MonoBehaviour
         {
             foreach (string sceneName in sceneNames)
             {
-                SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+                SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
             }
         }
         else
