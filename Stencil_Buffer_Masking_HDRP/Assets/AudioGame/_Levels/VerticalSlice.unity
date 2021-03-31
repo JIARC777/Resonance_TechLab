@@ -1306,6 +1306,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 32561940}
     m_Modifications:
+    - target: {fileID: 128403953, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
+    - target: {fileID: 740717324049489243, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
     - target: {fileID: 1630282256935703428, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_Name
       value: DAVE
@@ -7901,12 +7909,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Intensity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8843054401131603272, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -15277,6 +15293,7 @@ MonoBehaviour:
   - Assets/AudioGame/_Levels/VerticalSlice/Robot_Storage/RobotStorage.unity
   - Assets/AudioGame/_Levels/VerticalSlice/Studio_Room/StudioRoom.unity
   - Assets/AudioGame/_Levels/VerticalSlice/Waiting_Room/WaitingRoom.unity
+  - Assets/AudioGame/_Levels/VerticalSlice/Terminal_Room/Terminal_Room.unity
 --- !u!1 &2085245248
 GameObject:
   m_ObjectHideFlags: 0
