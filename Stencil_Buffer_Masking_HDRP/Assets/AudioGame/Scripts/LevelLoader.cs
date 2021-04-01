@@ -1,7 +1,10 @@
 using System;
-using UnityEditor.SceneManagement;
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor.SceneManagement;
+#endif
 
 [ExecuteAlways]
 public class LevelLoader : MonoBehaviour
@@ -21,10 +24,12 @@ public class LevelLoader : MonoBehaviour
         }
         else
         {
+            #if UNITY_EDITOR
             foreach (string sceneName in sceneNames)
             {
                 EditorSceneManager.OpenScene(sceneName, OpenSceneMode.Additive);
             }
+            #endif
         }
     }
     
