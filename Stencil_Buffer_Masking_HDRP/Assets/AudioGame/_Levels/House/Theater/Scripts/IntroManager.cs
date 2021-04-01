@@ -12,14 +12,14 @@ public class IntroManager : MonoBehaviour
 
     bool endMovieCalled = false;
 
-    public void EndMovie()
+    public void EndMovie(float time = 4f)
     {
         if (!endMovieCalled)
         {
             introPlayer.Stop();
             player.transform.position = teleportPos.transform.position;
             endMovieCalled = true;
-            Invoke("StartDiscordMovie", 4f);
+            Invoke("StartDiscordMovie", time);
         }  
     }
 

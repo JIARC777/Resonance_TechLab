@@ -7,6 +7,6 @@ public class SkipButton : MonoBehaviour
     public IntroManager introManager;
     private void OnCollisionEnter(Collision collision)
     {
-        introManager.EndMovie();
+        introManager.EndMovie(0f);
     }
 }
