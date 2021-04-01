@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: a901e4196d3a321d7919a0c30b50f5fd, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 98068a77629114c4285c3d6b2eed9690, type: 2}
 --- !u!1 &6843709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,9 +1463,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2516581086044899745, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+      propertyPath: gunFX
+      value: 
+      objectReference: {fileID: 276916278}
+    - target: {fileID: 2516581086044899745, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: modelRB
       value: 
       objectReference: {fileID: 72191959}
+    - target: {fileID: 2516581086044899745, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+      propertyPath: gunPivot
+      value: 
+      objectReference: {fileID: 302366796}
     - target: {fileID: 2516581086044899745, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: modelTransform
       value: 
@@ -6516,6 +6524,11 @@ ArticulationBody:
   m_JointFriction: 0.05
   m_Immovable: 0
   m_UseGravity: 1
+--- !u!4 &302366796 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1745376286036494920, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+  m_PrefabInstance: {fileID: 276916275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &303424030
 GameObject:
   m_ObjectHideFlags: 0
