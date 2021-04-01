@@ -322,7 +322,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &48609450
@@ -634,7 +634,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &70886867
@@ -1136,8 +1136,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000003987867
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
@@ -1205,6 +1209,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1e-45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1544,8 +1556,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.0000000061385315
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1886,7 +1910,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &283122149
@@ -2102,7 +2126,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &290518936
@@ -2413,7 +2437,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &326276587
@@ -2518,8 +2542,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000043973046
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
@@ -2587,6 +2615,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1e-45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2887,8 +2923,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000011365643
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
@@ -2956,6 +3004,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000004634822
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3326,7 +3390,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &545012516
@@ -3483,8 +3547,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 3e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.7e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3844,7 +3920,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &650909912
@@ -4690,7 +4766,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &840662807
@@ -4862,6 +4938,22 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.0000000030356393
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
@@ -4912,6 +5004,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000048684427
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5120,7 +5228,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &918601573
@@ -5357,8 +5465,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000004955919
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
@@ -5426,6 +5546,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000008200267
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5729,7 +5865,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1101515714
@@ -5945,7 +6081,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1182748335
@@ -6256,7 +6392,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1201153620
@@ -6459,6 +6595,22 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000055057995
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
@@ -6509,6 +6661,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.0000000028017997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6606,8 +6774,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.0000001252514
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
@@ -6675,6 +6855,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.0000000024424214
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6919,8 +7115,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000016632569
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7107,6 +7315,22 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000009273158
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
@@ -7157,6 +7381,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000004384173
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7453,6 +7693,22 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000002755148
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
@@ -7503,6 +7759,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000099154306
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7651,6 +7923,22 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000014055229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
@@ -7701,6 +7989,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000007410957
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -7830,8 +8134,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000004156746
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
@@ -7980,8 +8296,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000088629974
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8202,7 +8530,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1613572225
@@ -8418,7 +8746,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1656015463
@@ -8634,7 +8962,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1685274884
@@ -8778,6 +9106,22 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.0000000027706069
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
@@ -8828,6 +9172,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.0000000017107249
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9036,7 +9396,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1719756659
@@ -9195,8 +9555,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4189480811864059680, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000009243159
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189480811864059680, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189480811864059680, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189480811864059680, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5921433409723940147, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_PenumbraTint
@@ -9515,8 +9887,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000017770333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9769,8 +10153,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000005670511
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10271,7 +10667,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1906304584
@@ -10773,7 +11169,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &2062269665
@@ -10935,8 +11331,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000004009383
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
@@ -11004,6 +11412,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_RenderingLayerMask
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.00000009062779
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.6228841e-26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 4.5904e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
