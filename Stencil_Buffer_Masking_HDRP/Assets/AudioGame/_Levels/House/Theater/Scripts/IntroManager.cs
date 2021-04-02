@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.Events;
 
 public class IntroManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class IntroManager : MonoBehaviour
     public GameObject teleportPos;
     public VideoPlayer introPlayer;
     public VideoPlayer discordPlayer;
+    public UnityEvent drawerEvent;
+    public float drawerOpenDelay = 48f;
 
     bool endMovieCalled = false;
 
@@ -26,6 +29,12 @@ public class IntroManager : MonoBehaviour
     void StartDiscordMovie()
     {
         discordPlayer.Play();
+        Invoke("OpenDrawer", drawerOpenDelay);
+    }
+
+    void OpenDrawer()
+    {
+        drawerEvent.Invoke();
     }
 
 }

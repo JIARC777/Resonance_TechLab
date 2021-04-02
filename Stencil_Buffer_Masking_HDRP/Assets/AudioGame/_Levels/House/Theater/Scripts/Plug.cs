@@ -8,7 +8,7 @@ public class Plug : MonoBehaviour
     {
         if (other.gameObject.tag == "Plug")
         {
-            Debug.Log("Load Level");
+            Debug.Log("Plugged in");
         }
     }
 }
