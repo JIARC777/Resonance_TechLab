@@ -7,6 +7,8 @@ public class Panel_Detect : MonoBehaviour
     public bool activated;
     public bool lockedPanel;
 
+    public bool terminal;
+
     public Material activePanelMat;
     public Material inactivePanelMat;
 
@@ -14,7 +16,8 @@ public class Panel_Detect : MonoBehaviour
 
     private void Start()
     {
-        SetMaterial(inactivePanelMat);
+        if(!terminal)
+            SetMaterial(inactivePanelMat);
 
         activated = false;
     }
@@ -62,6 +65,7 @@ public class Panel_Detect : MonoBehaviour
 
     public void SetMaterial(Material mat)
     {
-        transform.parent.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().material = mat;
+        if(!terminal)
+            transform.parent.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().material = mat;
     }
 }
