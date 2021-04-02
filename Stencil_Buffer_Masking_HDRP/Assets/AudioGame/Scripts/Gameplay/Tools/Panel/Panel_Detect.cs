@@ -5,6 +5,7 @@ using UnityEngine;
 public class Panel_Detect : MonoBehaviour
 {
     public bool activated;
+    public bool lockedPanel;
 
     public Material activePanelMat;
     public Material inactivePanelMat;
@@ -30,8 +31,11 @@ public class Panel_Detect : MonoBehaviour
 
                 activated = true;
 
-                if (linkedObjects[i])
+                if (linkedObjects[i] && !lockedPanel)
                     linkedObjects[i].gameObject.GetComponent<Activate>().Activation(true);
+
+                if (linkedObjects[i] && lockedPanel)
+                    linkedObjects[i].gameObject.GetComponent<Unlock_Requirements>().PanelActivated();
 
             }
 
@@ -47,7 +51,11 @@ public class Panel_Detect : MonoBehaviour
 
                 activated = true;
 
-                linkedObjects[i].gameObject.GetComponent<Activate>().Activation(true);
+                if (linkedObjects[i] && !lockedPanel)
+                    linkedObjects[i].gameObject.GetComponent<Activate>().Activation(true);
+
+                if (linkedObjects[i] && lockedPanel)
+                    linkedObjects[i].gameObject.GetComponent<Unlock_Requirements>().PanelActivated();
             }
         }
     }

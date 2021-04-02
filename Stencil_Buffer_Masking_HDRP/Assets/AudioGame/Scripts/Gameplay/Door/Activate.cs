@@ -28,7 +28,7 @@ public class Activate : MonoBehaviour
             door = transform.GetChild(0);
             doorOrigPos = door.position;
         }
-        else
+        else if(dualDoors)
         {
             doorLeft = transform.GetChild(0);
             doorRight = transform.GetChild(1);
