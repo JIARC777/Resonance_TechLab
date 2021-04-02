@@ -22,7 +22,7 @@ public class IntroVideo : MonoBehaviour
     {
         if (Time.time > startTime + videoLength)
         {
-            introManager.EndMovie();
+            introManager.EndMovie(0);
         }
         
     }
