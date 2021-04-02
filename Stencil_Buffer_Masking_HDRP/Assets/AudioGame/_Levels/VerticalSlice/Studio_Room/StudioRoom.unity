@@ -273,7 +273,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -328,7 +328,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5}
   m_BounceIntensity: 1
@@ -336,7 +336,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: NaN, z: NaN, w: 0}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &112257645
@@ -1113,7 +1113,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -1168,7 +1168,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 7.85378}
   m_BounceIntensity: 1
@@ -1176,7 +1176,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &311784031
@@ -1417,7 +1417,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -1472,7 +1472,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.811966}
   m_BounceIntensity: 1
@@ -1480,7 +1480,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1001 &369855485
@@ -1723,12 +1723,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 415574622}
     m_Modifications:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -1795,8 +1803,12 @@ PrefabInstance:
       value: LightFixture_1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -2193,7 +2205,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -2248,7 +2260,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 7.6190934}
   m_BounceIntensity: 1
@@ -2256,7 +2268,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &544843741
@@ -2682,7 +2694,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -2737,7 +2749,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.726512}
   m_BounceIntensity: 1
@@ -2745,7 +2757,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1001 &690416601
@@ -3258,7 +3270,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -3313,7 +3325,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5}
   m_BounceIntensity: 1
@@ -3321,7 +3333,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 1, z: 1, w: 1}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &837576332
@@ -4027,7 +4039,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -4082,7 +4094,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5.816245}
   m_BounceIntensity: 1
@@ -4090,7 +4102,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &1077327341
@@ -4339,7 +4351,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -4394,7 +4406,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.9021893}
   m_BounceIntensity: 1
@@ -4402,7 +4414,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1001 &1159224073
@@ -4637,7 +4649,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -4692,7 +4704,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5}
   m_BounceIntensity: 1
@@ -4700,7 +4712,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
   m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1262124268
@@ -5163,12 +5175,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 415574622}
     m_Modifications:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -5235,8 +5255,12 @@ PrefabInstance:
       value: LightFixture_2
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -5970,7 +5994,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -6025,7 +6049,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5.699899}
   m_BounceIntensity: 1
@@ -6033,7 +6057,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &1755501144
@@ -6650,7 +6674,7 @@ MonoBehaviour:
   useOldInspector: 0
   useVolumetric: 1
   featuresFoldout: 1
-  showAdditionalSettings: 8
+  showAdditionalSettings: 9
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 2
   m_AreaLightEmissiveMeshLayer: -1
@@ -6705,7 +6729,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.718016}
   m_BounceIntensity: 1
@@ -6713,7 +6737,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &1978341019
@@ -6917,12 +6941,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 415574622}
     m_Modifications:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowUpdateMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -6989,8 +7021,12 @@ PrefabInstance:
       value: LightFixture_3
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -7214,6 +7250,38 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 1046.7135
       objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_UpdateShadowOnLightMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2893217879064307591, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3142173040807850331, guid: dd0db489470fec840896ab3c57798309, type: 3}
       propertyPath: m_Materials.Array.size
       value: 2
@@ -7296,7 +7364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4843148358559798763, guid: dd0db489470fec840896ab3c57798309, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4843148358559798763, guid: dd0db489470fec840896ab3c57798309, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4843148358559798763, guid: dd0db489470fec840896ab3c57798309, type: 3}
       propertyPath: m_BoundingSphereOverride.w

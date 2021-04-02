@@ -1384,7 +1384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1630282257028749024, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1630282257028749024, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -1412,7 +1412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1630282257028749024, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1630282257028749030, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_IsActive
@@ -1464,7 +1464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2516581085824980181, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: showAdditionalSettings
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2516581085824980181, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -7952,7 +7952,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_BoundingSphereOverride.w
@@ -7972,10 +7976,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LinkShadowLayers
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_Override
+      value: 340
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -7984,7 +8024,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8843054401131603272, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_IsActive
@@ -15863,7 +15907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1630282257028749024, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1630282257028749024, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -15895,7 +15939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2516581085824980181, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: showAdditionalSettings
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2516581085824980181, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: m_ShadowResolution.m_Level

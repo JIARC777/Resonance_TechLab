@@ -314,7 +314,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 3.7964752}
   m_BounceIntensity: 1
@@ -322,7 +322,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &48609450
@@ -626,7 +626,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.9498205}
   m_BounceIntensity: 1
@@ -634,7 +634,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &70886867
@@ -1125,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -1141,11 +1141,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -1176,8 +1180,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -1201,7 +1213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -1217,7 +1229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -1432,6 +1444,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_InnerSpotPercent
       value: 17.1
       objectReference: {fileID: 0}
@@ -1545,7 +1561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -1569,7 +1585,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1902,7 +1918,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.680469}
   m_BounceIntensity: 1
@@ -1910,7 +1926,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &283122149
@@ -2118,7 +2134,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 9.12542}
   m_BounceIntensity: 1
@@ -2126,7 +2142,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &290518936
@@ -2429,7 +2445,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 9.215154}
   m_BounceIntensity: 1
@@ -2437,7 +2453,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &326276587
@@ -2531,7 +2547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -2547,11 +2563,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -2582,8 +2602,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -2607,7 +2635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -2623,7 +2651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -2912,7 +2940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -2936,11 +2964,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -2971,8 +3003,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -2996,7 +3036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -3020,7 +3060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -3382,7 +3422,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.6218576}
   m_BounceIntensity: 1
@@ -3390,7 +3430,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &545012516
@@ -3421,6 +3461,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_InnerSpotPercent
@@ -3536,7 +3580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -3560,7 +3604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3912,7 +3956,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5.2797246}
   m_BounceIntensity: 1
@@ -3920,7 +3964,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &650909912
@@ -4758,7 +4802,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 3.7964752}
   m_BounceIntensity: 1
@@ -4766,7 +4810,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &840662807
@@ -4928,7 +4972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -4952,7 +4996,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -4971,8 +5019,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -4996,7 +5052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -5020,7 +5076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -5220,7 +5276,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.6218576}
   m_BounceIntensity: 1
@@ -5228,7 +5284,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &918601573
@@ -5454,7 +5510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -5478,11 +5534,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -5513,8 +5573,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -5538,7 +5606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -5562,7 +5630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -5857,7 +5925,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.910811}
   m_BounceIntensity: 1
@@ -5865,7 +5933,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1101515714
@@ -6073,7 +6141,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.961152}
   m_BounceIntensity: 1
@@ -6081,7 +6149,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1182748335
@@ -6384,7 +6452,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.848736}
   m_BounceIntensity: 1
@@ -6392,7 +6460,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1201153620
@@ -6585,7 +6653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -6609,7 +6677,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -6628,8 +6700,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -6653,7 +6733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -6677,7 +6757,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -6763,7 +6843,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -6787,11 +6867,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -6822,8 +6906,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -6847,7 +6939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -6871,7 +6963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -6991,6 +7083,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_InnerSpotPercent
       value: 17.1
       objectReference: {fileID: 0}
@@ -7104,7 +7200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -7128,7 +7224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7305,7 +7401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -7329,7 +7425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -7348,8 +7448,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -7373,7 +7481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -7397,7 +7505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -7683,7 +7791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -7707,7 +7815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -7726,8 +7838,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -7751,7 +7871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -7775,7 +7895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -7913,7 +8033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -7937,7 +8057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -7956,8 +8080,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -7981,7 +8113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -8005,7 +8137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -8028,6 +8160,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -8123,7 +8259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -8147,7 +8283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
@@ -8170,6 +8306,10 @@ PrefabInstance:
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_InnerSpotPercent
@@ -8285,7 +8425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -8309,7 +8449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8522,7 +8662,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.928872}
   m_BounceIntensity: 1
@@ -8530,7 +8670,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1613572225
@@ -8738,7 +8878,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 5.2797246}
   m_BounceIntensity: 1
@@ -8746,7 +8886,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1656015463
@@ -8954,7 +9094,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 9.215154}
   m_BounceIntensity: 1
@@ -8962,7 +9102,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1685274884
@@ -9096,7 +9236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -9120,7 +9260,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -9139,8 +9283,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -9164,7 +9316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -9188,7 +9340,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
@@ -9388,7 +9540,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 8.80142}
   m_BounceIntensity: 1
@@ -9396,7 +9548,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1719756659
@@ -9544,7 +9696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4189480811864059680, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4189480811864059680, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -9568,11 +9720,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4189480811864059680, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5921433409723940147, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5921433409723940147, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5921433409723940147, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -9763,6 +9919,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_InnerSpotPercent
       value: 17.1
       objectReference: {fileID: 0}
@@ -9876,7 +10036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -9900,7 +10060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10029,6 +10189,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_InnerSpotPercent
       value: 17.1
       objectReference: {fileID: 0}
@@ -10142,7 +10306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -10166,7 +10330,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8112782002492030399, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10659,7 +10823,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 9.215154}
   m_BounceIntensity: 1
@@ -10667,7 +10831,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1906304584
@@ -11161,7 +11325,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.1, y: 6.8312187}
   m_BounceIntensity: 1
@@ -11169,7 +11333,7 @@ Light:
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 10}
   m_UseBoundingSphereOverride: 1
-  m_UseViewFrustumForShadowCasterCull: 1
+  m_UseViewFrustumForShadowCasterCull: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &2062269665
@@ -11320,7 +11484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -11344,11 +11508,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7731970389091741526, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_PenumbraTint
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8151352019211932520, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
@@ -11379,8 +11547,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: m_LightlayersMask
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_LinkShadowLayers
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8598471722892914725, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_ShadowResolution.m_Level
@@ -11404,7 +11580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Lightmapping
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -11428,7 +11604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8773100412381385618, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
       propertyPath: m_UseViewFrustumForShadowCasterCull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e14dc2649d36a47b58bc198272dd18, type: 3}
