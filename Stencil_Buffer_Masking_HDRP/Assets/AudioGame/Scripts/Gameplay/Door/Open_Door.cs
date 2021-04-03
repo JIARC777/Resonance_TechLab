@@ -54,9 +54,10 @@ public class Open_Door : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Dave" && other.tag == "Player")
+        if(other.tag == "Dave" || other.tag == "Player")
         {
             doorToActivate.Activation(false);
+            activated = false;
         }
     }
 }
