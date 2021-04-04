@@ -71,7 +71,7 @@ public class NoiseMaker : MonoBehaviour
 	}
 
 	// This is the sound emission for any physics objects
-	void EmitSound(Collision col)
+	public void EmitSound(Collision col)
 	{
 		float initialVolume = defaultVolumeBaseline;//; * (col.relativeVelocity.magnitude * 100000000);
 		float echo = echoFactor;

@@ -92,7 +92,6 @@ namespace Valve.VR.InteractionSystem
                     lastKickTime = Time.time;
                 }
             }
-            
         }
 
         //this is terrible
