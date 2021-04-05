@@ -11,7 +11,7 @@ public class PlayerFirstBumpDialogue : DialogueTrigger
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.Log("Hit tag is: " + hit.gameObject.tag);
+        //Debug.Log("Hit tag is: " + hit.gameObject.tag);
         if (hit.gameObject.tag == "PhysicsObj" || hit.gameObject.tag == "Map Hazard")
         {
             dialogueManager.QueueDialogue(thisClip, delayBeforeStarting, clipPriority);

@@ -227,7 +227,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 8.130587, y: 1.6699504, z: -3.0305657}
+  m_ConnectedAnchor: {x: 9.49052, y: 1.6699504, z: -3.651111}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1421,6 +1421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cc3378efb9fe6419f0b2b33717218b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoDelay: 0
+  plugInVideo: {fileID: 32900000, guid: 3ae8bae1b4a057148b5c419c0202e6f0, type: 3}
+  discordPlayer: {fileID: 1989427078}
 --- !u!1001 &557938678
 PrefabInstance:
   m_ObjectHideFlags: 0
