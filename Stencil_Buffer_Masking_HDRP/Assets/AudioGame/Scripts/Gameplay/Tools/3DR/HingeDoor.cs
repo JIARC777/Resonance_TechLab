@@ -8,6 +8,7 @@ public class HingeDoor : MonoBehaviour
     private JointMotor motor;
     
     bool isClosed = false;
+    public  bool isLoaded = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,7 @@ public class HingeDoor : MonoBehaviour
     void Update()
     {
         //Debug.Log(hinge.connectedBody.transform.localEulerAngles.y);
-        if (Mathf.Abs(hinge.connectedBody.transform.localEulerAngles.y - 90) < 0.5f)
+        if (Mathf.Abs(hinge.connectedBody.transform.localEulerAngles.y - 90) < 0.5f && isLoaded)
         {
             Locked();
         }

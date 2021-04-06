@@ -264,6 +264,7 @@ public class Fire_3DR : MonoBehaviour
     {
 
         Debug.Log("EJECT");
+        GetComponent<HingeDoor>().isLoaded = false;
         Vector3 spoolOrigPos = spoolOBJ.localPosition;
         Quaternion origRotation = spoolOBJ.localRotation;
 

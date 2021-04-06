@@ -17,6 +17,8 @@ public class Reload_3DR_Spool : MonoBehaviour
             Fire_3DR.threeDRInstance.NewSpool();
             hand.DetachObject(other.gameObject);
             Destroy(other.gameObject);
+
+            GetComponentInParent<HingeDoor>().isLoaded = true;
         }
     }
 }
