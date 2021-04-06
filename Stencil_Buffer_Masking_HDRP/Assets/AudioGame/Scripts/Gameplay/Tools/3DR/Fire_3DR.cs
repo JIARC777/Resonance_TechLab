@@ -82,6 +82,8 @@ public class Fire_3DR : MonoBehaviour
         firingLocation = transform.GetChild(2);
         
         spoolOBJ = transform.GetChild(0);
+        spoolOBJ.GetComponent<BoxCollider>().enabled = false;
+        
         internalSpool = spoolOBJ.GetChild(1);
         
         aimingObject = transform.GetChild(4);
@@ -149,19 +151,9 @@ public class Fire_3DR : MonoBehaviour
     {
         //Prevents any more projectiles from being created during this process then reduces the remaining spool charges by the spoolLost variable
         canGenerateProjectile = false;
-        spoolRemaining -= spoolLost;
-        
-        if (spoolRemaining == 0) //If the spool has no remaining charges left, reset its size back to its original size, then disable it
-        {
-            internalSpool.localScale = spoolOrigSize;
-            internalSpool.gameObject.SetActive(false);
-        }
-        else //Otherwise, multiply the internalSpool's scale by the spoolScaleReduce variable
-        {
-            internalSpool.localScale = new Vector3(internalSpool.localScale.x * spoolScaleReduce, internalSpool.localScale.y * spoolScaleReduce, internalSpool.localScale.z);
-        }
 
-                
+        internalSpool.localScale = new Vector3(internalSpool.localScale.x * spoolScaleReduce, internalSpool.localScale.y * spoolScaleReduce, internalSpool.localScale.z);
+            
         yield return new WaitForSeconds(printTime); //Waits for printTime seconds
 
 
@@ -183,10 +175,18 @@ public class Fire_3DR : MonoBehaviour
 
             newAmmo = commonProjectileModels[randomCommonAmmo];
         }
-
+            
+        spoolRemaining -= spoolLost;
+            
         //Creates the projectile based on the newAmmo transform, and assigns the ammoSpawn transform as its parent, then allows the player to generate another projectile, if they have a spool charge remaining
         Reload(newAmmo);
         canGenerateProjectile = true;
+        
+        if (spoolRemaining == 0) //If the spool has no remaining charges left, reset its size back to its original size, then disable it
+        {
+            StartCoroutine(EjectSpool());
+            //internalSpool.gameObject.SetActive(false);
+        }
     }  
     
 
@@ -196,9 +196,9 @@ public class Fire_3DR : MonoBehaviour
         
         spoolRemaining = maxSpool; //Assigns the maxSpool value to the spoolRemaining value, replenishing its charges
                 
-        if (internalSpool.gameObject.activeSelf == false) //If the internalSpool gameobject is disabled, re-enable it
+        if (spoolOBJ.gameObject.activeSelf == false) //If the internalSpool gameobject is disabled, re-enable it
         {
-            internalSpool.gameObject.SetActive(true);
+            spoolOBJ.gameObject.SetActive(true);
         }
         
         internalSpool.localScale = spoolOrigSize; //The internalSpool gameobject's scale is returned to its original size
@@ -258,6 +258,36 @@ public class Fire_3DR : MonoBehaviour
             
             aimingLine.SetPosition(i, new Vector3(0, vertDist, horizDist)); //Sets the position of the current point in the line using the variables set previously
         }
+    }
+
+    IEnumerator EjectSpool()
+    {
+
+        Debug.Log("EJECT");
+        Vector3 spoolOrigPos = spoolOBJ.localPosition;
+        Quaternion origRotation = spoolOBJ.localRotation;
+
+        GetComponent<HingeDoor>().UnlockDoor();
+        
+        spoolOBJ.GetComponent<Rigidbody>().isKinematic = false;
+        
+        spoolOBJ.GetComponent<BoxCollider>().enabled = true;
+        
+        spoolOBJ.GetComponent<Rigidbody>().AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
+        
+        yield return new WaitForSeconds(printTime);
+
+        spoolOBJ.GetComponent<BoxCollider>().enabled = false;
+        
+        internalSpool.localScale = spoolOrigSize;
+
+        spoolOBJ.GetComponent<Rigidbody>().isKinematic = true;
+        
+        spoolOBJ.localPosition = spoolOrigPos;
+        spoolOBJ.localRotation = origRotation;
+        
+        spoolOBJ.gameObject.SetActive(false);
+
     }
 }
 

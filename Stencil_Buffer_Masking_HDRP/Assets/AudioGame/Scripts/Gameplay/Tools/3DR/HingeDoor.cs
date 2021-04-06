@@ -4,12 +4,21 @@ using UnityEngine;
 
 public class HingeDoor : MonoBehaviour
 {
-    HingeJoint hinge;
+    private HingeJoint hinge;
+    private JointMotor motor;
+    
     bool isClosed = false;
     // Start is called before the first frame update
     void Start()
     {
         hinge = GetComponent<HingeJoint>();
+
+        motor.force = 20;
+        motor.targetVelocity = -50;
+        motor.freeSpin = false;
+
+        hinge.motor = motor;
+        hinge.useMotor = false;
     }
 
     // Update is called once per frame
@@ -18,16 +27,37 @@ public class HingeDoor : MonoBehaviour
         //Debug.Log(hinge.connectedBody.transform.localEulerAngles.y);
         if (Mathf.Abs(hinge.connectedBody.transform.localEulerAngles.y - 90) < 0.5f)
         {
-            Close();
+            Locked();
         }
     }
 
-    void Close()
+    public void Locked()
     {
         if (!isClosed)
         {
             hinge.connectedBody.constraints = RigidbodyConstraints.FreezePosition;
             isClosed = true;
+        }
+    }
+
+    public void UnlockDoor()
+    {
+        StartCoroutine(Unlock());
+    }
+
+    IEnumerator Unlock()
+    {
+        if (isClosed)
+        {
+            hinge.connectedBody.constraints = RigidbodyConstraints.None;
+
+            hinge.useMotor = true;
+
+            yield return new WaitForSeconds(1);
+            
+            isClosed = false;
+
+            hinge.useMotor = false;
         }
     }
 }

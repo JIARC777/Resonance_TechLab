@@ -367,9 +367,10 @@ GameObject:
   - component: {fileID: 1632550387827110878}
   - component: {fileID: 1632550387827110876}
   - component: {fileID: 1128125866884670743}
+  - component: {fileID: 3145502606753593038}
   m_Layer: 0
   m_Name: Spool
-  m_TagString: Spool
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,11 +443,24 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3145502606753593038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632550387827110850}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3133166827755628595
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,7 +689,7 @@ GameObject:
   - component: {fileID: 134359315314195579}
   - component: {fileID: 1221837995}
   m_Layer: 0
-  m_Name: 3DR_v2
+  m_Name: 3DR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -690,7 +704,7 @@ Transform:
   m_GameObject: {fileID: 5468916313504984883}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.09, y: 1.25, z: 4.767}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5384616, y: 1.5384616, z: 1.5384616}
   m_Children:
   - {fileID: 1632550387827110878}
   - {fileID: 5468916313024273908}
@@ -989,7 +1003,7 @@ HingeJoint:
   m_Anchor: {x: -0.07, y: -0.07, z: -0.035}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.2529998, y: -0.07000005, z: -0.0699999}
+  m_ConnectedAnchor: {x: 0.25299886, y: -0.07, z: -0.069999635}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -1200,6 +1214,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8156335098808210683, guid: b7f8d465adfae3c45ade5a2d956796da, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7023a033d65ced24493903d939929a3c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7f8d465adfae3c45ade5a2d956796da, type: 3}
 --- !u!4 &3385006418548265546 stripped
