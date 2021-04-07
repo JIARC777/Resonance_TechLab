@@ -404,13 +404,14 @@ public class DAVE : MonoBehaviour
         // Find the player, get the position, add a bit of extra height assuming its floor position 
         // If we find that this static height leads to issues, we can look for a way to implement dynamic height
 
-        Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, 1.3f, 0);
+        Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, .7f, 0);
         // Stay where you found the player
-        SetDestination(this.transform.position); // CHANGED AND UNTESTED  - revert to SetDestination(playerTargetPos) if error
+        SetDestination(this.transform.position + new Vector3(2,0,2)); // CHANGED AND UNTESTED  - revert to SetDestination(playerTargetPos) if error
         
         Debug.Log("Player's Location: " + playerTargetPos);
+        //FireGun(playerTargetPos);
+       // Debug.DrawLine(beamGunTip.position, playerTargetPos, Color.red);
         
-        Debug.DrawLine(beamGunTip.position, playerTargetPos, Color.red);
         // Add an actual object and/or line renderer ^
 
         //This commented stuff is old, now uses ResonanceHealth stuff
@@ -420,23 +421,26 @@ public class DAVE : MonoBehaviour
         //    RestartLevel();
         //}
         ResonanceHealth.DamagePlayer();
-        StartCoroutine(HoldAttackState());
+        StartCoroutine(HoldAttackState(playerTargetPos));
         
     }
 
-    public IEnumerator HoldAttackState()
+    public IEnumerator HoldAttackState(Vector3 targetPos)
     {
         //Debug.Log("Holding Attack");
         statusLight.color = AttackModeColor;
-        yield return new WaitForSeconds(.25f);
-        PlayAudio(fireAtPlayer);
         yield return new WaitForSeconds(1.75f);
+        PlayAudio(fireAtPlayer);
+        FireGun(targetPos);
+        yield return new WaitForSeconds(.25f);
         
         StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
     }
 
     void FireGun(Vector3 targetPos)
     {
+        Debug.Log(transform.position);
+        Debug.Log("Gun Fired");
         gunPivot.transform.LookAt(targetPos);
         gunFX.Emit(1000);
 
