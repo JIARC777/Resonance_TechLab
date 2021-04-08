@@ -351,9 +351,10 @@ GameObject:
   - component: {fileID: 173654536}
   - component: {fileID: 173654535}
   - component: {fileID: 173654534}
+  - component: {fileID: 173654538}
   m_Layer: 0
   m_Name: Plane_19
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,6 +436,21 @@ Transform:
   m_Father: {fileID: 1518882347}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -90}
+--- !u!114 &173654538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173654533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &275403648
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,7 +465,7 @@ GameObject:
   - component: {fileID: 275403649}
   m_Layer: 0
   m_Name: Plane_14
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1407,9 +1423,10 @@ GameObject:
   - component: {fileID: 745356924}
   - component: {fileID: 745356923}
   - component: {fileID: 745356922}
+  - component: {fileID: 745356926}
   m_Layer: 0
   m_Name: Plane_17
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1491,6 +1508,21 @@ Transform:
   m_Father: {fileID: 1518882347}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
+--- !u!114 &745356926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745356921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &919372090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,9 +1535,10 @@ GameObject:
   - component: {fileID: 919372093}
   - component: {fileID: 919372092}
   - component: {fileID: 919372091}
+  - component: {fileID: 919372095}
   m_Layer: 0
   m_Name: Plane_20
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1587,6 +1620,21 @@ Transform:
   m_Father: {fileID: 1518882347}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &919372095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919372090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &996335568
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,9 +1863,10 @@ GameObject:
   - component: {fileID: 1122414773}
   - component: {fileID: 1122414772}
   - component: {fileID: 1122414771}
+  - component: {fileID: 1122414775}
   m_Layer: 0
   m_Name: Plane_16
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1899,6 +1948,21 @@ Transform:
   m_Father: {fileID: 1518882347}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: -90}
+--- !u!114 &1122414775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122414770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &1136407363
 GameObject:
   m_ObjectHideFlags: 0
@@ -2129,7 +2193,7 @@ GameObject:
   - component: {fileID: 1141494527}
   m_Layer: 0
   m_Name: Plane_21
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3988,9 +4052,10 @@ GameObject:
   - component: {fileID: 1807053305}
   - component: {fileID: 1807053304}
   - component: {fileID: 1807053303}
+  - component: {fileID: 1807053307}
   m_Layer: 0
   m_Name: Plane_15
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4072,6 +4137,21 @@ Transform:
   m_Father: {fileID: 1518882347}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1807053307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807053302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &1866286283
 GameObject:
   m_ObjectHideFlags: 0

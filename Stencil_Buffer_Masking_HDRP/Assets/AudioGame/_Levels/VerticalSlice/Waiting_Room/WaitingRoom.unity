@@ -169,9 +169,10 @@ GameObject:
   - component: {fileID: 104304802}
   - component: {fileID: 104304801}
   - component: {fileID: 104304800}
+  - component: {fileID: 104304804}
   m_Layer: 0
   m_Name: Plane_4
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,6 +254,21 @@ Transform:
   m_Father: {fileID: 768600479}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &104304804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104304799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &267120963
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,9 +376,10 @@ GameObject:
   - component: {fileID: 282782508}
   - component: {fileID: 282782507}
   - component: {fileID: 282782506}
+  - component: {fileID: 282782510}
   m_Layer: 0
   m_Name: Plane_2
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -444,6 +461,21 @@ Transform:
   m_Father: {fileID: 768600479}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &282782510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282782505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &431106015
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,9 +488,10 @@ GameObject:
   - component: {fileID: 431106018}
   - component: {fileID: 431106017}
   - component: {fileID: 431106016}
+  - component: {fileID: 431106020}
   m_Layer: 0
   m_Name: Plane_6
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -540,6 +573,21 @@ Transform:
   m_Father: {fileID: 768600479}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 90}
+--- !u!114 &431106020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431106015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &462097168
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,9 +600,10 @@ GameObject:
   - component: {fileID: 462097171}
   - component: {fileID: 462097170}
   - component: {fileID: 462097169}
+  - component: {fileID: 462097173}
   m_Layer: 0
   m_Name: Plane_5
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,6 +685,21 @@ Transform:
   m_Father: {fileID: 768600479}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &462097173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462097168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &484536190
 GameObject:
   m_ObjectHideFlags: 0
@@ -2323,9 +2387,10 @@ GameObject:
   - component: {fileID: 1362535569}
   - component: {fileID: 1362535568}
   - component: {fileID: 1362535567}
+  - component: {fileID: 1362535571}
   m_Layer: 0
   m_Name: Plane_1
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2407,6 +2472,21 @@ Transform:
   m_Father: {fileID: 768600479}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1362535571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362535566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &1533563942
 GameObject:
   m_ObjectHideFlags: 0

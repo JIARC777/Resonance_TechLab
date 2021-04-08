@@ -135,9 +135,10 @@ GameObject:
   - component: {fileID: 26092611}
   - component: {fileID: 26092610}
   - component: {fileID: 26092609}
+  - component: {fileID: 26092613}
   m_Layer: 0
   m_Name: Floor_3
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,6 +220,21 @@ Transform:
   m_Father: {fileID: 1050567894}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
+--- !u!114 &26092613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26092608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &53187371
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,9 +247,10 @@ GameObject:
   - component: {fileID: 53187374}
   - component: {fileID: 53187373}
   - component: {fileID: 53187372}
+  - component: {fileID: 53187376}
   m_Layer: 0
   m_Name: Floor_5
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -315,6 +332,21 @@ Transform:
   m_Father: {fileID: 1050567894}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
+--- !u!114 &53187376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53187371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1 &73436583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,9 +1444,10 @@ GameObject:
   - component: {fileID: 546679548}
   - component: {fileID: 546679547}
   - component: {fileID: 546679546}
+  - component: {fileID: 546679550}
   m_Layer: 0
   m_Name: Floor_6
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1496,6 +1529,21 @@ Transform:
   m_Father: {fileID: 1050567894}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
+--- !u!114 &546679550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546679545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1001 &593727101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1621,9 +1669,10 @@ GameObject:
   - component: {fileID: 613060381}
   - component: {fileID: 613060380}
   - component: {fileID: 613060379}
+  - component: {fileID: 613060383}
   m_Layer: 0
   m_Name: Floor_7
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1705,6 +1754,21 @@ Transform:
   m_Father: {fileID: 1050567894}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &613060383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613060378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1001 &630376561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1830,9 +1894,10 @@ GameObject:
   - component: {fileID: 778529707}
   - component: {fileID: 778529706}
   - component: {fileID: 778529705}
+  - component: {fileID: 778529709}
   m_Layer: 0
   m_Name: Floor_4
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1914,6 +1979,21 @@ Transform:
   m_Father: {fileID: 1050567894}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
+--- !u!114 &778529709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778529704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1001 &847534150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2039,9 +2119,10 @@ GameObject:
   - component: {fileID: 916102453}
   - component: {fileID: 916102452}
   - component: {fileID: 916102451}
+  - component: {fileID: 916102455}
   m_Layer: 0
   m_Name: Floor_8
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2123,6 +2204,21 @@ Transform:
   m_Father: {fileID: 1050567894}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &916102455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916102450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
 --- !u!1001 &945119494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3382,9 +3478,11 @@ GameObject:
   - component: {fileID: 1840466009}
   - component: {fileID: 1840466008}
   - component: {fileID: 1840466007}
+  - component: {fileID: 1840466011}
+  - component: {fileID: 1840466010}
   m_Layer: 0
   m_Name: West_Wall_1
-  m_TagString: Untagged
+  m_TagString: Map Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3446,12 +3544,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840466006}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -3.9176006, y: 0.12349987, z: -9.014}
+  m_LocalPosition: {x: -3.962, y: 0.162, z: -9.014}
   m_LocalScale: {x: 0.49787238, y: 0.6390485, z: 0.91755193}
   m_Children: []
   m_Father: {fileID: 1050567894}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!114 &1840466010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840466006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
+--- !u!64 &1840466011
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840466006}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 827bb3bbb3e219f1a98379acbd1d23b7, type: 3}
 --- !u!1 &1872891887
 GameObject:
   m_ObjectHideFlags: 0
@@ -3837,6 +3964,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FancyTable
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eee399d8a9587e0438960dd2e007e355, type: 3}
+      propertyPath: m_TagString
+      value: Map Hazard
+      objectReference: {fileID: 0}
     - target: {fileID: 1170970068873931921, guid: eee399d8a9587e0438960dd2e007e355, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -3861,6 +3992,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.19, y: 2.92, z: 3.7}
   m_Center: {x: 0, y: 1.24, z: 0}
+--- !u!114 &1979824924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979824922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loudnessFactor: 1
+  echoFactor: 1
+  soundFX: {fileID: 8300000, guid: baf850f2c140b1e418d3507ac73decb0, type: 3}
 --- !u!1001 &1987060626
 PrefabInstance:
   m_ObjectHideFlags: 0
