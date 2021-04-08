@@ -21,7 +21,7 @@ public class Soundtrack : MonoBehaviour
             timeToPlayNext = Time.time + Random.Range(100, 200);
             updateTime = false;
 		}
-        if (Time.time >= timeToPlayNext)
+        if (Time.time >= timeToPlayNext && !source.isPlaying)
 		{
             source.Play();
             updateTime = true;

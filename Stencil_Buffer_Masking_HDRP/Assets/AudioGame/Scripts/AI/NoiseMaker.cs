@@ -29,6 +29,8 @@ public class NoiseMaker : MonoBehaviour
     GameObject ParticlePrefab;
     // Reference to the particle system
   //  ParticleSystem pSystem;
+  public ParticleSystem emitter;
+  public float minVelocity = 3f;
 
     void Start()
     {
@@ -89,6 +91,10 @@ public class NoiseMaker : MonoBehaviour
 		ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
 		ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
 		sound.TransferVolumeData(initialVolume, lifeTime, transform.position, Time.time);
+		if (col.relativeVelocity.magnitude >= minVelocity)
+		{
+			emitter.Play();
+		}
 		// if something weird breaks uncomment? 
 		//sound = null;
 
@@ -110,6 +116,7 @@ public class NoiseMaker : MonoBehaviour
         ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.TransformPoint(this.GetComponent<CharacterController>().center), transform.rotation) as GameObject;
         ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
         sound.TransferVolumeData(initialVolume, lifeTime, transform.position, Time.time);
+        emitter.Play();
         // if something weird breaks uncomment? 
 		//sound = null;
 

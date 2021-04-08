@@ -14,7 +14,7 @@ public class DAVEInvestigator : IDaveState
     private bool bIsWaitingOnInvestigation = false;
 
     // Start is called before the first frame update
-    public void Initialize(DAVE dave)
+    public void StateEnter(DAVE dave)
     {
         Debug.Log("<color=green>Enterering: Investigator</color>");
         dave.HeardNoise += Add;
@@ -25,21 +25,23 @@ public class DAVEInvestigator : IDaveState
     }
 
     // Update is called once per frame
-    public void UpdateCycle(DAVE dave)
+    public void StateUpdate()
     {
         var doneWaitingOnInvestigation = bIsWaitingOnInvestigation && Time.time >= noiseStartWaitTime + noiseWaitTime;
         if (doneWaitingOnInvestigation)
         {
+            Debug.Log("Done waiting on investigation");
             bIsWaitingOnInvestigation = false;
             soundsToInvestigate.RemoveAt(0);
             if (soundsToInvestigate.Count == 0) //No sounds to investigate
             {
-                Exit();
+                StateExit();
             } else
 			{
                 PrioritizeSounds();
 			}
         }
+        
     }
 
     void Add(ActiveSound noise)
@@ -58,7 +60,7 @@ public class DAVEInvestigator : IDaveState
     
     void PrioritizeSounds()
     {
-        if (soundsToInvestigate.Count >= 1)
+        if (soundsToInvestigate.Count > 1)
         {   // Toggle between the Linq expression and our custom function 
             // soundsToInvestigate = soundsToInvestigate.OrderBy(s => s.curVolume).ToList<ActiveSound>();
             soundsToInvestigate = SortAndReorder(soundsToInvestigate);
@@ -68,6 +70,7 @@ public class DAVEInvestigator : IDaveState
         if (soundsToInvestigate.Count > 0)
         {
             thisDave.SetDestination(soundsToInvestigate[0].soundLocation);
+            Debug.Log(soundsToInvestigate.Count + " sounds to investigate");
         }
     }
     // the OrderBy function is clean but doesnt seem to provide the behavior we want - as a testing precaution, we can implement this more open manual function to more easily adjust priority behavior
@@ -103,13 +106,13 @@ public class DAVEInvestigator : IDaveState
         noiseStartWaitTime = Time.time;
     }
     
-    public void Exit()
+    public void StateExit()
     {
         Debug.Log("<color=green>Exting Investigator</color>");
         thisDave.HeardNoise -= Add;
         thisDave.ArrivedAtDestination -= PingAtInvestigateSound;
         // This is where we transition into the patroller state instead of in the DAVE base class
         thisDave.currentState = new DAVEPatroller();
-        thisDave.currentState.Initialize(thisDave);
+        thisDave.currentState.StateEnter(thisDave);
     }
 }
