@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 1408429207314017409}
   - component: {fileID: 2604318031927812900}
   - component: {fileID: 270376756742150126}
-  - component: {fileID: 1441441720712678253}
   - component: {fileID: 1653300066920080527}
+  - component: {fileID: 8452067220102660502}
   m_Layer: 0
   m_Name: SimpleTable
   m_TagString: Map Hazard
@@ -83,20 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1441441720712678253
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1783546718618187323}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1749118567077922332, guid: 291b2869cd3df8d4fabfd359290a6440, type: 3}
 --- !u!114 &1653300066920080527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +98,16 @@ MonoBehaviour:
   loudnessFactor: 1
   echoFactor: 1
   soundFX: {fileID: 8300000, guid: 6addf910504239d4282a4f56688eeded, type: 3}
+--- !u!65 &8452067220102660502
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783546718618187323}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.8299999, y: 0.38, z: 0.81}
+  m_Center: {x: 0, y: 0, z: 0.405}
