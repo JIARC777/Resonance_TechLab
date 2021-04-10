@@ -53,7 +53,8 @@ public class DAVEChaser : IDaveState
 
     public void TravelToSuspectedPlayerPos(Vector3 suspectedPlayerLocation)
     {
-        Debug.Log("Set Player Destination: " + suspectedPlayerLocation);
+        suspectedPlayerLocation.y = .12f;
+        // Debug.Log("Set Player Destination: " + suspectedPlayerLocation);
         thisDave.SetDestination(suspectedPlayerLocation);
     }
 

@@ -19,7 +19,7 @@ namespace Valve.VR.InteractionSystem
         {
             if (isOpening)
             {
-                transform.position += Vector3.forward * openRate * Time.deltaTime;
+                transform.position += Vector3.left * openRate * Time.deltaTime;
                 drawerDriver.linearMapping.value += openRate * Time.deltaTime;
                 if (drawerDriver.linearMapping.value > 0.123f)
                 {
