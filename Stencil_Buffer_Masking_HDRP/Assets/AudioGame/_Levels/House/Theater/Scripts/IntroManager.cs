@@ -11,6 +11,8 @@ public class IntroManager : MonoBehaviour
     public VideoPlayer introPlayer;
     public VideoPlayer discordPlayer;
     public UnityEvent drawerEvent;
+    public UnityEvent startNextSceneLoadEvent;
+
     public float drawerOpenDelay = 48f;
 
     bool endMovieCalled = false;
@@ -36,5 +38,6 @@ public class IntroManager : MonoBehaviour
     {
         drawerEvent.Invoke();
     }
+
 
 }
