@@ -233,7 +233,7 @@ public class DAVE : MonoBehaviour
     {
         // New destination incoming, no longer waiting - make sure to call set destination after any wait periods (I think we already do this)
         waitingAtLocation = false;
-        // Debug.Log("New Destination" + newPointOfInterest);
+        Debug.Log("New Destination" + newPointOfInterest);
         currentDestination = newPointOfInterest;
         // Debug.Log(newPointOfInterest);
         agent.SetDestination(currentDestination);
@@ -260,13 +260,13 @@ public class DAVE : MonoBehaviour
 
     void EngagePlayer(Vector3 knownPlayerLocation)
     {
-        if (!engagedPlayer)
+        /* if (!engagedPlayer)
         {
             Debug.Log("Engage Player = true");
             engagedPlayer = true;
             // Update Drone's last known player position
             // Even though attack is handled by the DAVE script itself, we dont want any other states trying to tell DAVE what to do. This is a bit of a weird "No State" situation. We assume the temporarilyDeactivateProcessing couroutine will re-intialized a patroller after the proper waiting time
-        }
+        } */
 
         lastKnownPlayerLocation = knownPlayerLocation;
         // Before chasing, check if we are close enough to attack
@@ -278,7 +278,7 @@ public class DAVE : MonoBehaviour
             //Can attack player right now, do so
             ExitCurrentState();
             currentState = null;
-            AttackPlayer();
+            StartCoroutine(AttackPlayer());
         }
         else
         {
@@ -405,51 +405,22 @@ public class DAVE : MonoBehaviour
 
     #region attack
 
-    void AttackPlayer()
+    public IEnumerator AttackPlayer()
     {
-        // We need a reference to the player's position
+        SetDestination(this.transform.position); //+ new Vector3(-1, 0, -1));
         Debug.Log("<color=Red> Attacking player</color>");
-        // Find the player, get the position, add a bit of extra height assuming its floor position 
-        // If we find that this static height leads to issues, we can look for a way to implement dynamic height
-
-        Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position +
-                                  new Vector3(0, .7f, 0);
-        // Stay where you found the player
-        SetDestination(this.transform.position +
-                       new Vector3(2, 0,
-                           2)); // CHANGED AND UNTESTED  - revert to SetDestination(playerTargetPos) if error
-
-        Debug.Log("Player's Location: " + playerTargetPos);
-        //FireGun(playerTargetPos);
-        // Debug.DrawLine(beamGunTip.position, playerTargetPos, Color.red);
-
-        // Add an actual object and/or line renderer ^
-
-        //This commented stuff is old, now uses ResonanceHealth stuff
-        //playerHealth--;
-        //if (playerHealth <= 0)
-        //{
-        //    RestartLevel();
-        //}
-        ResonanceHealth.DamagePlayer();
-        StartCoroutine(HoldAttackState(playerTargetPos));
-    }
-
-    public IEnumerator HoldAttackState(Vector3 targetPos)
-    {
         //Debug.Log("Holding Attack");
         statusLight.color = AttackModeColor;
-        yield return new WaitForSeconds(1.75f);
+        yield return new WaitForSeconds(.6f);
         PlayAudio(fireAtPlayer);
-        FireGun(targetPos);
-        yield return new WaitForSeconds(.25f);
-
+        ResonanceHealth.DamagePlayer();
+        Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, .7f, 0);
+        FireGun(playerTargetPos);
         StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));
     }
 
     void FireGun(Vector3 targetPos)
     {
-        Debug.Log(transform.position);
         Debug.Log("Gun Fired");
         gunPivot.transform.LookAt(targetPos);
         gunFX.Emit(1000);

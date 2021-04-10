@@ -77,7 +77,7 @@ public class Activate : MonoBehaviour
                 door.localPosition = new Vector3(door.localPosition.x, Mathf.Lerp(door.localPosition.y, doorOrigPos.y, timeTillUp), door.localPosition.z);
 
                 timeTillUp += Time.deltaTime;
-                Debug.Log("Time Till up: " + timeTillUp);
+                //Debug.Log("Time Till up: " + timeTillUp);
                 yield return null;
             }
         }

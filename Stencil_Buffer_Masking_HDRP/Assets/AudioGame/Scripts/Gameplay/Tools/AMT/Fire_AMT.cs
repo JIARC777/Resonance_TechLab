@@ -46,6 +46,8 @@ public class Fire_AMT : MonoBehaviour
     public Spin_Emitter spinning;
     public Charge_Lighting chargeLight;
     public AMT_Hud hud;
+    public AudioSource clapAudio;
+    public AudioSource beamAudio;
     private Transform beam; //The Transform object representing the Beam
     private Transform beamCharge; //The Transform object representing the Beam's charging animation
     private Transform lineObj;
@@ -181,6 +183,8 @@ public class Fire_AMT : MonoBehaviour
 
         StartCoroutine(FireBeam()); //Start the FireBeam coroutine
 
+        // Play the soundFX
+        beamAudio.Play();
         //This coroutine controls the events that occur when the AMT is fired
         IEnumerator FireBeam()
         {
@@ -209,7 +213,8 @@ public class Fire_AMT : MonoBehaviour
         //Set the canFire boolean to false, then reduce the total energy count by the clapEnergyUsed variable
         canFire = false;
         energy -= clapEnergyUsed;
-
+        // Play the soundFX
+        clapAudio.Play();
         //Emit sound particles, then wait clapRechargeTime seconds
         particles.Play();        
 
@@ -230,3 +235,4 @@ public class Fire_AMT : MonoBehaviour
         beam.localPosition = new Vector3(0, 0, beamPosAdjust);
     }
 }
+

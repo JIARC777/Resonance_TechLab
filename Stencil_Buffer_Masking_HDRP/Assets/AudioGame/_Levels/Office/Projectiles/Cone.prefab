@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 6257389056645746777}
   - component: {fileID: 7023765648774160380}
   - component: {fileID: 5088393496878295862}
+  - component: {fileID: 2058619129415888245}
   m_Layer: 0
   m_Name: Cone
-  m_TagString: Untagged
+  m_TagString: PhysicsObj
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,7 +52,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -82,3 +82,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2058619129415888245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6745660642381335267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c718f1c9c9eca8a4ba52c886fc1c1efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolumeBaseline: 5
+  echoFactor: 1
+  volumeMultiplier: 1
+  impactCooldown: 1
+  PhysicsObject: 1
+  emitter: {fileID: 6815856360085620188, guid: ab444f015d5ab0f49aca06c7781b0f2b, type: 3}
+  minVelocity: 1
