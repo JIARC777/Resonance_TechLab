@@ -7,15 +7,16 @@ public class DAVEChaser : IDaveState
 {
     // Start is called before the first frame update
     DAVE thisDave;
-    float timeSinceLastPing;
     //Vector3 last
 
-    private float timeOfArrival;
-    // Since a ping takes a noticable finite amount of time, this keeps us from killing the state until we assume the ping returned void 
+
     bool bIsWaitingAtLocation = false;
-    float pingWaitTime = 2f;
+
+    float pingWaitUntilFinishedTime = 2f;
+
     private float noiseStartWaitTime;
-    public void Initialize(DAVE dave)
+
+    public void StateEnter(DAVE dave)
     {
         Debug.Log("<color=red>Entering: Chaser</color>");
         thisDave = dave;
@@ -25,36 +26,35 @@ public class DAVEChaser : IDaveState
         thisDave.ArrivedAtDestination += ReachedOldPlayerPosPing;
 
 
-       // thisDave.PingExited += PingExited;
     }
 
-    // Update is called once per frame
 
-    public void UpdateCycle(DAVE dave)
+    public void StateUpdate()
     {
-        var doneWaitingOnInvestigation = bIsWaitingAtLocation && Time.time >= noiseStartWaitTime + pingWaitTime;
+        var doneWaitingOnInvestigation = bIsWaitingAtLocation && Time.time >= noiseStartWaitTime + pingWaitUntilFinishedTime;
+        
         if (doneWaitingOnInvestigation)
         {
-          //  Debug.Log("Done Investiagting");
-            // Only after this waiting period, check to see if the ping hit anything
-            if (thisDave.pingFoundPlayer)
+            
+            if (thisDave.pingFoundPlayer)// Only after this waiting period, check to see if the ping hit anything
             {
                 Debug.Log("Found Player Again");
                 bIsWaitingAtLocation = false;
                 // As soon as its true, set false
                 thisDave.pingFoundPlayer = false;
                 TravelToSuspectedPlayerPos(thisDave.lastKnownPlayerLocation);
-            } else
-			{
-                Exit();
-			}
+            }
+            else
+            {
+                StateExit();
+            }
         }
-        
     }
 
     public void TravelToSuspectedPlayerPos(Vector3 suspectedPlayerLocation)
     {
-        Debug.Log("Set Player Destination: " + suspectedPlayerLocation);
+        suspectedPlayerLocation.y = .12f;
+        // Debug.Log("Set Player Destination: " + suspectedPlayerLocation);
         thisDave.SetDestination(suspectedPlayerLocation);
     }
 
@@ -62,9 +62,9 @@ public class DAVEChaser : IDaveState
     {
         ///TODO: If the player ping didn't find anything, exit out to Patroller
         Debug.Log("Reached old player location");
-        
+
         // We asssume that if this ping returns a hit, we will reassign the position
-        
+
         if (!bIsWaitingAtLocation)
         {
             thisDave.PingSurroundings();
@@ -72,22 +72,16 @@ public class DAVEChaser : IDaveState
             bIsWaitingAtLocation = true;
             noiseStartWaitTime = Time.time;
         }
-        
     }
-
-    private void PingExited(DAVE dave)
-    {//The ping Didn't find anything, exiting out to Patroller
-        Debug.Log("<color=purple> Exiting Chaser through PingExit</color>");
-        //Debug.Assert(1 == 2);
-    }
+    
 
     // Someone brave can look at fitting this into the execution loop for DAVE 
-    public void Exit()
+    public void StateExit()
     {
         Debug.Log("<color=red> Exiting Chaser</color>");
         thisDave.engagedPlayer = false;
         thisDave.ArrivedAtDestination -= ReachedOldPlayerPosPing;
         thisDave.currentState = new DAVEPatroller();
-        thisDave.currentState.Initialize(thisDave);
+        thisDave.currentState.StateEnter(thisDave);
     }
 }

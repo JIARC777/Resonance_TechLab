@@ -29,6 +29,8 @@ public class NoiseMaker : MonoBehaviour
     GameObject ParticlePrefab;
     // Reference to the particle system
   //  ParticleSystem pSystem;
+  public ParticleSystem emitter;
+  public float minVelocity = 3f;
 
     void Start()
     {
@@ -84,11 +86,15 @@ public class NoiseMaker : MonoBehaviour
 			// calculate initial volume ** ADD FACTOR FOR VELOCITY OF OBJECT ON IMPACT **
 			echoFactor *= nd.echoFactor;
 			// Supposedly this creates an audio source at runtime when the clip needs to be played and then deletes it. If we run into issue NoiseData can be reconfigured to rely on an audio source
-			AudioSource.PlayClipAtPoint(nd.soundFX, this.transform.position);
+			AudioSource.PlayClipAtPoint(nd.soundFX, this.transform.position, 10f);
 		}
 		ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.position, transform.rotation) as GameObject;
 		ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
 		sound.TransferVolumeData(initialVolume, lifeTime, transform.position, Time.time);
+		if (col.relativeVelocity.magnitude >= minVelocity)
+		{
+			emitter.Play();
+		}
 		// if something weird breaks uncomment? 
 		//sound = null;
 
@@ -110,6 +116,7 @@ public class NoiseMaker : MonoBehaviour
         ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.TransformPoint(this.GetComponent<CharacterController>().center), transform.rotation) as GameObject;
         ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
         sound.TransferVolumeData(initialVolume, lifeTime, transform.position, Time.time);
+        emitter.Play();
         // if something weird breaks uncomment? 
 		//sound = null;
 

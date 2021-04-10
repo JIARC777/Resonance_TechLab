@@ -1126,7 +1126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &254836105
 Transform:
   m_ObjectHideFlags: 0
@@ -6826,7 +6826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &327889412
 Transform:
   m_ObjectHideFlags: 0
@@ -8877,7 +8877,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &732989478
 Transform:
   m_ObjectHideFlags: 0
@@ -11475,6 +11475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Auto_Door
       objectReference: {fileID: 0}
+    - target: {fileID: 7730573003036100758, guid: fd93a80ef0cca9943a9636ae3cdcab4b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7730573004423027737, guid: fd93a80ef0cca9943a9636ae3cdcab4b, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -13011,6 +13015,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 32561940}
     m_Modifications:
+    - target: {fileID: 1444842114088112987, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444842115944118591, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14945,8 +14957,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2023929543}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 11.75, y: -19.4, z: -18.14}
-  m_LocalScale: {x: 12.788371, y: 5, z: 0.046109628}
+  m_LocalPosition: {x: 11.75, y: -19.4, z: -18.1666}
+  m_LocalScale: {x: 12.73466, y: 5, z: 0.046109628}
   m_Children:
   - {fileID: 1489084418}
   m_Father: {fileID: 1632082777}

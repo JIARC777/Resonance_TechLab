@@ -14,7 +14,7 @@ public class Open_Door : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (!activated && other.tag == "Player")
+        if ((!activated && other.tag == "Player")|| (!activated && other.tag == "DAVE"))
         {
             if (!needsButton)
             {
@@ -54,7 +54,7 @@ public class Open_Door : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if(other.tag == "Dave" || other.tag == "Player")
+        if(other.tag == "DAVE" || other.tag == "Player")
         {
             doorToActivate.Activation(false);
             activated = false;

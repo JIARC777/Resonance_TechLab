@@ -8,7 +8,7 @@ public class DAVEPatroller : IDaveState
     bool deactivateAndPassDaveReference = false;
     DAVE thisDave;
     // Start is called before the first frame update
-    public void Initialize(DAVE dave)
+    public void StateEnter(DAVE dave)
     {
         Debug.Log("<color=blue>Entering Patroller</color>");
         thisDave = dave;
@@ -21,7 +21,7 @@ public class DAVEPatroller : IDaveState
     }
 
     // Update Cycle looks for events to deactivate itself and pass dave the new current state if it needs to
-    public void UpdateCycle(DAVE dave)
+    public void StateUpdate()
     {
        // Debug.Log("Patroller Is Running");
     }
@@ -31,7 +31,7 @@ public class DAVEPatroller : IDaveState
         dave.currentPatrolPathIndex = ((dave.currentPatrolPathIndex + 1) % (patrolPathNodes.Length));
         dave.SetDestination(patrolPathNodes[dave.currentPatrolPathIndex].transform.localPosition);
 	}
-    public void Exit()
+    public void StateExit()
     {
         
         Debug.Log("<color=blue>Exit Patroller</color>");
