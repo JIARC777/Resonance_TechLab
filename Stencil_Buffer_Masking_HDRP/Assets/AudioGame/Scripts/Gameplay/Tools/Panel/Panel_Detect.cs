@@ -41,9 +41,6 @@ public class Panel_Detect : MonoBehaviour
                     linkedObjects[i].gameObject.GetComponent<Unlock_Requirements>().PanelActivated();
 
             }
-
-            //Insert sound emitting code here
-
         }
         if(other.tag == "Beam" && !activated)
         {
