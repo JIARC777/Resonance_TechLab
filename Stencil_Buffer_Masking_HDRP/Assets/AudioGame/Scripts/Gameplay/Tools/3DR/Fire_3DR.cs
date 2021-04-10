@@ -48,7 +48,9 @@ public class Fire_3DR : MonoBehaviour
     public Transform aimingObject; //The object the aimingLine LineRenderer is on
     public int lineLength; //How many points the line follows
     public float lineWidthMultiplier; //How wide the line looks
-    #endregion Line Properties   
+    #endregion Line Properties
+
+    public ParticleSystem cutterEmitter;
 
     #region SteamVR Input Functions
     public void StartFiring(SteamVR_Behaviour_Boolean behavBool, SteamVR_Input_Sources source, bool boolStat)
@@ -208,6 +210,8 @@ public class Fire_3DR : MonoBehaviour
     //This function fires a projectile from the 3DR
     private void Fire()
     {
+        //Emit vision particles
+        cutterEmitter.Play();
 
         //Unparents the projectile from the 3DR's firingLocation then disables the projectile's kinematic property
         currentProjectile.SetParent(null);

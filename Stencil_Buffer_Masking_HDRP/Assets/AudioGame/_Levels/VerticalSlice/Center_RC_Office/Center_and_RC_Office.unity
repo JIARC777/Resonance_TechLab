@@ -3245,6 +3245,16 @@ MonoBehaviour:
   loudnessFactor: 1
   echoFactor: 1
   soundFX: {fileID: 8300000, guid: 91fefb46f9b494e4ab12f34e1fd9ec93, type: 3}
+--- !u!82 &537461899 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: -1597631272565546172, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+  m_PrefabInstance: {fileID: 1779542449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &537461900 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7087125590913740061, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+  m_PrefabInstance: {fileID: 1779542449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &545012513
 GameObject:
   m_ObjectHideFlags: 0
@@ -9744,6 +9754,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: AMT
       objectReference: {fileID: 0}
+    - target: {fileID: 3614655560201232673, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: beamAudio
+      value: 
+      objectReference: {fileID: 537461899}
+    - target: {fileID: 3614655560201232673, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: clapAudio
+      value: 
+      objectReference: {fileID: 537461900}
     - target: {fileID: 3614655560201232686, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -9852,6 +9870,14 @@ PrefabInstance:
       propertyPath: m_ShadowResolution.m_UseOverride
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7127534318421970338, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 7127534318421970338, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7127534318828320114, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -9876,6 +9902,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7127534318990447415, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 7127534318990447415, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 7127534319102157125, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
