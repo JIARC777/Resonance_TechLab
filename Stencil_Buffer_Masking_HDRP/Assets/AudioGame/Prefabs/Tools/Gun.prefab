@@ -39,19 +39,19 @@ ParticleSystem:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839335413}
-  serializedVersion: 8
+  serializedVersion: 7
   lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  emitterVelocityMode: 1
   looping: 1
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
+  useRigidbodyForVelocity: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -601,7 +601,6 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     maxNumParticles: 1000
-    customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 1
     rotation3D: 0
     gravityModifier:
@@ -4821,7 +4820,6 @@ ParticleSystemRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
@@ -4928,7 +4926,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5024,7 +5021,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5120,7 +5116,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5216,7 +5211,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5313,7 +5307,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -5431,10 +5424,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 85
+  attachmentFlags: 44
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
-  releaseVelocityStyle: 3
+  releaseVelocityStyle: 1
   releaseVelocityTimeOffset: -0.011
   scaleReleaseVelocity: 1.1
   scaleReleaseVelocityThreshold: -1
@@ -5503,13 +5496,13 @@ MonoBehaviour:
   poseEditorExpanded: 1
   blendEditorExpanded: 1
   poseNames:
-  - GunHandPose (MAIN)
+  - '[not set]'
   overridePreviewLeftHandPrefab: {fileID: 1000013348574242, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
   overridePreviewRightHandPrefab: {fileID: 1000010304998954, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
-  skeletonMainPose: {fileID: 11400000, guid: 92a6fa758a498d4468610203ea953aea, type: 2}
+  skeletonMainPose: {fileID: 0}
   skeletonAdditionalPoses: []
   showLeftPreview: 0
-  showRightPreview: 0
+  showRightPreview: 1
   previewLeftInstance: {fileID: 0}
   previewRightInstance: {fileID: 0}
   previewPoseSelection: 0
@@ -5528,16 +5521,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerPull:
-    actionPath: /actions/default/in/FireWeapon
+    actionPath: 
     needsReinit: 0
-  particleSystem: {fileID: 1839335415}
-  gunParts:
-  - {fileID: 9036018644539398366}
-  - {fileID: 9036018644496543453}
-  - {fileID: 9036018644608434737}
-  - {fileID: 9036018646093468444}
-  - {fileID: 9036018645301928981}
-  - {fileID: 9036018644958515255}
+  particleSystem: {fileID: 0}
+  gunParts: []
 --- !u!114 &2133711308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5551,7 +5538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   booleanAction:
-    actionPath: /actions/default/in/FireWeapon
+    actionPath: 
     needsReinit: 0
   inputSource: 0
   onChange:
@@ -5565,34 +5552,10 @@ MonoBehaviour:
       m_Calls: []
   onPressDown:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3496819823999129644}
-        m_TargetAssemblyTypeName: Valve.VR.InteractionSystem.Gun, Assembly-CSharp
-        m_MethodName: Fire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onPressUp:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3496819823999129644}
-        m_TargetAssemblyTypeName: Valve.VR.InteractionSystem.Gun, Assembly-CSharp
-        m_MethodName: StopFiring
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2133711309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5607,13 +5570,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 0
+  hideHandOnAttach: 1
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1
-  attachEaseIn: 1
+  attachEaseIn: 0
   snapAttachEaseInCurve:
     serializedVersion: 2
     m_Curve:
@@ -5665,34 +5628,10 @@ MonoBehaviour:
       m_Calls: []
   onAttachedToHand:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3496819823999129644}
-        m_TargetAssemblyTypeName: Valve.VR.InteractionSystem.Gun, Assembly-CSharp
-        m_MethodName: AttachedToHand
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDetachedFromHand:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3496819823999129644}
-        m_TargetAssemblyTypeName: Valve.VR.InteractionSystem.Gun, Assembly-CSharp
-        m_MethodName: DetachedFromHand
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &9036018646093468444
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,7 +5684,6 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1

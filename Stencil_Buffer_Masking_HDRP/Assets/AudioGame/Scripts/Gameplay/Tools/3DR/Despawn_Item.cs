@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,5 +24,10 @@ public class Despawn_Item : MonoBehaviour
             //Destroys the gameobject this script is attached to
             Destroy(gameObject);
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        Debug.Log("Impact");
     }
 }

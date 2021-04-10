@@ -213,10 +213,11 @@ public class Fire_AMT : MonoBehaviour
         //Set the canFire boolean to false, then reduce the total energy count by the clapEnergyUsed variable
         canFire = false;
         energy -= clapEnergyUsed;
+        
         // Play the soundFX
         clapAudio.Play();
         //Emit sound particles, then wait clapRechargeTime seconds
-        particles.Play();        
+        particles.Play();                
 
         yield return new WaitForSeconds(clapRechargeTime);
 
