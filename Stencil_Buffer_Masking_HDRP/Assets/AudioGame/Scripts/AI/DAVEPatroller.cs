@@ -17,6 +17,10 @@ public class DAVEPatroller : IDaveState
         dave.ArrivedAtDestination += GoToNextPatrolNode;
         thisDave.statusLight.color = thisDave.patrolModeColor;
         GoToNextPatrolNode(thisDave);
+        for (int i = 0; i < patrolPathNodes.Length; i++)
+		{
+            Debug.Log(patrolPathNodes[i].transform.position);
+		}
         
     }
 
@@ -33,7 +37,6 @@ public class DAVEPatroller : IDaveState
 	}
     public void StateExit()
     {
-        
         Debug.Log("<color=blue>Exit Patroller</color>");
         // Make sure to unsub from events on destruction
         thisDave.ArrivedAtDestination -= GoToNextPatrolNode;
