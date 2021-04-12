@@ -193,15 +193,15 @@ public class DAVE : MonoBehaviour
         //crossStateData = new DAVEData();
         // Start DAVE off in a patrol mode
         ExitCurrentState();
-        currentState = new DAVEPatroller();
-        currentState.StateEnter(this);
+       // agent.SetDestination(new Vector3(0, 0, 0));
+       currentState = new DAVEPatroller();
+       currentState.StateEnter(this);
     }
 
     // Update is called once per frame
     void Update()
     {
         // Debug.Log((currentDestination - transform.position).magnitude);
-
         // Check the distance between target to notify any listeners that DAVE has arrived - also check to make sure you are not waiting
         if ((currentDestination - transform.position).magnitude <= agent.stoppingDistance && !waitingAtLocation)
         {
@@ -231,11 +231,13 @@ public class DAVE : MonoBehaviour
 
     public void SetDestination(Vector3 newPointOfInterest)
     {
+        agent.enabled = true;
+        
         // New destination incoming, no longer waiting - make sure to call set destination after any wait periods (I think we already do this)
         waitingAtLocation = false;
         Debug.Log("New Destination" + newPointOfInterest);
         currentDestination = newPointOfInterest;
-        // Debug.Log(newPointOfInterest);
+        Debug.Log(newPointOfInterest);
         agent.SetDestination(currentDestination);
     }
 
