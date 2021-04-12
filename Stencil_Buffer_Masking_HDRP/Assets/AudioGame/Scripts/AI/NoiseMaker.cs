@@ -108,10 +108,12 @@ public class NoiseMaker : MonoBehaviour
 		float lifeTime = echo * defaultVolumeBaseline;
 		if (col.gameObject.GetComponent<NoiseData>() != null)
         {
-	        float materialSoundProperty = col.gameObject.GetComponent<NoiseData>().loudnessFactor;
+	        NoiseData nd = col.gameObject.GetComponent<NoiseData>();
+	        float materialSoundProperty = nd.loudnessFactor;
 	        initialVolume *= materialSoundProperty;
 	        // calculate initial volume ** ADD FACTOR FOR VELOCITY OF OBJECT ON IMPACT **
-	        echoFactor *= col.gameObject.GetComponent<NoiseData>().echoFactor;
+	        echoFactor *= nd.echoFactor;
+	        AudioSource.PlayClipAtPoint(nd.soundFX, this.transform.position, 1f);
         }
         ParticlePrefab = Instantiate(Resources.Load("ParticleSound", typeof(GameObject)), transform.TransformPoint(this.GetComponent<CharacterController>().center), transform.rotation) as GameObject;
         ActiveSound sound = ParticlePrefab.GetComponent<ActiveSound>();
