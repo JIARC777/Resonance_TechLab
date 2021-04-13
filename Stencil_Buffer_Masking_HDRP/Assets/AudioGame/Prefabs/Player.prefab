@@ -2446,7 +2446,6 @@ GameObject:
   - component: {fileID: 1445252776842249941}
   - component: {fileID: 1238560135}
   - component: {fileID: 1238560136}
-  - component: {fileID: 2007050786177507893}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -2564,8 +2563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b23d11b9409aba4483b3e2da948eea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingLocation: {x: 0, y: 0, z: 0}
+  respawnLocation: {x: 0, y: 0, z: 0}
   maxPlayerHealth: 3
+  currentPlayerHealth: 0
 --- !u!114 &1238560136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2585,21 +2585,6 @@ MonoBehaviour:
   PhysicsObject: 0
   emitter: {fileID: 8304982482556162748}
   minVelocity: 3
---- !u!111 &2007050786177507893
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1445252775801137895}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 0c6fa55222f40b84c909b9eb73816556, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1445252775801138313
 GameObject:
   m_ObjectHideFlags: 0

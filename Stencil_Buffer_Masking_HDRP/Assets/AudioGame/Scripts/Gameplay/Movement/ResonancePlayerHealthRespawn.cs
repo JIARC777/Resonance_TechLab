@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResonanceHealth : MonoBehaviour
+public class ResonancePlayerHealthRespawn : MonoBehaviour
 {
-    public static ResonanceHealth instance;
+    public static ResonancePlayerHealthRespawn instance;
 
-    Animation youDiedAnim;
+    public Animator playerDiedAnimator;
 
-    public Vector3 startingLocation;
+    public Vector3 respawnLocation;
+    
+    #region Health
     public int maxPlayerHealth = 2;
-    [Header("Set from script")]
-    public static int currentPlayerHealth;
-
+    [HideInInspector] public int currentPlayerHealth;
+    #endregion
     //Establish a good singleton
     private void Awake()
     {
-        youDiedAnim = GetComponent<Animation>();
-        startingLocation = this.transform.position;
+        respawnLocation = this.transform.position;
         if (instance != null && instance != this)
             Destroy(this);
         else
@@ -32,6 +32,7 @@ public class ResonanceHealth : MonoBehaviour
     private void Start()
     {
         currentPlayerHealth = maxPlayerHealth;
+        playerDiedAnimator.Play("Rest");
     }
 
     public void DamagePlayer()
@@ -51,9 +52,11 @@ public class ResonanceHealth : MonoBehaviour
 
     public IEnumerator RespawnPlayer()
 	{
-        youDiedAnim.Play();
+        playerDiedAnimator.Play("Entry");
         yield return new WaitForSeconds(1);
-        transform.position = startingLocation;
+        transform.position = respawnLocation;
+        playerDiedAnimator.Play("Rest");
+
 
     }
     
