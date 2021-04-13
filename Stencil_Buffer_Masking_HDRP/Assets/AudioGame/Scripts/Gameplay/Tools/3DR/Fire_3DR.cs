@@ -212,7 +212,8 @@ public class Fire_3DR : MonoBehaviour
     {
         //Emit vision particles
         cutterEmitter.Play();
-
+        // Play Sound FX
+        GetComponent<AudioSource>().Play();
         //Unparents the projectile from the 3DR's firingLocation then disables the projectile's kinematic property
         currentProjectile.SetParent(null);
         currentProjectile.gameObject.GetComponent<Rigidbody>().isKinematic = false;
