@@ -23,7 +23,7 @@ public class DAVE : MonoBehaviour
     public IDaveState currentState;
 
     // Reference the real AI as opposed to whatever weird stuff we've written
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     // Reference where dave wants to head at any given moment
     Vector3 currentDestination;
@@ -89,6 +89,8 @@ public class DAVE : MonoBehaviour
     private float attackTimestamp = 0f;
 
     private float attackPlayerDelaySeconds = 0.6f;
+    public float agroSpeedBoost = 1.5F;
+    public bool isAgro = false;
 
     #endregion Fields - Attack Timings
 
@@ -278,9 +280,12 @@ public class DAVE : MonoBehaviour
 
     // Fires on event, player detected by ping
 
+
+    // Whenever we want to pause DAVE's processing, we can call this script and pass various related different wait times such as post attack waiting and deactivating times
     void EngagePlayer(Vector3 knownPlayerLocation)
     {
         lastKnownPlayerLocation = knownPlayerLocation;
+        
         // Before chasing, check if we are close enough to attack
         var bCanAttackPlayer = (this.transform.position - knownPlayerLocation).magnitude <= attackRadius;
         Debug.Log(bCanAttackPlayer);
@@ -301,6 +306,7 @@ public class DAVE : MonoBehaviour
             Debug.Log(bNotInChaseState);
             if (bNotInChaseState)
             {
+                agent.speed += agroSpeedBoost;
                 //Must transition to chaser state to go to player location
                 // Bit of a fun little bug I found here that explains alot of behavior we've seen - So we call exit on DAVEInvestigator in most cases which in turn by default activates a DAVEPatroller in the background referenced to the current state, so that is why we have a tendency to return to the patrol state all the time;
                 // Since its initialized and no one ever calls exit on it before the reference to the current state is changed, whenever it becomes Initialized I assume it will stay initialized for the durration of the run
@@ -319,8 +325,6 @@ public class DAVE : MonoBehaviour
             }
         }
     }
-
-    // Whenever we want to pause DAVE's processing, we can call this script and pass various related different wait times such as post attack waiting and deactivating times
 
     IEnumerator temporarilyDeactivateProcessing(float waitTime)
     {
@@ -361,6 +365,11 @@ public class DAVE : MonoBehaviour
         needToLERPModel = true;
         modelRB.isKinematic = true;
         modelRB.useGravity = false;
+        
+        // Dave is angry now that you shot him
+        isAgro = true;
+        if (agent.speed < 3.5)
+            agent.speed += agroSpeedBoost;
     }
 
 

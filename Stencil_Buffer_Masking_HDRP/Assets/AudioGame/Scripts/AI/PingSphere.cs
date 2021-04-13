@@ -18,7 +18,7 @@ public class PingSphere : PlayerDetector
     void FixedUpdate()
     {
         transform.localScale = new Vector3(curScale,curScale,curScale);
-        curScale += .1f;
+        curScale += .3f;
         if (curScale >= maxRadius)
         {
             Destroy(this.gameObject);

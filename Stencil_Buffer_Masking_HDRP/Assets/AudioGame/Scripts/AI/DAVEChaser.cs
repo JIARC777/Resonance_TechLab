@@ -78,6 +78,8 @@ public class DAVEChaser : IDaveState
     // Someone brave can look at fitting this into the execution loop for DAVE 
     public void StateExit()
     {
+        if (!thisDave.isAgro)
+            thisDave.agent.speed -= thisDave.agroSpeedBoost;
         Debug.Log("<color=red> Exiting Chaser</color>");
         thisDave.engagedPlayer = false;
         thisDave.ArrivedAtDestination -= ReachedOldPlayerPosPing;

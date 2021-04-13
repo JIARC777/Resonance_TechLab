@@ -60,6 +60,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
+  - {fileID: 2100000, guid: fbe150286818670439ccd225e220c350, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4661e958e9068d44dba5a774a479b134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitingAtLocation: 0
   daveModelTransform: {fileID: 7290257654647726976}
   gunPivot: {fileID: 1745376286036494920}
   modelRB: {fileID: 7086164785029562423}
@@ -223,7 +223,13 @@ MonoBehaviour:
   patrolPathNodes:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   currentPatrolPathIndex: 0
+  waitingAtLocation: 0
   attackRadius: 2
   postAttackWaitTime: 10
   lastKnownPlayerLocation: {x: 0, y: 0, z: 0}
@@ -245,7 +251,7 @@ MonoBehaviour:
   daveHeardPlayer: {fileID: 2516581086044899754}
   daveHeardNoise: {fileID: 2516581086044899757}
   fireAtPlayer: {fileID: 2516581086044899756}
-  hoverFX: {fileID: 2516581086044899759}
+  hoverSoundFX: {fileID: 2516581086044899759}
 --- !u!65 &2516581086044899758
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6137,6 +6143,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
+  - {fileID: 2100000, guid: fbe150286818670439ccd225e220c350, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
