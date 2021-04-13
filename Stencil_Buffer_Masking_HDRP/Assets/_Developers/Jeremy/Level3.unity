@@ -39492,65 +39492,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1445252775801086641, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1445252775801095717, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 1445252775801137895, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1445252775801149371, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1445252775918983758, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1445252776842249939, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_Radius
-      value: 0.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2624085544002318975, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2624085544218268054, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2624085545133967525, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4860065415988519914, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: speakingIndicator
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4860065417288505648, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: speakingIndicator
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4860065417915842563, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: speakingIndicator
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5674336779642288008, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5674336779862529121, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5674336780758764882, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
@@ -49186,6 +49130,35 @@ PrefabInstance:
       objectReference: {fileID: 840863306}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+--- !u!1 &1647269296 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7955575871172639034, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+  m_PrefabInstance: {fileID: 1647269295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1647269297 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7381688448329707864, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
+  m_PrefabInstance: {fileID: 1647269295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1647269298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647269296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c718f1c9c9eca8a4ba52c886fc1c1efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolumeBaseline: 5
+  echoFactor: 1
+  volumeMultiplier: 1
+  impactCooldown: 1
+  PhysicsObject: 0
+  emitter: {fileID: 1647269297}
+  minVelocity: 1
 --- !u!1001 &1650073184
 PrefabInstance:
   m_ObjectHideFlags: 0

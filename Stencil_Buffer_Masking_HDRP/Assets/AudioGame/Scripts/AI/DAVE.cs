@@ -415,7 +415,7 @@ public class DAVE : MonoBehaviour
         statusLight.color = AttackModeColor;
         yield return new WaitForSeconds(.6f);
         PlayAudio(fireAtPlayer);
-        ResonanceHealth.DamagePlayer();
+        ResonanceHealth.instance.DamagePlayer();
         Vector3 playerTargetPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>().position + new Vector3(0, .7f, 0);
         FireGun(playerTargetPos);
         StartCoroutine(temporarilyDeactivateProcessing(postAttackWaitTime));

@@ -6,6 +6,9 @@ public class ResonanceHealth : MonoBehaviour
 {
     public static ResonanceHealth instance;
 
+    Animation youDiedAnim;
+
+    public Vector3 startingLocation;
     public int maxPlayerHealth = 2;
     [Header("Set from script")]
     public static int currentPlayerHealth;
@@ -13,6 +16,8 @@ public class ResonanceHealth : MonoBehaviour
     //Establish a good singleton
     private void Awake()
     {
+        youDiedAnim = GetComponent<Animation>();
+        startingLocation = this.transform.position;
         if (instance != null && instance != this)
             Destroy(this);
         else
@@ -29,7 +34,7 @@ public class ResonanceHealth : MonoBehaviour
         currentPlayerHealth = maxPlayerHealth;
     }
 
-    public static void DamagePlayer()
+    public void DamagePlayer()
     {
         currentPlayerHealth--;
 
@@ -37,10 +42,19 @@ public class ResonanceHealth : MonoBehaviour
             Die();
     }
 
-    private static void Die()
+    private void Die()
     {
+        RespawnPlayer();
         //TODO: Figure out resetting level with persistent player
         Debug.Log("The player has died");
+    }
+
+    public IEnumerator RespawnPlayer()
+	{
+        youDiedAnim.Play();
+        yield return new WaitForSeconds(1);
+        transform.position = startingLocation;
+
     }
     
 }
