@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4661e958e9068d44dba5a774a479b134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  agent: {fileID: 0}
   daveModelTransform: {fileID: 7290257654647726976}
   gunPivot: {fileID: 1745376286036494920}
   modelRB: {fileID: 7086164785029562423}
@@ -232,6 +233,8 @@ MonoBehaviour:
   waitingAtLocation: 0
   attackRadius: 2
   postAttackWaitTime: 10
+  agroSpeedBoost: 1.5
+  isAgro: 0
   lastKnownPlayerLocation: {x: 0, y: 0, z: 0}
   engagedPlayer: 0
   pingFoundPlayer: 0
@@ -286,7 +289,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 0
-  MaxDistance: 5.6423864
+  MaxDistance: 4.26
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -417,7 +420,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -513,7 +516,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -609,7 +612,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -705,7 +708,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -755,7 +758,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -6178,6 +6181,7 @@ GameObject:
   - component: {fileID: 9198362245759215718}
   - component: {fileID: 5196672266662760696}
   - component: {fileID: 1532847241416703438}
+  - component: {fileID: 1647269298}
   m_Layer: 14
   m_Name: DAVE_V2
   m_TagString: DAVE
@@ -6257,6 +6261,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fffe1161afcf7f4b85e421a8c2aad40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1647269298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7955575871172639034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c718f1c9c9eca8a4ba52c886fc1c1efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultVolumeBaseline: 5
+  echoFactor: 1
+  volumeMultiplier: 1
+  impactCooldown: 1
+  PhysicsObject: 0
+  emitter: {fileID: 7381688448329707864}
+  minVelocity: 1
 --- !u!1001 &4100474374718911620
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6389,5 +6412,10 @@ PrefabInstance:
 --- !u!4 &7381688448329707866 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6815856360085620190, guid: c820e121bbd1c6149beb1eede3b8c040, type: 3}
+  m_PrefabInstance: {fileID: 4100474374718911620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7381688448329707864 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6815856360085620188, guid: c820e121bbd1c6149beb1eede3b8c040, type: 3}
   m_PrefabInstance: {fileID: 4100474374718911620}
   m_PrefabAsset: {fileID: 0}

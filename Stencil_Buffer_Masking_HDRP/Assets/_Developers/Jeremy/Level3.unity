@@ -51107,22 +51107,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1630282257028749024, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2516581085824980181, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
-      propertyPath: m_LightlayersMask
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2516581085824980181, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
-      propertyPath: m_LinkShadowLayers
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2516581086044899745, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
-      propertyPath: hoverSoundFX
-      value: 
-      objectReference: {fileID: 1775185152}
+      propertyPath: patrolPathNodes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2516581086044899745, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
       propertyPath: patrolPathNodes.Array.data[0]
       value: 
@@ -51133,35 +51121,6 @@ PrefabInstance:
       objectReference: {fileID: 840863306}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
---- !u!1 &1647269296 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7955575871172639034, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
-  m_PrefabInstance: {fileID: 1647269295}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1647269297 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7381688448329707864, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
-  m_PrefabInstance: {fileID: 1647269295}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1647269298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1647269296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c718f1c9c9eca8a4ba52c886fc1c1efb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultVolumeBaseline: 5
-  echoFactor: 1
-  volumeMultiplier: 1
-  impactCooldown: 1
-  PhysicsObject: 0
-  emitter: {fileID: 1647269297}
-  minVelocity: 1
 --- !u!1001 &1650073184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -54207,11 +54166,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2911649116472485783, guid: b3b7ae56fdf0ee54bacab8a31cc96d9a, type: 3}
   m_PrefabInstance: {fileID: 1774096291}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1775185152 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2516581086044899759, guid: ce31fe90fc2e44248b0bcee461018963, type: 3}
-  m_PrefabInstance: {fileID: 1647269295}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1783322624 stripped
 Transform:
