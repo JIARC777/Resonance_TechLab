@@ -219,6 +219,8 @@ GameObject:
   - component: {fileID: 872761708679836341}
   - component: {fileID: 7087125590913740061}
   - component: {fileID: -1597631272565546172}
+  - component: {fileID: 1335464612}
+  - component: {fileID: 1335464613}
   m_Layer: 0
   m_Name: AMT
   m_TagString: Untagged
@@ -414,6 +416,30 @@ MonoBehaviour:
       - m_Target: {fileID: 239020722}
         m_TargetAssemblyTypeName: Holsterable, Assembly-CSharp
         m_MethodName: OnHolsterablePickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1335464612}
+        m_TargetAssemblyTypeName: DestroyTrigger, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1335464613}
+        m_TargetAssemblyTypeName: DialogueFromEvent, Assembly-CSharp
+        m_MethodName: FireDialogue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -792,6 +818,37 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1335464612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614655560201232672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58f8fe699184d6741af691a418d49993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToDestroy: {fileID: 0}
+--- !u!114 &1335464613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614655560201232672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137389b9cb905f843bf5c7680aa7e460, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  dialogueManager: {fileID: 0}
+  thisClip: {fileID: 32900000, guid: f2d9a723b1f59654a8ac9d01bf2998c5, type: 3}
+  delayBeforeStarting: 0
+  clipPriority: 0
+  destroyOnPlay: 1
 --- !u!1 &3614655560419820708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,6 +1153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AMT_Line_Renderer
       objectReference: {fileID: 0}
+    - target: {fileID: 8156335098808210680, guid: 59fe8defa9d80dc4786ed33ad18ee7aa, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8156335098808210682, guid: 59fe8defa9d80dc4786ed33ad18ee7aa, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1141,9 +1202,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8156335098808210683, guid: 59fe8defa9d80dc4786ed33ad18ee7aa, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156335098808210683, guid: 59fe8defa9d80dc4786ed33ad18ee7aa, type: 3}
       propertyPath: m_Positions.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8156335098808210683, guid: 59fe8defa9d80dc4786ed33ad18ee7aa, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: a1dea1ee6c1dbfb4f8f3ef15d02d54a1, type: 2}
     - target: {fileID: 8156335098808210683, guid: 59fe8defa9d80dc4786ed33ad18ee7aa, type: 3}
       propertyPath: m_Positions.Array.data[1].y
       value: 0
@@ -1180,7 +1249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7255360381390782802, guid: cd07b4f5e11caca40ad8ad8a3232e4f9, type: 3}
       propertyPath: m_fontSize
-      value: 36
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7255360381390782802, guid: cd07b4f5e11caca40ad8ad8a3232e4f9, type: 3}
       propertyPath: m_fontAsset
@@ -1228,7 +1297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7255360381891895239, guid: cd07b4f5e11caca40ad8ad8a3232e4f9, type: 3}
       propertyPath: m_fontSize
-      value: 36
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7255360381891895239, guid: cd07b4f5e11caca40ad8ad8a3232e4f9, type: 3}
       propertyPath: m_fontAsset
@@ -1497,14 +1566,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f70930bbd604efe4f8d4107760402ab3, type: 3}
---- !u!4 &5181194635784711701 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6384363953954461752, guid: f70930bbd604efe4f8d4107760402ab3, type: 3}
-  m_PrefabInstance: {fileID: 2269422929036506669}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5524964279707186351 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6039891820370182786, guid: f70930bbd604efe4f8d4107760402ab3, type: 3}
+  m_PrefabInstance: {fileID: 2269422929036506669}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5181194635784711701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6384363953954461752, guid: f70930bbd604efe4f8d4107760402ab3, type: 3}
   m_PrefabInstance: {fileID: 2269422929036506669}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6412415961602852619
