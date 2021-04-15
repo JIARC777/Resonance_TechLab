@@ -7,6 +7,7 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
     public static ResonancePlayerHealthRespawn instance;
 
     public Animator playerDiedAnimator;
+    public Animator damageAnimator;
 
     public Vector3 respawnLocation;
     
@@ -40,9 +41,20 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
         currentPlayerHealth--;
 
         if (currentPlayerHealth <= 0)
+		{
             Die();
+            return;
+        }
+        StartCoroutine(damageAnimation());
+            
     }
 
+    public IEnumerator damageAnimation()
+	{
+        damageAnimator.Play("Entry");
+        yield return new WaitForSeconds(.5f);
+        playerDiedAnimator.Play("Rest");
+	}
     private void Die()
     {
         RespawnPlayer();
@@ -55,6 +67,7 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
         playerDiedAnimator.Play("Entry");
         yield return new WaitForSeconds(1);
         transform.position = respawnLocation;
+        // If this ends the animation we should add an extra delay;
         playerDiedAnimator.Play("Rest");
 
 
