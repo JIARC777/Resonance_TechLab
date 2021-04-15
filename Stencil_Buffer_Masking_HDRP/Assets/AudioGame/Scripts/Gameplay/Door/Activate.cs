@@ -20,6 +20,9 @@ public class Activate : MonoBehaviour
 
     public Transform doorLeft;
     public Transform doorRight;
+    public GameObject gameManager;
+
+    public Scene_Manager Game_Manager;
 
     private void Start()
     {
@@ -32,6 +35,19 @@ public class Activate : MonoBehaviour
         {
             doorLeft = transform.GetChild(0);
             doorRight = transform.GetChild(1);
+        }
+
+        gameManager = GameObject.Find("Game_Manager");
+        Game_Manager = gameManager.GetComponent<Scene_Manager>();
+
+    }
+
+    private void Update()
+    {
+        if (!gameManager)
+        {
+            gameManager = GameObject.Find("Game_Manager");
+            Game_Manager = gameManager.GetComponent<Scene_Manager>();
         }
     }
 
@@ -174,5 +190,6 @@ public class Activate : MonoBehaviour
     public void EndLevel()
     {
         Debug.Log("The Player has reached the end of the level!");
+        Game_Manager.LoadNextLevel();
     }
 }
