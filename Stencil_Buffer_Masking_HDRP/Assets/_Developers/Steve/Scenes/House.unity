@@ -865,12 +865,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445252777090329988}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b23d11b9409aba4483b3e2da948eea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDiedAnimator: {fileID: 0}
+  damageAnimator: {fileID: 0}
+  respawnLocation: {x: 0, y: 0, z: 0}
   maxPlayerHealth: 3
+  currentPlayerHealth: 0
 --- !u!114 &344550123
 MonoBehaviour:
   m_ObjectHideFlags: 0
