@@ -12,6 +12,8 @@ public class Panel_Detect : MonoBehaviour
     public Material activePanelMat;
     public Material inactivePanelMat;
 
+    public Light panelLight;
+
     public GameObject[] linkedObjects;
 
     private void Start()
@@ -62,7 +64,14 @@ public class Panel_Detect : MonoBehaviour
 
     public void SetMaterial(Material mat)
     {
-        if(!terminal)
+        if (!terminal)
+        {
             transform.parent.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().material = mat;
+        }
+
+        if (activated)
+        {
+            panelLight.color = Color.green;
+        }
     }
 }
