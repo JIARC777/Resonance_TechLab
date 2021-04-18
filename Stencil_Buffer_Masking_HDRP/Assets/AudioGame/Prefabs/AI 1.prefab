@@ -60,7 +60,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
-  - {fileID: 2100000, guid: fbe150286818670439ccd225e220c350, type: 2}
+  - {fileID: 2100000, guid: dc389e3171242004f85a9440ea70103b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -220,7 +220,7 @@ MonoBehaviour:
   daveModelTransform: {fileID: 7290257654647726976}
   gunPivot: {fileID: 1745376286036494920}
   modelRB: {fileID: 7086164785029562423}
-  gunFX: {fileID: 0}
+  gunFX: {fileID: 276916278}
   patrolPathNodes:
   - {fileID: 0}
   - {fileID: 0}
@@ -231,9 +231,9 @@ MonoBehaviour:
   - {fileID: 0}
   currentPatrolPathIndex: 0
   waitingAtLocation: 0
-  attackRadius: 2
+  attackRadius: 2.5
   postAttackWaitTime: 10
-  agroSpeedBoost: 1.5
+  agroSpeedBoost: 1.25
   isAgro: 0
   lastKnownPlayerLocation: {x: 0, y: 0, z: 0}
   engagedPlayer: 0
@@ -242,8 +242,8 @@ MonoBehaviour:
   closeProximityDetector: {fileID: 2516581087738877457}
   daveWeakSpot: {fileID: 2516581086079939916}
   weakSpotDeactivatedWaitTime: 30
-  physicsImpactDeactivationWaitTime: 5
-  projectileImpactDeactivationWaitTime: 10
+  physicsImpactDeactivationWaitTime: 20
+  projectileImpactDeactivationWaitTime: 45
   statusLight: {fileID: 1630282257028749024}
   patrolModeColor: {r: 0, g: 0.8771584, b: 1, a: 0}
   investigationModeColor: {r: 1, g: 0.63169324, b: 0, a: 0}
@@ -758,7 +758,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 2.75
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -6041,7 +6041,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.33
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2516581087738877457
 MonoBehaviour:
@@ -6146,7 +6146,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
-  - {fileID: 2100000, guid: fbe150286818670439ccd225e220c350, type: 2}
+  - {fileID: 2100000, guid: dc389e3171242004f85a9440ea70103b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6287,6 +6287,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7290257654647726976}
     m_Modifications:
+    - target: {fileID: 6815856360085620188, guid: c820e121bbd1c6149beb1eede3b8c040, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6815856360085620188, guid: c820e121bbd1c6149beb1eede3b8c040, type: 3}
       propertyPath: lengthInSec
       value: 3
