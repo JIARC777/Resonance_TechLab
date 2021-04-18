@@ -23303,11 +23303,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722564979}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!95 &724127583 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 6778721618884395578, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-  m_PrefabInstance: {fileID: 1298213022}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &725839885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40969,14 +40964,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 485563612}
     m_Modifications:
-    - target: {fileID: 1238560135, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1238560135, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-      propertyPath: playerDiedAnimator
-      value: 
-      objectReference: {fileID: 724127583}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -52220,11 +52207,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5695720319830359533, guid: 986b864cd1bb43547905519b5046732a, type: 3}
   m_PrefabInstance: {fileID: 1679726940}
-  m_PrefabAsset: {fileID: 0}
---- !u!328 &1681096805 stripped
-VideoPlayer:
-  m_CorrespondingSourceObject: {fileID: 483183743, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-  m_PrefabInstance: {fileID: 1298213022}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1683302724
 GameObject:
@@ -65984,19 +65966,19 @@ PrefabInstance:
     - target: {fileID: 6462234347315847488, guid: a6a8f5fc69476a2479b529c189d7b73a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1681096805}
+      objectReference: {fileID: 0}
     - target: {fileID: 6462234347915768278, guid: a6a8f5fc69476a2479b529c189d7b73a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1681096805}
+      objectReference: {fileID: 0}
     - target: {fileID: 6462234348419836191, guid: a6a8f5fc69476a2479b529c189d7b73a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1681096805}
+      objectReference: {fileID: 0}
     - target: {fileID: 6462234348682581650, guid: a6a8f5fc69476a2479b529c189d7b73a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 1681096805}
+      objectReference: {fileID: 0}
     - target: {fileID: 9182089540794773475, guid: a6a8f5fc69476a2479b529c189d7b73a, type: 3}
       propertyPath: m_Name
       value: Additions
