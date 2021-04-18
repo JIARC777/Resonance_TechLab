@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class DialogueTrigger : MonoBehaviour
     public float delayBeforeStarting = 0f; //after hitting the trigger, wait for this time
     public float clipPriority;
     public bool destroyOnPlay = true;
+
+    public UnityEvent onEnteredTriggerEvent;
 
     //[Header("If this dialogue should just string into another")]
     //public DialogueTrigger_v2 nextDialogue;
@@ -33,6 +36,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            onEnteredTriggerEvent.Invoke();
             dialogueManager.QueueDialogue(thisClip, delayBeforeStarting, clipPriority);
             GetComponent<BoxCollider>().enabled = false;
         }
