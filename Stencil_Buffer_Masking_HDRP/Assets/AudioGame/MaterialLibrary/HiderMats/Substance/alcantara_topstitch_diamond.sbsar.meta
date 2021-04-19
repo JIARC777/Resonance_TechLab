@@ -14,23 +14,11 @@ ScriptedImporter:
   - graphLabel: Alcantara Topstitch Diamond
     prototypeName: Alcantara Topstitch Diamond
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://alcantara_topstitch_diamond\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"2005629128\" type=\"8\"
-      value=\"11,11\" />\n  <presetinput identifier=\"color\" uid=\"23325954\" type=\"2\"
-      value=\"1,1,1\" />\n  <presetinput identifier=\"variation_hue\" uid=\"18594193\"
-      type=\"0\" value=\"31\" />\n  <presetinput identifier=\"metallic\" uid=\"23326001\"
-      type=\"0\" value=\"0.174\" />\n  <presetinput identifier=\"topstitch_color\"
-      uid=\"53169234\" type=\"2\" value=\"0.129458,0.129458,0.133364\" />\n  <presetinput
-      identifier=\"topstitch_amount\" uid=\"53102765\" type=\"4\" value=\"100\" />\n 
-      <presetinput identifier=\"topstitch_position\" uid=\"53115368\" type=\"0\"
-      value=\"0.335\" />\n  <presetinput identifier=\"topstitch_width\" uid=\"53094686\"
-      type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_length\" uid=\"52660473\"
-      type=\"0\" value=\"0\" />\n  <presetinput identifier=\"topstitch_puncture\"
-      uid=\"64338391\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"hole_size\"
-      uid=\"53195977\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"quilting_type\"
-      uid=\"52746883\" type=\"4\" value=\"3\" />\n </sbspreset>\n"
+      value=\"9,9\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -49,7 +37,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
         texture: {fileID: 3870169668648347709, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
-        scale: {x: 12, y: 12}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -651,15 +639,21 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
-      bGenerateOnLoad: 0
+      bGenerateOnLoad: 1
     material: {fileID: -4023381274136600233, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
     generatedTextures:
+    - {fileID: 1273596197378814208, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
     - {fileID: 3870169668648347709, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
     - {fileID: 2629366837746607871, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
     - {fileID: 8079400166798348586, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
+    - {fileID: 3606620013726776650, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
+    - {fileID: -719433151764143783, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
+    - {fileID: 7795677987741221310, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
+    - {fileID: 2967567207538926748, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
     - {fileID: 9019810599133386964, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
+    - {fileID: -6245165240648153700, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}
     - {fileID: 8303869543045915354, guid: ff1421cd18dc2b44b841267118a478ab, type: 3}

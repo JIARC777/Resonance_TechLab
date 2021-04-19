@@ -14,16 +14,11 @@ ScriptedImporter:
   - graphLabel: Metal Speaker Mesh Facets
     prototypeName: Metal Speaker Mesh Facets
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://metal_speaker_mesh_facets\" label=\"\" >\n 
-      <presetinput identifier=\"$outputsize\" uid=\"645485574\" type=\"8\" value=\"11,11\"
-      />\n  <presetinput identifier=\"color\" uid=\"1363797624\" type=\"2\" value=\"0.518868,0.518868,0.518868\"
-      />\n  <presetinput identifier=\"tile\" uid=\"1363217147\" type=\"4\" value=\"6\"
-      />\n  <presetinput identifier=\"material_relief\" uid=\"1363802089\" type=\"0\"
-      value=\"1\" />\n  <presetinput identifier=\"color_fabric\" uid=\"1363777863\"
-      type=\"2\" value=\"0.518868,0.518868,0.518868\" />\n  <presetinput identifier=\"roughness\"
-      uid=\"1363796001\" type=\"0\" value=\"0.633\" />\n </sbspreset>\n"
+      <presetinput identifier=\"$outputsize\" uid=\"645485574\" type=\"8\" value=\"9,9\"
+      />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -585,8 +580,8 @@ ScriptedImporter:
       aniso: 1
     - textureName: Metal Speaker Mesh Facets - baseColor
       wrapMode: 0
-      filterMode: 0
-      aniso: 16
+      filterMode: 1
+      aniso: 1
     - textureName: Metal Speaker Mesh Facets - normal
       wrapMode: 0
       filterMode: 1
@@ -625,15 +620,20 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
     material: {fileID: 5307083017502258081, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
     generatedTextures:
+    - {fileID: 9188880131897513303, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
     - {fileID: -1589336970466928217, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
     - {fileID: -6388552920261524883, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
     - {fileID: 3225617952846414817, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
+    - {fileID: -611431172917793037, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
+    - {fileID: 2880621785585754413, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
+    - {fileID: 421702086346564229, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
     - {fileID: -8484265318311230283, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
+    - {fileID: -3809625395150700045, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}
     - {fileID: -5291221581677790430, guid: a4964d8a620f1604190e94fc4ea8cf8a, type: 3}

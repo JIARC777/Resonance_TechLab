@@ -14,18 +14,11 @@ ScriptedImporter:
   - graphLabel: Hemlock Wood Parquet Hexagon
     prototypeName: Hemlock Wood Parquet Hexagon
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://hemlock_wood_parquet_hexagon\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"3118446679\" type=\"8\"
-      value=\"12,12\" />\n  <presetinput identifier=\"wood_color_variation\" uid=\"3521958337\"
-      type=\"0\" value=\"0.139\" />\n  <presetinput identifier=\"veins_contrast\"
-      uid=\"3521958351\" type=\"0\" value=\"0.155\" />\n  <presetinput identifier=\"wood_roughness\"
-      uid=\"3521958349\" type=\"0\" value=\"0.346\" />\n  <presetinput identifier=\"cut\"
-      uid=\"3521958347\" type=\"4\" value=\"1\" />\n  <presetinput identifier=\"parquet_hexagon_x_amount\"
-      uid=\"3521958380\" type=\"4\" value=\"7\" />\n  <presetinput identifier=\"parquet_hexagon_y_amount\"
-      uid=\"3521958378\" type=\"4\" value=\"3\" />\n  <presetinput identifier=\"parquet_tile\"
-      uid=\"3521958164\" type=\"4\" value=\"5\" />\n </sbspreset>\n"
+      value=\"9,9\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -627,15 +620,20 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 4096
-      textureHeight: 4096
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
     material: {fileID: 741474304972950092, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
     generatedTextures:
+    - {fileID: -2423145760487385757, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
     - {fileID: 298336766807139416, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
     - {fileID: 2711629020779579304, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
     - {fileID: 3208817670079827683, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
+    - {fileID: 7453026991474735274, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
+    - {fileID: 410808047542667748, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
+    - {fileID: 9059559125992537520, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
     - {fileID: -6402763381114931622, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
+    - {fileID: -3682246578482652606, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}
     - {fileID: -4174008541032059625, guid: 1921f1c91cb1f144783b277aaabedbe7, type: 3}

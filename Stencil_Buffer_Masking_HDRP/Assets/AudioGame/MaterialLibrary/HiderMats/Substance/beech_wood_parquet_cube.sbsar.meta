@@ -14,20 +14,11 @@ ScriptedImporter:
   - graphLabel: Beech Wood Parquet Cube
     prototypeName: Beech Wood Parquet Cube
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://beech_wood_parquet_cube\" label=\"\" >\n 
-      <presetinput identifier=\"$outputsize\" uid=\"3505132696\" type=\"8\" value=\"11,11\"
-      />\n  <presetinput identifier=\"$randomseed\" uid=\"2275279562\" type=\"4\"
-      value=\"1519\" />\n  <presetinput identifier=\"wood_color\" uid=\"3101650278\"
-      type=\"2\" value=\"1,1,1\" />\n  <presetinput identifier=\"wood_color_variation\"
-      uid=\"3101650200\" type=\"0\" value=\"0.294\" />\n  <presetinput identifier=\"veins_contrast\"
-      uid=\"3101650202\" type=\"0\" value=\"0.557\" />\n  <presetinput identifier=\"cut\"
-      uid=\"3101650206\" type=\"4\" value=\"1\" />\n  <presetinput identifier=\"knots_amount\"
-      uid=\"3101650192\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"fibers\"
-      uid=\"3101650194\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"material_rotation\"
-      uid=\"3101650179\" type=\"4\" value=\"3\" />\n  <presetinput identifier=\"parquet_cube_y_amount\"
-      uid=\"3101650237\" type=\"4\" value=\"5\" />\n </sbspreset>\n"
+      <presetinput identifier=\"$outputsize\" uid=\"3505132696\" type=\"8\" value=\"9,9\"
+      />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -45,7 +36,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
         texture: {fileID: 65413322956079994, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
-        scale: {x: 3, y: 3}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -629,15 +620,20 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
     material: {fileID: 8209230588633548044, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
     generatedTextures:
+    - {fileID: -3616230000789450435, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
     - {fileID: 65413322956079994, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
     - {fileID: 2508262092852913631, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
     - {fileID: 405636587273179997, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+    - {fileID: -136364481352797954, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+    - {fileID: 1021175025678327710, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+    - {fileID: 3509125685434438047, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
     - {fileID: 2444690147453073292, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
+    - {fileID: -967019243928494864, guid: 318af78ebbc131240895c42ebbf63536, type: 3}
     - {fileID: -9209465439656239716, guid: 318af78ebbc131240895c42ebbf63536, type: 3}

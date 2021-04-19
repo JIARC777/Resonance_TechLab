@@ -17,20 +17,8 @@ ScriptedImporter:
     generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://wood_pixel_patterned\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"1023435586\" type=\"8\" value=\"11,11\" />\n 
-      <presetinput identifier=\"$randomseed\" uid=\"1785885968\" type=\"4\" value=\"3878\"
-      />\n  <presetinput identifier=\"tile\" uid=\"1271992623\" type=\"8\" value=\"12,13\"
-      />\n  <presetinput identifier=\"color_noise_selection\" uid=\"1272013475\"
-      type=\"4\" value=\"7\" />\n  <presetinput identifier=\"glaze_selection\" uid=\"1271923674\"
-      type=\"4\" value=\"4\" />\n  <presetinput identifier=\"vein_noise_selection\"
-      uid=\"1272921980\" type=\"4\" value=\"2\" />\n  <presetinput identifier=\"glaze_target_color\"
-      uid=\"1272013441\" type=\"2\" value=\"1,1,1\" />\n  <presetinput identifier=\"pixel_patterned_roughness\"
-      uid=\"1272925330\" type=\"0\" value=\"0.49\" />\n  <presetinput identifier=\"pixel_patterned_metallic\"
-      uid=\"1274277661\" type=\"0\" value=\"0.386\" />\n  <presetinput identifier=\"wood_vein_intensity\"
-      uid=\"1272969914\" type=\"0\" value=\"0\" />\n  <presetinput identifier=\"pixel_depth_intensity\"
-      uid=\"1272868260\" type=\"0\" value=\"0.482\" />\n  <presetinput identifier=\"contrast\"
-      uid=\"1205408731\" type=\"0\" value=\"0.011\" />\n  <presetinput identifier=\"saturation\"
-      uid=\"945609452\" type=\"0\" value=\"0.463\" />\n </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"1023435586\" type=\"8\" value=\"9,9\" />\n
+      </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -48,7 +36,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
         texture: {fileID: 6369951670691872457, guid: 95d7834322cc8c04f8327f8b337079fd, type: 3}
-        scale: {x: 3, y: 3}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -632,8 +620,8 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1

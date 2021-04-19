@@ -14,16 +14,10 @@ ScriptedImporter:
   - graphLabel: Wave Curtain Wall
     prototypeName: Wave Curtain Wall
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://wave_curtain_wall\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"50853450\" type=\"8\" value=\"12,12\" />\n 
-      <presetinput identifier=\"base_color\" uid=\"1761847981\" type=\"2\" value=\"0.308962,0.39221,0.5\"
-      />\n  <presetinput identifier=\"roughness\" uid=\"1761846291\" type=\"0\" value=\"0.38\"
-      />\n  <presetinput identifier=\"x_amount\" uid=\"1763471245\" type=\"4\" value=\"50\"
-      />\n  <presetinput identifier=\"scale\" uid=\"1763617694\" type=\"0\" value=\"0.655\"
-      />\n  <presetinput identifier=\"warp\" uid=\"1761639653\" type=\"0\" value=\"0.226\"
-      />\n </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"50853450\" type=\"8\" value=\"9,9\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -625,15 +619,20 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 4096
-      textureHeight: 4096
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
-      bGenerateOnLoad: 0
+      bGenerateOnLoad: 1
     material: {fileID: 4182295053640314924, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
     generatedTextures:
+    - {fileID: 219227966493294211, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
     - {fileID: -2931903816761835054, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
     - {fileID: -1915629696674434191, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
     - {fileID: -7348145449534750254, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
+    - {fileID: 7826382087569093599, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
+    - {fileID: -784190230544417793, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
+    - {fileID: 1463604753983516287, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
     - {fileID: 1229221931376970125, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
+    - {fileID: 4042507741048588331, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}
     - {fileID: 8500183186278237855, guid: 7cba7e9181e5d3b4d91c5c1679813e83, type: 3}

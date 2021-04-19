@@ -14,15 +14,11 @@ ScriptedImporter:
   - graphLabel: Shark Skin Fabric
     prototypeName: Shark Skin Fabric
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://shark_skin_fabric\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"3182736839\" type=\"8\" value=\"11,11\" />\n 
-      <presetinput identifier=\"tile\" uid=\"3387260429\" type=\"4\" value=\"40\"
-      />\n  <presetinput identifier=\"color\" uid=\"3387255297\" type=\"2\" value=\"0.5,0.492925,0.492925\"
-      />\n  <presetinput identifier=\"roughness\" uid=\"3387255483\" type=\"0\" value=\"0.684\"
-      />\n  <presetinput identifier=\"metallic\" uid=\"3387255545\" type=\"0\" value=\"0.863\"
-      />\n </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"3182736839\" type=\"8\" value=\"9,9\" />\n
+      </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -643,15 +639,21 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
     material: {fileID: -1957252348856637409, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
     generatedTextures:
+    - {fileID: 3071304193583898478, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
     - {fileID: -6441833912874966823, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
     - {fileID: 4099300881846951213, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
     - {fileID: 2912100353616652687, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
+    - {fileID: 6026173100759832474, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
+    - {fileID: 7896184631583468674, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
+    - {fileID: 3644819496413842649, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
+    - {fileID: 6973780783658933971, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
     - {fileID: 6362639756790192044, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
+    - {fileID: -4014803276998586445, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}
     - {fileID: -5239907932755869347, guid: 1c3f40ab8ffba8e48a29d62f07777000, type: 3}

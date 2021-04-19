@@ -14,10 +14,10 @@ ScriptedImporter:
   - graphLabel: Concrete Float
     prototypeName: Concrete Float
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://concrete_float\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"1173470128\" type=\"8\" value=\"11,11\" />\n
+      identifier=\"$outputsize\" uid=\"1173470128\" type=\"8\" value=\"9,9\" />\n
       </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
@@ -36,7 +36,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
         texture: {fileID: -1080760001111057773, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
-        scale: {x: 2, y: 2}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -602,15 +602,19 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
-      bGenerateOnLoad: 0
+      bGenerateOnLoad: 1
     material: {fileID: -1258362251675300733, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
     generatedTextures:
+    - {fileID: 8530451394713553699, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
     - {fileID: -1080760001111057773, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
     - {fileID: -6087123721371061178, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
     - {fileID: 209827954756805961, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+    - {fileID: -5941813047234699697, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+    - {fileID: -574801729654750873, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
+    - {fileID: -3183647982654075647, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
     - {fileID: 7082641804344016309, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}
     - {fileID: 1915962208917492255, guid: 39c069ae4537d064aae3dfa717ea7da7, type: 3}

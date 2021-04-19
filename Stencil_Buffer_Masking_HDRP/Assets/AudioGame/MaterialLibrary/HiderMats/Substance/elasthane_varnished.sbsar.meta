@@ -14,16 +14,11 @@ ScriptedImporter:
   - graphLabel: Elasthane Varnished
     prototypeName: Elasthane Varnished
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://elasthane_varnished\" label=\"\" >\n  <presetinput
-      identifier=\"$outputsize\" uid=\"1667867515\" type=\"8\" value=\"9,9\" />\n 
-      <presetinput identifier=\"pattern_amount\" uid=\"368340271\" type=\"8\" value=\"20,20\"
-      />\n  <presetinput identifier=\"pattern_size\" uid=\"368362169\" type=\"0\"
-      value=\"1\" />\n  <presetinput identifier=\"pattern_blur\" uid=\"368392777\"
-      type=\"0\" value=\"0.479\" />\n  <presetinput identifier=\"roughness\" uid=\"360789645\"
-      type=\"0\" value=\"0.741\" />\n  <presetinput identifier=\"varnih_roughness\"
-      uid=\"368332203\" type=\"0\" value=\"0.582\" />\n </sbspreset>\n"
+      identifier=\"$outputsize\" uid=\"1667867515\" type=\"8\" value=\"9,9\" />\n
+      </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -669,8 +664,15 @@ ScriptedImporter:
       bGenerateOnLoad: 1
     material: {fileID: 6603858766565585560, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
     generatedTextures:
+    - {fileID: 574359927128532288, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
     - {fileID: -1111070940419132145, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
     - {fileID: 2057634525875356617, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
     - {fileID: -793699738753156180, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
+    - {fileID: 1366634913015530939, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
+    - {fileID: 7066523612401480427, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
+    - {fileID: 9075826454652300524, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
+    - {fileID: 2966069861662403737, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
     - {fileID: -3070675451129404364, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
+    - {fileID: 2504123521385442313, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
+    - {fileID: -8644991283168861003, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}
     - {fileID: -5117996131995208088, guid: 2ed72319cf764bb4abd15de1df9b2652, type: 3}

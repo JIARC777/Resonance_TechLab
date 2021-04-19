@@ -14,14 +14,11 @@ ScriptedImporter:
   - graphLabel: Acoustic Ceiling
     prototypeName: Acoustic Ceiling
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://plaster_acoustic_ceiling\" label=\"\" >\n 
-      <presetinput identifier=\"$outputsize\" uid=\"3497022419\" type=\"8\" value=\"11,11\"
-      />\n  <presetinput identifier=\"color\" uid=\"2715213283\" type=\"2\" value=\"1,1,1\"
-      />\n  <presetinput identifier=\"color_frame\" uid=\"2715201414\" type=\"2\"
-      value=\"0,0,0\" />\n  <presetinput identifier=\"acoustic_ceiling_roughness\"
-      uid=\"2717447814\" type=\"0\" value=\"0.94\" />\n </sbspreset>\n"
+      <presetinput identifier=\"$outputsize\" uid=\"3497022419\" type=\"8\" value=\"9,9\"
+      />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -605,15 +602,19 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
     material: {fileID: 709318944593886674, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
     generatedTextures:
+    - {fileID: -3520486282843684009, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
     - {fileID: -1520047256083398198, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
     - {fileID: 298075986574888402, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
     - {fileID: -2433376408040102958, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
+    - {fileID: -6010408553948413752, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
+    - {fileID: 6089900903733352074, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
+    - {fileID: -7698115378817787038, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
     - {fileID: -7974798069307977862, guid: d84fa6e2532ba724388c69971e314d62, type: 3}
     - {fileID: 77490096891834839, guid: d84fa6e2532ba724388c69971e314d62, type: 3}

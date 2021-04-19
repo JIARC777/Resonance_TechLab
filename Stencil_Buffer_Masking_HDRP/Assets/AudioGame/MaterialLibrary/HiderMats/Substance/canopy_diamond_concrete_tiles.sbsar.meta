@@ -14,19 +14,11 @@ ScriptedImporter:
   - graphLabel: Canopy Diamond Concrete Tiles
     prototypeName: Canopy Diamond Concrete Tiles
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://canopy_diamond_concrete_tiles\" label=\"\"
       >\n  <presetinput identifier=\"$outputsize\" uid=\"3018535405\" type=\"8\"
-      value=\"11,11\" />\n  <presetinput identifier=\"primary_color\" uid=\"3655208224\"
-      type=\"2\" value=\"0.783019,0.783019,0.783019\" />\n  <presetinput identifier=\"primary_color_luminance_variation_by_pattern\"
-      uid=\"3653259331\" type=\"0\" value=\"0.503\" />\n  <presetinput identifier=\"primary_color_luminance_variation_by_shape\"
-      uid=\"3653259375\" type=\"0\" value=\"0.374\" />\n  <presetinput identifier=\"color_hue_variation\"
-      uid=\"3655204927\" type=\"0\" value=\"1\" />\n  <presetinput identifier=\"primary_roughness\"
-      uid=\"3655297271\" type=\"0\" value=\"0.752\" />\n  <presetinput identifier=\"primary_color_metallic\"
-      uid=\"3655292894\" type=\"0\" value=\"0.301\" />\n  <presetinput identifier=\"pyramid_top_offset\"
-      uid=\"3655548735\" type=\"0\" value=\"0.188\" />\n  <presetinput identifier=\"damage_amount\"
-      uid=\"3627638016\" type=\"0\" value=\"0\" />\n </sbspreset>\n"
+      value=\"9,9\" />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
       shader: {fileID: 4800000, guid: 756bac9090102564582875f4c7e30202, type: 3}
@@ -44,7 +36,7 @@ ScriptedImporter:
         offset: {x: 0, y: 0}
       - name: _BaseColorMap
         texture: {fileID: 1960473884795630607, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
-        scale: {x: 4, y: 4}
+        scale: {x: 1, y: 1}
         offset: {x: 0, y: 0}
       - name: _BentNormalMap
         texture: {instanceID: 0}
@@ -627,16 +619,21 @@ ScriptedImporter:
     targetSettingList:
     - label: Default
       bOverride: 0
-      bLockRatio: 0
-      textureWidth: 2048
-      textureHeight: 2048
+      bLockRatio: 1
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
     material: {fileID: -5318748992018522398, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
     generatedTextures:
+    - {fileID: -3527768727838299662, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
     - {fileID: 1960473884795630607, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
     - {fileID: 635765469362542690, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
     - {fileID: -2491930975371512376, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
+    - {fileID: -5198466467198780756, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
+    - {fileID: -998513746280368385, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
+    - {fileID: -3441588414519786035, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
     - {fileID: 2896281675539012390, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
+    - {fileID: -2737748486924104261, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}
     - {fileID: 7978332746120353738, guid: 9b1ee62de8efbfa4c9305c2b765291e8, type: 3}

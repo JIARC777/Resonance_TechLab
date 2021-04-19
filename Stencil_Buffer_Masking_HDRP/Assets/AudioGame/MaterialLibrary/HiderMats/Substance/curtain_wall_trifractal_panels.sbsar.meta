@@ -14,10 +14,10 @@ ScriptedImporter:
   - graphLabel: Curtain Wall Trifractal Panels
     prototypeName: Curtain Wall Trifractal Panels
     graphDescIndex: 0
-    generateAllOutputs: 0
+    generateAllOutputs: 1
     generateMipMaps: 1
     preset: " <sbspreset pkgurl=\"pkg://curtain_wall_trifractal_panels\" label=\"\"
-      >\n  <presetinput identifier=\"$outputsize\" uid=\"904315479\" type=\"8\" value=\"11,11\"
+      >\n  <presetinput identifier=\"$outputsize\" uid=\"904315479\" type=\"8\" value=\"9,9\"
       />\n </sbspreset>\n"
     shaderName: HDRP/LitTessellation
     materialProperties:
@@ -639,15 +639,21 @@ ScriptedImporter:
     - label: Default
       bOverride: 0
       bLockRatio: 1
-      textureWidth: 2048
-      textureHeight: 2048
+      textureWidth: 512
+      textureHeight: 512
       textureFormatMode: 0
       normalCompressed: 0
       bGenerateOnLoad: 1
     material: {fileID: 4103796683614651465, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
     generatedTextures:
+    - {fileID: 3007041081054775, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
     - {fileID: -6313184517353536704, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
     - {fileID: 1733728952506006124, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
     - {fileID: -3355098062167414435, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
+    - {fileID: 1486316129715598174, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
+    - {fileID: 7813057021133676920, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
+    - {fileID: 1019194852556922123, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
     - {fileID: -7973913327643271696, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
+    - {fileID: 4864664746179225647, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
+    - {fileID: -552587379202344092, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
     - {fileID: 1274204851652423204, guid: 042bc1d1d81cebf45a0f3d63c89ad632, type: 3}
