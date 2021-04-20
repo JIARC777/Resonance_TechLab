@@ -5148,7 +5148,7 @@ PrefabInstance:
     - target: {fileID: 1335464613, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 483183743}
+      objectReference: {fileID: 0}
     - target: {fileID: 3614655560201232672, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_Name
       value: AMT
@@ -5163,11 +5163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3614655560201232686, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.53
+      value: 3.217
       objectReference: {fileID: 0}
     - target: {fileID: 3614655560201232686, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 29.851
+      value: -13.67
       objectReference: {fileID: 0}
     - target: {fileID: 3614655560201232686, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10022,11 +10022,6 @@ Transform:
   m_Father: {fileID: 1466129639}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!328 &483183743 stripped
-VideoPlayer:
-  m_CorrespondingSourceObject: {fileID: 483183743, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
-  m_PrefabInstance: {fileID: 1795301081}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &485193814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11966,12 +11961,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a5b27589d6fdd4998ddd815dea1f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: 29d9fe55b5752d748b2f7d307b54e15d, type: 3}
   delayBeforeStarting: 0
   clipPriority: 0
   destroyOnPlay: 1
+  onEnteredTriggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &577162748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4334876256778794310, guid: 13228fc822c4ef4429f0d27de4f7b9f9, type: 3}
@@ -13435,7 +13433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &641373644
 Transform:
   m_ObjectHideFlags: 0
@@ -13730,12 +13728,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb12ff76a40ac54299db1a2db06e5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: caf04689bec75954bafa8674472e449f, type: 3}
   delayBeforeStarting: 0
   clipPriority: 1
   destroyOnPlay: 1
+  onEnteredTriggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &648735475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18988,12 +18989,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb12ff76a40ac54299db1a2db06e5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: 2a05661ebb966ae489e2aee0b113e1c7, type: 3}
   delayBeforeStarting: 0
   clipPriority: 1
   destroyOnPlay: 1
+  onEnteredTriggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &914487143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20572,12 +20576,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb12ff76a40ac54299db1a2db06e5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: c3ac376b48349574b9a06138223be724, type: 3}
   delayBeforeStarting: 2
   clipPriority: 2
   destroyOnPlay: 1
+  onEnteredTriggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &995102830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24576,12 +24583,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb12ff76a40ac54299db1a2db06e5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: 093401c61680c5c4bb8d706ea4c737be, type: 3}
   delayBeforeStarting: 0
   clipPriority: 1
   destroyOnPlay: 1
+  onEnteredTriggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1208161296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25885,10 +25895,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1109245062}
     m_Modifications:
-    - target: {fileID: 170897039099375506, guid: dd0db489470fec840896ab3c57798309, type: 3}
-      propertyPath: terminal
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3502606215627051150, guid: dd0db489470fec840896ab3c57798309, type: 3}
       propertyPath: m_Name
       value: Terminal
@@ -28817,12 +28823,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb12ff76a40ac54299db1a2db06e5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: 96d9b0b83e8239a40a453e99fbdb60b8, type: 3}
   delayBeforeStarting: 0
   clipPriority: 1
   destroyOnPlay: 1
+  onEnteredTriggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1514881554
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33760,7 +33769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0ff1869501721409dd937b2d1f6653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   levelLoadClip: {fileID: 32900000, guid: 0ff1925ab09f28c4c8b8a38e9cfaf999, type: 3}
   levelLoadClipDelay: 0
 --- !u!1001 &1781106275
@@ -34222,7 +34231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.716
+      value: -13.932
       objectReference: {fileID: 0}
     - target: {fileID: 1445252775800822431, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -37290,12 +37299,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb12ff76a40ac54299db1a2db06e5c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 483183743}
+  player: {fileID: 0}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: 36c9b7f99a9d46241b09f3ea452fb650, type: 3}
   delayBeforeStarting: 0
   clipPriority: 1
   destroyOnPlay: 1
+  onEnteredTriggerEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1934017669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40873,6 +40885,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee662cce7411fa459f4224b116f4f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelPositions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 9, y: 0.25, z: 10.5}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  player: {fileID: 577134265}
 --- !u!4 &2112038937
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ResonancePlayerHealthRespawn : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
     public Animator damageAnimator;
 
     public Vector3 respawnLocation;
+    public TextMeshProUGUI healthNumberText;
 
     #region Health
 
@@ -36,13 +38,14 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
     private void Start()
     {
         currentPlayerHealth = maxPlayerHealth;
+        healthNumberText.text = currentPlayerHealth.ToString();
         playerDiedAnimator.Play("Rest");
     }
 
     public void DamagePlayer()
     {
         currentPlayerHealth--;
-
+        healthNumberText.text = currentPlayerHealth.ToString();
         if (currentPlayerHealth <= 0)
         {
             Die();
@@ -73,6 +76,8 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
         //playerDiedAnimator.Play("Entry");
         yield return new WaitForSeconds(1);
         transform.position = respawnLocation;
+        currentPlayerHealth = maxPlayerHealth;
+        healthNumberText.text = currentPlayerHealth.ToString();
         // If this ends the animation we should add an extra delay;
         yield return new WaitForSeconds(1);
 

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2893217879064307591}
   - component: {fileID: 170897039099375506}
   - component: {fileID: 3669266705429643772}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terminal_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,6 +325,8 @@ MonoBehaviour:
   door: {fileID: 0}
   doorLeft: {fileID: 0}
   doorRight: {fileID: 0}
+  gameManager: {fileID: 0}
+  Game_Manager: {fileID: 0}
 --- !u!1 &3502606215627051150
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +338,7 @@ GameObject:
   - component: {fileID: 4309963978483092020}
   - component: {fileID: 900661593278891409}
   - component: {fileID: 3142173040807850331}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terminal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,6 +388,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 40ccb627feffa7e4997eefd55c55e0cc, type: 2}
+  - {fileID: 2100000, guid: 6b951451db0e5327c9732bbc96eae4d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

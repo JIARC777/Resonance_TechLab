@@ -18,6 +18,10 @@ public class DialogueManager : MonoBehaviour
     //Play the level load clip, if there is one
     void Start()
     {
+        if (!player)
+        {
+            player = GameObject.Find("DialogueVideoPlayer").GetComponent<VideoPlayer>();
+        }
         if (levelLoadClip)
         {
             ResonanceVideo startVideo = new ResonanceVideo(levelLoadClip, levelLoadClipDelay, 1);

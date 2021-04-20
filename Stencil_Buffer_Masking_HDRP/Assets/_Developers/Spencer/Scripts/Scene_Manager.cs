@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Valve.VR.InteractionSystem;
 
 public class Scene_Manager : MonoBehaviour
 {
+    [Header("Start with vertical slice position")]
+    public List<Vector3> levelPositions = new List<Vector3>();
 
+    public GameObject player;
+    
     Scene transitionScene;
     Scene tutorial;
     Scene virtualSlice;
     Scene levelThree;
 
-    int nextScene = 1;
+    int nextScene = 3;
 
     // Start is called before the first frame update
     void Start()
     {
-
         DontDestroyOnLoad(transform);
     }
 
@@ -37,7 +41,9 @@ public class Scene_Manager : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
-
+        player.GetComponent<ResonanceMovement>().enabled = false;
+        //player.transform.position = Vector3.up;
+        player.transform.position = levelPositions[nextScene];
         StartCoroutine(LoadTransitionScene());
 
         yield return new WaitForSeconds(1);
@@ -52,7 +58,8 @@ public class Scene_Manager : MonoBehaviour
         }
 
         Debug.Log("Is loaded");
-
+        
+        player.GetComponent<ResonanceMovement>().enabled = true;
         nextScene++;
 
         yield return new WaitForSeconds(1);
