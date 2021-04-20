@@ -11961,7 +11961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2a5b27589d6fdd4998ddd815dea1f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1795301082}
   dialogueManager: {fileID: 1775995899}
   thisClip: {fileID: 32900000, guid: 29d9fe55b5752d748b2f7d307b54e15d, type: 3}
   delayBeforeStarting: 0
@@ -13433,7 +13433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &641373644
 Transform:
   m_ObjectHideFlags: 0
@@ -34319,6 +34319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+--- !u!328 &1795301082 stripped
+VideoPlayer:
+  m_CorrespondingSourceObject: {fileID: 1851397306903094557, guid: a9df29c1d9b12b443b82daf458c067b2, type: 3}
+  m_PrefabInstance: {fileID: 1795301081}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1795587727
 PrefabInstance:
   m_ObjectHideFlags: 0

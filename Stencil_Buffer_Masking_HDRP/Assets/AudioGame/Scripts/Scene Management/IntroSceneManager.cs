@@ -15,6 +15,7 @@ public class IntroSceneManager : MonoBehaviour
 
     void LoadNextScene()
     {
+        Destroy(GameObject.Find("Player_Intro"));
         SceneManager.LoadScene(indexOfSceneToLoad);
     }
 }

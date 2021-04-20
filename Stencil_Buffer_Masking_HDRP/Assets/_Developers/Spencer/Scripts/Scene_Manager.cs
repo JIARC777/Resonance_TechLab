@@ -26,7 +26,7 @@ public class Scene_Manager : MonoBehaviour
 
     IEnumerator LoadTransitionScene()
     {
-        AsyncOperation transition = SceneManager.LoadSceneAsync(0);
+        AsyncOperation transition = SceneManager.LoadSceneAsync(1);
 
         while (!transition.isDone)
         {
@@ -36,7 +36,7 @@ public class Scene_Manager : MonoBehaviour
 
         Debug.Log("Transition Scene loaded");
 
-        transitionScene = SceneManager.GetSceneByBuildIndex(0);
+        transitionScene = SceneManager.GetSceneByBuildIndex(1);
     }
 
     IEnumerator LoadNextScene()
@@ -46,7 +46,7 @@ public class Scene_Manager : MonoBehaviour
         player.transform.position = levelPositions[nextScene];
         StartCoroutine(LoadTransitionScene());
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(10);
 
         AsyncOperation load = SceneManager.LoadSceneAsync(nextScene);
 
@@ -67,6 +67,19 @@ public class Scene_Manager : MonoBehaviour
 
     public void LoadNextLevel()
     {
+        DestroyTools();
         StartCoroutine(LoadNextScene());
+    }
+
+    void DestroyTools()
+    {
+        if (GameObject.Find("AMT"))
+        {
+            Destroy(GameObject.Find("AMT"));
+        }
+        if (GameObject.Find("3DR"))
+        {
+            Destroy(GameObject.Find("3DR"));
+        }
     }
 }
