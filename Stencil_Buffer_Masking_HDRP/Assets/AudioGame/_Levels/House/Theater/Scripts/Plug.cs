@@ -11,6 +11,7 @@ public class Plug : MonoBehaviour
     public VideoClip plugInVideo;
     public VideoPlayer discordPlayer;
     public GameObject plugGeoToEnable;
+    public Animator effect;
     public UnityEvent pluggedIn;
 
     private void OnTriggerEnter(Collider other)
@@ -24,6 +25,7 @@ public class Plug : MonoBehaviour
             //other.transform.parent.SetParent(transform);
             discordPlayer.clip = plugInVideo;
             discordPlayer.Play();
+            effect.SetBool("Damage", true);
         }
     }
 }
