@@ -23,6 +23,8 @@ public class Activate : MonoBehaviour
     public GameObject gameManager;
 
     public Scene_Manager Game_Manager;
+    [Header("Only applies if this is a terminal")]
+    public DialogueManager dialogueManager;
 
     private void Start()
     {
@@ -35,6 +37,10 @@ public class Activate : MonoBehaviour
         {
             doorLeft = transform.GetChild(0);
             doorRight = transform.GetChild(1);
+        }
+        if (!dialogueManager)
+        {
+            dialogueManager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         }
 
         gameManager = GameObject.Find("Game_Manager");
@@ -67,7 +73,7 @@ public class Activate : MonoBehaviour
         }
         if (terminal)
         {
-            EndLevel();
+            StartCoroutine(EndLevel());
         }
     }
 
@@ -187,9 +193,12 @@ public class Activate : MonoBehaviour
         }        
     }
 
-    public void EndLevel()
+    public IEnumerator EndLevel()
     {
         Debug.Log("The Player has reached the end of the level!");
+        dialogueManager.PlayEndClip();
+        yield return new WaitForSeconds((float)dialogueManager.levelEndClip.length);
         Game_Manager.LoadNextLevel();
     }
+
 }

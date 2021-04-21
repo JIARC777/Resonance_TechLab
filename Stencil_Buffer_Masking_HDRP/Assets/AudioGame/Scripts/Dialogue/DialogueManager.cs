@@ -12,6 +12,9 @@ public class DialogueManager : MonoBehaviour
     public VideoClip levelLoadClip;
     public float levelLoadClipDelay;
 
+    [Header("The clip to play when the terminal is activated")]
+    public VideoClip levelEndClip;
+
     private List<ResonanceVideo> clipsToPlay = new List<ResonanceVideo>();
     private ResonanceVideo videoCurrentlyPlaying;
 
@@ -74,6 +77,11 @@ public class DialogueManager : MonoBehaviour
         videoCurrentlyPlaying = videoToPlay;
         yield return new WaitForSeconds(videoToPlay.delayBeforePlaying);
         player.Play();
+    }
+
+    public void PlayEndClip()
+    {
+        QueueDialogue(levelEndClip, 0f, 5f);
     }
 }
 

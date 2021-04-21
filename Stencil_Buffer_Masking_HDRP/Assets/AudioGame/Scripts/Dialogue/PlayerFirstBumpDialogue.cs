@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerFirstBumpDialogue : DialogueTrigger
 {
+
+
     private void OnTriggerEnter(Collider other)
     {
         return;

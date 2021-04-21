@@ -42,6 +42,10 @@ public class Scene_Manager : MonoBehaviour
     IEnumerator LoadNextScene()
     {
         player.GetComponent<ResonanceMovement>().enabled = false;
+        ResonancePlayerHealthRespawn playerHP = player.GetComponent<ResonancePlayerHealthRespawn>();
+        playerHP.currentPlayerHealth = playerHP.maxPlayerHealth;
+        playerHP.healthNumberText.text = playerHP.currentPlayerHealth.ToString();
+
         //player.transform.position = Vector3.up;
         player.transform.position = levelPositions[nextScene];
         StartCoroutine(LoadTransitionScene());
