@@ -10,7 +10,7 @@ Shader "Basic Info"
         ZTest greater
         ZWrite On //On: Make BG write to depth, could cause AO issues
         ColorMask 0
-        Offset 0, 10
+        Offset 1, 10
         ///SBM-------
 
 

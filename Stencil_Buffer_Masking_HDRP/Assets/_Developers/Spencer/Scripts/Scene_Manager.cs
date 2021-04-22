@@ -45,6 +45,7 @@ public class Scene_Manager : MonoBehaviour
         ResonancePlayerHealthRespawn playerHP = player.GetComponent<ResonancePlayerHealthRespawn>();
         playerHP.currentPlayerHealth = playerHP.maxPlayerHealth;
         playerHP.healthNumberText.text = playerHP.currentPlayerHealth.ToString();
+        playerHP.respawnLocation = levelPositions[nextScene - 1];
 
         //player.transform.position = Vector3.up;
         player.transform.position = levelPositions[nextScene];
