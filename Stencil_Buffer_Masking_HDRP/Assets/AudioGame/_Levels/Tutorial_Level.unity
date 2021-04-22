@@ -5214,10 +5214,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1975649146}
     m_Modifications:
+    - target: {fileID: 1335464612, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: objectToDestroy
+      value: 
+      objectReference: {fileID: 995102827}
     - target: {fileID: 1335464613, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1795301082}
+    - target: {fileID: 1335464613, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1775995899}
     - target: {fileID: 3614655560201232672, guid: c854a68ae8c7c5643aa59d7934c2b634, type: 3}
       propertyPath: m_Name
       value: AMT
@@ -38721,10 +38729,9 @@ GameObject:
   - component: {fileID: 1980008342}
   - component: {fileID: 1980008341}
   - component: {fileID: 1980008340}
-  - component: {fileID: 1980008343}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Map Hazard
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -38806,21 +38813,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980008338}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1980008343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1980008338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56a0f2bbdb55a6f4fa1bb81627ff03fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loudnessFactor: 1
-  echoFactor: 1
-  soundFX: {fileID: 0}
 --- !u!1 &1980374336
 GameObject:
   m_ObjectHideFlags: 0
