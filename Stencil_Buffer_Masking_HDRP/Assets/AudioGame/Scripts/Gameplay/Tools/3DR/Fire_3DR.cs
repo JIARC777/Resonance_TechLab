@@ -219,7 +219,7 @@ public class Fire_3DR : MonoBehaviour
         currentProjectile.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
         //Applies an impulse force to the projectile in the forward direction of the firingLocations position using the firingForce variable
-        currentProjectile.gameObject.GetComponent<Rigidbody>().AddForce(firingLocation.forward * firingForce, ForceMode.Impulse);
+        currentProjectile.gameObject.GetComponent<Rigidbody>().AddForce(firingLocation.forward * firingForce, ForceMode.VelocityChange);
 
         //Calls the Despawn() function withing the Despawn_Item script atttached to the currentAmmo gameobject, then Sets the currentAmmo in the 3DR and allows the 3DR to generate projectiles again
         currentProjectile.gameObject.GetComponent<Despawn_Item>().Despawn();
