@@ -25,6 +25,7 @@ public class Plug : MonoBehaviour
             //other.transform.parent.SetParent(transform);
             discordPlayer.clip = plugInVideo;
             discordPlayer.Play();
+            GetComponent<AudioSource>().Play();
             effect.SetBool("Damage", true);
         }
     }
