@@ -334,6 +334,10 @@ public class DAVE : MonoBehaviour
         damaged = true;
         attackTimestamp = Time.time;
         agent.enabled = false;
+        
+        // SCARY UNTESTED DAVE CHANGE - Unsub so DAVE does not reactivate on trigger enter
+        closeProximityDetector.DetectedPlayer -= EngagePlayer;
+        
         Debug.Log("<color=cyan>Deactivation Cooldown Start</color>");
         yield return new WaitForSeconds(waitTime);
         Debug.Log("<color=cyan>Deactivation Cooldown Complete</color>");
@@ -341,7 +345,10 @@ public class DAVE : MonoBehaviour
         agent.enabled = true;
         engagedPlayer = false;
         damaged = false;
-
+        
+        // SCARY UNTESTED DAVE CHANGE LINE 2 - Resub so we can use trigger
+        closeProximityDetector.DetectedPlayer += EngagePlayer;
+        
         ExitCurrentState();
         currentState = new DAVEPatroller();
         currentState.StateEnter(this);

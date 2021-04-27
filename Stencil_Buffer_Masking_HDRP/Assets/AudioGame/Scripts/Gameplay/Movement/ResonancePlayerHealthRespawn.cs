@@ -20,6 +20,9 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
 
     #endregion
 
+    private float ignoreTime = 2f;
+
+    private float stopIgnoringTime = 0f;
     //Establish a good singleton
     private void Awake()
     {
@@ -44,17 +47,24 @@ public class ResonancePlayerHealthRespawn : MonoBehaviour
 
     public void DamagePlayer()
     {
-        currentPlayerHealth--;
-        healthNumberText.text = currentPlayerHealth.ToString();
-        if (currentPlayerHealth <= 0)
+        if (Time.time > stopIgnoringTime)
         {
-            Die();
-            return;
-        }
+            stopIgnoringTime = Time.time + ignoreTime;
+            currentPlayerHealth--;
+            healthNumberText.text = currentPlayerHealth.ToString();
+            if (currentPlayerHealth <= 0)
+            {
+                Die();
+                return;
+            }
 
-        StartCoroutine(damageAnimation());
+            StartCoroutine(damageAnimation());
+        } else 
+            Debug.Log("Dave Shot twice - Ignoring");
+            
+        
     }
-
+    
     public IEnumerator damageAnimation()
     {
         damageAnimator.SetBool("Damage", true);
