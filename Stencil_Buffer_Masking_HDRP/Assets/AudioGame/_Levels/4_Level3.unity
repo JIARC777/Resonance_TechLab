@@ -17732,6 +17732,14 @@ PrefabInstance:
       propertyPath: m_LinkShadowLayers
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3665563287240856705, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_Name
       value: Std_Floor_Lamp_8
@@ -17801,8 +17809,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8253238411667546688, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -28249,6 +28265,14 @@ PrefabInstance:
       propertyPath: m_LinkShadowLayers
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665581342381957615, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5052922748390551096, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_RootOrder
       value: 48
@@ -28324,6 +28348,10 @@ PrefabInstance:
     - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633090180623319640, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6366979478503700481, guid: 910f0caf077422746ad9d66b7de53cd1, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -38052,6 +38080,14 @@ PrefabInstance:
       propertyPath: m_LinkShadowLayers
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_ShadowUpdateMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 517750350768182169, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: showAdditionalSettings
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3665563287240856705, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_Name
       value: Std_Floor_Lamp_11
@@ -38121,8 +38157,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5348765451614046904, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
+      propertyPath: m_UseViewFrustumForShadowCasterCull
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8253238411667546688, guid: 9040de5d34e6e274694fa177b444ad9e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -45839,18 +45883,6 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7688172984789761192, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.23076923
-      objectReference: {fileID: 0}
-    - target: {fileID: 7688172984789761192, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.23076925
-      objectReference: {fileID: 0}
-    - target: {fileID: 7688172984789761192, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.23076923
-      objectReference: {fileID: 0}
-    - target: {fileID: 7688172984789761192, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -61.368
       objectReference: {fileID: 0}
@@ -45890,25 +45922,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7688172984789761195, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7688172984789761204, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
       propertyPath: m_Name
       value: Spool_7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7688172984789761204, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8548342835238670232, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9125654449788095909, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a631a6b7e64d14409d47005adc52ebb, type: 3}
